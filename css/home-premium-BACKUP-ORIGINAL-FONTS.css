@@ -1,0 +1,221 @@
+/* ======================================================
+   BACKUP: ORIGINAL FONTS - COMPLETE (PHASE 1 + PHASE 2)
+   Created: 2026-01-07
+   Updated: 2026-01-07 - Phase 2 Complete
+   Purpose: Backup of ALL original font styles before Ondo-style update
+   ====================================================== */
+
+/* ==================== ORIGINAL HERO SECTION FONTS ==================== */
+
+/* ORIGINAL HERO TITLE STYLE */
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ORIGINAL HERO TAGLINE STYLE */
+.hero-tagline {
+    font-size: 1.5rem;
+    color: #00D4FF;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* ORIGINAL HERO SUBTITLE STYLE */
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+/* ==================== ORIGINAL SECTION HEADERS (PHASE 1) ==================== */
+
+/* ORIGINAL SECTION HEADER H2 */
+.section-header h2 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 1rem;
+}
+
+/* ORIGINAL FOUNDER TITLE */
+.founder-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 2rem;
+}
+
+/* ORIGINAL CTA SECTION H2 */
+.cta-content h2 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+}
+
+/* ==================== ORIGINAL STAT VALUES (PHASE 1) ==================== */
+
+/* ORIGINAL STAT VALUE */
+.stat-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #00D4FF;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+/* ==================== ORIGINAL FOUNDER LABEL (PHASE 1) ==================== */
+
+/* ORIGINAL FOUNDER LABEL */
+.founder-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #00D4FF;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+/* ==================== ORIGINAL FEATURE & STEP CARDS (PHASE 2) ==================== */
+
+/* ORIGINAL FEATURE CARD H3 */
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* ORIGINAL STEP NUMBER */
+.step-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #000000;
+}
+
+/* ORIGINAL STEP CARD H3 */
+.step-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 1rem;
+}
+
+/* ORIGINAL FOOTER TITLE */
+.footer-title {
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-md);
+}
+
+/* ======================================================
+   NEW ONDO-STYLE FONTS (FOR REFERENCE)
+   ====================================================== */
+
+/* ===== PHASE 1: HERO & MAIN SECTIONS ===== */
+
+/* NEW HERO TITLE - Light, Wide-Spaced, Uppercase */
+.hero-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* NEW TAGLINE - Refined, Subtle Spacing */
+.hero-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+/* NEW SUBTITLE - Light, Wide-Spaced, Uppercase */
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* NEW SECTION HEADERS - Light, Wide-Spaced, Uppercase */
+.section-header h2,
+.founder-title,
+.cta-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* NEW STAT VALUES - Ultra-Light Elegant Numbers */
+.stat-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+/* NEW FOUNDER LABEL - Ultra-Light, Extra Wide */
+.founder-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+}
+
+/* ===== PHASE 2: FEATURE CARDS & FOOTER ===== */
+
+/* NEW FEATURE CARD H3 - Medium Weight, Subtle Spacing */
+.feature-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+/* NEW STEP NUMBER - Light, Elegant */
+.step-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+/* NEW STEP CARD H3 - Medium Weight, Subtle Spacing */
+.step-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+/* NEW FOOTER TITLE - Semibold, Wide Spacing */
+.footer-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+/* ======================================================
+   TO RESTORE ORIGINAL FONTS:
+   
+   METHOD 1: Ask the assistant
+   Just say: "revert to original fonts"
+   
+   METHOD 2: Manual restore
+   1. Open css/home-premium.css and css/main.css
+   2. Find each section (hero, headers, stats, features, steps, footer)
+   3. Copy the ORIGINAL styles from above
+   4. Replace the new styles with the original ones
+   
+   All styles are clearly marked with their original values
+   ====================================================== */

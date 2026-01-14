@@ -1,0 +1,304 @@
+<!-- Wallet Connection Modal - Add this to ALL pages before closing </body> tag -->
+<!-- This modal opens as a popup when user clicks "Connect Wallet" badge -->
+
+<div id="walletModal" class="wallet-modal">
+    <div class="wallet-modal-content">
+        <button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button>
+        
+        <div class="wallet-modal-header">
+            <div class="wallet-modal-icon">🔗</div>
+            <h2>Connect Your Wallet</h2>
+            <p>Choose your preferred wallet to connect to MayaRoyale</p>
+        </div>
+        
+        <div class="wallet-options-grid">
+            <!-- Phantom -->
+            <button class="wallet-option" onclick="connectPhantom()">
+                <div class="wallet-option-icon">👻</div>
+                <div class="wallet-option-name">Phantom</div>
+                <div class="wallet-option-desc">Solana</div>
+                <span class="wallet-badge-rec">Recommended</span>
+            </button>
+            
+            <!-- Solflare -->
+            <button class="wallet-option" onclick="connectSolflare()">
+                <div class="wallet-option-icon">☀️</div>
+                <div class="wallet-option-name">Solflare</div>
+                <div class="wallet-option-desc">Solana</div>
+            </button>
+            
+            <!-- MetaMask -->
+            <button class="wallet-option" onclick="connectMetaMask()">
+                <div class="wallet-option-icon">🦊</div>
+                <div class="wallet-option-name">MetaMask</div>
+                <div class="wallet-option-desc">Ethereum</div>
+            </button>
+            
+            <!-- WalletConnect -->
+            <button class="wallet-option" onclick="connectWalletConnect()">
+                <div class="wallet-option-icon">🔗</div>
+                <div class="wallet-option-name">WalletConnect</div>
+                <div class="wallet-option-desc">Multi-chain</div>
+            </button>
+            
+            <!-- Coinbase Wallet -->
+            <button class="wallet-option" onclick="connectCoinbase()">
+                <div class="wallet-option-icon">💼</div>
+                <div class="wallet-option-name">Coinbase</div>
+                <div class="wallet-option-desc">Multi-chain</div>
+            </button>
+            
+            <!-- Trust Wallet -->
+            <button class="wallet-option" onclick="connectTrustWallet()">
+                <div class="wallet-option-icon">🛡️</div>
+                <div class="wallet-option-name">Trust Wallet</div>
+                <div class="wallet-option-desc">Multi-chain</div>
+            </button>
+        </div>
+        
+        <div class="wallet-modal-footer">
+            <p>New to crypto wallets? <a href="https://phantom.app/" target="_blank">Learn more</a></p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Wallet Modal Styles */
+.wallet-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.wallet-modal-content {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.wallet-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.wallet-modal-close:hover {
+    background: rgba(184, 134, 11, 0.1);
+    color: #B8860B;
+    transform: rotate(90deg);
+}
+
+.wallet-modal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.wallet-modal-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.wallet-modal-header h2 {
+    font-size: 2rem;
+    color: #0A0A0A;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.wallet-modal-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.wallet-options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.wallet-option {
+    background: #FFFFFF;
+    border: 2px solid rgba(184, 134, 11, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.wallet-option:hover {
+    transform: translateY(-5px);
+    border-color: #B8860B;
+    box-shadow: 0 10px 30px rgba(184, 134, 11, 0.2);
+}
+
+.wallet-option-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.wallet-option-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 0.25rem;
+}
+
+.wallet-option-desc {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.wallet-badge-rec {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: linear-gradient(135deg, #B8860B, #D4AF37);
+    color: #FFFFFF;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.wallet-modal-footer {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.wallet-modal-footer p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.wallet-modal-footer a {
+    color: #B8860B;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.wallet-modal-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .wallet-modal-content {
+        padding: 2rem 1.5rem;
+        width: 95%;
+    }
+    
+    .wallet-options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wallet-modal-header h2 {
+        font-size: 1.5rem;
+    }
+}
+</style>
+
+<script>
+// Wallet Connection Functions
+function connectPhantom() {
+    console.log('Connecting to Phantom...');
+    if (typeof window.solana !== 'undefined' && window.solana.isPhantom) {
+        window.solana.connect().then(() => {
+            alert('Phantom wallet connected!');
+            closeWalletModal();
+            // Redirect to dashboard after connection
+            window.location.href = 'dashboard.html';
+        }).catch(err => {
+            alert('Failed to connect to Phantom: ' + err.message);
+        });
+    } else {
+        alert('Phantom wallet not found. Please install it from phantom.app');
+        window.open('https://phantom.app/', '_blank');
+    }
+}
+
+function connectSolflare() {
+    console.log('Connecting to Solflare...');
+    alert('Solflare connection coming soon. Please use Phantom or MetaMask for now.');
+}
+
+function connectMetaMask() {
+    console.log('Connecting to MetaMask...');
+    if (typeof window.ethereum !== 'undefined') {
+        window.ethereum.request({ method: 'eth_requestAccounts' }).then(() => {
+            alert('MetaMask wallet connected!');
+            closeWalletModal();
+            // Redirect to dashboard after connection
+            window.location.href = 'dashboard.html';
+        }).catch(err => {
+            alert('Failed to connect to MetaMask: ' + err.message);
+        });
+    } else {
+        alert('MetaMask not found. Please install it from metamask.io');
+        window.open('https://metamask.io/', '_blank');
+    }
+}
+
+function connectWalletConnect() {
+    console.log('Connecting via WalletConnect...');
+    alert('WalletConnect integration coming soon.');
+}
+
+function connectCoinbase() {
+    console.log('Connecting to Coinbase Wallet...');
+    alert('Coinbase Wallet integration coming soon.');
+}
+
+function connectTrustWallet() {
+    console.log('Connecting to Trust Wallet...');
+    alert('Trust Wallet integration coming soon.');
+}
+</script>

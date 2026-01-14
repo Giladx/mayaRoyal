@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokenomics - MayaRoyale</title>
+    <meta name="description" content="MayaRoyale MAYA Token Economics: 1,000,000 total supply, $2,000 per token, three investment tiers - all land-backed.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tokenomics-premium.css?v=3.0">
+    <link rel="stylesheet" href="css/blockchain-design-refined.css">
+    <link rel="stylesheet" href="css/regulatory-disclosure.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-premium nav-scrolled">
+        <div class="nav-premium-container">
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo">
+                </a>
+            </div>
+            
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Platform
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                    <span class="nav-premium-dropdown-item-desc">Track your portfolio</span>
+                                </span>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💎</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                    <span class="nav-premium-dropdown-item-desc">Token economics & funding</span>
+                                </span>
+                            </a>
+                            <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📈</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Financial Forecast</span>
+                                    <span class="nav-premium-dropdown-item-desc">7-year projections</span>
+                                </span>
+                            </a>
+                            <a href="investment-calculator.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🧮</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Investment Calculator</span>
+                                    <span class="nav-premium-dropdown-item-desc">Calculate your returns</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        The Project
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏖️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Smart Resort Vision</span>
+                                    <span class="nav-premium-dropdown-item-desc">Property gallery & plans</span>
+                                </span>
+                            </a>
+                            <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌅</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span>
+                                    <span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family of Resorts</span>
+                                </span>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Strategic Positioning</span>
+                                    <span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span>
+                                </span>
+                            </a>
+                            <a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Protection Animation</span>
+                                    <span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span>
+                                </span>
+                            </a>
+                            <a href="yucatan-boom.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🚀</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Yucatan Boom</span>
+                                    <span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span>
+                                </span>
+                            </a>
+                            <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Wellness Differentiation</span>
+                                    <span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span>
+                                </span>
+                            </a>
+                            <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🍽️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Culinary Excellence</span>
+                                    <span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span>
+                                </span>
+                            </a>
+                            <a href="technology.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">⚡</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Technology & Blockchain</span>
+                                    <span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span>
+                                </span>
+                            </a>
+                            <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏨</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">LHW Partnership</span>
+                                    <span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span>
+                                </span>
+                            </a>
+                            <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌿</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Sustainability</span>
+                                    <span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Company
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">👥</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Innovation Council</span>
+                                    <span class="nav-premium-dropdown-item-desc">Meet our team</span>
+                                </span>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📧</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Contact</span>
+                                    <span class="nav-premium-dropdown-item-desc">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <a href="#" class="nav-premium-cta">Connect Wallet</a>
+            
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="tokenomics-hero">
+        <div class="container">
+            <span class="crypto-badge" style="margin-bottom: 20px; display: inline-block;">⚡ Built on Solana • 1,000,000 Total Token Supply</span>
+            <h1>MAYA Tokenomics & <span style="color: #B8860B;">Funding Structure</span></h1>
+            <p class="hero-subtitle">All 1,000,000 MAYA tokens are backed by $100M+ trophy beachfront real estate on Solana blockchain</p>
+        </div>
+    </section>
+
+    <!-- Token Supply Section -->
+    <section class="token-supply-section">
+        <div class="container">
+            <div class="supply-header">
+                <h2>Total Supply: <span class="animate-counter" data-target="1000000" data-prefix="" data-suffix=" MAYA Tokens">0</span></h2>
+                <div class="token-price-highlight">Token Price: <span class="animate-counter" data-target="2000" data-prefix="$" data-suffix="">0</span></div>
+            </div>
+
+            <div class="tokenomics-grid">
+                <!-- Token Distribution Chart -->
+                <div class="distribution-card">
+                    <h3>Token Distribution</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="distributionChart"></canvas>
+                    </div>
+                    <div class="distribution-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #17a2b8;"></span>
+                            <div class="legend-text">
+                                <div>Public Offering: <span class="animate-counter" data-target="11.2" data-prefix="" data-suffix="%">0</span></div>
+                                <div class="legend-tokens">(<span class="animate-counter" data-target="112000" data-prefix="" data-suffix=" tokens">0</span>)</div>
+                            </div>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #B8860B;"></span>
+                            <div class="legend-text">
+                                <div>Reserve: <span class="animate-counter" data-target="88.8" data-prefix="" data-suffix="%">0</span></div>
+                                <div class="legend-tokens">(<span class="animate-counter" data-target="888000" data-prefix="" data-suffix=" tokens">0</span>)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Value Proposition Box -->
+                    <div class="distribution-value-box">
+                        <h4 class="value-box-title">Why This Distribution Matters</h4>
+                        <div class="value-box-item">
+                            <span class="value-icon">🔒</span>
+                            <p>88.8% Reserve ensures long-term stability and sustainable growth</p>
+                        </div>
+                        <div class="value-box-item">
+                            <span class="value-icon">🛡️</span>
+                            <p>Controlled release prevents market dilution and maintains token value</p>
+                        </div>
+                        <div class="value-box-item">
+                            <span class="value-icon">💎</span>
+                            <p>Protects investor value through strategic token supply management</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="metrics-card">
+                    <div class="metrics-header">
+                        <h3>Key Token Metrics</h3>
+                        <div class="token-badge-display">
+                            <div class="maya-token-badge">
+                                <div class="token-badge-bg"></div>
+                                <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MAYA Token" class="token-logo">
+                                <div class="token-badge-text">MAYA</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Total Supply:</span>
+                        <span class="metric-value animate-counter" data-target="1000000" data-prefix="" data-suffix=" MAYA">0</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Token Price:</span>
+                        <span class="metric-value animate-counter" data-target="2000" data-prefix="$" data-suffix="">0</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Market Cap:</span>
+                        <span class="metric-value animate-counter" data-target="2" data-prefix="$" data-suffix=" Billion">0</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Asset Backing:</span>
+                        <span class="metric-value animate-counter" data-target="100" data-prefix="$" data-suffix="M+ Beachfront">0</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Property Size:</span>
+                        <span class="metric-value animate-counter" data-target="15" data-prefix="" data-suffix=" Acres">0</span>
+                    </div>
+                    <div class="metric-row" style="background: linear-gradient(135deg, rgba(20, 241, 149, 0.15), rgba(20, 241, 149, 0.08)); border-left: 3px solid #14F195; padding: 1rem;">
+                        <span class="metric-label" style="color: #0A0A0A; font-weight: 600;">Blockchain:</span>
+                        <span class="metric-value solana-badge" style="color: #0A0A0A !important; font-size: 1.5rem !important; font-weight: 700 !important; opacity: 1 !important; visibility: visible !important; display: inline-block !important;">SOLANA ⚡</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Land Appreciation:</span>
+                        <span class="metric-value animate-counter" data-target="15" data-prefix="" data-suffix="% Annual">0</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Projected Returns:</span>
+                        <span class="metric-value animate-counter" data-target="18" data-prefix="" data-suffix="-20% Annual">0</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Daily EcoResort Transaction:<br><span style="font-size: 0.75rem; color: rgba(0, 0, 0, 0.5); font-weight: 400; text-transform: none; letter-spacing: 0;">(Supports Secondary Market)</span></span>
+                        <span class="metric-value animate-counter" data-target="50000" data-prefix="$" data-suffix="+">0</span>
+                    </div>
+                    
+                    <!-- Value Proposition Box -->
+                    <div class="metrics-value-box">
+                        <h4 class="value-box-title">Why Invest in MAYA?</h4>
+                        <div class="value-box-item">
+                            <span class="value-icon">💰</span>
+                            <p>Real asset backing with $100M+ trophy beachfront property</p>
+                        </div>
+                        <div class="value-box-item">
+                            <span class="value-icon">📈</span>
+                            <p>Consistent returns with 18-20% projected annual growth</p>
+                        </div>
+                        <div class="value-box-item">
+                            <span class="value-icon">🌴</span>
+                            <p>Prime location value in Isla Aguada with LHW partnership</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Secondary Market Flow -->
+    <section class="market-flow-section">
+        <div class="container">
+            <h2>Enhanced Secondary Market Flow</h2>
+            <div class="flow-diagram">
+                <div class="flow-step">
+                    <div class="step-icon">📋</div>
+                    <h3>Token Listing</h3>
+                    <p>MAYA tokens listed on exchanges and blockchain platforms</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-icon">💰</div>
+                    <h3>Investor Purchase</h3>
+                    <p>Investors buy tokens at $2,000 each with full transparency</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-icon">🏖️</div>
+                    <h3>Token EcoResorts Use</h3>
+                    <p>Daily volume: $50,000 in resort ecosystem transactions</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-icon">♻️</div>
+                    <h3>Token Recycling</h3>
+                    <p>Tokens recycled back to market, maintaining liquidity</p>
+                </div>
+            </div>
+            
+            <!-- Continuous Ecosystem Cycle Card -->
+            <div class="ecosystem-cycle-card">
+                <h3 class="cycle-title">Continuous Ecosystem Cycle</h3>
+                <p class="cycle-subtitle">How hotel guest spending drives secondary market liquidity</p>
+                
+                <div class="cycle-flow">
+                    <div class="cycle-step">
+                        <div class="cycle-step-number">1</div>
+                        <div class="cycle-step-content">
+                            <h4>Investor Purchases Token</h4>
+                            <p>Investor buys MAYA token at $2,000 on secondary market</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cycle-arrow">→</div>
+                    
+                    <div class="cycle-step">
+                        <div class="cycle-step-number">2</div>
+                        <div class="cycle-step-content">
+                            <h4>Guest Stays at Resort</h4>
+                            <p>Hotel guest spends token for accommodations, dining, spa services</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cycle-arrow">→</div>
+                    
+                    <div class="cycle-step">
+                        <div class="cycle-step-number">3</div>
+                        <div class="cycle-step-content">
+                            <h4>Resort Collects Token</h4>
+                            <p>MayaRoyale receives token as payment (~$50,000 daily volume)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cycle-arrow">→</div>
+                    
+                    <div class="cycle-step">
+                        <div class="cycle-step-number">4</div>
+                        <div class="cycle-step-content">
+                            <h4>Token Returns to Market</h4>
+                            <p>Token recycled to secondary market, creating continuous liquidity</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cycle-loop">
+                        <div class="cycle-loop-arrow">↰</div>
+                        <p class="cycle-loop-text">Cycle Repeats<br>$50,000+ Daily</p>
+                    </div>
+                </div>
+                
+                <div class="cycle-benefits">
+                    <div class="cycle-benefit">
+                        <span class="benefit-icon">♻️</span>
+                        <p><strong>Continuous Liquidity:</strong> Daily token recycling maintains market depth</p>
+                    </div>
+                    <div class="cycle-benefit">
+                        <span class="benefit-icon">💎</span>
+                        <p><strong>Real Utility:</strong> Tokens deliver tangible value within the resort ecosystem and expand to local vendors, restaurants, and businesses</p>
+                    </div>
+                    <div class="cycle-benefit">
+                        <span class="benefit-icon">📈</span>
+                        <p><strong>Price Support:</strong> $50,000+ daily volume supports token value</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Economy Integration -->
+    <section class="local-economy-section">
+        <div class="container">
+            <h2>Beyond the Resort: <span style="color: #B8860B;">Local Economy Integration</span></h2>
+            <p class="section-subtitle">MAYA tokens expand beyond resort walls, creating a vibrant community currency ecosystem</p>
+            
+            <div class="local-economy-card">
+                <div class="economy-header">
+                    <div class="economy-icon">🌍</div>
+                    <h3>Token Utility in Local Community</h3>
+                    <p>Building a seamless payment network across Isla Aguada and surrounding areas</p>
+                </div>
+
+                <div class="economy-grid">
+                    <!-- Local Restaurants -->
+                    <div class="economy-item">
+                        <div class="economy-item-icon">🍽️</div>
+                        <h4>Local Restaurants</h4>
+                        <p>Authentic Mexican cuisine, beachfront dining, seafood markets</p>
+                        <div class="economy-badge">Dining & Food</div>
+                    </div>
+
+                    <!-- Shops & Retail -->
+                    <div class="economy-item">
+                        <div class="economy-item-icon">🛍️</div>
+                        <h4>Shops & Retail</h4>
+                        <p>Local artisan crafts, boutiques, souvenir shops, markets</p>
+                        <div class="economy-badge">Shopping</div>
+                    </div>
+
+                    <!-- Transportation -->
+                    <div class="economy-item">
+                        <div class="economy-item-icon">🚖</div>
+                        <h4>Transportation</h4>
+                        <p>Taxis, water taxis, boat rentals, tour operators</p>
+                        <div class="economy-badge">Transport</div>
+                    </div>
+
+                    <!-- Tours & Activities -->
+                    <div class="economy-item">
+                        <div class="economy-item-icon">🏄</div>
+                        <h4>Tours & Activities</h4>
+                        <p>Fishing charters, eco-tours, cultural experiences, water sports</p>
+                        <div class="economy-badge">Entertainment</div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="economy-item">
+                        <div class="economy-item-icon">💇</div>
+                        <h4>Local Services</h4>
+                        <p>Salons, spas, wellness centers, photography, guides</p>
+                        <div class="economy-badge">Services</div>
+                    </div>
+
+                    <!-- Accommodations -->
+                    <div class="economy-item">
+                        <div class="economy-item-icon">🏨</div>
+                        <h4>Partner Hotels</h4>
+                        <p>Local lodging, vacation rentals, partner accommodations</p>
+                        <div class="economy-badge">Lodging</div>
+                    </div>
+                </div>
+
+                <!-- Value Proposition -->
+                <div class="economy-value-box">
+                    <div class="economy-value-row">
+                        <div class="economy-value-item">
+                            <span class="economy-value-icon">🔄</span>
+                            <div>
+                                <h5>Circular Economy</h5>
+                                <p>Token circulation creates value for entire community</p>
+                            </div>
+                        </div>
+                        <div class="economy-value-item">
+                            <span class="economy-value-icon">📱</span>
+                            <div>
+                                <h5>Seamless Payments</h5>
+                                <p>Easy digital transactions without currency exchange</p>
+                            </div>
+                        </div>
+                        <div class="economy-value-item">
+                            <span class="economy-value-icon">💰</span>
+                            <div>
+                                <h5>Economic Growth</h5>
+                                <p>Supporting local businesses and community prosperity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adoption Roadmap -->
+                <div class="adoption-timeline">
+                    <h4>Network Expansion Roadmap</h4>
+                    <div class="timeline-steps">
+                        <div class="timeline-step">
+                            <div class="timeline-number">1</div>
+                            <div class="timeline-content">
+                                <h5>Phase 1: Resort Foundation</h5>
+                                <p>Establish token utility within MayaRoyale resort ecosystem</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-number">2</div>
+                            <div class="timeline-content">
+                                <h5>Phase 2: Strategic Partnerships</h5>
+                                <p>Partner with premium local restaurants and tour operators</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-number">3</div>
+                            <div class="timeline-content">
+                                <h5>Phase 3: Community Adoption</h5>
+                                <p>Expand to retail shops, services, and transportation providers</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-number">4</div>
+                            <div class="timeline-content">
+                                <h5>Phase 4: Regional Network</h5>
+                                <p>Scale acceptance across Campeche region and coastal communities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Series -->
+    <section class="investment-tiers-section">
+        <div class="container">
+            <h2>Funding Series</h2>
+            <p class="tier-subtitle">Strategic capital raising for MayaRoyale development</p>
+            
+            <div class="tiers-container">
+                <!-- Series A -->
+                <div class="tier-card tier-featured">
+                    <div class="tier-ribbon">CURRENT ROUND</div>
+                    <div class="tier-badge">SERIES A</div>
+                    <h3 class="tier-name">Early Stage Capital</h3>
+                    <div class="tier-price">$10M</div>
+                    <div class="tier-tokens">10% Equity</div>
+                    <ul class="tier-features">
+                        <li>✓ Opco + Propco + Token</li>
+                        <li>✓ Land acquisition & development</li>
+                        <li>✓ Pre-development planning</li>
+                        <li>✓ Environmental studies</li>
+                        <li>✓ Legal & regulatory approvals</li>
+                        <li>✓ Initial infrastructure</li>
+                        <li>✓ Board seat consideration</li>
+                    </ul>
+                    <a href="connect-wallet.html" class="tier-btn tier-btn-featured">Join Series A</a>
+                </div>
+
+                <!-- Series B -->
+                <div class="tier-card">
+                    <div class="tier-badge">SERIES B</div>
+                    <h3 class="tier-name">Growth Capital</h3>
+                    <div class="tier-price">$20M</div>
+                    <div class="tier-tokens">15% Equity</div>
+                    <ul class="tier-features">
+                        <li>✓ Opco + Token</li>
+                        <li>✓ Resort construction phase 1</li>
+                        <li>✓ Infrastructure development</li>
+                        <li>✓ LHW partnership activation</li>
+                        <li>✓ Marketing & branding</li>
+                        <li>✓ Team expansion</li>
+                        <li>✓ Token platform development</li>
+                        <li>✓ Board seat & strategic input</li>
+                    </ul>
+                    <a href="connect-wallet.html" class="tier-btn">Series B Details</a>
+                </div>
+
+                <!-- Series C / Mezzanine -->
+                <div class="tier-card">
+                    <div class="tier-badge">SERIES C</div>
+                    <h3 class="tier-name">Mezzanine Debt</h3>
+                    <div class="tier-price">$20M</div>
+                    <div class="tier-tokens">Senior Secured Debt</div>
+                    <ul class="tier-features">
+                        <li>✓ Resort construction completion</li>
+                        <li>✓ Full property buildout</li>
+                        <li>✓ Operational infrastructure</li>
+                        <li>✓ Senior secured debt position</li>
+                        <li>✓ 12% annual interest rate</li>
+                        <li>✓ 5-year maturity</li>
+                        <li>✓ Property collateral</li>
+                    </ul>
+                    <a href="connect-wallet.html" class="tier-btn">Mezzanine Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Token Utility -->
+    <section class="token-utility-section">
+        <div class="container">
+            <h2>Token Utility & Benefits</h2>
+            <div class="utility-grid">
+                <div class="utility-item">
+                    <div class="utility-icon">🏖️</div>
+                    <h3>Resort Services</h3>
+                    <p><strong>$50,000+ Daily Volume</strong></p>
+                    <p>Use tokens for accommodations, dining, spa, and activities at MayaRoyale facilities.</p>
+                    <ul>
+                        <li>✓ Room bookings</li>
+                        <li>✓ Restaurants & bars</li>
+                        <li>✓ Spa services</li>
+                        <li>✓ Water sports</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item">
+                    <div class="utility-icon">📈</div>
+                    <h3>Land Appreciation</h3>
+                    <p><strong>15% Annual Growth</strong></p>
+                    <p>Benefit from land value appreciation in prime Isla Aguada beachfront location.</p>
+                    <ul>
+                        <li>✓ 15 acres beachfront</li>
+                        <li>✓ $100M+ valuation</li>
+                        <li>✓ Quarterly appraisals</li>
+                        <li>✓ Trophy property</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item">
+                    <div class="utility-icon">💱</div>
+                    <h3>Secondary Trading</h3>
+                    <p><strong>$2,000 per Token</strong></p>
+                    <p>Trade tokens 24/7 on blockchain exchanges with instant liquidity.</p>
+                    <ul>
+                        <li>✓ 24/7 trading</li>
+                        <li>✓ Instant settlement</li>
+                        <li>✓ Global access</li>
+                        <li>✓ Transparent pricing</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item">
+                    <div class="utility-icon">🗳️</div>
+                    <h3>Governance Rights</h3>
+                    <p><strong>Series B & C Investors</strong></p>
+                    <p>Vote on development plans, amenities, policies, and partnerships.</p>
+                    <ul>
+                        <li>✓ Development voting</li>
+                        <li>✓ Amenity decisions</li>
+                        <li>✓ Partnership approval</li>
+                        <li>✓ Budget input</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item">
+                    <div class="utility-icon">💰</div>
+                    <h3>Revenue Sharing</h3>
+                    <p><strong>18-20% Annual Returns</strong></p>
+                    <p>Participate in resort revenue from bookings, F&B, spa, and events.</p>
+                    <ul>
+                        <li>✓ Room revenue (40%)</li>
+                        <li>✓ F&B operations (25%)</li>
+                        <li>✓ Spa & activities (20%)</li>
+                        <li>✓ Events (15%)</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item">
+                    <div class="utility-icon">🎁</div>
+                    <h3>VIP Perks</h3>
+                    <p><strong>10-20% Discounts</strong></p>
+                    <p>Exclusive access to private events, priority reservations, and concierge.</p>
+                    <ul>
+                        <li>✓ Private events</li>
+                        <li>✓ Priority booking</li>
+                        <li>✓ Resort discounts</li>
+                        <li>✓ Concierge services</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item">
+                    <div class="utility-icon">🌴</div>
+                    <h3>LHW Partnership</h3>
+                    <p><strong>Global Luxury Network</strong></p>
+                    <p>Access Leading Hotels of the World management and 400+ properties.</p>
+                    <ul>
+                        <li>✓ LHW brand prestige</li>
+                        <li>✓ Global marketing</li>
+                        <li>✓ Quality standards</li>
+                        <li>✓ Network access</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item">
+                    <div class="utility-icon">🔒</div>
+                    <h3>Blockchain Security</h3>
+                    <p><strong>Smart Contract Protected</strong></p>
+                    <p>Audited smart contracts with transparent records and property appraisals.</p>
+                    <ul>
+                        <li>✓ Audited contracts</li>
+                        <li>✓ Immutable records</li>
+                        <li>✓ Quarterly appraisals</li>
+                        <li>✓ Multi-sig security</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item">
+                    <div class="utility-icon">♻️</div>
+                    <h3>Token Recycling</h3>
+                    <p><strong>$50K Daily Volume</strong></p>
+                    <p>Automatic recycling maintains liquidity and perpetual utility value.</p>
+                    <ul>
+                        <li>✓ Auto recycling</li>
+                        <li>✓ Liquidity pool</li>
+                        <li>✓ High velocity</li>
+                        <li>✓ Perpetual cycle</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blockchain Technology Section -->
+    <section class="token-utility-section" style="background: linear-gradient(135deg, rgba(20, 241, 149, 0.05), rgba(20, 241, 149, 0.02));">
+        <div class="container">
+            <h2>Built on <span style="color: #14F195;">Solana</span> Blockchain</h2>
+            <p class="tier-subtitle">High-performance blockchain technology powering MAYA tokens</p>
+            
+            <div class="utility-grid">
+                <div class="utility-item" style="border-color: rgba(20, 241, 149, 0.2);">
+                    <div class="utility-icon" style="background: linear-gradient(135deg, rgba(20, 241, 149, 0.15), rgba(20, 241, 149, 0.05));">⚡</div>
+                    <h3>Ultra-Fast Transactions</h3>
+                    <p><strong>400ms Block Time</strong></p>
+                    <p>Solana processes up to 65,000 transactions per second with sub-second finality.</p>
+                    <ul>
+                        <li>✓ Instant settlements</li>
+                        <li>✓ Real-time trading</li>
+                        <li>✓ Seamless experience</li>
+                        <li>✓ No delays</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item" style="border-color: rgba(20, 241, 149, 0.2);">
+                    <div class="utility-icon" style="background: linear-gradient(135deg, rgba(20, 241, 149, 0.15), rgba(20, 241, 149, 0.05));">💰</div>
+                    <h3>Low Transaction Costs</h3>
+                    <p><strong>$0.00025 Average Fee</strong></p>
+                    <p>Minimal fees ensure maximum value for all token transactions and transfers.</p>
+                    <ul>
+                        <li>✓ Negligible costs</li>
+                        <li>✓ No gas wars</li>
+                        <li>✓ Predictable fees</li>
+                        <li>✓ Cost-effective</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item" style="border-color: rgba(20, 241, 149, 0.2);">
+                    <div class="utility-icon" style="background: linear-gradient(135deg, rgba(20, 241, 149, 0.15), rgba(20, 241, 149, 0.05));">🌍</div>
+                    <h3>Global Accessibility</h3>
+                    <p><strong>Multi-Chain Ready</strong></p>
+                    <p>Built on Solana with plans for multi-chain deployment for maximum reach.</p>
+                    <ul>
+                        <li>✓ 24/7 global trading</li>
+                        <li>✓ Cross-chain bridges</li>
+                        <li>✓ Major exchange listings</li>
+                        <li>✓ Wide liquidity</li>
+                    </ul>
+                </div>
+                
+                <div class="utility-item" style="border-color: rgba(20, 241, 149, 0.2);">
+                    <div class="utility-icon" style="background: linear-gradient(135deg, rgba(20, 241, 149, 0.15), rgba(20, 241, 149, 0.05));">🔒</div>
+                    <h3>Enterprise Security</h3>
+                    <p><strong>Battle-Tested Network</strong></p>
+                    <p>Solana's proven security infrastructure protects all MAYA token transactions.</p>
+                    <ul>
+                        <li>✓ Audited smart contracts</li>
+                        <li>✓ Proof of History</li>
+                        <li>✓ Validator network</li>
+                        <li>✓ Transparent blockchain</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="distribution-value-box" style="margin-top: 3rem; background: linear-gradient(135deg, rgba(20, 241, 149, 0.1), rgba(20, 241, 149, 0.03)); border-color: rgba(20, 241, 149, 0.3);">
+                <h4 class="value-box-title" style="color: #14F195;">Why Solana for Real Estate Tokenization?</h4>
+                <div class="value-box-item">
+                    <span class="value-icon">🚀</span>
+                    <p><strong>Scalability:</strong> Handle millions of investors and transactions without network congestion</p>
+                </div>
+                <div class="value-box-item">
+                    <span class="value-icon">💎</span>
+                    <p><strong>Institutional Grade:</strong> Trusted by major financial institutions and enterprises worldwide</p>
+                </div>
+                <div class="value-box-item">
+                    <span class="value-icon">🌐</span>
+                    <p><strong>Ecosystem:</strong> Access to DEXs, wallets, and exchanges with massive user base</p>
+                </div>
+                <div class="value-box-item">
+                    <span class="value-icon">⚡</span>
+                    <p><strong>Future-Proof:</strong> Constantly evolving technology with active development and community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Disclosure -->
+    <section class="risk-disclosure-section">
+        <div class="container">
+            <div class="disclosure-box">
+                <h3>⚠️ Investment Risk Disclosure</h3>
+                <p>Cryptocurrency and tokenized real estate investments involve significant risks. Past performance does not guarantee future results. Land appreciation projections are estimates based on market trends and are not guaranteed. The value of MAYA tokens may fluctuate. Investors should conduct thorough due diligence and consult with financial advisors before investing. This is not financial advice.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Regulatory Disclosure -->
+    <section class="regulatory-disclosure">
+        <div class="container">
+            <div class="disclosure-content">
+                <h3 class="disclosure-title">⚖️ Regulation D 506(c) & Regulation S Offering</h3>
+                <p class="disclosure-text" style="font-weight: 600; font-size: 1.05rem; margin-bottom: 1rem;">
+                    This offering is being conducted pursuant to Rule 506(c) of Regulation D and Regulation S under the U.S. Securities Act of 1933.
+                </p>
+                <p class="disclosure-text">
+                    MayaRoyale securities are offered pursuant to an exemption from registration under Regulation D, Rule 506(c) of the Securities Act of 1933, as amended. This offering is available only to accredited investors as defined in Rule 501 of Regulation D. Investors must meet specific income or net worth requirements and provide verification of accredited investor status before participating. 
+                </p>
+                <p class="disclosure-text">
+                    <strong>Investment involves risk.</strong> Token values may fluctuate significantly. There is no guarantee of returns, and investors may lose some or all of their investment. Token utility and benefits are subject to project completion and market conditions.
+                </p>
+                <p class="disclosure-subtext">
+                    Securities offered through MayaRoyale are not registered with the SEC and involve a high degree of risk. Please read all offering materials carefully.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="gallery.html">Smart Resort Vision</a></li>
+                        <li><a href="connect-wallet.html">Connect Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#disclaimer">Risk Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+        }
+        
+        // Number counting animation (like Ondo Finance)
+        function animateCounter(element, target, duration = 2000) {
+            const prefix = element.getAttribute('data-prefix') || '';
+            const suffix = element.getAttribute('data-suffix') || '';
+            const start = 0;
+            const increment = target / (duration / 16); // 60fps
+            let current = start;
+            
+            // Check if target is a decimal
+            const isDecimal = target % 1 !== 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                // Format number with commas and handle decimals
+                let formattedNumber;
+                if (isDecimal) {
+                    formattedNumber = current.toFixed(1); // Keep one decimal place
+                } else {
+                    formattedNumber = Math.floor(current).toLocaleString('en-US');
+                }
+                
+                element.textContent = prefix + formattedNumber + suffix;
+            }, 16);
+        }
+        
+        // Intersection Observer for stats animation
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    const target = parseFloat(entry.target.getAttribute('data-target'));
+                    animateCounter(entry.target, target);
+                }
+            });
+        }, observerOptions);
+        
+        // Distribution Chart with Animation
+        const ctx = document.getElementById('distributionChart');
+        if (ctx) {
+            // Variables for animated percentages
+            let currentPublicPercent = 0;
+            let currentReservePercent = 0;
+            const targetPublicPercent = 11.2;
+            const targetReservePercent = 88.8;
+            let animationStarted = false;
+            
+            const chartData = {
+                labels: ['Public Offering', 'Reserve'],
+                datasets: [{
+                    data: [11.2, 88.8],
+                    backgroundColor: ['#17a2b8', '#B8860B'],
+                    borderWidth: 3,
+                    borderColor: '#1A1A1A'
+                }]
+            };
+            
+            const config = {
+                type: 'doughnut',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                            titleColor: '#B8860B',
+                            bodyColor: '#FFFFFF',
+                            borderColor: '#B8860B',
+                            borderWidth: 1,
+                            padding: 12,
+                            displayColors: true,
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed;
+                                    const tokens = context.dataIndex === 0 ? '112,000' : '888,000';
+                                    return [
+                                        label + ': ' + value + '%',
+                                        tokens + ' MAYA Tokens',
+                                        context.dataIndex === 0 ? 'Available for Public' : 'Ecosystem Reserve'
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true,
+                        duration: 2000,
+                        easing: 'easeInOutQuart',
+                        onComplete: function() {
+                            if (!animationStarted) {
+                                animationStarted = true;
+                                animatePercentages();
+                            }
+                        }
+                    }
+                },
+                plugins: [{
+                    id: 'centerText',
+                    beforeDraw: function(chart) {
+                        const width = chart.width;
+                        const height = chart.height;
+                        const ctx = chart.ctx;
+                        ctx.restore();
+                        
+                        // Draw center text
+                        ctx.font = 'bold 28px Inter';
+                        ctx.fillStyle = '#000000';
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'middle';
+                        ctx.fillText('1M', width / 2, height / 2 - 15);
+                        
+                        ctx.font = '14px Inter';
+                        ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
+                        ctx.fillText('Total Supply', width / 2, height / 2 + 10);
+                        
+                        ctx.save();
+                    }
+                }, {
+                    id: 'percentageLabels',
+                    afterDatasetDraw: function(chart) {
+                        const ctx = chart.ctx;
+                        const meta = chart.getDatasetMeta(0);
+                        
+                        meta.data.forEach((arc, index) => {
+                            const centerX = arc.x;
+                            const centerY = arc.y;
+                            const radius = (arc.outerRadius + arc.innerRadius) / 2;
+                            const startAngle = arc.startAngle;
+                            const endAngle = arc.endAngle;
+                            const midAngle = (startAngle + endAngle) / 2;
+                            
+                            // Calculate position for label
+                            const x = centerX + Math.cos(midAngle) * radius;
+                            const y = centerY + Math.sin(midAngle) * radius;
+                            
+                            // Draw percentage
+                            ctx.save();
+                            ctx.font = 'bold 20px Inter';
+                            ctx.fillStyle = '#FFFFFF';
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+                            ctx.shadowColor = 'rgba(0, 0, 0, 0.8)';
+                            ctx.shadowBlur = 4;
+                            ctx.shadowOffsetX = 0;
+                            ctx.shadowOffsetY = 2;
+                            
+                            const percent = index === 0 ? currentPublicPercent : currentReservePercent;
+                            ctx.fillText(percent.toFixed(1) + '%', x, y - 8);
+                            
+                            // Draw token count
+                            ctx.font = '12px Inter';
+                            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                            const tokens = index === 0 ? 
+                                Math.floor((currentPublicPercent / 100) * 1000000).toLocaleString() :
+                                Math.floor((currentReservePercent / 100) * 1000000).toLocaleString();
+                            ctx.fillText(tokens + ' tokens', x, y + 8);
+                            
+                            ctx.restore();
+                        });
+                    }
+                }]
+            };
+            
+            const chart = new Chart(ctx.getContext('2d'), config);
+            
+            // Animate percentages on chart segments
+            function animatePercentages() {
+                const duration = 2000;
+                const startTime = Date.now();
+                
+                function updatePercentages() {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Easing function
+                    const eased = progress < 0.5 
+                        ? 2 * progress * progress 
+                        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+                    
+                    currentPublicPercent = targetPublicPercent * eased;
+                    currentReservePercent = targetReservePercent * eased;
+                    
+                    chart.update('none'); // Update without animation
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updatePercentages);
+                    }
+                }
+                
+                updatePercentages();
+            }
+        }
+        
+        // Observe all counter elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.animate-counter');
+            counters.forEach(counter => observer.observe(counter));
+        });
+    </script>
+    <script src="js/wallet.js"></script>
+    <!-- SIMPLE MOBILE NAV -->
+    <script src="js/mobile-nav-simple.js"></script>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Yucatan Boom | MayaRoyale - $100B+ Investment Validates the Market</title>
+    <meta name="description" content="From jungle to $100B+ tourism empire in 50 years. Massive government and private investment proves the Yucatan Peninsula boom. Isla Aguada: The ONLY hurricane-free location left to capture this explosive growth.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        /* Yucatan Boom Page - Aggressive Fintech Style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FFFFFF;
+            color: #0A0A0A;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Hero Section */
+        .boom-hero {
+            background: linear-gradient(135deg, #0A0F1E 0%, #1A1F35 100%);
+            padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .boom-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(34, 211, 238, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .boom-hero .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .boom-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
+            color: #FFFFFF;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 24px rgba(34, 211, 238, 0.3);
+            animation: pulse-badge 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-badge {
+            0%, 100% { box-shadow: 0 8px 24px rgba(34, 211, 238, 0.3); }
+            50% { box-shadow: 0 12px 32px rgba(34, 211, 238, 0.5); }
+        }
+        
+        .boom-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .boom-hero h1 .highlight {
+            background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .boom-hero .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+        
+        .boom-hero .hero-cta {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #22D3EE;
+            margin-top: 2rem;
+        }
+        
+        /* Hero Stats */
+        .hero-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .hero-stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-stat-card:hover {
+            transform: translateY(-8px);
+            border-color: #22D3EE;
+            box-shadow: 0 16px 40px rgba(34, 211, 238, 0.2);
+        }
+        
+        .hero-stat-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #22D3EE;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        
+        .hero-stat-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Section Styles */
+        .boom-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .boom-section.dark {
+            background: linear-gradient(180deg, #F8F9FA 0%, #FFFFFF 100%);
+        }
+        
+        .boom-section.light {
+            background: #FFFFFF;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
+            color: #FFFFFF;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #0A0A0A;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-header .aggressive-cta {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #06B6D4;
+            margin-top: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #4A4A4A;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        /* Timeline Section */
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-left: 80px;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 39px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #22D3EE 0%, #06B6D4 100%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 40px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -41px;
+            top: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #FFFFFF;
+            box-shadow: 0 8px 24px rgba(34, 211, 238, 0.4);
+            border: 4px solid #FFFFFF;
+            z-index: 2;
+        }
+        
+        .timeline-content {
+            background: #FFFFFF;
+            border: 2px solid #E5E7EB;
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-content:hover {
+            transform: translateX(8px);
+            border-color: #22D3EE;
+            box-shadow: 0 12px 32px rgba(34, 211, 238, 0.2);
+        }
+        
+        .timeline-year {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #22D3EE;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #0A0A0A;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: #6A6A6A;
+            line-height: 1.6;
+        }
+        
+        /* Investment Cards Grid */
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .investment-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+            border: 2px solid #E5E7EB;
+            border-radius: 24px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .investment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, #22D3EE 0%, #06B6D4 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .investment-card:hover {
+            transform: translateY(-8px);
+            border-color: #22D3EE;
+            box-shadow: 0 16px 48px rgba(34, 211, 238, 0.2);
+        }
+        
+        .investment-card:hover::before {
+            opacity: 1;
+        }
+        
+        .investment-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(34, 211, 238, 0.2);
+        }
+        
+        .investment-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0A0A0A;
+            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .investment-amount {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #22D3EE;
+            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .investment-desc {
+            font-size: 1.05rem;
+            color: #6A6A6A;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .investment-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .investment-list li {
+            font-size: 1rem;
+            color: #2A2A2A;
+            line-height: 2;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .investment-list li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            color: #22D3EE;
+            font-weight: 700;
+        }
+        
+        /* Chart Container */
+        .chart-container {
+            background: #FFFFFF;
+            border: 2px solid #E5E7EB;
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 3rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+        
+        .chart-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0A0A0A;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Metrics Dashboard */
+        .metrics-dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+            border: 2px solid #E5E7EB;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-8px);
+            border-color: #22D3EE;
+            box-shadow: 0 16px 40px rgba(34, 211, 238, 0.2);
+        }
+        
+        .metric-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .metric-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #22D3EE;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        
+        .metric-label {
+            font-size: 1.1rem;
+            color: #4A4A4A;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .metric-change {
+            font-size: 0.95rem;
+            color: #10B981;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        
+        /* Punch Line Section */
+        .punchline-section {
+            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .punchline-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .punchline-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .punchline-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            margin-bottom: 2rem;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        
+        .punchline-subtitle {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+        
+        .punchline-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .punchline-stat {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .punchline-stat-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .punchline-stat-label {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+        }
+        
+        /* CTA Section */
+        .boom-cta {
+            background: linear-gradient(135deg, #0A0F1E 0%, #1A1F35 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .boom-cta h2 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .boom-cta p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .btn-cta {
+            padding: 1.5rem 3rem;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
+            color: #FFFFFF;
+            box-shadow: 0 8px 24px rgba(34, 211, 238, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(34, 211, 238, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #FFFFFF;
+            border: 2px solid #22D3EE;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(34, 211, 238, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .boom-hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero-stats-grid,
+            .investment-grid,
+            .metrics-dashboard {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .timeline-container {
+                padding-left: 60px;
+            }
+            
+            .timeline-container::before {
+                left: 29px;
+            }
+            
+            .timeline-dot {
+                left: -31px;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .timeline-item {
+                padding-left: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .boom-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats-grid,
+            .investment-grid,
+            .metrics-dashboard,
+            .punchline-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+        
+        /* CRITICAL MOBILE NAVIGATION FIXES */
+        @media (max-width: 968px) {
+            /* Fix logo visibility */
+            .nav-premium-brand {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                z-index: 1002 !important;
+            }
+            
+            .nav-premium-logo {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                height: 50px !important;
+                width: auto !important;
+                min-width: 130px !important;
+            }
+            
+            /* Fix Connect Wallet button - reduce size */
+            .nav-premium-cta {
+                padding: 0.4rem 0.75rem !important;
+                font-size: 0.75rem !important;
+                white-space: nowrap !important;
+                margin-left: auto !important;
+                margin-right: 0.5rem !important;
+            }
+            
+            /* Fix hamburger menu - ensure visible and clickable */
+            .nav-premium-mobile-toggle {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                width: 28px !important;
+                height: 24px !important;
+                z-index: 1003 !important;
+                position: relative !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+            }
+            
+            .nav-premium-mobile-toggle span {
+                display: block !important;
+                width: 100% !important;
+                height: 3px !important;
+                background: #0A0A0A !important;
+                border-radius: 2px !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            .nav-premium.nav-scrolled .nav-premium-mobile-toggle span {
+                background: #0A0A0A !important;
+            }
+            
+            /* Push hero content down to avoid overlay */
+            .boom-hero {
+                padding-top: 10rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium nav-scrolled">
+        <div class="nav-premium-container">
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo">
+                </a>
+            </div>
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">Platform<span class="nav-premium-arrow">▼</span></a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                    <span class="nav-premium-dropdown-item-desc">Track your portfolio</span>
+                                </span>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💎</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                    <span class="nav-premium-dropdown-item-desc">Token economics & funding</span>
+                                </span>
+                            </a>
+                            <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📈</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Financial Forecast</span>
+                                    <span class="nav-premium-dropdown-item-desc">7-year projections</span>
+                                </span>
+                            </a>
+                            <a href="investment-calculator.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🧮</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Investment Calculator</span>
+                                    <span class="nav-premium-dropdown-item-desc">Calculate your returns</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">The Project<span class="nav-premium-arrow">▼</span></a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏖️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Smart Resort Vision</span>
+                                    <span class="nav-premium-dropdown-item-desc">Property gallery & plans</span>
+                                </span>
+                            </a>
+                            <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌅</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span>
+                                    <span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family</span>
+                                </span>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Strategic Positioning</span>
+                                    <span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span>
+                                </span>
+                            </a>
+                            <a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Protection Animation</span>
+                                    <span class="nav-premium-dropdown-item-desc">Hurricane & sargassum shield</span>
+                                </span>
+                            </a>
+                            <a href="yucatan-boom.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🚀</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Yucatan Boom</span>
+                                    <span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span>
+                                </span>
+                            </a>
+                            <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Wellness Differentiation</span>
+                                    <span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span>
+                                </span>
+                            </a>
+                            <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🍽️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Culinary Excellence</span>
+                                    <span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span>
+                                </span>
+                            </a>
+                            <a href="technology.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">⚡</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Technology & Blockchain</span>
+                                    <span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span>
+                                </span>
+                            </a>
+                            <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏨</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">LHW Partnership</span>
+                                    <span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span>
+                                </span>
+                            </a>
+                            <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌿</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Sustainability</span>
+                                    <span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">Company<span class="nav-premium-arrow">▼</span></a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">👥</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Innovation Council</span>
+                                    <span class="nav-premium-dropdown-item-desc">Meet our team</span>
+                                </span>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📧</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Contact</span>
+                                    <span class="nav-premium-dropdown-item-desc">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="nav-premium-cta">Connect Wallet</a>
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Immediate menu activation script -->
+    <script>
+    (function() {
+        const toggle = document.getElementById('navPremiumMobileToggle');
+        const menu = document.getElementById('navPremiumMenu');
+        if (toggle && menu) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                menu.classList.toggle('active');
+                toggle.classList.toggle('active');
+            });
+            
+            // Mobile dropdown toggle
+            document.querySelectorAll('.nav-premium-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 968) {
+                        const link = item.querySelector('.nav-premium-link');
+                        const dropdown = item.querySelector('.nav-premium-dropdown');
+                        if (dropdown && (e.target === link || link.contains(e.target))) {
+                            e.preventDefault();
+                            item.classList.toggle('dropdown-open');
+                        }
+                    }
+                });
+            });
+        }
+    })();
+    </script>
+
+    <!-- Hero Section -->
+    <section class="boom-hero">
+        <div class="container">
+            <div class="boom-badge">🚀 REGIONAL MARKET VALIDATION</div>
+            <h1>From Jungle to <span class="highlight">$100B Empire</span><br>in 50 Years</h1>
+            <p class="hero-subtitle">
+                The Yucatan Peninsula transformed from dense jungle to the world's hottest tourism market.<br>
+                <strong>$30B+ government investment. $70B+ private capital. 32 million annual tourists.</strong><br>
+                Everyone knows the Yucatan is exploding. What they don't know: There's ONE hurricane-free location left.
+            </p>
+            <p class="hero-cta">Isla Aguada: The ONLY Protected Paradise to Capture This $100B Boom</p>
+            
+            <!-- Hero Stats Grid -->
+            <div class="hero-stats-grid">
+                <div class="hero-stat-card">
+                    <div class="hero-stat-value" data-target="100" data-prefix="$" data-suffix="B+">$0B+</div>
+                    <div class="hero-stat-label">Total Investment</div>
+                </div>
+                <div class="hero-stat-card">
+                    <div class="hero-stat-value" data-target="32" data-suffix="M+">0M+</div>
+                    <div class="hero-stat-label">Annual Tourists</div>
+                </div>
+                <div class="hero-stat-card">
+                    <div class="hero-stat-value" data-target="1500" data-suffix="+">0+</div>
+                    <div class="hero-stat-label">Hotels & Resorts</div>
+                </div>
+                <div class="hero-stat-card">
+                    <div class="hero-stat-value" data-target="50">0</div>
+                    <div class="hero-stat-label">Years of Growth</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="boom-section dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">📅 50-YEAR TRANSFORMATION</div>
+                <h2>From Jungle to Empire:<br>The Yucatan Explosion</h2>
+                <p class="section-subtitle">
+                    In 1970, the Yucatan Peninsula was dense jungle with fishing villages.<br>
+                    Today, it's a <strong>$52B tourism economy</strong> with world-class infrastructure and 32 million annual visitors.
+                </p>
+            </div>
+            
+            <div class="timeline-container">
+                <!-- 1974 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">🏝️</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1974</div>
+                        <div class="timeline-title">Cancún Founded</div>
+                        <div class="timeline-desc">
+                            Mexican government launches Cancún as planned resort city. Zone carved from jungle.
+                            First hotels open. Government bets on tourism as economic engine.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 1988 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">🏨</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1988</div>
+                        <div class="timeline-title">Major Hotel Brands Arrive</div>
+                        <div class="timeline-desc">
+                            Hilton, Marriott, Hyatt invest billions. Cancún becomes international destination.
+                            Tourism jumps from 1M to 3M+ annually. Private capital validates government vision.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 1999 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">🌴</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1999</div>
+                        <div class="timeline-title">Riviera Maya Emerges</div>
+                        <div class="timeline-desc">
+                            Playa del Carmen explodes. Tulum discovered by luxury travelers. Riviera Maya brand
+                            created. Coastline south of Cancún becomes premium destination. Real estate boom begins.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2005 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">💰</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2005</div>
+                        <div class="timeline-title">Private Capital Flood</div>
+                        <div class="timeline-desc">
+                            $20B+ private investment in hotels, resorts, real estate. Four Seasons, Ritz-Carlton,
+                            Rosewood enter market. Xcaret expands. Tourism reaches 15M+. Yucatan = proven market.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2015 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">🚀</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-title">Tulum Explosion</div>
+                        <div class="timeline-desc">
+                            Tulum becomes global phenomenon. Eco-luxury boom. Celebrities, influencers, investors
+                            flood in. Real estate prices 10x. Tourism hits 25M+. Yucatan = hottest market on Earth.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2023 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">🚄</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-title">Tren Maya + Infrastructure Mega-Projects</div>
+                        <div class="timeline-desc">
+                            <strong>$20B+ Tren Maya railway completed.</strong> New Tulum Airport opens ($800M+).
+                            Highway expansions. Port modernization. Government commits $30B+ total infrastructure.
+                            Tourism hits 32M+. GDP contribution: $52B.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2025+ -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">🛡️</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025+</div>
+                        <div class="timeline-title">Isla Aguada: The Last Protected Paradise</div>
+                        <div class="timeline-desc">
+                            Everyone invested billions in the Yucatan boom. <strong>But they ALL got hit by hurricanes.</strong>
+                            Isla Aguada: 50 years, ZERO hurricanes. The ONLY protected location left to capture
+                            the $100B+ Yucatan explosion. <strong>MayaRoyale positions you in the last safe paradise.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Investment Section -->
+    <section class="boom-section light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🏛️ GOVERNMENT COMMITMENT</div>
+                <h2>$30B+ Government Investment<br>Proves Long-Term Vision</h2>
+                <p class="section-subtitle">
+                    When a government invests $30 billion in infrastructure, they're telling you something:<br>
+                    <strong>This region is the future.</strong> Tren Maya, airports, highways, ports—world-class access is here.
+                </p>
+                <p class="aggressive-cta">If the government is betting $30B+, why aren't you?</p>
+            </div>
+            
+            <div class="investment-grid">
+                <!-- Tren Maya -->
+                <div class="investment-card">
+                    <div class="investment-icon">🚄</div>
+                    <div class="investment-title">Tren Maya Railway</div>
+                    <div class="investment-amount" data-target="20" data-prefix="$" data-suffix="B+">$20B+</div>
+                    <div class="investment-desc">
+                        1,525-kilometer railway connecting Cancún, Playa del Carmen, Tulum, Bacalar, and Palenque.
+                        Completed 2024. Game-changing infrastructure linking entire Yucatan Peninsula.
+                    </div>
+                    <ul class="investment-list">
+                        <li>15 stations across 5 states</li>
+                        <li>200 km/h high-speed trains</li>
+                        <li>Connects resorts to Mayan ruins</li>
+                        <li>Opens previously inaccessible areas</li>
+                    </ul>
+                </div>
+                
+                <!-- Airports -->
+                <div class="investment-card">
+                    <div class="investment-icon">✈️</div>
+                    <div class="investment-title">Airport Mega-Projects</div>
+                    <div class="investment-amount" data-target="3" data-prefix="$" data-suffix="B+">$3B+</div>
+                    <div class="investment-desc">
+                        New Tulum International Airport ($800M+, opened Dec 2023). Cancún Airport Terminal 4
+                        expansion ($1.5B+). Increased capacity: 40M+ passengers annually.
+                    </div>
+                    <ul class="investment-list">
+                        <li>Tulum Airport: 5M passengers/year capacity</li>
+                        <li>Cancún: World's 2nd busiest beach airport</li>
+                        <li>Direct flights from 50+ countries</li>
+                        <li>Reduced travel time to Riviera Maya</li>
+                    </ul>
+                </div>
+                
+                <!-- Highways -->
+                <div class="investment-card">
+                    <div class="investment-icon">🛣️</div>
+                    <div class="investment-title">Highway Infrastructure</div>
+                    <div class="investment-amount" data-target="5" data-prefix="$" data-suffix="B+">$5B+</div>
+                    <div class="investment-desc">
+                        Federal Highway 307 expansion (Cancún to Tulum). New toll roads. 4-lane highways
+                        connecting major tourist zones. Reduced drive times by 40%.
+                    </div>
+                    <ul class="investment-list">
+                        <li>Highway 307: 4-lane expansion complete</li>
+                        <li>New bypass roads reduce congestion</li>
+                        <li>Improved safety and travel times</li>
+                        <li>Opens development corridors</li>
+                    </ul>
+                </div>
+                
+                <!-- Ports -->
+                <div class="investment-card">
+                    <div class="investment-icon">⚓</div>
+                    <div class="investment-title">Port Modernization</div>
+                    <div class="investment-amount" data-target="2" data-prefix="$" data-suffix="B+">$2B+</div>
+                    <div class="investment-desc">
+                        Progreso Port expansion ($500M+). Cozumel cruise terminal upgrades. Mahahual port
+                        improvements. Increased cruise ship and cargo capacity.
+                    </div>
+                    <ul class="investment-list">
+                        <li>Cozumel: 4M+ cruise passengers/year</li>
+                        <li>Progreso: Expanded cargo operations</li>
+                        <li>Mahahual: Growing cruise destination</li>
+                        <li>Maritime access for supplies & tourists</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Investment Section -->
+    <section class="boom-section dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">💼 PRIVATE CAPITAL FLOOD</div>
+                <h2>$70B+ Private Investment<br>Validates the Market</h2>
+                <p class="section-subtitle">
+                    When Hilton, Marriott, Hyatt, Four Seasons, and Ritz-Carlton invest $70 billion,<br>
+                    they've done the due diligence. <strong>The Yucatan is the hottest market on Earth.</strong>
+                </p>
+                <p class="aggressive-cta">Smart money is already here. Are you?</p>
+            </div>
+            
+            <div class="investment-grid">
+                <!-- Hotels -->
+                <div class="investment-card">
+                    <div class="investment-icon">🏨</div>
+                    <div class="investment-title">Hotel Chain Investments</div>
+                    <div class="investment-amount" data-target="20" data-prefix="$" data-suffix="B+">$20B+</div>
+                    <div class="investment-desc">
+                        Major hotel brands invested $20B+ in Yucatan properties. Hilton (15+ properties),
+                        Marriott (20+), Hyatt (10+), Four Seasons, Ritz-Carlton, Rosewood, Banyan Tree.
+                    </div>
+                    <ul class="investment-list">
+                        <li>1,500+ hotels operating (vs 100 in 1980)</li>
+                        <li>Luxury brands dominate Riviera Maya</li>
+                        <li>Average room rate: $300+/night</li>
+                        <li>Occupancy rates: 75%+ year-round</li>
+                    </ul>
+                </div>
+                
+                <!-- Real Estate -->
+                <div class="investment-card">
+                    <div class="investment-icon">🏡</div>
+                    <div class="investment-title">Real Estate Development</div>
+                    <div class="investment-amount" data-target="25" data-prefix="$" data-suffix="B+">$25B+</div>
+                    <div class="investment-desc">
+                        Residential and commercial real estate boom. Tulum prices increased 1,000%+ since 2010.
+                        Playa del Carmen condos selling for $500K+. Luxury villas: $2M-$10M+.
+                    </div>
+                    <ul class="investment-list">
+                        <li>Tulum: Most expensive market in Mexico</li>
+                        <li>International buyers (US, Canada, Europe)</li>
+                        <li>Rental yields: 8-12% annually</li>
+                        <li>Appreciation: 15-25%/year (2015-2023)</li>
+                    </ul>
+                </div>
+                
+                <!-- Tourism -->
+                <div class="investment-card">
+                    <div class="investment-icon">🎢</div>
+                    <div class="investment-title">Tourism Attractions</div>
+                    <div class="investment-amount" data-target="5" data-prefix="$" data-suffix="B+">$5B+</div>
+                    <div class="investment-desc">
+                        Xcaret Group: $500M+ expansion (8 parks). Theme parks, eco-attractions, adventure
+                        tours. Chichén Itzá improvements. Water parks, cenote tours, Mayan experiences.
+                    </div>
+                    <ul class="investment-list">
+                        <li>Xcaret: 3M+ visitors annually</li>
+                        <li>Xel-Há, Xplor, Xenses parks</li>
+                        <li>Cenote diving & snorkeling boom</li>
+                        <li>Cultural experiences drive premium pricing</li>
+                    </ul>
+                </div>
+                
+                <!-- Retail -->
+                <div class="investment-card">
+                    <div class="investment-icon">🛍️</div>
+                    <div class="investment-title">Shopping & Entertainment</div>
+                    <div class="investment-amount" data-target="20" data-prefix="$" data-suffix="B+">$20B+</div>
+                    <div class="investment-desc">
+                        La Isla Shopping Village, Puerto Cancún, Luxury Avenue, Fifth Avenue Playa del Carmen.
+                        High-end retail, restaurants, nightlife. $20B+ in commercial development.
+                    </div>
+                    <ul class="investment-list">
+                        <li>Luxury brands: Louis Vuitton, Gucci, Hermès</li>
+                        <li>100+ world-class restaurants</li>
+                        <li>Nightlife & entertainment venues</li>
+                        <li>Shopping tourism drives spending</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Investment Chart -->
+            <div class="chart-container">
+                <div class="chart-title">$100B+ Total Investment by Sector (1980-2024)</div>
+                <canvas id="investmentChart" style="max-height: 400px;"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED INVESTMENT BREAKDOWN SECTION -->
+    <section class="boom-section" style="background: linear-gradient(135deg, #0A0F1E 0%, #1A1F35 100%); padding: 6rem 0;">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <div class="section-badge" style="background: rgba(184, 134, 11, 0.15); color: #B8860B; display: inline-block; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem;">💼 INSTITUTIONAL-GRADE DATA</div>
+                <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 300; color: #FFFFFF; margin-bottom: 1rem; letter-spacing: -0.02em;">
+                    $12+ Billion USD<br>
+                    <span style="color: #B8860B; font-weight: 700;">Confirmed Capital Deployment</span>
+                </h2>
+                <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); max-width: 800px; margin: 0 auto; line-height: 1.7;">
+                    Public and private investment breakdown by sector, company, and project.<br>
+                    <strong style="color: #FFFFFF;">Hard data. Real money. Institutional validation.</strong>
+                </p>
+            </div>
+
+            <!-- Key Highlight Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+                <!-- Private Investment -->
+                <div style="background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(184, 134, 11, 0.05) 100%); border: 1px solid rgba(184, 134, 11, 0.3); border-radius: 12px; padding: 2rem; text-align: center;">
+                    <div style="font-size: 0.875rem; color: #B8860B; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Private Sector</div>
+                    <div class="investment-stat" data-target="4.2" data-prefix="$" data-suffix="B" style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">$0B</div>
+                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">11 major companies confirmed</div>
+                </div>
+                
+                <!-- Public Investment -->
+                <div style="background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(184, 134, 11, 0.05) 100%); border: 1px solid rgba(184, 134, 11, 0.3); border-radius: 12px; padding: 2rem; text-align: center;">
+                    <div style="font-size: 0.875rem; color: #B8860B; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Government Sector</div>
+                    <div class="investment-stat" data-target="8.2" data-prefix="$" data-suffix="B" style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">$0B</div>
+                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Infrastructure & development</div>
+                </div>
+                
+                <!-- Maya Train -->
+                <div style="background: linear-gradient(135deg, rgba(184, 134, 11, 0.15) 0%, rgba(184, 134, 11, 0.08) 100%); border: 2px solid #B8860B; border-radius: 12px; padding: 2rem; text-align: center; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0.5rem; right: 0.5rem; background: #B8860B; color: #000; font-size: 0.65rem; padding: 0.25rem 0.75rem; border-radius: 50px; font-weight: 700;">MEGAPROJECT</div>
+                    <div style="font-size: 0.875rem; color: #B8860B; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">🚆 Tren Maya</div>
+                    <div class="investment-stat" data-target="20" data-prefix="$" data-suffix="B" style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">$0B</div>
+                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Federal government catalyst</div>
+                </div>
+            </div>
+
+            <!-- Interactive Charts Row -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem;">
+                <!-- Bar Chart -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem;">
+                    <h3 style="font-size: 1.25rem; color: #FFFFFF; margin-bottom: 1.5rem; font-weight: 600;">Investment by Sector (USD Billions)</h3>
+                    <canvas id="sectorBarChart" style="max-height: 350px;"></canvas>
+                </div>
+                
+                <!-- Pie Chart -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem;">
+                    <h3 style="font-size: 1.25rem; color: #FFFFFF; margin-bottom: 1.5rem; font-weight: 600;">Investment Distribution</h3>
+                    <canvas id="sectorPieChart" style="max-height: 350px;"></canvas>
+                </div>
+            </div>
+
+            <!-- Private Companies Table -->
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2.5rem; margin-bottom: 3rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.5rem; color: #FFFFFF; font-weight: 600;">Major Private Companies Investing in Yucatán</h3>
+                    <div style="background: rgba(184, 134, 11, 0.15); color: #B8860B; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700;">$4.2B Total</div>
+                </div>
+                
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <th style="text-align: left; padding: 1rem; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Company</th>
+                                <th style="text-align: left; padding: 1rem; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Industry</th>
+                                <th style="text-align: left; padding: 1rem; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Location</th>
+                                <th style="text-align: right; padding: 1rem; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Investment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Heineken</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Beverage / Manufacturing</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Kanasín</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$2.75B</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Grupo Modelo (AB InBev)</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Beverage / Manufacturing</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Hunucmá</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$500M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Amazon</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">E-commerce / Logistics</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Mérida Metro</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$60-100M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Woodgenix (China)</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Manufacturing (Furniture)</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Industrial Parks</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$80M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Walmart México</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Retail / Logistics</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Statewide</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$65M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Uchiyama Manufacturing</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Automotive Components</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Hunucmá</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$65M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Leoni</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Automotive / Electrical</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Mérida</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$50M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Accenture</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Technology / Services</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Mérida</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$30M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Mercado Libre</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">E-commerce / Logistics</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Regional Operations</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$25M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Renewable Energy Developers</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Wind & Solar Energy</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Progreso & Interior</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$100-150M</td>
+                            </tr>
+                            <tr style="transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">Tourism & Hospitality Groups</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Hotels / Resorts</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Statewide</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$290M</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Government Investment Breakdown -->
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2.5rem; margin-bottom: 3rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.5rem; color: #FFFFFF; font-weight: 600;">Government & Public Sector Investment</h3>
+                    <div style="background: rgba(184, 134, 11, 0.15); color: #B8860B; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700;">$8.2B Total</div>
+                </div>
+                
+                <!-- Maya Train Highlight -->
+                <div style="background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(184, 134, 11, 0.05) 100%); border-left: 4px solid #B8860B; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
+                        <div style="font-size: 3rem;">🚆</div>
+                        <div style="flex: 1;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                                <h4 style="font-size: 1.5rem; color: #FFFFFF; font-weight: 700; margin: 0;">Maya Train (Tren Maya)</h4>
+                                <span style="background: #B8860B; color: #000; font-size: 0.7rem; padding: 0.25rem 0.75rem; border-radius: 50px; font-weight: 700;">CATALYST PROJECT</span>
+                            </div>
+                            <div style="color: #B8860B; font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">$20.0 Billion USD</div>
+                            <div style="color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1rem;">
+                                Federal government megaproject covering entire Yucatán Peninsula (Yucatán, Quintana Roo, Campeche, Chiapas, Tabasco)
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                                <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px;">
+                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem;">Impact</div>
+                                    <div style="color: #FFFFFF; font-weight: 600;">Transforms regional mobility</div>
+                                </div>
+                                <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px;">
+                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem;">Type</div>
+                                    <div style="color: #FFFFFF; font-weight: 600;">Federal megaproject</div>
+                                </div>
+                                <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px;">
+                                    <div style="color: rgba(255,255,255,0.6); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem;">Scale</div>
+                                    <div style="color: #FFFFFF; font-weight: 600;">Largest in SE Mexico history</div>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; padding: 1rem; background: rgba(184, 134, 11, 0.1); border-radius: 8px;">
+                                <div style="color: #B8860B; font-weight: 700; margin-bottom: 0.5rem;">💡 Investor Takeaway</div>
+                                <div style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">The Maya Train represents over 90% of public infrastructure investment, acting as a catalyst for private capital deployment.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Government Projects Table -->
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <th style="text-align: left; padding: 1rem; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Sector / Project</th>
+                                <th style="text-align: left; padding: 1rem; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Purpose</th>
+                                <th style="text-align: right; padding: 1rem; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Investment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">🛣️ Highways & Road Infrastructure</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Highway expansions, urban access, industrial connectivity</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$600M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">⚓ Ports & Maritime (Progreso)</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Logistics, trade, cruise terminals</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$450M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">🏭 Industrial Parks</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Nearshoring & economic development programs</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$500M</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">💧 Public Utilities</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Water, power, urban infrastructure</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$350M</td>
+                            </tr>
+                            <tr style="transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.05)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 1rem; color: #FFFFFF; font-weight: 600;">🏖️ Tourism Infrastructure</td>
+                                <td style="padding: 1.25rem 1rem; color: rgba(255,255,255,0.7);">Promotion, cultural projects, site development</td>
+                                <td style="padding: 1.25rem 1rem; color: #B8860B; font-weight: 700; text-align: right; font-size: 1.1rem;">$280M</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Summary Box -->
+            <div style="background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%); border-radius: 16px; padding: 3rem; text-align: center;">
+                <div style="font-size: 1rem; color: rgba(0,0,0,0.7); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Combined Capital Deployment</div>
+                <div class="forecast-stat" data-target="12.4" data-prefix="$" data-suffix="B+" style="font-size: 4rem; font-weight: 700; color: #000000; margin-bottom: 1rem; line-height: 1;">$0B+</div>
+                <div style="font-size: 1.125rem; color: rgba(0,0,0,0.8); max-width: 600px; margin: 0 auto; line-height: 1.7;">
+                    Private sector + Government investment positioning Yucatán as a <strong>nearshoring, manufacturing, and tourism hub</strong> in Mexico
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAYA TRAIN STATION DEVELOPMENT SECTION -->
+    <section class="boom-section light" style="padding: 6rem 0; background: #FAFAFA;">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <div class="section-badge" style="background: rgba(184, 134, 11, 0.1); color: #B8860B; display: inline-block; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem;">🛤️ INFRASTRUCTURE CATALYST</div>
+                <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 300; color: #0A0A0A; margin-bottom: 1rem; letter-spacing: -0.02em;">
+                    Maya Train Station Development:<br>
+                    <span style="color: #B8860B; font-weight: 700;">Real Estate Boom at Every Stop</span>
+                </h2>
+                <p style="font-size: 1.125rem; color: #6A6A6A; max-width: 900px; margin: 0 auto; line-height: 1.7;">
+                    The $20B Maya Train isn't just transportation—it's a <strong style="color: #0A0A0A;">real estate catalyst</strong>.<br>
+                    Communities near every station are experiencing explosive growth in housing, hotels, and commercial development.
+                </p>
+            </div>
+
+            <!-- Development Categories Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                <!-- Real Estate -->
+                <div style="background: #FFFFFF; border: 1px solid #E5E5E5; border-radius: 16px; padding: 2rem; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💼</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #0A0A0A; margin-bottom: 1rem;">Real Estate & Housing Growth</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #6A6A6A; line-height: 1.8;">
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            New subdivisions near Section 5 stations
+                        </li>
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Commercial plots marketed with train proximity
+                        </li>
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Property values rising ahead of openings
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Large + local developers positioning
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Community Services -->
+                <div style="background: #FFFFFF; border: 1px solid #E5E5E5; border-radius: 16px; padding: 2rem; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🏘️</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #0A0A0A; margin-bottom: 1rem;">Community Services & Infrastructure</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #6A6A6A; line-height: 1.8;">
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Enhanced roads & utility connections
+                        </li>
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Regional development planning underway
+                        </li>
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Local services expanding near stops
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Station proximity = value driver
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tourism Development -->
+                <div style="background: #FFFFFF; border: 1px solid #E5E5E5; border-radius: 16px; padding: 2rem; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🏨</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #0A0A0A; margin-bottom: 1rem;">Hotels & Tourism Development</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #6A6A6A; line-height: 1.8;">
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Hotels & resorts near tourist corridors
+                        </li>
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Cancún–Playa del Carmen–Valladolid route
+                        </li>
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Short-stay rentals capitalizing on access
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Connectivity driving tourism investment
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Commercial Infrastructure -->
+                <div style="background: #FFFFFF; border: 1px solid #E5E5E5; border-radius: 16px; padding: 2rem; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛍️</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #0A0A0A; margin-bottom: 1rem;">Commercial & Shopping</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #6A6A6A; line-height: 1.8;">
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Shopping centers near major stations
+                        </li>
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Mixed-use developments planned
+                        </li>
+                        <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Retail, dining, logistics hubs emerging
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #B8860B;">✓</span>
+                            Economic nodes around Valladolid & Mérida
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Key Stations Development Table -->
+            <div style="background: #FFFFFF; border: 1px solid #E5E5E5; border-radius: 16px; padding: 2.5rem; margin-bottom: 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                <h3 style="font-size: 1.75rem; font-weight: 700; color: #0A0A0A; margin-bottom: 2rem; text-align: center;">Development Status by Station</h3>
+                
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #E5E5E5;">
+                                <th style="text-align: left; padding: 1.25rem 1rem; color: #6A6A6A; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Station / Area</th>
+                                <th style="text-align: left; padding: 1.25rem 1rem; color: #6A6A6A; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Development Status</th>
+                                <th style="text-align: center; padding: 1.25rem 1rem; color: #6A6A6A; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Activity Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #F0F0F0; transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.03)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.5rem 1rem;">
+                                    <div style="font-weight: 700; color: #0A0A0A; margin-bottom: 0.25rem;">📍 Mérida Teya</div>
+                                    <div style="font-size: 0.875rem; color: #6A6A6A;">Near Mérida</div>
+                                </td>
+                                <td style="padding: 1.5rem 1rem; color: #0A0A0A; line-height: 1.6;">
+                                    Local infrastructure upgrades around station. Real estate interest from residents and small developers. Road improvements and utility connections underway.
+                                </td>
+                                <td style="padding: 1.5rem 1rem; text-align: center;">
+                                    <span style="background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%); color: #FFFFFF; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; white-space: nowrap;">🔥 HIGH</span>
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #F0F0F0; transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.03)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.5rem 1rem;">
+                                    <div style="font-weight: 700; color: #0A0A0A; margin-bottom: 0.25rem;">📍 Valladolid</div>
+                                    <div style="font-size: 0.875rem; color: #6A6A6A;">Colonial Town</div>
+                                </td>
+                                <td style="padding: 1.5rem 1rem; color: #0A0A0A; line-height: 1.6;">
+                                    Rising property interest and listings marketed with train connectivity. Nearby tourism and commerce development. Strategic location for regional travel hub.
+                                </td>
+                                <td style="padding: 1.5rem 1rem; text-align: center;">
+                                    <span style="background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%); color: #FFFFFF; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; white-space: nowrap;">🔥 HIGH</span>
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #F0F0F0; transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.03)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.5rem 1rem;">
+                                    <div style="font-weight: 700; color: #0A0A0A; margin-bottom: 0.25rem;">📍 Playa del Carmen Corridor</div>
+                                    <div style="font-size: 0.875rem; color: #6A6A6A;">Quintana Roo</div>
+                                </td>
+                                <td style="padding: 1.5rem 1rem; color: #0A0A0A; line-height: 1.6;">
+                                    <strong style="color: #B8860B;">Strong real estate boom</strong> with new subdivisions, condominiums, hotel/resort construction tied to train accessibility. Explosive growth in tourism infrastructure.
+                                </td>
+                                <td style="padding: 1.5rem 1rem; text-align: center;">
+                                    <span style="background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%); color: #FFFFFF; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; animation: pulse 2s infinite;">🚀 EXPLOSIVE</span>
+                                </td>
+                            </tr>
+                            <tr style="transition: background 0.2s;" onmouseover="this.style.background='rgba(184,134,11,0.03)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.5rem 1rem;">
+                                    <div style="font-weight: 700; color: #0A0A0A; margin-bottom: 0.25rem;">📍 Smaller Rural Stops</div>
+                                    <div style="font-size: 0.875rem; color: #6A6A6A;">Various Locations</div>
+                                </td>
+                                <td style="padding: 1.5rem 1rem; color: #0A0A0A; line-height: 1.6;">
+                                    Early interest and land speculation. Actual services and shopping centers still emerging. Infrastructure catching up gradually. Long-term value creation potential.
+                                </td>
+                                <td style="padding: 1.5rem 1rem; text-align: center;">
+                                    <span style="background: #E5E5E5; color: #6A6A6A; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; white-space: nowrap;">📊 EARLY</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Investor Takeaways -->
+            <div style="background: linear-gradient(135deg, #0A0F1E 0%, #1A1F35 100%); border-radius: 16px; padding: 3rem; color: #FFFFFF;">
+                <div style="text-align: center; margin-bottom: 2.5rem;">
+                    <h3 style="font-size: 1.75rem; font-weight: 700; color: #B8860B; margin-bottom: 0.5rem;">💡 Investor Takeaways</h3>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">What this means for capital deployment opportunities</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Near-term -->
+                    <div style="background: rgba(184, 134, 11, 0.1); border-left: 4px solid #B8860B; padding: 1.5rem; border-radius: 8px;">
+                        <div style="font-weight: 700; color: #B8860B; margin-bottom: 1rem; font-size: 1.1rem;">✅ Near-Term Outcomes</div>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: rgba(255,255,255,0.9); line-height: 1.8;">
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0;">→</span>
+                                Land value appreciation ahead of station openings
+                            </li>
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0;">→</span>
+                                Commercial plots attracting developer interest
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0;">→</span>
+                                First-mover advantage in emerging corridors
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Context -->
+                    <div style="background: rgba(184, 134, 11, 0.1); border-left: 4px solid #D4A017; padding: 1.5rem; border-radius: 8px;">
+                        <div style="font-weight: 700; color: #D4A017; margin-bottom: 1rem; font-size: 1.1rem;">❗ Important Context</div>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: rgba(255,255,255,0.9); line-height: 1.8;">
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0;">→</span>
+                                Not all stations have full commercial ecosystems yet
+                            </li>
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0;">→</span>
+                                Many areas early in development cycle
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0;">→</span>
+                                Infrastructure and services catching up gradually
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Long-term -->
+                    <div style="background: rgba(184, 134, 11, 0.1); border-left: 4px solid #22D3EE; padding: 1.5rem; border-radius: 8px;">
+                        <div style="font-weight: 700; color: #22D3EE; margin-bottom: 1rem; font-size: 1.1rem;">📈 Long-Term Value</div>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: rgba(255,255,255,0.9); line-height: 1.8;">
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0;">→</span>
+                                Stations maturing into regional transit hubs
+                            </li>
+                            <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0;">→</span>
+                                Economic nodes supporting retail and services
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0;">→</span>
+                                Multi-decade value creation as ridership grows
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Key Talking Points -->
+                <div style="margin-top: 2.5rem; padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                    <div style="font-weight: 700; color: #B8860B; margin-bottom: 1.5rem; font-size: 1.25rem; text-align: center;">📌 Investor Talking Points</div>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 8px; border-left: 3px solid #B8860B;">
+                            <em style="color: rgba(255,255,255,0.9); line-height: 1.7;">
+                                "Multiple communities along the Maya Train route are already experiencing real estate growth, with housing subdivisions and commercial plots being developed near planned stations."
+                            </em>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 8px; border-left: 3px solid #D4A017;">
+                            <em style="color: rgba(255,255,255,0.9); line-height: 1.7;">
+                                "Tourism-oriented areas such as the Riviera Maya and Valladolid corridor are seeing increased hotel and mixed-use development as connectivity improves."
+                            </em>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 8px; border-left: 3px solid #22D3EE;">
+                            <em style="color: rgba(255,255,255,0.9); line-height: 1.7;">
+                                "Long-term value creation is anticipated as stations mature into regional transit and economic hubs, driving sustained demand for residential and commercial real estate."
+                            </em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pulse Animation -->
+        <style>
+            @keyframes pulse {
+                0%, 100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                50% {
+                    opacity: 0.9;
+                    transform: scale(1.05);
+                }
+            }
+        </style>
+    </section>
+
+    <!-- TOURISM & HOTEL FORECAST SECTION -->
+    <section class="boom-section" style="background: linear-gradient(135deg, #0A0F1E 0%, #1A1F35 100%); padding: 6rem 0;">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <div class="section-badge" style="background: rgba(184, 134, 11, 0.15); color: #B8860B; display: inline-block; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem;">📈 GROWTH PROJECTIONS</div>
+                <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 300; color: #FFFFFF; margin-bottom: 1rem; letter-spacing: -0.02em;">
+                    Tourism & Hotel Demand:<br>
+                    <span style="color: #B8860B; font-weight: 700;">10-Year Forecast (2025-2035)</span>
+                </h2>
+                <p style="font-size: 1.125rem; color: rgba(255,255,255,0.7); max-width: 900px; margin: 0 auto; line-height: 1.7;">
+                    Data-driven projections showing explosive growth trajectory.<br>
+                    <strong style="color: #FFFFFF;">Maya Train + Infrastructure Investment = Unprecedented Demand</strong>
+                </p>
+            </div>
+
+            <!-- Key Forecast Metrics -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+                <!-- 2025 Baseline -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 2rem; text-align: center;">
+                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.5); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">2025 Baseline</div>
+                    <div class="forecast-stat" data-target="32" data-suffix="M" style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.25rem;">0M</div>
+                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Annual Tourists</div>
+                </div>
+                
+                <!-- 2030 Projection -->
+                <div style="background: rgba(184, 134, 11, 0.1); border: 1px solid rgba(184, 134, 11, 0.3); border-radius: 12px; padding: 2rem; text-align: center;">
+                    <div style="font-size: 0.75rem; color: #B8860B; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">2030 Projection</div>
+                    <div class="forecast-stat" data-target="48" data-suffix="M" style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.25rem;">0M</div>
+                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Annual Tourists</div>
+                    <div style="font-size: 0.75rem; color: #10B981; margin-top: 0.5rem; font-weight: 600;">+50% Growth</div>
+                </div>
+                
+                <!-- 2035 Target -->
+                <div style="background: rgba(184, 134, 11, 0.15); border: 2px solid #B8860B; border-radius: 12px; padding: 2rem; text-align: center; position: relative;">
+                    <div style="position: absolute; top: 0.5rem; right: 0.5rem; background: #B8860B; color: #000; font-size: 0.65rem; padding: 0.25rem 0.75rem; border-radius: 50px; font-weight: 700;">TARGET</div>
+                    <div style="font-size: 0.75rem; color: #B8860B; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">2035 Target</div>
+                    <div class="forecast-stat" data-target="65" data-suffix="M" style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.25rem;">0M</div>
+                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Annual Tourists</div>
+                    <div style="font-size: 0.75rem; color: #10B981; margin-top: 0.5rem; font-weight: 600;">+103% from 2025</div>
+                </div>
+                
+                <!-- Revenue 2035 -->
+                <div style="background: linear-gradient(135deg, rgba(184, 134, 11, 0.2) 0%, rgba(184, 134, 11, 0.1) 100%); border: 1px solid #B8860B; border-radius: 12px; padding: 2rem; text-align: center;">
+                    <div style="font-size: 0.75rem; color: #B8860B; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">2035 Revenue</div>
+                    <div class="forecast-stat" data-target="105" data-prefix="$" data-suffix="B" style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.25rem;">$0B</div>
+                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Tourism GDP</div>
+                    <div style="font-size: 0.75rem; color: #10B981; margin-top: 0.5rem; font-weight: 600;">+102% from $52B (2024)</div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                <!-- Tourism Revenue Forecast Chart -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2.5rem;">
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.5rem; color: #FFFFFF; margin-bottom: 0.5rem; font-weight: 600;">📊 Tourism Revenue Forecast</h3>
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Projected annual tourism GDP contribution (2025-2035)</p>
+                    </div>
+                    <canvas id="tourismRevenueForecastChart" style="max-height: 400px;"></canvas>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(184, 134, 11, 0.1); border-radius: 8px; border-left: 3px solid #B8860B;">
+                        <div style="font-size: 0.75rem; color: #B8860B; font-weight: 700; margin-bottom: 0.5rem;">💡 KEY INSIGHT</div>
+                        <div style="font-size: 0.875rem; color: rgba(255,255,255,0.8); line-height: 1.6;">
+                            Tourism revenue projected to double from $52B (2024) to $105B+ (2035) driven by Maya Train connectivity, infrastructure investment, and sustained demand growth.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hotel Room Demand Projection Chart -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2.5rem;">
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.5rem; color: #FFFFFF; margin-bottom: 0.5rem; font-weight: 600;">🏨 Hotel Room Demand Projection</h3>
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Required hotel inventory to meet tourist demand (2025-2035)</p>
+                    </div>
+                    <canvas id="hotelDemandForecastChart" style="max-height: 400px;"></canvas>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(34, 211, 238, 0.1); border-radius: 8px; border-left: 3px solid #22D3EE;">
+                        <div style="font-size: 0.75rem; color: #22D3EE; font-weight: 700; margin-bottom: 0.5rem;">💡 KEY INSIGHT</div>
+                        <div style="font-size: 0.875rem; color: rgba(255,255,255,0.8); line-height: 1.6;">
+                            Hotel room inventory must increase from 150,000 rooms (2025) to 250,000+ rooms (2035) to meet explosive demand—creating massive development opportunities.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Growth Drivers Section -->
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 3rem;">
+                <h3 style="font-size: 1.75rem; color: #FFFFFF; margin-bottom: 2rem; text-align: center; font-weight: 700;">🚀 Growth Drivers Behind the Forecast</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <!-- Driver 1 -->
+                    <div style="padding: 1.5rem; background: rgba(184, 134, 11, 0.05); border-radius: 12px; border-left: 4px solid #B8860B;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🚆</div>
+                        <h4 style="color: #B8860B; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Maya Train Catalyst</h4>
+                        <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">
+                            $20B infrastructure connecting entire peninsula, unlocking previously inaccessible destinations and driving 20-30% increase in tourist accessibility.
+                        </p>
+                    </div>
+                    
+                    <!-- Driver 2 -->
+                    <div style="padding: 1.5rem; background: rgba(184, 134, 11, 0.05); border-radius: 12px; border-left: 4px solid #D4A017;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">✈️</div>
+                        <h4 style="color: #D4A017; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Airport Expansion</h4>
+                        <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">
+                            New Tulum Airport ($800M+), Cancún expansion, improved regional connectivity increasing international arrivals by 15%+ annually.
+                        </p>
+                    </div>
+                    
+                    <!-- Driver 3 -->
+                    <div style="padding: 1.5rem; background: rgba(184, 134, 11, 0.05); border-radius: 12px; border-left: 4px solid #22D3EE;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🏭</div>
+                        <h4 style="color: #22D3EE; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Private Capital Flood</h4>
+                        <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">
+                            $4.2B+ private investment from Heineken, Amazon, Walmart, international developers creating jobs and driving domestic tourism demand.
+                        </p>
+                    </div>
+                    
+                    <!-- Driver 4 -->
+                    <div style="padding: 1.5rem; background: rgba(184, 134, 11, 0.05); border-radius: 12px; border-left: 4px solid #10B981;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🌍</div>
+                        <h4 style="color: #10B981; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">International Demand</h4>
+                        <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">
+                            75% of visitors international; sustained growth from USA, Canada, Europe, Latin America as travel demand rebounds and expands post-pandemic.
+                        </p>
+                    </div>
+                    
+                    <!-- Driver 5 -->
+                    <div style="padding: 1.5rem; background: rgba(184, 134, 11, 0.05); border-radius: 12px; border-left: 4px solid #8B5CF6;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">📱</div>
+                        <h4 style="color: #8B5CF6; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Digital Marketing Boom</h4>
+                        <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">
+                            Social media, influencer culture, and digital discovery making Yucatán a global phenomenon—Tulum, Bacalar, cenotes going viral.
+                        </p>
+                    </div>
+                    
+                    <!-- Driver 6 -->
+                    <div style="padding: 1.5rem; background: rgba(184, 134, 11, 0.05); border-radius: 12px; border-left: 4px solid #F59E0B;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🏖️</div>
+                        <h4 style="color: #F59E0B; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Product Diversification</h4>
+                        <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">
+                            Beyond beaches: eco-tourism, wellness, cultural experiences, adventure tourism, gastronomy—broader appeal driving longer stays and repeat visits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment Opportunity Callout -->
+            <div style="margin-top: 3rem; background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%); border-radius: 16px; padding: 3rem; text-align: center;">
+                <div style="font-size: 1rem; color: rgba(0,0,0,0.7); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">💼 INVESTMENT OPPORTUNITY</div>
+                <div style="font-size: 2.5rem; font-weight: 700; color: #000000; margin-bottom: 1rem; line-height: 1.2;">
+                    100,000+ New Hotel Rooms Needed by 2035
+                </div>
+                <div style="font-size: 1.125rem; color: rgba(0,0,0,0.8); max-width: 800px; margin: 0 auto 2rem; line-height: 1.7;">
+                    To accommodate 65M+ annual tourists, Yucatán Peninsula must add <strong>100,000+ hotel rooms</strong> over the next decade—representing <strong>$15-20 billion</strong> in hospitality development opportunities.
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+                    <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px;">
+                        <div class="forecast-stat" data-target="100" data-suffix="K+" style="font-size: 2rem; font-weight: 700; color: #000;">0K+</div>
+                        <div style="font-size: 0.9rem; color: rgba(0,0,0,0.8);">New Rooms Required</div>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px;">
+                        <div class="forecast-stat" data-target="17.5" data-prefix="$" data-suffix="B" style="font-size: 2rem; font-weight: 700; color: #000;">$0B</div>
+                        <div style="font-size: 0.9rem; color: rgba(0,0,0,0.8);">Development Capital Needed</div>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px;">
+                        <div class="forecast-stat" data-target="10" data-suffix=" Years" style="font-size: 2rem; font-weight: 700; color: #000;">0 Years</div>
+                        <div style="font-size: 0.9rem; color: rgba(0,0,0,0.8);">Investment Window</div>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px;">
+                        <div class="forecast-stat" data-target="19" data-suffix="%" style="font-size: 2rem; font-weight: 700; color: #000;">0%</div>
+                        <div style="font-size: 0.9rem; color: rgba(0,0,0,0.8);">Projected Annual Returns</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Metrics Dashboard -->
+    <section class="boom-section light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">📊 EXPLOSIVE GROWTH METRICS</div>
+                <h2>The Numbers Don't Lie:<br>Yucatan is Unstoppable</h2>
+                <p class="section-subtitle">
+                    From 1 million tourists to 32 million. From $500M GDP to $52 billion.<br>
+                    <strong>This is the fastest-growing tourism market in the Western Hemisphere.</strong>
+                </p>
+            </div>
+            
+            <!-- Metrics Grid -->
+            <div class="metrics-dashboard">
+                <div class="metric-card">
+                    <div class="metric-icon">✈️</div>
+                    <div class="metric-value" data-target="32" data-suffix="M">0M</div>
+                    <div class="metric-label">Annual Tourists</div>
+                    <div class="metric-change">↑ 3,200% since 1980</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">💰</div>
+                    <div class="metric-value" data-target="52" data-prefix="$" data-suffix="B">$0B</div>
+                    <div class="metric-label">Tourism GDP</div>
+                    <div class="metric-change">↑ 10,400% since 1980</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">🏨</div>
+                    <div class="metric-value" data-target="1500" data-suffix="+">0+</div>
+                    <div class="metric-label">Hotels & Resorts</div>
+                    <div class="metric-change">↑ 1,400% since 1980</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">👥</div>
+                    <div class="metric-value" data-target="250" data-suffix="K+">0K+</div>
+                    <div class="metric-label">Tourism Jobs</div>
+                    <div class="metric-change">↑ 600% since 1980</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">🌍</div>
+                    <div class="metric-value" data-target="75" data-suffix="%">0%</div>
+                    <div class="metric-label">International Visitors</div>
+                    <div class="metric-change">From 50+ countries</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">📈</div>
+                    <div class="metric-value" data-target="15" data-suffix="%">0%</div>
+                    <div class="metric-label">Annual Growth Rate</div>
+                    <div class="metric-change">Consistent 10-15% CAGR</div>
+                </div>
+            </div>
+            
+            <!-- Tourism Growth Chart -->
+            <div class="chart-container">
+                <div class="chart-title">Tourism Growth: 1 Million to 32 Million in 44 Years</div>
+                <canvas id="tourismGrowthChart" style="max-height: 400px;"></canvas>
+            </div>
+            
+            <!-- GDP Growth Chart -->
+            <div class="chart-container" style="margin-top: 3rem;">
+                <div class="chart-title">Tourism GDP Contribution: $5B to $52B (2000-2024)</div>
+                <canvas id="gdpChart" style="max-height: 400px;"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Punch Line Section -->
+    <section class="punchline-section">
+        <div class="container">
+            <div class="punchline-title">Everyone Invested $100B+.<br>They ALL Got Hit by Hurricanes.</div>
+            <div class="punchline-subtitle">
+                Cancún: Devastated by Wilma (2005). Cozumel: Destroyed by Emily (2005).<br>
+                Riviera Maya: Hit by Dean (2007), Delta (2020), Zeta (2020), Grace (2021).<br>
+                <strong>Billions in damage. Operations shut down. Insurance nightmares. Revenue lost forever.</strong>
+            </div>
+            
+            <div class="punchline-stats">
+                <div class="punchline-stat">
+                    <div class="punchline-stat-value metric-value" data-target="26" data-suffix="+">0+</div>
+                    <div class="punchline-stat-label">Major Hurricanes Hit Riviera Maya (50 years)</div>
+                </div>
+                <div class="punchline-stat">
+                    <div class="punchline-stat-value metric-value" data-target="100" data-prefix="$" data-suffix="B+">$0B+</div>
+                    <div class="punchline-stat-label">Invested in Hurricane-Prone Locations</div>
+                </div>
+                <div class="punchline-stat">
+                    <div class="punchline-stat-value">ZERO</div>
+                    <div class="punchline-stat-label">Hurricanes Hit Isla Aguada (50 years)</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; padding-top: 3rem; border-top: 2px solid rgba(255, 255, 255, 0.2);">
+                <p style="font-size: 2rem; font-weight: 800; color: #FFFFFF; margin-bottom: 1rem;">
+                    🛡️ Isla Aguada: The ONLY Hurricane-Free Location Left
+                </p>
+                <p style="font-size: 1.3rem; color: rgba(255, 255, 255, 0.9);">
+                    Everyone knows the Yucatan is booming. What they don't know:<br>
+                    There's ONE protected paradise left to capture this $100B explosion.<br>
+                    <strong>MayaRoyale positions you in the last safe location.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="boom-cta">
+        <div class="container">
+            <h2>Invest in the ONLY Hurricane-Free Location</h2>
+            <p>
+                The government invested $30B+. Private capital poured in $70B+. 32 million tourists prove the demand.<br>
+                <strong>Don't bet on hurricane-prone locations. Invest in the ONLY protected paradise: Isla Aguada.</strong>
+            </p>
+            <div class="cta-buttons">
+                <a href="investment-calculator.html" class="btn-cta btn-primary">Calculate Your Returns</a>
+                <a href="contact.html" class="btn-cta btn-secondary">Schedule Private Meeting</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="financial-forecast.html">Financial Forecast</a></li>
+                        <li><a href="investment-calculator.html">Investment Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">The Project</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Property Showcase</a></li>
+                        <li><a href="future-vision.html">Future of Isla Aguada</a></li>
+                        <li><a href="positioning.html">Strategic Positioning</a></li>
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="team.html">Innovation Council</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/wallet.js"></script>
+    <script src="js/mobile-nav-simple.js"></script>
+    <script src="js/yucatan-boom.js"></script>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

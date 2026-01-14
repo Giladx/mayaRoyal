@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator | MayaRoyale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css?v=2.0">
+    <link rel="stylesheet" href="css/premium-light.css">
+    <link rel="stylesheet" href="css/calculator-fresh.css">
+    <link rel="stylesheet" href="css/regulatory-disclosure.css">
+    
+    <!-- Chart.js for Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium nav-scrolled">
+        <div class="container nav-premium-container">
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo">
+                </a>
+            </div>
+
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <!-- Platform Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Platform
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                    <span class="nav-premium-dropdown-item-desc">Track your portfolio</span>
+                                </span>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💎</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                    <span class="nav-premium-dropdown-item-desc">Token economics & funding</span>
+                                </span>
+                            </a>
+                            <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📈</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Financial Forecast</span>
+                                    <span class="nav-premium-dropdown-item-desc">7-year projections</span>
+                                </span>
+                            </a>
+                            <a href="investment-calculator.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🧮</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Investment Calculator</span>
+                                    <span class="nav-premium-dropdown-item-desc">Calculate your returns</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- The Project Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        The Project
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏖️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Property Showcase</span>
+                                    <span class="nav-premium-dropdown-item-desc">Complete property & strategic analysis</span>
+                                </span>
+                            </a>
+                            <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌅</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span>
+                                    <span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family</span>
+                                </span>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Strategic Positioning</span>
+                                    <span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span>
+                                </span>
+                            </a>
+                            <a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Protection Animation</span>
+                                    <span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span>
+                                </span>
+                            </a>
+                            <a href="yucatan-boom.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🚀</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Yucatan Boom</span>
+                                    <span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span>
+                                </span>
+                            </a>
+                            <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Wellness Differentiation</span>
+                                    <span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span>
+                                </span>
+                            </a>
+                            <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🍽️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Culinary Excellence</span>
+                                    <span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span>
+                                </span>
+                            </a>
+                            <a href="technology.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">⚡</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Technology & Blockchain</span>
+                                    <span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span>
+                                </span>
+                            </a>
+                            <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏨</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">LHW Partnership</span>
+                                    <span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span>
+                                </span>
+                            </a>
+                            <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌿</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Sustainability</span>
+                                    <span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Company Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Company
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">👥</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Innovation Council</span>
+                                    <span class="nav-premium-dropdown-item-desc">Meet our team</span>
+                                </span>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📧</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Contact</span>
+                                    <span class="nav-premium-dropdown-item-desc">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <a href="#" class="nav-premium-cta btn-connect-wallet">Connect Wallet</a>
+            
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="calculator-hero">
+        <div class="hero-content-center">
+            <h1 class="hero-title">Investment Calculator</h1>
+            <p class="hero-subtitle">Model your returns with precision. Calculate token allocation, equity stake, and 7-year projections based on Series A or Series B investment parameters.</p>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-grid">
+                <!-- Left Panel: Input Controls -->
+                <div class="calculator-input-panel">
+                    <h2>Configure Investment</h2>
+
+                    <!-- Series Selection -->
+                    <div class="form-group">
+                        <label>Investment Round</label>
+                        <div class="series-selector">
+                            <button class="series-btn active" data-series="a">
+                                <div class="series-badge">Series A</div>
+                                <div class="series-price">$800 / token</div>
+                                <div class="series-details">Land appreciation included</div>
+                            </button>
+                            <button class="series-btn" data-series="b">
+                                <div class="series-badge">Series B</div>
+                                <div class="series-price">$2,000 / token</div>
+                                <div class="series-details">Resort profits only</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Investment Amount -->
+                    <div class="form-group">
+                        <label for="investmentAmount">Investment Amount (USD)</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">$</span>
+                            <input 
+                                type="number" 
+                                id="investmentAmount" 
+                                placeholder="Enter amount"
+                                min="800"
+                                max="100000000"
+                                step="100"
+                                value="100000"
+                            >
+                        </div>
+                        <div class="input-hints">
+                            <button class="preset-btn" data-amount="50000">$50K</button>
+                            <button class="preset-btn" data-amount="100000">$100K</button>
+                            <button class="preset-btn" data-amount="250000">$250K</button>
+                            <button class="preset-btn" data-amount="500000">$500K</button>
+                            <button class="preset-btn" data-amount="1000000">$1M</button>
+                        </div>
+                    </div>
+
+                    <!-- Results Summary: GOLDEN CARD -->
+                    <div class="results-summary-card">
+                        <div class="summary-item">
+                            <div class="summary-label">Tokens Received</div>
+                            <div class="summary-value" id="tokensReceived">125.00</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">% of Round</div>
+                            <div class="summary-value" id="percentOfRound">1.00%</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Equity Stake</div>
+                            <div class="summary-value" id="equityStake">0.100%</div>
+                        </div>
+                    </div>
+
+                    <!-- Benefits List -->
+                    <div class="benefits-list" id="benefitsList">
+                        <h3>Your Benefits Include:</h3>
+                        <ul id="benefitsItems">
+                            <li>✅ Land Appreciation (15% annually)</li>
+                            <li>✅ Resort Profit Share (18-20% annually)</li>
+                            <li>✅ MAYA Tokens at $800</li>
+                            <li>✅ 10% Equity Position</li>
+                            <li>✅ Land + PropCo + OpCo + Tokens</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Visualization -->
+                <div class="calculator-viz-panel">
+                    <h2>7-Year Projection</h2>
+                    
+                    <!-- Key Metrics -->
+                    <div class="projection-metrics">
+                        <div class="metric-card">
+                            <div class="metric-icon">📊</div>
+                            <div class="metric-value" id="year7Value">$0</div>
+                            <div class="metric-label">Year 7 Value</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">📈</div>
+                            <div class="metric-value" id="totalReturn">0%</div>
+                            <div class="metric-label">Total Return</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">💰</div>
+                            <div class="metric-value" id="annualizedReturn">0%</div>
+                            <div class="metric-label">Annualized Return</div>
+                        </div>
+                    </div>
+
+                    <!-- Chart -->
+                    <div class="chart-container">
+                        <canvas id="projectionChart"></canvas>
+                    </div>
+
+                    <!-- Assumptions -->
+                    <div class="assumptions-box">
+                        <h4>Projection Assumptions</h4>
+                        <ul>
+                            <li><strong>Land Appreciation:</strong> 15% annually (Series A only)</li>
+                            <li><strong>Resort Profit Share:</strong> 18-20% annually (both series)</li>
+                            <li><strong>Token Value:</strong> Locks at purchase price, tradable on secondary markets</li>
+                            <li><strong>Distributions:</strong> Quarterly profit distributions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <div class="section-badge">📊 Side-by-Side Comparison</div>
+                <h2>Series A vs Series B</h2>
+                <p>Understanding the key differences between investment rounds</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-cell">Feature</div>
+                    <div class="comparison-cell featured">Series A <span class="badge">CURRENT</span></div>
+                    <div class="comparison-cell">Series B</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Total Round Size</strong></div>
+                    <div class="comparison-cell featured">$10,000,000</div>
+                    <div class="comparison-cell">$20,000,000</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Token Price</strong></div>
+                    <div class="comparison-cell featured">$800 / token</div>
+                    <div class="comparison-cell">$2,000 / token</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Equity Offered</strong></div>
+                    <div class="comparison-cell featured">10%</div>
+                    <div class="comparison-cell">15%</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Minimum Investment</strong></div>
+                    <div class="comparison-cell featured">$800 (1 token)</div>
+                    <div class="comparison-cell">$2,000 (1 token)</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Land Appreciation</strong></div>
+                    <div class="comparison-cell featured">✅ 15% annually</div>
+                    <div class="comparison-cell">❌ Not included</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Resort Profit Share</strong></div>
+                    <div class="comparison-cell featured">✅ Included</div>
+                    <div class="comparison-cell">✅ Included</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Token Tradability</strong></div>
+                    <div class="comparison-cell featured">✅ Secondary markets</div>
+                    <div class="comparison-cell">✅ Secondary markets</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Estimated 7-Year ROI</strong></div>
+                    <div class="comparison-cell featured">237% (Series A)</div>
+                    <div class="comparison-cell">133% (Series B)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Invest?</h2>
+            <p>Join the MayaRoyale community and secure your position in tokenized tropical real estate.</p>
+            <div class="cta-actions">
+                <a href="connect-wallet.html" class="btn-cta primary btn-connect-wallet">Connect Wallet</a>
+                <a href="contact.html" class="btn-cta secondary">Schedule Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p>Tokenized trophy beachfront real estate in Isla Aguada, Campeche, Mexico.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="gallery.html">Smart Resort Vision</a></li>
+                        <li><a href="connect-wallet.html">Connect Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#disclaimer">Risk Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#twitter" aria-label="Twitter">𝕏</a>
+                    <a href="#linkedin" aria-label="LinkedIn">in</a>
+                    <a href="#telegram" aria-label="Telegram">✈</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/wallet.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/mobile-nav-simple.js"></script>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

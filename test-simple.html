@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLE TEST - Mobile Dropdown</title>
+    
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 80px 20px 20px;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+        .test-box {
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 2px solid #333;
+        }
+        .green { color: #0f0; font-weight: bold; }
+        .red { color: #f00; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="nav-premium">
+        <div class="nav-premium-container">
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="Logo" class="nav-premium-logo">
+                </a>
+            </div>
+            
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Platform
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="#" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                    <span class="nav-premium-dropdown-item-desc">Track portfolio</span>
+                                </span>
+                            </a>
+                            <a href="#" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💎</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                    <span class="nav-premium-dropdown-item-desc">Token economics</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Company
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="#" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">👥</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Team</span>
+                                    <span class="nav-premium-dropdown-item-desc">Meet our team</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- TEST INSTRUCTIONS -->
+    <div class="test-box">
+        <h1>🧪 SUPER SIMPLE TEST</h1>
+        <p><strong>Screen Width:</strong> <span id="width"></span>px</p>
+        <p><strong>Mobile Mode:</strong> <span id="mobile"></span></p>
+    </div>
+    
+    <div class="test-box">
+        <h2>📋 INSTRUCTIONS:</h2>
+        <ol>
+            <li>Resize browser to <strong>&lt;968px</strong> (or open DevTools mobile view)</li>
+            <li>Click the <strong>hamburger icon (☰)</strong> top-right</li>
+            <li>Menu should slide in</li>
+            <li>Click <strong>"Platform ▼"</strong></li>
+            <li>Should show 2 items underneath</li>
+            <li>Click <strong>"Company ▼"</strong></li>
+            <li>Should show 1 item underneath</li>
+        </ol>
+    </div>
+    
+    <div class="test-box">
+        <h2>✅ STATUS:</h2>
+        <div id="status">Checking...</div>
+    </div>
+    
+    <div class="test-box">
+        <h2>🖥️ CONSOLE:</h2>
+        <div id="console" style="font-family: monospace; font-size: 12px;"></div>
+    </div>
+    
+    <script>
+        // Show screen info
+        function updateInfo() {
+            document.getElementById('width').textContent = window.innerWidth;
+            document.getElementById('mobile').textContent = window.innerWidth <= 968 ? 'YES' : 'NO';
+        }
+        updateInfo();
+        window.addEventListener('resize', updateInfo);
+        
+        // Capture console
+        const consoleDiv = document.getElementById('console');
+        const originalLog = console.log;
+        const originalError = console.error;
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            consoleDiv.innerHTML += args.join(' ') + '<br>';
+        };
+        
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            consoleDiv.innerHTML += '<span style="color: #f00;">' + args.join(' ') + '</span><br>';
+        };
+        
+        // Check status
+        setTimeout(function() {
+            const toggle = document.getElementById('navPremiumMobileToggle');
+            const menu = document.getElementById('navPremiumMenu');
+            const dropdowns = document.querySelectorAll('.nav-premium-dropdown');
+            
+            let html = '';
+            html += toggle ? '<span class="green">✅ Hamburger found</span><br>' : '<span class="red">❌ Hamburger NOT found</span><br>';
+            html += menu ? '<span class="green">✅ Menu found</span><br>' : '<span class="red">❌ Menu NOT found</span><br>';
+            html += dropdowns.length > 0 ? '<span class="green">✅ ' + dropdowns.length + ' dropdowns found</span><br>' : '<span class="red">❌ Dropdowns NOT found</span><br>';
+            
+            document.getElementById('status').innerHTML = html;
+        }, 500);
+    </script>
+    
+    <!-- THE ONLY SCRIPT NEEDED -->
+    <script src="js/mobile-nav-simple.js"></script>
+</body>
+</html>

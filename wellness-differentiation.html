@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Differentiation | MayaRoyale - Transformation by Design</title>
+    <meta name="description" content="MayaRoyale's world-class wellness spa featuring Tropical Wood Thalassotherapy, Dead Sea-inspired thermal circuits, IV therapy, and luxury medical-grade wellness services.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/premium-light.css">
+    
+    <style>
+        /* Wellness Page Styles */
+        .wellness-hero {
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wellness-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(184, 134, 11, 0.1) 0%, transparent 70%);
+        }
+        
+        .wellness-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .wellness-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .wellness-hero .tagline {
+            font-size: 1.5rem;
+            color: #B8860B;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        
+        .thalasso-section {
+            padding: 6rem 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: rgba(184, 134, 11, 0.1);
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            color: #B8860B;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: #0A0A0A;
+            margin-bottom: 1rem;
+        }
+        
+        .thalasso-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+        
+        .thalasso-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .thalasso-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .thalasso-quote {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #B8860B;
+        }
+        
+        .thalasso-features .feature-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .feature-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .pillars-section {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .pillar-card {
+            background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+            border: 2px solid #E5E7EB;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            border-color: #B8860B;
+            box-shadow: 0 20px 60px rgba(184, 134, 11, 0.2);
+        }
+        
+        .pillar-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pillar-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pillar-subtitle {
+            font-size: 0.85rem;
+            color: #B8860B;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .services-section {
+            padding: 6rem 0;
+            background: linear-gradient(180deg, #F8F9FA 0%, #FFFFFF 100%);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .service-card {
+            background: white;
+            border: 2px solid #E5E7EB;
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            border-color: #B8860B;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(184, 134, 11, 0.15);
+        }
+        
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .service-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .service-card li {
+            padding: 0.5rem 0;
+            color: #6A6A6A;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #B8860B;
+            font-weight: 700;
+        }
+        
+        .cta-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .cta-btn {
+            padding: 1.25rem 3rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn-primary {
+            background: white;
+            color: #0A0A0A;
+        }
+        
+        .cta-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+        }
+        
+        @media (max-width: 1024px) {
+            .thalasso-content { grid-template-columns: 1fr; }
+            .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            .wellness-hero h1 { font-size: 2.5rem; }
+            .section-header h2 { font-size: 2rem; }
+            .pillars-grid { grid-template-columns: 1fr; }
+            .cta-section h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium nav-scrolled"><div class="nav-premium-container"><div class="nav-premium-brand"><a href="index.html"><img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo"></a></div><ul class="nav-premium-menu" id="navPremiumMenu"><li class="nav-premium-item"><a href="#" class="nav-premium-link">Platform<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="dashboard.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Dashboard</span><span class="nav-premium-dropdown-item-desc">Track your portfolio</span></span></a><a href="tokenomics.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💎</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Tokenomics</span><span class="nav-premium-dropdown-item-desc">Token economics & funding</span></span></a><a href="financial-forecast.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📈</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Financial Forecast</span><span class="nav-premium-dropdown-item-desc">7-year projections</span></span></a><a href="investment-calculator.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🧮</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Investment Calculator</span><span class="nav-premium-dropdown-item-desc">Calculate your returns</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">The Project<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="gallery.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏖️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Smart Resort Vision</span><span class="nav-premium-dropdown-item-desc">Property gallery & plans</span></span></a><a href="future-vision.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌅</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span><span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family of Resorts</span></span></a><a href="positioning.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Strategic Positioning</span><span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span></span></a><a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Protection Animation</span><span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span></span></a><a href="yucatan-boom.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🚀</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Yucatan Boom</span><span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span></span></a><a href="wellness-differentiation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Wellness Differentiation</span><span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span></span></a><a href="culinary-excellence.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🍽️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Culinary Excellence</span><span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span></span></a><a href="technology.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">⚡</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Technology & Blockchain</span><span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span></span></a><a href="lhw-partnership.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏨</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">LHW Partnership</span><span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span></span></a><a href="sustainability.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌿</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Sustainability</span><span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">Company<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="team.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">👥</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Innovation Council</span><span class="nav-premium-dropdown-item-desc">Meet our team</span></span></a><a href="contact.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📧</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Contact</span><span class="nav-premium-dropdown-item-desc">Get in touch</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li></ul><a href="#" class="nav-premium-cta">Connect Wallet</a><button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle"><span></span><span></span><span></span></button></div></nav>
+
+    <!-- Hero -->
+    <section class="wellness-hero">
+        <div class="container">
+            <h1>Wellness Differentiation</h1>
+            <div class="tagline">TRANSFORMATION BY DESIGN</div>
+            <p style="font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto;">
+                World-class wellness sanctuary combining ancient healing traditions<br>
+                with cutting-edge medical science in a pristine jungle paradise.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tropical Wood Thalassotherapy -->
+    <section class="thalasso-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🌴 Signature Experience</div>
+                <h2>Tropical Wood Thalassotherapy</h2>
+                <p style="font-size: 1.1rem; color: #6A6A6A; max-width: 800px; margin: 0 auto;">
+                    Revolutionary wellness concept harmonizing reclaimed wood architecture, healing mineral waters, and immersive jungle nature.
+                </p>
+            </div>
+            
+            <div class="thalasso-content">
+                <div class="thalasso-image">
+                    <img src="https://www.genspark.ai/api/files/s/qvNE9bHt" alt="Tropical Wood Thalassotherapy">
+                    <div class="thalasso-quote">
+                        <p style="font-style: italic; margin: 0;">"Where healing waters meet nature's embrace."</p>
+                    </div>
+                </div>
+                
+                <div class="thalasso-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-tree"></i></div>
+                        <div class="feature-content">
+                            <h3>Reclaimed Wood Architecture</h3>
+                            <p style="color: #6A6A6A;">Stunning mineral pool sanctuary constructed from reclaimed timber, blending seamlessly with the tropical landscape.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="feature-content">
+                            <h3>Indoor-Outdoor Flow</h3>
+                            <p style="color: #6A6A6A;">Floor-to-ceiling glass panels open completely to the jungle, surrounding guests with lush palms and natural stone.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-water"></i></div>
+                        <div class="feature-content">
+                            <h3>Dead Sea-Inspired Thermal Circuit</h3>
+                            <p style="color: #6A6A6A;">Comprehensive thermal journey with steaming mineral pools, sauna, steam, and cold plunge therapy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Pillars -->
+    <section class="pillars-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🌿 Holistic Integration</div>
+                <h2>Three Pillars of Transformation</h2>
+            </div>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌾</div>
+                    <h3>Organic</h3>
+                    <div class="pillar-subtitle">NUTRITION</div>
+                    <p style="color: #6A6A6A;">Farm-to-table cuisine, plant-based wellness menus, and personalized nutrition plans.</p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon">💎</div>
+                    <h3>Mineral</h3>
+                    <div class="pillar-subtitle">THERAPY</div>
+                    <p style="color: #6A6A6A;">Dead Sea-inspired thermal waters, hydrotherapy circuits, and marine treatments.</p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon">☀️</div>
+                    <h3>Nature</h3>
+                    <div class="pillar-subtitle">IMMERSION</div>
+                    <p style="color: #6A6A6A;">Jungle surroundings, beachfront yoga, and nature-based healing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Wellness Services -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">💉 Medical-Grade Wellness</div>
+                <h2>Advanced Longevity & Recovery Services</h2>
+                <p style="font-size: 1.1rem; color: #6A6A6A; max-width: 800px; margin: 0 auto;">
+                    Cutting-edge medical wellness services in a refined, medically-supervised setting.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon"><i class="fas fa-syringe"></i></div>
+                        <h4>IV Drip Therapy</h4>
+                    </div>
+                    <ul>
+                        <li>Vitamin & mineral infusions (Hydration, Immunity, Energy, Anti-Aging)</li>
+                        <li>NAD+ therapy for cellular repair and longevity</li>
+                        <li>Myers' Cocktail and customized blends</li>
+                        <li>Licensed medical professionals</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon"><i class="fas fa-dna"></i></div>
+                        <h4>Detox & Cellular Wellness</h4>
+                    </div>
+                    <ul>
+                        <li>Guided detox programs (3-day, 5-day, 7-day)</li>
+                        <li>Heavy metal and toxin cleansing</li>
+                        <li>Lymphatic drainage massage</li>
+                        <li>Infrared sauna detox sessions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon"><i class="fas fa-lungs"></i></div>
+                        <h4>Oxygen & Recovery</h4>
+                    </div>
+                    <ul>
+                        <li>Hyperbaric oxygen therapy (HBOT)</li>
+                        <li>Cryotherapy (whole body or localized)</li>
+                        <li>Red light photobiomodulation</li>
+                        <li>Athletic recovery protocols</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon"><i class="fas fa-microscope"></i></div>
+                        <h4>Diagnostics & Personalization</h4>
+                    </div>
+                    <ul>
+                        <li>Wellness blood panels & biomarker testing</li>
+                        <li>Nutritional and metabolic assessments</li>
+                        <li>Hormone and vitamin analysis</li>
+                        <li>Personalized longevity plans</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon"><i class="fas fa-spa"></i></div>
+                        <h4>Integrative Wellness</h4>
+                    </div>
+                    <ul>
+                        <li>Functional medicine consultations</li>
+                        <li>Stress reduction & nervous system reset</li>
+                        <li>Sound healing and biofeedback</li>
+                        <li>Post-travel recovery protocols</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
+                        <h4>Medical Spa</h4>
+                    </div>
+                    <ul>
+                        <li>Non-invasive aesthetic treatments</li>
+                        <li>Skin rejuvenation & anti-aging</li>
+                        <li>Body contouring</li>
+                        <li>Doctor-supervised programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Transformation by Design</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+                Where ancient healing traditions meet cutting-edge medical science<br>
+                in a pristine jungle paradise.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-btn cta-btn-primary">
+                    <i class="fas fa-calendar-check"></i> Book Consultation
+                </a>
+                <a href="gallery.html" class="cta-btn cta-btn-primary">
+                    <i class="fas fa-images"></i> Explore Vision
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Script -->
+    <script src="js/wallet.js"></script>
+    <script src="js/mobile-nav-simple.js"></script>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

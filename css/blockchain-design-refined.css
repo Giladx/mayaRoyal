@@ -1,0 +1,226 @@
+/* ========================================
+   MAYAROYALE REFINED DESIGN SYSTEM
+   Premium, Subtle, Professional
+   ======================================== */
+
+/* ==================== ROOT VARIABLES ==================== */
+:root {
+    /* Refined Color Palette */
+    --accent-cyan: #00d4ff;
+    --accent-gold: #B8860B;
+    --refined-dark: #0a0e27;
+    --refined-navy: #1a1f3a;
+    
+    /* Subtle Gradients */
+    --gradient-subtle: linear-gradient(135deg, rgba(0, 212, 255, 0.03) 0%, rgba(123, 97, 255, 0.03) 100%);
+    
+    /* Refined Shadows */
+    --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* ==================== MINIMAL ANIMATED BACKGROUNDS ==================== */
+
+/* Subtle Grid Background - Only for dark sections */
+.blockchain-grid-bg-subtle {
+    position: relative;
+    overflow: hidden;
+}
+
+.blockchain-grid-bg-subtle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+/* ==================== REFINED ACCENTS ==================== */
+
+/* Subtle Accent Text - No Glow */
+.accent-text {
+    color: var(--accent-cyan);
+}
+
+/* Professional Badge/Label */
+.refined-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 20px;
+    color: var(--accent-cyan);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==================== REFINED CARDS ==================== */
+
+/* Professional Card Style */
+.refined-card {
+    position: relative;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s ease;
+}
+
+.refined-card:hover {
+    box-shadow: var(--shadow-elevated);
+    transform: translateY(-4px);
+}
+
+/* Dark Theme Card */
+.refined-card-dark {
+    background: rgba(26, 31, 58, 0.95);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.refined-card-dark:hover {
+    border-color: rgba(0, 212, 255, 0.2);
+}
+
+/* ==================== BUTTONS & INTERACTIVE ELEMENTS ==================== */
+
+/* Primary Button - Clean Style */
+.btn-refined-primary {
+    padding: 14px 32px;
+    background: var(--accent-cyan);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-refined-primary:hover {
+    background: #00b8e6;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Outline Button */
+.btn-refined-outline {
+    padding: 14px 32px;
+    background: transparent;
+    border: 2px solid var(--accent-cyan);
+    border-radius: 8px;
+    color: var(--accent-cyan);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-refined-outline:hover {
+    background: rgba(0, 212, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ==================== SECTION HEADERS ==================== */
+
+/* Clean Section Title */
+.refined-section-title {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.refined-section-title-dark {
+    color: #fff;
+}
+
+.refined-section-title .highlight {
+    color: var(--accent-cyan);
+}
+
+/* Subtle Underline */
+.refined-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent-cyan);
+}
+
+/* ==================== LIGHT THEME SECTIONS ==================== */
+
+.section-light {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+    padding: 6rem 0;
+}
+
+.section-light-alt {
+    background: #FFFFFF;
+    padding: 6rem 0;
+}
+
+/* ==================== DARK THEME SECTIONS ==================== */
+
+.section-dark {
+    background: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
+    padding: 6rem 0;
+    color: #fff;
+}
+
+.section-dark-alt {
+    background: #1A1A1A;
+    padding: 6rem 0;
+    color: #fff;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+.text-refined-cyan { color: var(--accent-cyan); }
+.text-refined-gold { color: var(--accent-gold); }
+
+/* Spacing Utilities */
+.spacing-sm { padding: 3rem 0; }
+.spacing-md { padding: 6rem 0; }
+.spacing-lg { padding: 9rem 0; }
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 768px) {
+    .refined-section-title {
+        font-size: 1.8rem;
+    }
+    
+    .btn-refined-primary,
+    .btn-refined-outline {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .refined-card {
+        padding: 20px;
+    }
+    
+    .section-light,
+    .section-dark {
+        padding: 4rem 0;
+    }
+}

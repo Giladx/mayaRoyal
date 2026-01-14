@@ -1,0 +1,459 @@
+/* ========================================
+   MAYAROYALE BLOCKCHAIN & CRYPTO DESIGN SYSTEM
+   Futuristic web3 aesthetics integrated with luxury resort branding
+   ======================================== */
+
+/* ==================== ROOT VARIABLES ==================== */
+:root {
+    /* Blockchain Color Palette */
+    --crypto-blue: #00d4ff;
+    --crypto-purple: #7b61ff;
+    --crypto-cyan: #00fff7;
+    --crypto-neon-green: #39ff14;
+    --blockchain-dark: #0a0e27;
+    --blockchain-navy: #1a1f3a;
+    --blockchain-purple: #2e1a47;
+    
+    /* Gradient Overlays */
+    --gradient-cyber: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(123, 97, 255, 0.1) 100%);
+    --gradient-neon: linear-gradient(45deg, rgba(0, 255, 247, 0.2) 0%, rgba(123, 97, 255, 0.2) 100%);
+    --gradient-holographic: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.15) 0%, 
+        rgba(123, 97, 255, 0.15) 25%,
+        rgba(0, 255, 247, 0.15) 50%,
+        rgba(123, 97, 255, 0.15) 75%,
+        rgba(0, 212, 255, 0.15) 100%);
+    
+    /* Glow Effects */
+    --glow-cyan: 0 0 20px rgba(0, 255, 247, 0.5), 0 0 40px rgba(0, 255, 247, 0.3);
+    --glow-purple: 0 0 20px rgba(123, 97, 255, 0.5), 0 0 40px rgba(123, 97, 255, 0.3);
+    --glow-blue: 0 0 20px rgba(0, 212, 255, 0.5), 0 0 40px rgba(0, 212, 255, 0.3);
+}
+
+/* ==================== ANIMATED BACKGROUNDS ==================== */
+
+/* Blockchain Grid Background */
+.blockchain-grid-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.blockchain-grid-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+/* Holographic Shimmer Effect */
+.holographic-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.holographic-shimmer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(0, 255, 247, 0.1) 50%,
+        transparent 70%
+    );
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Cyber Glow Border */
+.cyber-border {
+    position: relative;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(123, 97, 255, 0.05) 100%);
+}
+
+.cyber-border::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(45deg, 
+        transparent 0%, 
+        rgba(0, 212, 255, 0.5) 50%, 
+        transparent 100%);
+    opacity: 0;
+    border-radius: inherit;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.cyber-border:hover::before {
+    opacity: 1;
+    animation: borderGlow 2s infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* ==================== BLOCKCHAIN ACCENTS ==================== */
+
+/* Neon Text Glow */
+.neon-text {
+    color: var(--crypto-cyan);
+    text-shadow: 
+        0 0 5px rgba(0, 255, 247, 0.5),
+        0 0 10px rgba(0, 255, 247, 0.3),
+        0 0 20px rgba(0, 255, 247, 0.2);
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% { 
+        text-shadow: 
+            0 0 5px rgba(0, 255, 247, 0.5),
+            0 0 10px rgba(0, 255, 247, 0.3),
+            0 0 20px rgba(0, 255, 247, 0.2);
+    }
+    50% { 
+        text-shadow: 
+            0 0 10px rgba(0, 255, 247, 0.8),
+            0 0 20px rgba(0, 255, 247, 0.5),
+            0 0 30px rgba(0, 255, 247, 0.3);
+    }
+}
+
+/* Crypto Badge/Label */
+.crypto-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(123, 97, 255, 0.2) 100%);
+    border: 1px solid rgba(0, 212, 255, 0.5);
+    border-radius: 20px;
+    color: var(--crypto-cyan);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--glow-cyan);
+    animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% { 
+        box-shadow: 0 0 10px rgba(0, 255, 247, 0.3);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 20px rgba(0, 255, 247, 0.5);
+        transform: scale(1.05);
+    }
+}
+
+/* Blockchain Icon Accents */
+.blockchain-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 247, 0.5));
+}
+
+/* ==================== DATA VISUALIZATION ==================== */
+
+/* Animated Data Strips */
+.data-strip {
+    position: relative;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        var(--crypto-cyan) 50%,
+        transparent 100%);
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.data-strip::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(0, 255, 247, 0.8) 50%,
+        transparent 100%);
+    animation: dataFlow 2s linear infinite;
+}
+
+@keyframes dataFlow {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Crypto Stats Card */
+.crypto-stat-card {
+    position: relative;
+    padding: 30px;
+    background: linear-gradient(135deg, 
+        rgba(10, 14, 39, 0.8) 0%,
+        rgba(26, 31, 58, 0.8) 100%);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.crypto-stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(0, 212, 255, 0.1) 50%,
+        transparent 100%);
+    transition: left 0.5s ease;
+}
+
+.crypto-stat-card:hover::before {
+    left: 100%;
+}
+
+.crypto-stat-card:hover {
+    border-color: var(--crypto-cyan);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.crypto-stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.crypto-stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--crypto-cyan);
+    text-shadow: var(--glow-cyan);
+}
+
+/* ==================== BUTTONS & INTERACTIVE ELEMENTS ==================== */
+
+/* Web3 Button Style */
+.btn-web3 {
+    position: relative;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(123, 97, 255, 0.2) 100%);
+    border: 2px solid var(--crypto-cyan);
+    border-radius: 8px;
+    color: var(--crypto-cyan);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-web3::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 212, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn-web3:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-web3:hover {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    transform: translateY(-2px);
+    border-color: var(--crypto-purple);
+}
+
+.btn-web3 span {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==================== SECTION HEADERS ==================== */
+
+/* Blockchain Section Title */
+.blockchain-section-title {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.blockchain-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        var(--crypto-cyan) 50%,
+        transparent 100%);
+    box-shadow: var(--glow-cyan);
+}
+
+.blockchain-section-title .highlight {
+    color: var(--crypto-cyan);
+    text-shadow: var(--glow-cyan);
+}
+
+/* ==================== PARTICLE EFFECTS ==================== */
+
+/* Floating Particles Background */
+.particles-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--crypto-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--crypto-cyan);
+    animation: float 20s infinite;
+}
+
+.particle:nth-child(2n) { 
+    background: var(--crypto-purple);
+    box-shadow: 0 0 5px var(--crypto-purple);
+    animation-duration: 25s;
+    animation-delay: -5s;
+}
+
+.particle:nth-child(3n) { 
+    background: var(--crypto-blue);
+    box-shadow: 0 0 5px var(--crypto-blue);
+    animation-duration: 30s;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* ==================== HEXAGON PATTERNS ==================== */
+
+.hex-pattern {
+    position: relative;
+}
+
+.hex-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 768px) {
+    .blockchain-section-title {
+        font-size: 1.8rem;
+    }
+    
+    .crypto-stat-value {
+        font-size: 2rem;
+    }
+    
+    .btn-web3 {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .crypto-stat-card {
+        padding: 20px;
+    }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+.text-crypto-cyan { color: var(--crypto-cyan); }
+.text-crypto-purple { color: var(--crypto-purple); }
+.text-crypto-blue { color: var(--crypto-blue); }
+
+.bg-blockchain-dark { background-color: var(--blockchain-dark); }
+.bg-blockchain-navy { background-color: var(--blockchain-navy); }
+
+.glow-cyan { box-shadow: var(--glow-cyan); }
+.glow-purple { box-shadow: var(--glow-purple); }
+.glow-blue { box-shadow: var(--glow-blue); }

@@ -1,0 +1,723 @@
+/* ========================================
+   INTERACTIVE PROPERTY MAP - PREMIUM FINTECH
+   Isla Aguada Location Visualization
+   ======================================== */
+
+.property-map-section {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+}
+
+/* Map Container */
+.map-container {
+    position: relative;
+    margin: 3rem 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.interactive-map {
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+/* Map Info Cards Overlay */
+.map-info-cards {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.map-info-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(184, 134, 11, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.map-info-card:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 6px 24px rgba(184, 134, 11, 0.2);
+    border-color: #B8860B;
+}
+
+.map-info-card .info-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.map-info-card .info-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin: 0 0 4px 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.map-info-card .info-content p {
+    font-size: 0.85rem;
+    color: #6A6A6A;
+    margin: 0;
+}
+
+/* Development Phases Grid */
+.phases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.phase-card {
+    background: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 2px solid #E5E7EB;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.phase-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #B8860B 0%, #D4A017 100%);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.phase-card:hover {
+    border-color: #B8860B;
+    box-shadow: 0 8px 24px rgba(184, 134, 11, 0.15);
+    transform: translateY(-4px);
+}
+
+.phase-card:hover::before {
+    transform: scaleY(1);
+}
+
+.phase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.phase-number {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #B8860B;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.phase-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-planning {
+    background: rgba(0, 212, 255, 0.1);
+    color: #00D4FF;
+}
+
+.status-future {
+    background: rgba(184, 134, 11, 0.1);
+    color: #B8860B;
+}
+
+.phase-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.phase-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.phase-features li {
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    color: #4A4A4A;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #F4F4F4;
+}
+
+.phase-features li:last-child {
+    border-bottom: none;
+}
+
+.phase-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00C88C;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.phase-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+.timeline-label {
+    font-size: 0.85rem;
+    color: #6A6A6A;
+    font-weight: 500;
+}
+
+.timeline-value {
+    font-size: 0.9rem;
+    color: #0A0A0A;
+    font-weight: 600;
+}
+
+/* Prestigious Designations Section */
+.prestigious-badges-section {
+    margin: 5rem 0;
+    padding: 4rem 3rem;
+    background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 50%, #F8F9FA 100%);
+    border-radius: 24px;
+    border: 2px solid #E5E7EB;
+}
+
+.badges-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.badges-subtitle {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #6A6A6A;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.prestige-badge {
+    background: #FFFFFF;
+    padding: 3rem;
+    border-radius: 20px;
+    border: 2px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.prestige-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #B8860B 0%, #D4A017 50%, #B8860B 100%);
+}
+
+.prestige-badge:hover {
+    border-color: #B8860B;
+    box-shadow: 0 12px 36px rgba(184, 134, 11, 0.15);
+    transform: translateY(-4px);
+}
+
+.badge-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.badge-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.badge-subtitle {
+    font-size: 1rem;
+    color: #B8860B;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.badge-features li {
+    padding: 12px 0;
+    padding-left: 32px;
+    position: relative;
+    color: #4A4A4A;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-bottom: 1px solid #F4F4F4;
+}
+
+.badge-features li:last-child {
+    border-bottom: none;
+}
+
+.badge-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00C88C;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.badge-features li strong {
+    color: #B8860B;
+    font-weight: 600;
+}
+
+.badge-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 2px solid #E5E7EB;
+}
+
+.badge-year,
+.badge-authority {
+    font-size: 0.85rem;
+    color: #6A6A6A;
+    font-weight: 600;
+}
+
+.badge-authority {
+    color: #B8860B;
+}
+
+/* Investment Impact Box */
+.prestige-impact-box {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    color: #FFFFFF;
+    border: 2px solid #B8860B;
+}
+
+.impact-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(184, 134, 11, 0.3);
+}
+
+.impact-icon {
+    font-size: 2.5rem;
+}
+
+.impact-header h4 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #B8860B;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.impact-item {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(184, 134, 11, 0.2);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.impact-item strong {
+    display: block;
+    color: #B8860B;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Location Highlights */
+.location-highlights {
+    margin-top: 4rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+    border-radius: 20px;
+    border: 1px solid #E5E7EB;
+}
+
+.highlights-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 2rem;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: #B8860B;
+}
+
+.highlight-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin-bottom: 0.75rem;
+}
+
+.highlight-item p {
+    font-size: 0.95rem;
+    color: #6A6A6A;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Custom Map Markers */
+.custom-map-marker {
+    text-align: center;
+}
+
+.marker-pin {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%);
+    border-radius: 50% 50% 50% 0;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 auto 8px;
+    box-shadow: 0 4px 12px rgba(184, 134, 11, 0.4);
+    border: 3px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marker-icon {
+    font-size: 1.5rem;
+    transform: rotate(45deg);
+    position: relative;
+    top: -3px;
+}
+
+.marker-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid #B8860B;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.3;
+}
+
+/* Phase Markers */
+.phase-marker {
+    text-align: center;
+}
+
+.phase-marker-content {
+    width: 44px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 3px solid #B8860B;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+    gap: 2px;
+}
+
+.phase-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.phase-number {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #B8860B;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Airport Markers */
+.airport-marker {
+    text-align: center;
+}
+
+.airport-icon {
+    width: 34px;
+    height: 34px;
+    background: rgba(0, 212, 255, 0.15);
+    border: 2px solid #00D4FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 10px rgba(0, 212, 255, 0.2);
+}
+
+/* Map Popup Customization */
+.leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+    margin: 0;
+    min-width: 200px;
+}
+
+.map-popup {
+    padding: 16px 20px;
+}
+
+.map-popup h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin: 0 0 12px 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.map-popup h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin: 0 0 8px 0;
+}
+
+.map-popup p {
+    font-size: 0.9rem;
+    color: #4A4A4A;
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.map-popup p strong {
+    color: #B8860B;
+    font-weight: 600;
+}
+
+.leaflet-popup-tip {
+    background: #FFFFFF;
+}
+
+/* Phase Card Active State */
+.phase-card.active {
+    border-color: #B8860B;
+    box-shadow: 0 12px 32px rgba(184, 134, 11, 0.25);
+    transform: translateY(-4px);
+}
+
+.phase-card.active::before {
+    transform: scaleY(1);
+}
+
+/* Zoom Controls Styling */
+.leaflet-control-zoom {
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-control-zoom a {
+    background: #FFFFFF !important;
+    color: #0A0A0A !important;
+    border: none !important;
+    font-weight: 700 !important;
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    font-size: 1.2rem !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background: #B8860B !important;
+    color: #FFFFFF !important;
+}
+
+/* Scale Control Styling */
+.leaflet-control-scale {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 600 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 8px !important;
+    padding: 4px 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .phases-grid,
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .badges-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .map-info-cards {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    
+    .interactive-map {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-map-section {
+        padding: 4rem 0;
+    }
+    
+    .phases-grid,
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .badges-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .prestigious-badges-section {
+        padding: 2.5rem 1.5rem;
+        margin: 3rem 0;
+    }
+    
+    .badges-title {
+        font-size: 1.75rem;
+    }
+    
+    .prestige-badge {
+        padding: 2rem;
+    }
+    
+    .badge-title {
+        font-size: 1.4rem;
+    }
+    
+    .prestige-impact-box {
+        padding: 2rem;
+    }
+    
+    .interactive-map {
+        height: 400px;
+    }
+    
+    .map-info-card {
+        min-width: auto;
+        flex: 1;
+    }
+    
+    .location-highlights {
+        padding: 2rem;
+    }
+    
+    .highlights-title {
+        font-size: 1.5rem;
+    }
+}

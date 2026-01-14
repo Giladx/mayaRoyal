@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Dashboard - MayaRoyale</title>
+    <meta name="description" content="Track your MayaRoyale token investment, portfolio value, and performance metrics.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css?v=2.0">
+    <link rel="stylesheet" href="css/dashboard-refined.css">
+    <link rel="stylesheet" href="css/blockchain-design-refined.css">
+    
+    <style>
+        /* Wallet Gate Styles */
+        .wallet-gate-section {
+            min-height: calc(100vh - 72px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wallet-gate-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(184, 134, 11, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .wallet-gate-content {
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .wallet-gate-icon {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .wallet-gate-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .wallet-gate-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        
+        .wallet-gate-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .gate-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .gate-feature:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(184, 134, 11, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .gate-feature-icon {
+            font-size: 1.75rem;
+        }
+        
+        .gate-feature-text {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            text-align: left;
+        }
+        
+        .btn-connect-wallet {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0A0A0A;
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(184, 134, 11, 0.3);
+        }
+        
+        .btn-connect-wallet:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(184, 134, 11, 0.4);
+        }
+        
+        .btn-connect-wallet .btn-icon {
+            font-size: 1.25rem;
+        }
+        
+        .wallet-gate-note {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .wallet-gate-title {
+                font-size: 2.5rem;
+            }
+            
+            .wallet-gate-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .wallet-gate-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-connect-wallet {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-premium nav-scrolled">
+        <div class="nav-premium-container">
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo">
+                </a>
+            </div>
+            
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Platform
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                    <span class="nav-premium-dropdown-item-desc">Track your portfolio</span>
+                                </span>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💎</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                    <span class="nav-premium-dropdown-item-desc">Token economics & funding</span>
+                                </span>
+                            </a>
+                            <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📈</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Financial Forecast</span>
+                                    <span class="nav-premium-dropdown-item-desc">7-year projections</span>
+                                </span>
+                            </a>
+                            <a href="investment-calculator.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🧮</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Investment Calculator</span>
+                                    <span class="nav-premium-dropdown-item-desc">Calculate your returns</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        The Project
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏖️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Smart Resort Vision</span>
+                                    <span class="nav-premium-dropdown-item-desc">Property gallery & plans</span>
+                                </span>
+                            </a>
+                            <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌅</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span>
+                                    <span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family</span>
+                                </span>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Strategic Positioning</span>
+                                    <span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span>
+                                </span>
+                            </a>
+                            <a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Protection Animation</span>
+                                    <span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span>
+                                </span>
+                            </a>
+                            <a href="yucatan-boom.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🚀</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Yucatan Boom</span>
+                                    <span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span>
+                                </span>
+                            </a>
+                            <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Wellness Differentiation</span>
+                                    <span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span>
+                                </span>
+                            </a>
+                            <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🍽️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Culinary Excellence</span>
+                                    <span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span>
+                                </span>
+                            </a>
+                            <a href="technology.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">⚡</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Technology & Blockchain</span>
+                                    <span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span>
+                                </span>
+                            </a>
+                            <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏨</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">LHW Partnership</span>
+                                    <span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span>
+                                </span>
+                            </a>
+                            <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌿</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Sustainability</span>
+                                    <span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Company
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">👥</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Innovation Council</span>
+                                    <span class="nav-premium-dropdown-item-desc">Meet our team</span>
+                                </span>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📧</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Contact</span>
+                                    <span class="nav-premium-dropdown-item-desc">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <a href="#" class="nav-premium-cta">Connect Wallet</a>
+            
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Wallet Connection Gate -->
+    <section id="wallet-gate" class="wallet-gate-section">
+        <div class="container">
+            <div class="wallet-gate-content">
+                <div class="wallet-gate-icon">🔐</div>
+                <h1 class="wallet-gate-title">Connect Your Wallet</h1>
+                <p class="wallet-gate-subtitle">Please connect your wallet to access your investor dashboard and view your portfolio</p>
+                
+                <div class="wallet-gate-features">
+                    <div class="gate-feature">
+                        <span class="gate-feature-icon">📊</span>
+                        <span class="gate-feature-text">Real-time portfolio tracking</span>
+                    </div>
+                    <div class="gate-feature">
+                        <span class="gate-feature-icon">💎</span>
+                        <span class="gate-feature-text">Token holdings & value</span>
+                    </div>
+                    <div class="gate-feature">
+                        <span class="gate-feature-icon">📈</span>
+                        <span class="gate-feature-text">Performance analytics</span>
+                    </div>
+                    <div class="gate-feature">
+                        <span class="gate-feature-icon">🔒</span>
+                        <span class="gate-feature-text">Secure blockchain access</span>
+                    </div>
+                </div>
+                
+                <button class="btn-connect-wallet" onclick="connectWallet()">
+                    <span class="btn-icon">⚡</span>
+                    <span>Connect Wallet</span>
+                </button>
+                
+                <p class="wallet-gate-note">Supported wallets: Phantom, Solflare, MetaMask, WalletConnect</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Content (Hidden until wallet connected) -->
+    <div id="dashboard-content" style="display: none;">
+        <!-- Hero Section -->
+        <section class="dashboard-hero">
+            <div class="container">
+                <span class="crypto-badge" style="margin-bottom: 20px;">⚡ Built on Solana • Real-Time Portfolio Tracking</span>
+                <h1>Investor <span style="color: #00D4FF;">Dashboard</span></h1>
+                <p class="hero-subtitle">Track your $100M+ trophy beachfront real estate portfolio performance</p>
+                <div class="wallet-info">
+                    <span id="wallet-address">Wallet: <span id="wallet-address-display">Not Connected</span></span>
+                    <button id="disconnect-btn" class="btn btn-web3" onclick="disconnectWallet()"><span>🔌 Disconnect</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Overview -->
+        <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-overview">
+                <div class="portfolio-card main-portfolio">
+                    <h2>Total Portfolio Value</h2>
+                    <div class="portfolio-value"><span class="animate-counter" data-target="125000" data-prefix="$" data-suffix="" id="portfolio-value">0</span></div>
+                    <div class="portfolio-change positive" id="portfolio-change">+$3,250 (2.6%) 24h</div>
+                </div>
+                <div class="portfolio-card">
+                    <h3>MAYA Tokens Held</h3>
+                    <div class="token-amount"><span class="animate-counter" data-target="62.5" data-prefix="" data-suffix="" id="token-amount">0</span></div>
+                    <div class="token-usd">@ $2,000 per token</div>
+                </div>
+            </div>
+
+            <!-- Metrics Grid -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">💰</div>
+                    <div class="metric-info">
+                        <h4>Token Price</h4>
+                        <div class="metric-value"><span class="animate-counter" data-target="2000" data-prefix="$" data-suffix="">0</span></div>
+                        <div class="metric-change positive">+3.2% 24h</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">📈</div>
+                    <div class="metric-info">
+                        <h4>Land Appreciation</h4>
+                        <div class="metric-value"><span class="animate-counter" data-target="15" data-prefix="" data-suffix="% APY">0</span></div>
+                        <div class="metric-subtitle">Annual Growth</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">💎</div>
+                    <div class="metric-info">
+                        <h4>Total Returns</h4>
+                        <div class="metric-value"><span class="animate-counter" data-target="18" data-prefix="" data-suffix="-20%">0</span></div>
+                        <div class="metric-subtitle">Projected Annual</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🏝️</div>
+                    <div class="metric-info">
+                        <h4>Asset Backing</h4>
+                        <div class="metric-value"><span class="animate-counter" data-target="100" data-prefix="$" data-suffix="M+">0</span></div>
+                        <div class="metric-subtitle">Trophy Beachfront</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Chart -->
+            <div class="chart-container">
+                <h3>Portfolio Performance</h3>
+                <div style="height: 400px;">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="actions-section">
+                <h3>Quick Actions</h3>
+                <div class="actions-grid">
+                    <button class="action-btn">
+                        <span class="action-icon">🛒</span>
+                        <span>Buy More Tokens</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">💰</span>
+                        <span>Stake Tokens</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">📤</span>
+                        <span>Transfer</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">🔄</span>
+                        <span>Trade</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Asset Backing Details -->
+            <div class="asset-backing-section">
+                <h3>Real Estate Asset Backing</h3>
+                <div class="asset-details">
+                    <div class="asset-item">
+                        <span class="asset-label">Property Value:</span>
+                        <span class="asset-value">$100,000,000+</span>
+                    </div>
+                    <div class="asset-item">
+                        <span class="asset-label">Location:</span>
+                        <span class="asset-value">Isla Aguada, Campeche, Mexico</span>
+                    </div>
+                    <div class="asset-item">
+                        <span class="asset-label">Land Size:</span>
+                        <span class="asset-value">15 Acres Trophy Beachfront</span>
+                    </div>
+                    <div class="asset-item">
+                        <span class="asset-label">Last Appraisal:</span>
+                        <span class="asset-value">January 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="transactions-section">
+                <h3>Recent Transactions</h3>
+                <div class="transaction-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Value (USD)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactions-body">
+                            <tr>
+                                <td>2026-01-03</td>
+                                <td><span class="tx-type buy">Buy</span></td>
+                                <td>12.5 MAYA</td>
+                                <td>$25,000</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>2025-12-15</td>
+                                <td><span class="tx-type buy">Buy</span></td>
+                                <td>25.0 MAYA</td>
+                                <td>$50,000</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>2025-11-20</td>
+                                <td><span class="tx-type buy">Buy</span></td>
+                                <td>25.0 MAYA</td>
+                                <td>$50,000</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <!-- End Dashboard Content -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="financial-forecast.html">Financial Forecast</a></li>
+                        <li><a href="investment-calculator.html">Investment Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">The Project</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Property Showcase</a></li>
+                        <li><a href="future-vision.html">Future of Isla Aguada</a></li>
+                        <li><a href="positioning.html">Strategic Positioning</a></li>
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="team.html">Innovation Council</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Premium Navigation - Mobile menu toggle
+        const navPremiumMobileToggle = document.getElementById('navPremiumMobileToggle');
+        const navPremiumMenu = document.getElementById('navPremiumMenu');
+        
+        if (navPremiumMobileToggle) {
+            navPremiumMobileToggle.addEventListener('click', () => {
+                navPremiumMenu.classList.toggle('active');
+                navPremiumMobileToggle.classList.toggle('active');
+            });
+        }
+        
+        // Mobile dropdown toggle
+        document.querySelectorAll('.nav-premium-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                if (window.innerWidth <= 968) {
+                    const link = item.querySelector('.nav-premium-link');
+                    if (e.target === link || link.contains(e.target)) {
+                        e.preventDefault();
+                        item.classList.toggle('dropdown-open');
+                    }
+                }
+            });
+        });
+        
+        // Number counting animation (like Tokenomics page)
+        function animateCounter(element, target, duration = 2000) {
+            const prefix = element.getAttribute('data-prefix') || '';
+            const suffix = element.getAttribute('data-suffix') || '';
+            const start = 0;
+            const increment = target / (duration / 16); // 60fps
+            let current = start;
+            
+            // Check if target is a decimal
+            const isDecimal = target % 1 !== 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                // Format number with commas and handle decimals
+                let formattedNumber;
+                if (isDecimal) {
+                    formattedNumber = current.toFixed(1); // Keep one decimal place
+                } else {
+                    formattedNumber = Math.floor(current).toLocaleString('en-US');
+                }
+                
+                element.textContent = prefix + formattedNumber + suffix;
+            }, 16);
+        }
+        
+        // Intersection Observer for stats animation
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    const target = parseFloat(entry.target.getAttribute('data-target'));
+                    animateCounter(entry.target, target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all counter elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.animate-counter');
+            counters.forEach(counter => observer.observe(counter));
+            
+            // Check if wallet is already connected on page load
+            checkWalletConnection();
+        });
+        
+        // ============================================
+        // WALLET CONNECTION LOGIC
+        // ============================================
+        
+        // Check if wallet is connected (check localStorage)
+        function checkWalletConnection() {
+            const walletConnected = localStorage.getItem('walletConnected');
+            const walletAddress = localStorage.getItem('walletAddress');
+            
+            if (walletConnected === 'true' && walletAddress) {
+                showDashboard(walletAddress);
+            } else {
+                showWalletGate();
+            }
+        }
+        
+        // Connect wallet function
+        async function connectWallet() {
+            try {
+                // Check if Phantom wallet is available (Solana)
+                if (window.solana && window.solana.isPhantom) {
+                    const response = await window.solana.connect();
+                    const walletAddress = response.publicKey.toString();
+                    
+                    // Store connection in localStorage
+                    localStorage.setItem('walletConnected', 'true');
+                    localStorage.setItem('walletAddress', walletAddress);
+                    
+                    // Show dashboard
+                    showDashboard(walletAddress);
+                    
+                } else if (window.ethereum) {
+                    // Fallback to Ethereum wallets (MetaMask, etc.)
+                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    const walletAddress = accounts[0];
+                    
+                    // Store connection in localStorage
+                    localStorage.setItem('walletConnected', 'true');
+                    localStorage.setItem('walletAddress', walletAddress);
+                    
+                    // Show dashboard
+                    showDashboard(walletAddress);
+                    
+                } else {
+                    // No wallet detected - show alert
+                    alert('No Web3 wallet detected. Please install Phantom, MetaMask, or another compatible wallet.');
+                    // Redirect to connect-wallet page for instructions
+                    window.location.href = 'connect-wallet.html';
+                }
+            } catch (error) {
+                console.error('Wallet connection error:', error);
+                alert('Failed to connect wallet. Please try again.');
+            }
+        }
+        
+        // Disconnect wallet function
+        function disconnectWallet() {
+            // Clear localStorage
+            localStorage.removeItem('walletConnected');
+            localStorage.removeItem('walletAddress');
+            
+            // Disconnect from Phantom if available
+            if (window.solana && window.solana.isPhantom) {
+                window.solana.disconnect();
+            }
+            
+            // Show wallet gate
+            showWalletGate();
+        }
+        
+        // Show dashboard content
+        function showDashboard(walletAddress) {
+            document.getElementById('wallet-gate').style.display = 'none';
+            document.getElementById('dashboard-content').style.display = 'block';
+            
+            // Display shortened wallet address
+            const shortened = walletAddress.substring(0, 6) + '...' + walletAddress.substring(walletAddress.length - 4);
+            document.getElementById('wallet-address-display').textContent = shortened;
+            
+            // Trigger counter animations
+            setTimeout(() => {
+                const counters = document.querySelectorAll('.animate-counter');
+                counters.forEach(counter => {
+                    const target = parseFloat(counter.getAttribute('data-target'));
+                    animateCounter(counter, target);
+                });
+            }, 100);
+        }
+        
+        // Show wallet gate
+        function showWalletGate() {
+            document.getElementById('wallet-gate').style.display = 'flex';
+            document.getElementById('dashboard-content').style.display = 'none';
+        }
+    </script>
+    <script src="js/dashboard.js"></script>
+    <!-- SIMPLE MOBILE NAV - THE ONLY ONE THAT MATTERS -->
+    <script src="js/mobile-nav-simple.js"></script>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

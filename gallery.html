@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Showcase & Strategic Analysis - MayaRoyale</title>
+    <meta name="description" content="Complete property showcase, interactive maps, competitive advantages, and strategic positioning of MayaRoyale's $100M+ trophy beachfront resort in Isla Aguada.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/premium-light.css">
+    <link rel="stylesheet" href="css/gallery-premium.css">
+    <link rel="stylesheet" href="css/property-map.css">
+    <link rel="stylesheet" href="css/competitive-advantages.css">
+    
+    <!-- Leaflet CSS for Interactive Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-premium nav-scrolled"><div class="nav-premium-container"><div class="nav-premium-brand"><a href="index.html"><img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo"></a></div><ul class="nav-premium-menu" id="navPremiumMenu"><li class="nav-premium-item"><a href="#" class="nav-premium-link">Platform<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="dashboard.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Dashboard</span><span class="nav-premium-dropdown-item-desc">Track your portfolio</span></span></a><a href="tokenomics.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💎</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Tokenomics</span><span class="nav-premium-dropdown-item-desc">Token economics & funding</span></span></a><a href="financial-forecast.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📈</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Financial Forecast</span><span class="nav-premium-dropdown-item-desc">7-year projections</span></span></a><a href="investment-calculator.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🧮</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Investment Calculator</span><span class="nav-premium-dropdown-item-desc">Calculate your returns</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">The Project<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="gallery.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏖️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Smart Resort Vision</span><span class="nav-premium-dropdown-item-desc">Property gallery & plans</span></span></a><a href="future-vision.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌅</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span><span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family of Resorts</span></span></a><a href="positioning.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Strategic Positioning</span><span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span></span></a><a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Protection Animation</span><span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span></span></a><a href="yucatan-boom.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🚀</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Yucatan Boom</span><span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span></span></a><a href="wellness-differentiation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Wellness Differentiation</span><span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span></span></a><a href="culinary-excellence.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🍽️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Culinary Excellence</span><span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span></span></a><a href="technology.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">⚡</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Technology & Blockchain</span><span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span></span></a><a href="lhw-partnership.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏨</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">LHW Partnership</span><span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span></span></a><a href="sustainability.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌿</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Sustainability</span><span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">Company<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="team.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">👥</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Innovation Council</span><span class="nav-premium-dropdown-item-desc">Meet our team</span></span></a><a href="contact.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📧</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Contact</span><span class="nav-premium-dropdown-item-desc">Get in touch</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li></ul><a href="#" class="nav-premium-cta">Connect Wallet</a><button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle"><span></span><span></span><span></span></button></div></nav>
+
+    <!-- Hero Section -->
+    <section class="hero-light">
+        <div class="container">
+            <div class="hero-light-content">
+                <span class="hero-light-badge">🎖️ Pueblos Mágicos • UNESCO Heritage • $100M+ Trophy Asset</span>
+                <h1 class="hero-light-title">Property Showcase & <span class="accent">Strategic Analysis</span></h1>
+                <p class="hero-light-subtitle">Complete overview of our $100M+ trophy beachfront resort: property details, interactive maps, competitive advantages, and strategic positioning in Isla Aguada</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="property">Property</button>
+                <button class="filter-btn" data-filter="location">Location</button>
+                <button class="filter-btn" data-filter="renderings">Renderings</button>
+                <button class="filter-btn" data-filter="amenities">Amenities</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Mas'Tul Beach Club Rendering -->
+                <div class="gallery-item" data-category="renderings property">
+                    <img src="https://www.genspark.ai/api/files/s/V4JQ5Yoo" alt="Mas'Tul Beach Club">
+                    <div class="gallery-overlay">
+                        <h3>Mas'Tul Beach Club</h3>
+                        <p>Signature beachfront dining & entertainment venue</p>
+                    </div>
+                </div>
+
+                <!-- Luxury Resort Lobby -->
+                <div class="gallery-item" data-category="amenities renderings">
+                    <img src="https://www.genspark.ai/api/files/s/vrhlicXB" alt="Luxury Resort Lobby" style="object-fit: cover; object-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Grand Lobby & Reception</h3>
+                        <p>Tropical elegance with soaring ceilings and ocean views</p>
+                    </div>
+                </div>
+
+                <!-- Expert-Led Rainforest Expedition -->
+                <div class="gallery-item" data-category="amenities">
+                    <img src="https://www.genspark.ai/api/files/s/eZXVObm7" alt="Expert-Led Safari Experience" style="object-fit: cover; object-position: center center; height: 100%;">
+                    <div class="gallery-overlay">
+                        <h3>Expert Experience</h3>
+                        <p>Guided rainforest safaris with MayaRoyale naturalist experts</p>
+                    </div>
+                </div>
+
+                <!-- ATV Jungle Adventures -->
+                <div class="gallery-item" data-category="amenities">
+                    <img src="https://www.genspark.ai/api/files/s/Y8msdOqS" alt="ATV Jungle Adventure Tours" style="object-fit: cover; object-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>ATV Jungle Adventures</h3>
+                        <p>Expert-guided off-road expeditions through pristine rainforest trails</p>
+                    </div>
+                </div>
+
+                <!-- Beach Horseback Riding -->
+                <div class="gallery-item" data-category="amenities">
+                    <img src="https://www.genspark.ai/api/files/s/5KxR6aBf" alt="Beach Horseback Riding" style="object-fit: cover; object-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Beachfront Horseback Riding</h3>
+                        <p>Scenic rides along pristine white sand beaches with turquoise waters</p>
+                    </div>
+                </div>
+
+                <!-- Pristine Beachfront -->
+                <div class="gallery-item" data-category="location">
+                    <img src="https://www.genspark.ai/api/files/s/52KtYrBI" alt="Pristine Caribbean Beach">
+                    <div class="gallery-overlay">
+                        <h3>Pristine Caribbean Beach</h3>
+                        <p>Crystal clear turquoise waters</p>
+                    </div>
+                </div>
+
+                <!-- Aerial Beachfront View -->
+                <div class="gallery-item" data-category="location">
+                    <img src="https://www.genspark.ai/api/files/s/5yUX8V20" alt="Aerial Beach View">
+                    <div class="gallery-overlay">
+                        <h3>15 Acres Trophy Beachfront</h3>
+                        <p>Pristine coastal land with turquoise waters</p>
+                    </div>
+                </div>
+
+                <!-- Resort Master Plan -->
+                <div class="gallery-item" data-category="renderings">
+                    <img src="https://www.genspark.ai/api/files/s/ogiJkD9n" alt="8 Kilometer Master Plan">
+                    <div class="gallery-overlay">
+                        <h3>8 Kilometer Coastal Masterplan</h3>
+                        <p>Isla Aguada Sabancuy Eco-Destination Development</p>
+                    </div>
+                </div>
+
+                <!-- Luxury Lounge Area -->
+                <div class="gallery-item" data-category="amenities renderings">
+                    <img src="https://www.genspark.ai/api/files/s/XE7atADN" alt="Luxury Pool & Lounge" style="object-fit: cover; object-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Tropical Pool & Lounge Oasis</h3>
+                        <p>Lush jungle setting with infinity pool and natural palapa lounges</p>
+                    </div>
+                </div>
+
+                <!-- Beach Club Restaurant -->
+                <div class="gallery-item" data-category="property amenities">
+                    <img src="https://www.genspark.ai/api/files/s/Bw6P9HxR" alt="Mas'Tul Beach Club" style="object-fit: cover; object-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Mas'Tul Beach Club & Restaurant</h3>
+                        <p>Architectural masterpiece with living walls and guests enjoying fine dining</p>
+                    </div>
+                </div>
+
+                <!-- Natural Pool Area -->
+                <div class="gallery-item" data-category="amenities">
+                    <img src="https://www.genspark.ai/api/files/s/AWDP1df9" alt="Natural Pools">
+                    <div class="gallery-overlay">
+                        <h3>Natural Rock Pools</h3>
+                        <p>Oceanfront infinity pools with tropical setting</p>
+                    </div>
+                </div>
+
+                <!-- Unique Architecture -->
+                <div class="gallery-item" data-category="property renderings">
+                    <img src="https://www.genspark.ai/api/files/s/zaBwzua9" alt="Sustainable Architecture" style="object-fit: cover; object-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Sustainable Architecture</h3>
+                        <p>Organic design inspired by nature</p>
+                    </div>
+                </div>
+
+                <!-- Wellness Center -->
+                <div class="gallery-item" data-category="amenities">
+                    <img src="https://www.genspark.ai/api/files/s/BH3NP8oj" alt="Wellness Center">
+                    <div class="gallery-overlay">
+                        <h3>Healing & Wellness Center</h3>
+                        <p>Collective healing rituals in harmony with nature</p>
+                    </div>
+                </div>
+
+                <!-- Video 1: Luxury Accommodations -->
+                <div class="gallery-item" data-category="amenities property">
+                    <video controls playsinline webkit-playsinline>
+                        <source src="https://www.genspark.ai/api/files/s/8twIIhY2" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-overlay">
+                        <h3>200 Keys</h3>
+                        <p>Biophilic Luxury Stays • Seamless Flow • Private Retreats</p>
+                    </div>
+                </div>
+
+                <!-- Video 2: Monaco Style Casino -->
+                <div class="gallery-item" data-category="amenities">
+                    <video controls playsinline webkit-playsinline>
+                        <source src="https://www.genspark.ai/api/files/s/838EaFKG" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-overlay">
+                        <h3>Monaco Style Casino</h3>
+                        <p>Ultra Luxury gaming and entertainment</p>
+                    </div>
+                </div>
+
+                <!-- Video 3: Aerial Footage -->
+                <div class="gallery-item" data-category="location">
+                    <video controls playsinline webkit-playsinline>
+                        <source src="https://www.genspark.ai/api/files/s/R2L7eYYm" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-overlay">
+                        <h3>Aerial Property View</h3>
+                        <p>15 acres from above</p>
+                    </div>
+                </div>
+
+                <!-- Video 4: Experiential Pillars -->
+                <div class="gallery-item" data-category="amenities">
+                    <video controls playsinline webkit-playsinline>
+                        <source src="https://www.genspark.ai/api/files/s/r0PcDsu4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-overlay">
+                        <h3>Experiential Pillars</h3>
+                        <p>Physical & Adventure • Natural & Inspiring</p>
+                    </div>
+                </div>
+
+                <!-- Video 5: Gastronomy & Culture -->
+                <div class="gallery-item" data-category="amenities">
+                    <video controls playsinline webkit-playsinline>
+                        <source src="https://www.genspark.ai/api/files/s/owcspZh1" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-overlay">
+                        <h3>Gastronomy & Culture</h3>
+                        <p>Ocean to Table • Farm to Fork • Wellness Plant Based</p>
+                    </div>
+                </div>
+
+                <!-- Video 6: Beyond Leisure - Thermal Circuit -->
+                <div class="gallery-item" data-category="amenities">
+                    <video controls playsinline webkit-playsinline>
+                        <source src="https://www.genspark.ai/api/files/s/wXLdVQwR" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-overlay">
+                        <h3>Beyond Leisure</h3>
+                        <p>Dead Sea inspired thermal circuit • Organic / Mineral / Nature</p>
+                    </div>
+                </div>
+
+                <!-- Video 7: Turtle Hospital -->
+                <div class="gallery-item" data-category="location">
+                    <video controls playsinline webkit-playsinline>
+                        <source src="https://www.genspark.ai/api/files/s/onvt1f6j" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-overlay">
+                        <h3>Tourist Turtle Hospital / Sanctuary</h3>
+                        <p>Conservation and protection of endangered sea turtles at the resort</p>
+                    </div>
+                </div>
+
+                <!-- Video 8: Wellness & Yoga -->
+                <div class="gallery-item" data-category="amenities">
+                    <video controls playsinline webkit-playsinline>
+                        <source src="https://www.genspark.ai/api/files/s/Ncc0e781" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="gallery-overlay">
+                        <h3>Wellness & Yoga at MayaRoyale</h3>
+                        <p>Beachfront yoga, meditation, and holistic wellness experiences in paradise</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Interactive Property Map Section -->
+            <section class="property-map-section">
+                <div class="container">
+                    <div class="section-header-centered">
+                        <span class="section-badge">📍 Prime Location</span>
+                        <h2>Isla Aguada, Campeche</h2>
+                        <p class="section-subtitle">15 acres of pristine beachfront on Mexico's Gulf Coast</p>
+                    </div>
+
+                    <div class="map-container">
+                        <!-- Interactive Map -->
+                        <div id="propertyMap" class="interactive-map"></div>
+                        
+                        <!-- Map Overlay Info -->
+                        <div class="map-info-cards">
+                            <div class="map-info-card">
+                                <div class="info-icon">🏖️</div>
+                                <div class="info-content">
+                                    <h4>15 Acres</h4>
+                                    <p>Beachfront Paradise</p>
+                                </div>
+                            </div>
+                            <div class="map-info-card">
+                                <div class="info-icon">✈️</div>
+                                <div class="info-content">
+                                    <h4>2 Airports</h4>
+                                    <p>Campeche & Ciudad Del Carmen</p>
+                                </div>
+                            </div>
+                            <div class="map-info-card">
+                                <div class="info-icon">🏗️</div>
+                                <div class="info-content">
+                                    <h4>3 Phases</h4>
+                                    <p>Staged Development</p>
+                                </div>
+                            </div>
+                            <div class="map-info-card">
+                                <div class="info-icon">🌊</div>
+                                <div class="info-content">
+                                    <h4>Gulf Coast</h4>
+                                    <p>Private Beach Access</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Phases Grid -->
+                    <div class="phases-grid">
+                        <div class="phase-card" data-phase="1">
+                            <div class="phase-header">
+                                <span class="phase-number">Phase 1</span>
+                                <span class="phase-status status-planning">Planning</span>
+                            </div>
+                            <h3 class="phase-title">🏖️ Foundation & Beach Club</h3>
+                            <ul class="phase-features">
+                                <li>Luxury Beach Villas</li>
+                                <li>Members Beach Club</li>
+                                <li>Infrastructure Foundation</li>
+                                <li>LHW Standards Implementation</li>
+                            </ul>
+                            <div class="phase-timeline">
+                                <span class="timeline-label">Timeline:</span>
+                                <span class="timeline-value">Post-Series A Funding</span>
+                            </div>
+                        </div>
+
+                        <div class="phase-card" data-phase="2">
+                            <div class="phase-header">
+                                <span class="phase-number">Phase 2</span>
+                                <span class="phase-status status-future">2027</span>
+                            </div>
+                            <h3 class="phase-title">🏨 Core Resort Development</h3>
+                            <ul class="phase-features">
+                                <li>Main Resort Building</li>
+                                <li>Restaurants & Spa</li>
+                                <li>Central Amenities</li>
+                                <li>Sustainable Systems (Solar, Water)</li>
+                            </ul>
+                            <div class="phase-timeline">
+                                <span class="timeline-label">Timeline:</span>
+                                <span class="timeline-value">2027 Target Launch</span>
+                            </div>
+                        </div>
+
+                        <div class="phase-card" data-phase="3">
+                            <div class="phase-header">
+                                <span class="phase-number">Phase 3</span>
+                                <span class="phase-status status-future">2028+</span>
+                            </div>
+                            <h3 class="phase-title">⚓ Expansion & Marina</h3>
+                            <ul class="phase-features">
+                                <li>Marina Development</li>
+                                <li>Watersports Center</li>
+                                <li>Additional Villas</li>
+                                <li>Eco-Tourism Programs</li>
+                            </ul>
+                            <div class="phase-timeline">
+                                <span class="timeline-label">Timeline:</span>
+                                <span class="timeline-value">2028+ Expansion</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prestigious Designations Section -->
+                    <div class="prestigious-badges-section">
+                        <h3 class="badges-title">🏆 World-Recognized Location</h3>
+                        <p class="badges-subtitle">Two prestigious international designations elevate our investment thesis</p>
+                        
+                        <div class="badges-grid">
+                            <!-- Pueblos Mágicos Badge -->
+                            <div class="prestige-badge">
+                                <div class="badge-icon">🎖️</div>
+                                <div class="badge-content">
+                                    <h4 class="badge-title">Pueblos Mágicos Status</h4>
+                                    <p class="badge-subtitle">Official Mexican Tourism Designation (SECTUR)</p>
+                                    <ul class="badge-features">
+                                        <li>One of only <strong>177 towns</strong> in all of Mexico</li>
+                                        <li>Recognizes cultural significance & natural beauty</li>
+                                        <li>Connected to <strong>Tren Maya</strong> tourism route</li>
+                                        <li>Major government support & international marketing</li>
+                                        <li>Increased tourism flow & infrastructure investment</li>
+                                    </ul>
+                                    <div class="badge-footer">
+                                        <span class="badge-year">Designated: 2020</span>
+                                        <span class="badge-authority">SECTUR Mexico</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- UNESCO Calakmul Badge -->
+                            <div class="prestige-badge">
+                                <div class="badge-icon">🌍</div>
+                                <div class="badge-content">
+                                    <h4 class="badge-title">Near UNESCO World Heritage Site</h4>
+                                    <p class="badge-subtitle">Calakmul: Ancient Maya City & Tropical Forests</p>
+                                    <ul class="badge-features">
+                                        <li><strong>722,000+ hectares</strong> protected tropical forest</li>
+                                        <li>One of most important <strong>Maya archaeological sites</strong></li>
+                                        <li>Home to jaguars, pumas, tapirs, 350+ bird species</li>
+                                        <li>Ancient Maya city rivaling Tikal in importance</li>
+                                        <li>Major cultural tourism draw for the region</li>
+                                    </ul>
+                                    <div class="badge-footer">
+                                        <span class="badge-year">UNESCO: 2002 (Extended 2014)</span>
+                                        <span class="badge-authority">Mixed Heritage Site</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Investment Impact Box -->
+                        <div class="prestige-impact-box">
+                            <div class="impact-header">
+                                <span class="impact-icon">📈</span>
+                                <h4>Investment Impact</h4>
+                            </div>
+                            <div class="impact-grid">
+                                <div class="impact-item">
+                                    <strong>Tourism Growth:</strong> Pueblos Mágicos status drives 30-50% increase in visitors
+                                </div>
+                                <div class="impact-item">
+                                    <strong>Infrastructure:</strong> Tren Maya brings world-class connectivity to the region
+                                </div>
+                                <div class="impact-item">
+                                    <strong>Cultural Cachet:</strong> UNESCO proximity elevates brand positioning
+                                </div>
+                                <div class="impact-item">
+                                    <strong>Government Support:</strong> Federal & state resources for tourism development
+                                </div>
+                                <div class="impact-item">
+                                    <strong>Visitor Quality:</strong> Attracts high-end cultural & eco-tourists
+                                </div>
+                                <div class="impact-item">
+                                    <strong>Asset Appreciation:</strong> Prestigious designations accelerate land value growth
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location Highlights -->
+                    <div class="location-highlights">
+                        <h3 class="highlights-title">Strategic Location Benefits</h3>
+                        <div class="highlights-grid">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🌴</div>
+                                <h4>Pristine Environment</h4>
+                                <p>Untouched beachfront with crystal-clear waters and white sand</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">✈️</div>
+                                <h4>Dual Airport Access</h4>
+                                <p>Campeche International (90 min) & Ciudad Del Carmen (45 min)</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🏛️</div>
+                                <h4>UNESCO World Heritage</h4>
+                                <p>Calakmul Maya ruins & biosphere - one of Mesoamerica's most important archaeological sites</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🎣</div>
+                                <h4>World-Class Fishing</h4>
+                                <p>Renowned for tarpon, snook, and deep-sea fishing</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">💼</div>
+                                <h4>Pueblos Mágicos Status</h4>
+                                <p>Official SECTUR designation - one of only 177 towns in Mexico with this prestigious tourism recognition</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🌊</div>
+                                <h4>Protected Waters</h4>
+                                <p>Calm Gulf of Mexico waters ideal for swimming and water activities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Competitive Advantages Section - Isla Aguada vs Riviera Maya -->
+            <section class="competitive-advantages-section">
+                <div class="container">
+                    <div class="section-header-centered">
+                        <span class="section-badge">🏆 Strategic Location Analysis</span>
+                        <h2>Why Isla Aguada Outperforms Riviera Maya</h2>
+                        <p class="section-subtitle">Data-driven comparison reveals 6 rare physical advantages creating superior investment fundamentals</p>
+                    </div>
+
+                    <!-- Comparison Grid -->
+                    <div class="comparison-container">
+                        <!-- Isla Aguada (Winner) -->
+                        <div class="location-column winner">
+                            <div class="location-header">
+                                <div class="location-badge winner-badge">🏖️ Isla Aguada</div>
+                                <div class="winner-label">SUPERIOR LOCATION</div>
+                            </div>
+                            
+                            <div class="advantages-list">
+                                <div class="advantage-item positive">
+                                    <div class="advantage-icon">✅</div>
+                                    <div class="advantage-content">
+                                        <h4>Hurricane-Free Zone</h4>
+                                        <p>Protected Gulf Coast location</p>
+                                        <span class="data-point">0 major hurricanes (100-year record)</span>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-item positive">
+                                    <div class="advantage-icon">✅</div>
+                                    <div class="advantage-content">
+                                        <h4>Zero Sargassum</h4>
+                                        <p>Clean beaches year-round</p>
+                                        <span class="data-point">No algae/seaweed issues</span>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-item positive">
+                                    <div class="advantage-icon">✅</div>
+                                    <div class="advantage-content">
+                                        <h4>15 Feet Above Sea Level</h4>
+                                        <p>Natural flood protection</p>
+                                        <span class="data-point">Climate-resilient elevation</span>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-item positive">
+                                    <div class="advantage-icon">✅</div>
+                                    <div class="advantage-content">
+                                        <h4>Zero Coastal Erosion</h4>
+                                        <p>Stable shoreline documented</p>
+                                        <span class="data-point">100+ years of geological stability</span>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-item positive">
+                                    <div class="advantage-icon">✅</div>
+                                    <div class="advantage-content">
+                                        <h4>West-Facing Sunset Views</h4>
+                                        <p>Premium ocean sunsets</p>
+                                        <span class="data-point">Rare Gulf Coast feature</span>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-item positive">
+                                    <div class="advantage-icon">✅</div>
+                                    <div class="advantage-content">
+                                        <h4>Federal Highway 180 Frontage</h4>
+                                        <p>Major artery from USA to Cancún passes through property</p>
+                                        <span class="data-point">20M locals within 2-hour drive</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="location-score">
+                                <div class="score-label">Investment Risk Score</div>
+                                <div class="score-value positive-score">
+                                    <span class="score-number">9.2</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                                <div class="score-desc">Minimal environmental & operational risks</div>
+                            </div>
+                        </div>
+
+                        <!-- VS Divider -->
+                        <div class="vs-divider">
+                            <div class="vs-circle">VS</div>
+                            <div class="comparison-line"></div>
+                        </div>
+
+                        <!-- Riviera Maya (Comparison) -->
+                        <div class="location-column competitor">
+                            <div class="location-header">
+                                <div class="location-badge competitor-badge">🌴 Riviera Maya</div>
+                                <div class="competitor-label">CANCÚN • PLAYA • TULUM</div>
+                            </div>
+                            
+                            <div class="advantages-list">
+                                <div class="advantage-item negative">
+                                    <div class="advantage-icon">⚠️</div>
+                                    <div class="advantage-content">
+                                        <h4>Hurricane Corridor</h4>
+                                        <p>Direct Caribbean exposure affects entire coast</p>
+                                        <span class="data-point warning">ALL of Mexico's Caribbean + Yucatán affected</span>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-item negative">
+                                    <div class="advantage-icon">⚠️</div>
+                                    <div class="advantage-content">
+                                        <h4>Massive Sargassum Crisis</h4>
+                                        <p>Annual seaweed invasions disrupt ALL Caribbean coast</p>
+                                        <span class="data-point warning">$500M+ regional cleanup (entire Mexican Caribbean)</span>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-item negative">
+                                    <div class="advantage-icon">⚠️</div>
+                                    <div class="advantage-content">
+                                        <h4>Below Sea Level Areas</h4>
+                                        <p>Flooding and storm surge risk</p>
+                                        <span class="data-point warning">Significant infrastructure vulnerability</span>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-item negative">
+                                    <div class="advantage-icon">⚠️</div>
+                                    <div class="advantage-content">
+                                        <h4>Constant Coastal Erosion</h4>
+                                        <p>Requires continuous sand replenishment</p>
+                                        <span class="data-point warning">$10M+ annual maintenance costs</span>
+                                    </div>
+                                </div>
+
+                                <div class="advantage-item negative">
+                                    <div class="advantage-icon">⚠️</div>
+                                    <div class="advantage-content">
+                                        <h4>East-Facing Sunrise Only</h4>
+                                        <p>No sunset ocean views</p>
+                                        <span class="data-point warning">Lower guest satisfaction ratings</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="location-score">
+                                <div class="score-label">Investment Risk Score</div>
+                                <div class="score-value negative-score">
+                                    <span class="score-number">5.8</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                                <div class="score-desc">High environmental & operational risks</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Financial Impact Cards -->
+                    <div class="financial-impact-section">
+                        <h3 class="impact-title">💰 Financial Impact on Operations & ROI</h3>
+                        <div class="impact-cards-grid">
+                            <div class="impact-card">
+                                <div class="impact-metric">
+                                    <span class="metric-value">$0</span>
+                                    <span class="metric-label">Annual Hurricane Insurance</span>
+                                </div>
+                                <p class="metric-comparison">vs. $500K-$2M for Riviera Maya properties</p>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-metric">
+                                    <span class="metric-value">$0</span>
+                                    <span class="metric-label">Sargassum Cleanup Costs</span>
+                                </div>
+                                <p class="metric-comparison">vs. $500M+ regional annual costs (Quintana Roo state)</p>
+                            </div>
+
+                            <div class="impact-card highlight-card">
+                                <div class="impact-metric">
+                                    <span class="metric-value">0</span>
+                                    <span class="metric-label">Months of Business Disruption</span>
+                                </div>
+                                <p class="metric-comparison">vs. 3-5 months yearly (sargassum season April-August)</p>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-metric">
+                                    <span class="metric-value">$0</span>
+                                    <span class="metric-label">Beach Replenishment</span>
+                                </div>
+                                <p class="metric-comparison">vs. $50K-$200K every 2-3 years</p>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-metric">
+                                    <span class="metric-value">365</span>
+                                    <span class="metric-label">Bookable Days Per Year</span>
+                                </div>
+                                <p class="metric-comparison">vs. 310-340 days (hurricane season closures)</p>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-metric">
+                                    <span class="metric-value">95%+</span>
+                                    <span class="metric-label">Beach Quality Consistency</span>
+                                </div>
+                                <p class="metric-comparison">vs. 60-75% (sargassum seasons)</p>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-metric">
+                                    <span class="metric-value">+25%</span>
+                                    <span class="metric-label">Premium Sunset Pricing</span>
+                                </div>
+                                <p class="metric-comparison">West-facing sunset views command higher ADR</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Risk Mitigation Box -->
+                    <div class="risk-mitigation-box">
+                        <div class="risk-header">
+                            <span class="risk-icon">🛡️</span>
+                            <h4>Climate-Resilient Investment</h4>
+                        </div>
+                        <div class="risk-content">
+                            <div class="risk-column">
+                                <h5>Operational Advantages</h5>
+                                <ul>
+                                    <li>✅ No storm damage repairs or downtime</li>
+                                    <li>✅ Consistent beach quality year-round</li>
+                                    <li>✅ Lower insurance premiums (50-70% reduction)</li>
+                                    <li>✅ No emergency evacuations or closures</li>
+                                    <li>✅ Predictable operating costs</li>
+                                </ul>
+                            </div>
+                            <div class="risk-column">
+                                <h5>Guest Experience Benefits</h5>
+                                <ul>
+                                    <li>✅ No seaweed/algae complaints (5-star reviews)</li>
+                                    <li>✅ Premium sunset dining & events</li>
+                                    <li>✅ Safe swimming conditions daily</li>
+                                    <li>✅ No weather-related cancellations</li>
+                                    <li>✅ Higher repeat booking rates</li>
+                                </ul>
+                            </div>
+                            <div class="risk-column">
+                                <h5>Asset Protection</h5>
+                                <ul>
+                                    <li>✅ Stable property value (no erosion risk)</li>
+                                    <li>✅ Future-proof against climate change</li>
+                                    <li>✅ No seawall/infrastructure repairs</li>
+                                    <li>✅ 100-year documented stability</li>
+                                    <li>✅ Natural disaster risk: near-zero</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="risk-footer">
+                            <strong>Bottom Line:</strong> Isla Aguada's rare physical advantages translate to $1-3M+ in annual savings, 
+                            higher occupancy rates, premium pricing power, and significantly reduced operational risks compared to Riviera Maya competitors.
+                        </div>
+                    </div>
+
+                    <!-- Data Sources -->
+                    <div class="data-sources">
+                        <p><strong>Data Sources:</strong> NOAA Hurricane Historical Records, SEMARNAT Coastal Monitoring, 
+                        INEGI Topographic Maps, University of Quintana Roo Sargassum Studies (2015-2025), 
+                        Mexico's National Water Commission, Campeche State Environmental Reports, Quintana Roo State Budget (Sargassum Cleanup Allocation)</p>
+                    </div>
+
+                    <!-- Geographic Fact Callout -->
+                    <div class="shocking-stat-callout">
+                        <div class="callout-header">
+                            <h3>🌎 The Only Protected Paradise in Mexico</h3>
+                            <p class="callout-subtitle">While the entire Caribbean and Mexican coastline suffers from hurricanes and sargassum, 
+                            one tiny pocket remains untouched: <strong>Isla Aguada and Sabancuy</strong></p>
+                        </div>
+
+                        <div class="shocking-stat-content">
+                            <div class="shocking-stat-icon">💸</div>
+                            <div class="shocking-stat-text">
+                                <h3>$500 Million+</h3>
+                                <p>Annual cost to Quintana Roo state (entire Riviera Maya) for sargassum cleanup and hurricane damage control</p>
+                                <span class="coverage-badge">🌊 Affects: ALL Caribbean Coast • ALL Mexican Beaches</span>
+                            </div>
+                        </div>
+                        <div class="shocking-stat-vs">
+                            <span class="vs-text">VERSUS</span>
+                        </div>
+                        <div class="shocking-stat-content winner-stat">
+                            <div class="shocking-stat-icon">✅</div>
+                            <div class="shocking-stat-text">
+                                <h3>$0</h3>
+                                <p>Isla Aguada's cost — the ONLY pocket in all of Mexico naturally protected by unique Gulf Coast geography</p>
+                                <span class="coverage-badge winner">📍 Only 2 towns protected: Isla Aguada + Sabancuy</span>
+                            </div>
+                        </div>
+                        <div class="shocking-stat-footer">
+                            <p><strong>The Geographic Anomaly:</strong> Hurricanes devastate Cancún, Playa del Carmen, Tulum, Cozumel, and the entire Caribbean coast. 
+                            Sargassum buries beaches from Yucatán to Quintana Roo. <strong>EXCEPT</strong> for one tiny, naturally-protected pocket on the Gulf Coast: 
+                            Isla Aguada and Sabancuy. <strong>3-5 months of business disruption across ALL of Mexico's Caribbean coast every year</strong> 
+                            versus <strong>zero interruption in our protected zone, ever.</strong></p>
+                            <div class="geographic-fact">
+                                <span class="fact-icon">🗺️</span>
+                                <strong>Geographic Fact:</strong> Out of 11,000+ kilometers of Mexican coastline and hundreds of beach destinations, 
+                                only this one Gulf Coast pocket is naturally shielded from both hurricanes and sargassum by unique ocean current patterns 
+                                and protective geography. This isn't just rare—it's virtually unique in all of Mexico.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Highway 180 & Domestic Market Advantage -->
+                    <div class="highway-market-section">
+                        <div class="section-header-centered">
+                            <span class="section-badge">🛣️ Infrastructure & Market Access</span>
+                            <h2>Federal Highway 180: Mexico's Coastal Artery</h2>
+                            <p class="section-subtitle">The major thoroughfare from USA to Cancún runs directly through our property—20 million underserved locals within 2 hours</p>
+                        </div>
+
+                        <div class="highway-benefits-grid">
+                            <!-- Highway Advantage -->
+                            <div class="highway-benefit-card primary-card">
+                                <div class="benefit-icon-large">🛣️</div>
+                                <h3>Federal Highway 180 Frontage</h3>
+                                <p class="benefit-description">The main artery connecting USA border to Cancún passes directly through MayaRoyale property, 
+                                dividing it into two portions: <strong>MayaRoyale Resort</strong> (landside) and <strong>Mas'Tul Beach Club</strong> (beachside)</p>
+                                <ul class="benefit-list">
+                                    <li>✅ Free advertising to 100% of coastal traffic</li>
+                                    <li>✅ Impossible-to-miss visibility (highway bisects property)</li>
+                                    <li>✅ Direct access from Mexico's primary coastal route</li>
+                                    <li>✅ No signage costs—the property IS the billboard</li>
+                                </ul>
+                            </div>
+
+                            <!-- Domestic Market -->
+                            <div class="highway-benefit-card primary-card">
+                                <div class="benefit-icon-large">👨‍👩‍👧‍👦</div>
+                                <h3>20 Million Underserved Locals</h3>
+                                <p class="benefit-description"><strong>20 million Mexican residents</strong> within 2-hour drive have <strong>ZERO accessible beach options</strong>. 
+                                They must travel to overcrowded Riviera Maya or poor-quality Pacific coast for beach vacations.</p>
+                                <ul class="benefit-list">
+                                    <li>✅ Massive untapped domestic market (2-hour drive)</li>
+                                    <li>✅ No competition for local beach access</li>
+                                    <li>✅ Weekend getaway destination for millions</li>
+                                    <li>✅ Recession-resistant domestic tourism demand</li>
+                                </ul>
+                            </div>
+
+                            <!-- Traffic & Visibility -->
+                            <div class="highway-benefit-card">
+                                <div class="benefit-icon">📊</div>
+                                <h3>Highway 180 Traffic Volume</h3>
+                                <div class="traffic-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-number">10,000+</span>
+                                        <span class="stat-label">Daily vehicles</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">3.6M+</span>
+                                        <span class="stat-label">Annual impressions</span>
+                                    </div>
+                                </div>
+                                <p>Every car traveling Mexico's Gulf Coast sees MayaRoyale. Free marketing to captive audience.</p>
+                            </div>
+
+                            <!-- Market Comparison -->
+                            <div class="highway-benefit-card">
+                                <div class="benefit-icon">🚫</div>
+                                <h3>Current Local Options</h3>
+                                <div class="comparison-list negative-list">
+                                    <p><strong>Riviera Maya:</strong></p>
+                                    <ul>
+                                        <li>⚠️ 6-8 hour drive from Campeche/Tabasco</li>
+                                        <li>⚠️ Expensive (foreigner pricing)</li>
+                                        <li>⚠️ Overcrowded & commercialized</li>
+                                        <li>⚠️ Sargassum ruins experience</li>
+                                    </ul>
+                                    <p><strong>Pacific Coast:</strong></p>
+                                    <ul>
+                                        <li>⚠️ 8-10 hour drive across mountains</li>
+                                        <li>⚠️ Poor beach quality (rocky, polluted)</li>
+                                        <li>⚠️ Limited infrastructure</li>
+                                        <li>⚠️ Safety concerns</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Dual Revenue Strategy -->
+                            <div class="highway-benefit-card">
+                                <div class="benefit-icon">💰</div>
+                                <h3>Mas'Tul Beach Club</h3>
+                                <p><strong>Highway-accessible day-use facility</strong> captures local weekend/day-trip market:</p>
+                                <ul class="benefit-list">
+                                    <li>✅ Premium beach club for locals & road-trippers</li>
+                                    <li>✅ Restaurant, bar, water sports, cabanas</li>
+                                    <li>✅ $50-100 per person day-use revenue</li>
+                                    <li>✅ Year-round local demand (not seasonal)</li>
+                                    <li>✅ Immediate revenue (no overnight required)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Market Size -->
+                            <div class="highway-benefit-card">
+                                <div class="benefit-icon">📍</div>
+                                <h3>20M Population Within 2 Hours</h3>
+                                <div class="population-breakdown">
+                                    <div class="city-item">
+                                        <strong>Villahermosa, Tabasco:</strong> 2.5M metro
+                                    </div>
+                                    <div class="city-item">
+                                        <strong>Campeche City:</strong> 800K metro
+                                    </div>
+                                    <div class="city-item">
+                                        <strong>Ciudad del Carmen:</strong> 220K+
+                                    </div>
+                                    <div class="city-item">
+                                        <strong>Mérida accessible:</strong> 1M+ (3 hours)
+                                    </div>
+                                    <div class="city-item">
+                                        <strong>Oil industry workers:</strong> 100,000+ high-income
+                                    </div>
+                                </div>
+                                <p class="market-note">Combined: <strong>20M people with ZERO quality beach access</strong> within easy driving distance</p>
+                            </div>
+                        </div>
+
+                        <!-- Revenue Impact Box -->
+                        <div class="risk-mitigation-box" style="border-color: #3B82F6;">
+                            <div class="risk-header">
+                                <span class="risk-icon">💵</span>
+                                <h4>Domestic Market Revenue Multiplier</h4>
+                            </div>
+                            <div class="risk-content">
+                                <div class="risk-column">
+                                    <h5>Weekend Warriors (Locals)</h5>
+                                    <ul>
+                                        <li>✅ 52 weekends × 500 visitors = 26,000 annual</li>
+                                        <li>✅ $75 average spend × 26K = $1.95M</li>
+                                        <li>✅ Recession-resistant domestic demand</li>
+                                        <li>✅ Year-round (not seasonal like int'l)</li>
+                                        <li>✅ Repeat visitors (locals return monthly)</li>
+                                    </ul>
+                                </div>
+                                <div class="risk-column">
+                                    <h5>International Tourists</h5>
+                                    <ul>
+                                        <li>✅ Hurricane-free, sargassum-free = premium</li>
+                                        <li>✅ LHW partnership = luxury positioning</li>
+                                        <li>✅ Pueblos Mágicos + UNESCO draw</li>
+                                        <li>✅ $300-500 ADR × 120 rooms = $10-20M</li>
+                                        <li>✅ 80%+ occupancy (365-day season)</li>
+                                    </ul>
+                                </div>
+                                <div class="risk-column">
+                                    <h5>Combined Advantage</h5>
+                                    <ul>
+                                        <li>✅ Dual revenue streams (resort + beach club)</li>
+                                        <li>✅ Diversified customer base (local + int'l)</li>
+                                        <li>✅ Risk mitigation (if int'l drops, locals sustain)</li>
+                                        <li>✅ Highway visibility = free marketing</li>
+                                        <li>✅ No Mexican competitor has this access</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="risk-footer">
+                                <strong>Market Gap:</strong> 20 million people within 2 hours have no quality beach access. Riviera Maya is too far, expensive, and plagued by sargassum. 
+                                Pacific coast is 10+ hours and poor quality. MayaRoyale is the ONLY option—and Federal Highway 180 delivers customers directly to our doorstep while providing 
+                                3.6 million free advertising impressions annually. <strong>This domestic market alone could sustain 50%+ occupancy before a single international tourist arrives.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Eco-Tourism & Conservation - Fintech Style -->
+            <div class="eco-tourism-section-fintech">
+                <div class="section-header-centered">
+                    <span class="section-badge">🌿 Environmental Commitment</span>
+                    <h2>Sustainable Development Framework</h2>
+                    <p class="section-subtitle">Protecting paradise while delivering exceptional returns</p>
+                </div>
+
+                <!-- Conservation Stats Grid -->
+                <div class="conservation-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🌳</div>
+                        <div class="stat-value">5:1</div>
+                        <div class="stat-label">Preservation Ratio</div>
+                        <p class="stat-description">For every acre developed, we protect 5+ acres of wilderness</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🐢</div>
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Wildlife Protection</div>
+                        <p class="stat-description">Active programs for sea turtles & migratory birds</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">☀️</div>
+                        <div class="stat-value">Net Zero</div>
+                        <div class="stat-label">Carbon Neutral</div>
+                        <p class="stat-description">Solar energy & sustainable practices by 2028</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💧</div>
+                        <div class="stat-value">90%</div>
+                        <div class="stat-label">Water Recycling</div>
+                        <p class="stat-description">Advanced systems protecting natural water sources</p>
+                    </div>
+                </div>
+
+                <!-- Conservation Commitments Grid -->
+                <div class="commitments-grid">
+                    <div class="commitment-card">
+                        <div class="commitment-header">
+                            <span class="commitment-icon">🌳</span>
+                            <h3>Natural Preservation</h3>
+                        </div>
+                        <p>Surrounding areas remain in natural, undeveloped condition. Native flora and fauna ecosystems are permanently protected through conservation easements.</p>
+                    </div>
+                    
+                    <div class="commitment-card">
+                        <div class="commitment-header">
+                            <span class="commitment-icon">🌊</span>
+                            <h3>Ocean Conservation</h3>
+                        </div>
+                        <p>Protecting coral reefs, mangroves, and coastal ecosystems. Responsible tourism practices that enhance rather than exploit marine environments.</p>
+                    </div>
+                    
+                    <div class="commitment-card">
+                        <div class="commitment-header">
+                            <span class="commitment-icon">♻️</span>
+                            <h3>Sustainable Development</h3>
+                        </div>
+                        <p>Eco-friendly materials and minimal environmental impact construction. All building techniques certified for sustainability and long-term ecological balance.</p>
+                    </div>
+                    
+                    <div class="commitment-card">
+                        <div class="commitment-header">
+                            <span class="commitment-icon">🌱</span>
+                            <h3>Carbon Neutrality</h3>
+                        </div>
+                        <p>Solar energy infrastructure, reforestation initiatives, and sustainable operational practices. Target: Net-zero carbon emissions by 2028.</p>
+                    </div>
+                </div>
+
+                <!-- Environmental Value Proposition -->
+                <div class="environmental-value-box">
+                    <h3>Investment in Paradise, Protected</h3>
+                    <p>MayaRoyale represents more than trophy real estate—it's a commitment to preserving one of Mexico's most pristine coastal ecosystems. Our environmental framework ensures that luxury and conservation work in harmony, protecting value for generations.</p>
+                    <div class="value-metrics">
+                        <div class="value-metric">
+                            <span class="metric-value">15 Acres</span>
+                            <span class="metric-label">Development Footprint</span>
+                        </div>
+                        <div class="value-metric">
+                            <span class="metric-value">75+ Acres</span>
+                            <span class="metric-label">Protected Wilderness</span>
+                        </div>
+                        <div class="value-metric">
+                            <span class="metric-value">$100M+</span>
+                            <span class="metric-label">Asset Value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Information -->
+    <section class="property-info-section">
+        <div class="container">
+            <h2>Property Details</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Location</h3>
+                    <p><span class="animate-counter" data-target="0" data-prefix="Isla Aguada, " data-suffix="Campeche, Mexico">Isla Aguada, Campeche, Mexico</span></p>
+                    <p class="info-detail">Prime Caribbean coastal location with pristine beaches</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📏</div>
+                    <h3>Property Size</h3>
+                    <p><span class="animate-counter" data-target="15" data-prefix="" data-suffix=" Acres">0</span></p>
+                    <p class="info-detail">Trophy beachfront real estate with unlimited potential</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">💰</div>
+                    <h3>Asset Value</h3>
+                    <p><span class="animate-counter" data-target="100" data-prefix="$" data-suffix="M+">0</span></p>
+                    <p class="info-detail">Independently appraised quarterly for transparency</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📈</div>
+                    <h3>Appreciation</h3>
+                    <p><span class="animate-counter" data-target="15" data-prefix="" data-suffix="% Annual">0</span></p>
+                    <p class="info-detail">Consistent historical growth in prime coastal markets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="gallery.html">Smart Resort Vision</a></li>
+                        <li><a href="connect-wallet.html">Connect Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#disclaimer">Risk Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+        }
+        
+        // Number counting animation
+        function animateCounter(element, target, duration = 2000) {
+            const prefix = element.getAttribute('data-prefix') || '';
+            const suffix = element.getAttribute('data-suffix') || '';
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const isDecimal = target % 1 !== 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                let formattedNumber;
+                if (isDecimal) {
+                    formattedNumber = current.toFixed(1);
+                } else {
+                    formattedNumber = Math.floor(current).toLocaleString('en-US');
+                }
+                
+                element.textContent = prefix + formattedNumber + suffix;
+            }, 16);
+        }
+        
+        // Intersection Observer for stats animation
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    const target = parseFloat(entry.target.getAttribute('data-target'));
+                    if (target > 0) {
+                        animateCounter(entry.target, target);
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all counter elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.animate-counter');
+            counters.forEach(counter => observer.observe(counter));
+        });
+    </script>
+    <script src="js/wallet.js"></script>
+    <script src="js/gallery.js"></script>
+    
+    <!-- Leaflet JS for Interactive Map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/property-map.js"></script>
+    <!-- SIMPLE MOBILE NAV -->
+    <script src="js/mobile-nav-simple.js"></script>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MayaRoyale | Tokenized Trophy Beachfront Real Estate</title>
+    <meta name="description" content="MAYA Token - $100M+ trophy beachfront real estate backed by blockchain technology. 18-22% projected annual returns. Rare institutional-grade opportunity.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css?v=2.0">
+    <link rel="stylesheet" href="css/premium-light.css">
+    <link rel="stylesheet" href="css/home-premium.css">
+    <link rel="stylesheet" href="css/regulatory-disclosure.css">
+    
+    <!-- Page-specific styles -->
+    <style>
+        /* Delicate animation for tokenized badge */
+        @keyframes delicateGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 212, 255, 0.2), 0 0 30px rgba(0, 212, 255, 0.1);
+                transform: translateY(0px);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.15);
+                transform: translateY(-2px);
+            }
+        }
+        
+        .hero-badge-animated {
+            animation: delicateGlow 3s ease-in-out infinite;
+        }
+        
+        /* Delicate animation for blockchain icon */
+        @keyframes iconPulse {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.1) rotate(5deg);
+                opacity: 1;
+            }
+        }
+        
+        .blockchain-icon-animated {
+            animation: iconPulse 2.5s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        /* Meets Blockchain desktop size */
+        .meets-blockchain-text {
+            font-size: 3.5rem !important;
+        }
+        
+        /* FIX HEADER OVERLAY - PUSH CONTENT DOWN FOR ALL SCREENS */
+        
+        /* DESKTOP & FULL SCREEN - Push hero content down to avoid navigation overlap */
+        .hero-fullscreen {
+            padding-top: 100px !important;
+            min-height: 100vh !important;
+            height: auto !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        .hero-content {
+            padding-top: 2rem !important;
+            padding-bottom: 3rem !important;
+            margin-top: 0 !important;
+            overflow: visible !important;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .hero-badge {
+            margin-top: 1rem !important;
+            margin-bottom: 1.5rem !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Ensure token cards are visible */
+        .hero-token-info {
+            display: grid !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            margin: 2rem auto 2rem !important;
+        }
+        
+        .token-card {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* MOBILE HAMBURGER MENU - CRITICAL FIX */
+        @media (max-width: 968px) {
+            .nav-premium-mobile-toggle {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                width: 28px !important;
+                height: 24px !important;
+                z-index: 1003 !important;
+                position: relative !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+                margin-left: 0.5rem !important;
+            }
+            
+            .nav-premium-mobile-toggle span {
+                display: block !important;
+                width: 100% !important;
+                height: 3px !important;
+                background: #FFFFFF !important;
+                border-radius: 2px !important;
+                margin: 3px 0 !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            /* When nav scrolls, change to dark lines */
+            .nav-premium.nav-scrolled .nav-premium-mobile-toggle span {
+                background: #0A0A0A !important;
+            }
+            
+            /* Active state (X icon) */
+            .nav-premium-mobile-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px) !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(2) {
+                opacity: 0 !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px) !important;
+            }
+        }
+        
+        /* MOBILE ADJUSTMENTS */
+        @media (max-width: 768px) {
+            .hero-fullscreen {
+                padding-top: 120px !important;
+                min-height: 100vh !important;
+                height: auto !important;
+                display: flex !important;
+                align-items: flex-start !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            .hero-content {
+                padding-top: 2rem !important;
+                padding-bottom: 5rem !important;
+                margin-top: 0 !important;
+                overflow: visible !important;
+            }
+            
+            .hero-badge {
+                margin-bottom: 1.5rem !important;
+                font-size: 0.7rem !important;
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                min-width: auto !important;
+                max-width: 90% !important;
+                width: fit-content !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding: 0.5rem 1rem !important;
+            }
+            
+            h1.hero-title {
+                font-size: 2.5rem !important;
+                margin-bottom: 0.5rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            h1.hero-title span {
+                font-size: 2.5rem !important;
+                letter-spacing: 0.30em !important;
+            }
+            
+            h1.hero-title span:last-child {
+                letter-spacing: 0.15em !important;
+            }
+            
+            /* Meets Blockchain - keep on one line on mobile */
+            .meets-blockchain-text {
+                font-size: 1.8rem !important;
+                letter-spacing: 0.05em !important;
+                white-space: nowrap !important;
+                gap: 0.5rem !important;
+            }
+            
+            .meets-blockchain-text svg {
+                width: 20px !important;
+                height: 20px !important;
+            }
+            
+            /* Hide vision tagline on mobile */
+            .hero-tagline-vision {
+                display: none !important;
+            }
+            
+            .hero-tagline {
+                font-size: 0.65rem !important;
+                margin-bottom: 0.5rem !important;
+                letter-spacing: 0.3em !important;
+            }
+            
+            .hero-location {
+                margin-bottom: 2rem !important;
+            }
+            
+            .hero-location > span {
+                font-size: 0.8rem !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 0rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            .hero-location span span {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 0.25rem !important;
+                white-space: nowrap !important;
+                font-size: 0.8rem !important;
+            }
+            
+            .hero-location svg {
+                flex-shrink: 0 !important;
+                width: 13px !important;
+                height: 13px !important;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.9rem !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            /* Token Info Cards - CRITICAL FIX */
+            .hero-token-info {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1rem !important;
+                width: 100% !important;
+                margin: 2rem 0 !important;
+                padding: 0 1rem !important;
+            }
+            
+            .token-card {
+                width: 100% !important;
+                padding: 1.5rem !important;
+                margin: 0 !important;
+                background: rgba(0, 0, 0, 0.5) !important;
+                border: 1px solid rgba(184, 134, 11, 0.3) !important;
+                border-radius: 12px !important;
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            
+            .token-label {
+                font-size: 0.85rem !important;
+                margin-bottom: 0.5rem !important;
+                display: block !important;
+            }
+            
+            .token-price {
+                font-size: 2rem !important;
+                display: block !important;
+            }
+            
+            .hero-actions {
+                margin-top: 2rem !important;
+                margin-bottom: 3rem !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1rem !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                z-index: 10 !important;
+                padding: 0 1rem !important;
+            }
+            
+            .hero-actions .btn {
+                width: 100% !important;
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                padding: 1rem 2rem !important;
+                font-size: 1rem !important;
+                pointer-events: auto !important;
+            }
+            
+            .btn-secondary {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-fullscreen {
+                padding-top: 110px !important;
+                padding-bottom: 3rem !important;
+                height: auto !important;
+            }
+            
+            .hero-content {
+                padding-top: 1.5rem !important;
+                padding-bottom: 4rem !important;
+            }
+            
+            .hero-title {
+                font-size: 2rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            .hero-title span {
+                font-size: 1.5rem !important;
+            }
+            
+            .hero-tagline {
+                font-size: 1.1rem !important;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.8rem !important;
+                padding: 0 0.5rem !important;
+            }
+            
+            .hero-token-info {
+                padding: 0 0.5rem !important;
+                gap: 0.75rem !important;
+            }
+            
+            .token-card {
+                padding: 1.25rem !important;
+            }
+            
+            .token-price {
+                font-size: 1.75rem !important;
+            }
+            
+            .hero-actions {
+                padding: 0 0.5rem !important;
+                margin-top: 1.5rem !important;
+                margin-bottom: 3rem !important;
+            }
+            
+            /* FINAL HAMBURGER FIX - Highest priority */
+            .nav-premium-mobile-toggle {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            
+            .nav-premium-mobile-toggle span {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                background: #FFFFFF !important;
+            }
+            
+            .nav-premium.nav-scrolled .nav-premium-mobile-toggle span {
+                background: #0A0A0A !important;
+            }
+        }
+        
+        /* MOBILE DROPDOWN FIXES - CRITICAL */
+        @media (max-width: 968px) {
+            /* Make dropdown items visible and styled for mobile */
+            .nav-premium-menu.active .nav-premium-dropdown-item {
+                display: flex !important;
+                align-items: center !important;
+                gap: 0.75rem !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                padding: 0.875rem 1rem !important;
+                border-radius: 6px !important;
+                transition: all 0.2s ease !important;
+                background: transparent !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown-item:hover {
+                background: rgba(255, 255, 255, 0.08) !important;
+                color: #FFFFFF !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown-item-icon {
+                font-size: 1.25rem !important;
+                min-width: 1.5rem !important;
+                display: block !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown-item-label {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0.125rem !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown-item-title {
+                font-weight: 600 !important;
+                font-size: 0.95rem !important;
+                color: #FFFFFF !important;
+                display: block !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown-item-desc {
+                font-size: 0.8rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                display: block !important;
+            }
+            
+            /* Hide the graphic element on mobile */
+            .nav-premium-menu.active .nav-premium-dropdown-graphic {
+                display: none !important;
+            }
+            
+            /* Ensure dropdown items container is visible */
+            .nav-premium-menu.active .nav-premium-dropdown-items {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0.25rem !important;
+                width: 100% !important;
+            }
+            
+            /* Arrow rotation on mobile */
+            .nav-premium-menu.active .nav-premium-item.dropdown-open .nav-premium-arrow {
+                transform: rotate(180deg) !important;
+            }
+        }
+        
+        /* ULTRA PRIORITY - Force hamburger visibility on ALL mobile screens */
+        @media (max-width: 968px) {
+            /* CRITICAL: Ensure nav container shows both Connect Wallet AND hamburger */
+            .nav-premium-container {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 0 1rem !important;
+            }
+            
+            /* Mobile menu - FORCE IT TO WORK */
+            .nav-premium-menu {
+                display: flex !important;
+                position: fixed !important;
+                top: 72px !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                height: calc(100vh - 72px) !important;
+                background: rgba(10, 10, 10, 0.98) !important;
+                backdrop-filter: blur(20px) !important;
+                flex-direction: column !important;
+                padding: 1.5rem !important;
+                z-index: 9998 !important;
+                overflow-y: auto !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                transform: translateX(100%) !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            .nav-premium-menu.active {
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: translateX(0) !important;
+            }
+            
+            /* Menu items when menu is open */
+            .nav-premium-menu.active .nav-premium-item {
+                display: block !important;
+                width: 100% !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-link {
+                display: flex !important;
+                color: #FFFFFF !important;
+                padding: 1rem !important;
+                font-size: 1rem !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown {
+                position: static !important;
+                background: rgba(255, 255, 255, 0.05) !important;
+                border-radius: 8px !important;
+                max-height: 0 !important;
+                overflow: hidden !important;
+                transition: max-height 0.3s ease !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-item.dropdown-open .nav-premium-dropdown {
+                max-height: 1000px !important;
+                padding: 0.5rem !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown-item {
+                display: flex !important;
+                color: rgba(255, 255, 255, 0.8) !important;
+                padding: 0.75rem 1rem !important;
+            }
+            
+            /* Keep Connect Wallet button visible but smaller */
+            .nav-premium-cta {
+                display: flex !important;
+                padding: 0.4rem 0.75rem !important;
+                font-size: 0.75rem !important;
+                margin-left: auto !important;
+                margin-right: 0.5rem !important;
+                order: 2 !important;
+            }
+            
+            /* FORCE HAMBURGER TO DISPLAY */
+            body .nav-premium .nav-premium-mobile-toggle,
+            .nav-premium-mobile-toggle,
+            #navPremiumMobileToggle {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                gap: 5px !important;
+                width: 32px !important;
+                height: 26px !important;
+                min-width: 32px !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                z-index: 99999 !important;
+                position: relative !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 3px !important;
+                margin: 0 !important;
+                order: 3 !important;
+                flex-shrink: 0 !important;
+            }
+            
+            /* FORCE SPANS TO DISPLAY */
+            body .nav-premium .nav-premium-mobile-toggle span,
+            .nav-premium-mobile-toggle span,
+            #navPremiumMobileToggle span {
+                display: block !important;
+                width: 100% !important;
+                height: 3px !important;
+                min-height: 3px !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                background-color: #FFFFFF !important;
+                border-radius: 2px !important;
+                transition: all 0.3s ease !important;
+                margin: 0 !important;
+            }
+            
+            /* Dark lines when scrolled */
+            body .nav-premium.nav-scrolled .nav-premium-mobile-toggle span,
+            body .nav-premium:not(.nav-transparent) .nav-premium-mobile-toggle span,
+            .nav-premium.nav-scrolled #navPremiumMobileToggle span {
+                background-color: #000000 !important;
+            }
+            
+            /* Hamburger X transformation when active */
+            .nav-premium-mobile-toggle.active span:nth-child(1),
+            #navPremiumMobileToggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px) !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(2),
+            #navPremiumMobileToggle.active span:nth-child(2) {
+                opacity: 0 !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(3),
+            #navPremiumMobileToggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px) !important;
+            }
+        }
+        
+        /* PREMIUM FINTECH BADGE ANIMATION */
+        @keyframes fintech-pulse {
+            0%, 100% {
+                border-color: rgba(0, 212, 255, 0.25);
+                box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+            }
+            50% {
+                border-color: rgba(0, 212, 255, 0.4);
+                box-shadow: 0 0 20px 0 rgba(0, 212, 255, 0.15);
+            }
+        }
+        
+        @keyframes fintech-dot-pulse {
+            0%, 100% {
+                box-shadow: 0 0 12px rgba(0, 212, 255, 0.5), 0 0 24px rgba(0, 212, 255, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 16px rgba(0, 212, 255, 0.7), 0 0 32px rgba(0, 212, 255, 0.5);
+                transform: scale(1.1);
+            }
+        }
+        
+        .hero-rare-opportunity {
+            animation: fintech-pulse 3s ease-in-out infinite;
+        }
+        
+        .hero-rare-opportunity span:first-child {
+            animation: fintech-dot-pulse 3s ease-in-out infinite;
+        }
+        
+        /* Mobile optimization for badge */
+        @media (max-width: 768px) {
+            .hero-rare-opportunity {
+                padding: 0.6rem 1.2rem !important;
+                gap: 0.5rem !important;
+                font-size: 0.8rem !important;
+            }
+        }
+        
+        /* ========================================
+           3 REVENUE STREAMS SECTION - PREMIUM FINTECH
+           ======================================== */
+        
+        .revenue-streams-section {
+            padding: 3rem 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .revenue-streams-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+        }
+        
+        .revenue-streams-section .section-header {
+            margin-bottom: 2rem;
+        }
+        
+        .revenue-streams-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .revenue-streams-section .section-header p {
+            font-size: 0.95rem;
+        }
+        
+        .revenue-cards-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 0 auto;
+            max-width: 1100px;
+            flex-wrap: wrap;
+        }
+        
+        .revenue-card {
+            flex: 1;
+            min-width: 260px;
+            max-width: 320px;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .revenue-card.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .revenue-card[data-index="0"] {
+            transition-delay: 0s;
+        }
+        
+        .revenue-card[data-index="1"] {
+            transition-delay: 0.2s;
+        }
+        
+        .revenue-card[data-index="2"] {
+            transition-delay: 0.4s;
+        }
+        
+        .revenue-card-inner {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 212, 255, 0.03) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 212, 255, 0.25);
+            border-radius: 16px;
+            padding: 1.5rem 1.25rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: revenueCardPulse 4s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .revenue-card-inner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .revenue-card:hover .revenue-card-inner {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 212, 255, 0.25);
+            border-color: rgba(0, 212, 255, 0.5);
+        }
+        
+        .revenue-card:hover .revenue-card-inner::before {
+            left: 100%;
+        }
+        
+        .revenue-icon {
+            font-size: 2.25rem;
+            margin-bottom: 0.75rem;
+            animation: iconFloat 3s ease-in-out infinite;
+            display: inline-block;
+        }
+        
+        .revenue-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.02em;
+        }
+        
+        .revenue-percentage {
+            margin-bottom: 1rem;
+        }
+        
+        .revenue-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFFFFF 0%, #00D4FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+            line-height: 1;
+        }
+        
+        .revenue-period {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .revenue-progress-container {
+            width: 100%;
+            height: 5px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 100px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .revenue-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00D4FF 0%, #0099CC 100%);
+            border-radius: 100px;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .revenue-progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5));
+            filter: blur(5px);
+        }
+        
+        .revenue-card.animate-in .revenue-progress-bar {
+            width: 85%;
+        }
+        
+        .revenue-description {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.65);
+            margin: 0;
+        }
+        
+        .revenue-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            animation: arrowFadeIn 0.6s ease forwards;
+            animation-delay: 0.8s;
+        }
+        
+        .revenue-arrow svg {
+            width: 32px;
+            height: 20px;
+            filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.4));
+        }
+        
+        .total-returns-banner {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .total-returns-inner {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.875rem 2rem;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 212, 255, 0.08) 100%);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(0, 212, 255, 0.4);
+            border-radius: 100px;
+            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
+            animation: totalReturnsPulse 3s ease-in-out infinite;
+        }
+        
+        .total-returns-icon {
+            font-size: 1.25rem;
+        }
+        
+        .total-returns-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+        
+        .total-returns-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFFFFF 0%, #00D4FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Animations */
+        @keyframes revenueCardPulse {
+            0%, 100% {
+                box-shadow: 0 6px 24px rgba(0, 212, 255, 0.12);
+            }
+            50% {
+                box-shadow: 0 6px 24px rgba(0, 212, 255, 0.2);
+            }
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+        
+        @keyframes arrowFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes totalReturnsPulse {
+            0%, 100% {
+                box-shadow: 0 6px 24px rgba(0, 212, 255, 0.18);
+                border-color: rgba(0, 212, 255, 0.4);
+            }
+            50% {
+                box-shadow: 0 6px 28px rgba(0, 212, 255, 0.3);
+                border-color: rgba(0, 212, 255, 0.55);
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .revenue-streams-section {
+                padding: 2.5rem 0;
+            }
+            
+            .revenue-streams-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .revenue-cards-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .revenue-card {
+                max-width: 100%;
+                width: 100%;
+            }
+            
+            .revenue-arrow {
+                transform: rotate(90deg);
+                margin: 0;
+            }
+            
+            .revenue-arrow svg {
+                width: 28px;
+                height: 18px;
+            }
+            
+            .total-returns-inner {
+                flex-direction: column;
+                gap: 0.4rem;
+                padding: 0.875rem 1.75rem;
+                text-align: center;
+            }
+            
+            .revenue-number {
+                font-size: 1.75rem;
+            }
+            
+            .revenue-icon {
+                font-size: 2rem;
+            }
+            
+            .revenue-title {
+                font-size: 1rem;
+            }
+            
+            .revenue-description {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Full-Screen Hero with Video Background -->
+    <section class="hero-fullscreen">
+        <!-- Background Video -->
+        <video class="hero-video-bg" autoplay muted loop playsinline>
+            <source src="https://www.genspark.ai/api/files/s/ua3dsTMP" type="video/mp4">
+        </video>
+        
+        <!-- Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Navigation (on top of video) -->
+        <nav class="nav-premium nav-transparent">
+            <div class="nav-premium-container">
+                <div class="nav-premium-brand">
+                    <a href="index.html">
+                        <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" 
+                             alt="MayaRoyale" 
+                             class="nav-premium-logo">
+                    </a>
+                </div>
+                
+                <ul class="nav-premium-menu" id="navPremiumMenu">
+                    <!-- Platform Dropdown -->
+                    <li class="nav-premium-item">
+                        <a href="#" class="nav-premium-link">
+                            Platform
+                            <span class="nav-premium-arrow">▼</span>
+                        </a>
+                        <div class="nav-premium-dropdown">
+                            <div class="nav-premium-dropdown-items">
+                                <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">📊</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                        <span class="nav-premium-dropdown-item-desc">Track your portfolio</span>
+                                    </span>
+                                </a>
+                                <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">💎</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                        <span class="nav-premium-dropdown-item-desc">Token economics & funding</span>
+                                    </span>
+                                </a>
+                                <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">📈</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Financial Forecast</span>
+                                        <span class="nav-premium-dropdown-item-desc">7-year projections</span>
+                                    </span>
+                                </a>
+                                <a href="investment-calculator.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">🧮</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Investment Calculator</span>
+                                        <span class="nav-premium-dropdown-item-desc">Calculate your returns</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="nav-premium-dropdown-graphic">
+                                <span class="nav-premium-dropdown-graphic-layer"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- The Project Dropdown -->
+                    <li class="nav-premium-item">
+                        <a href="#" class="nav-premium-link">
+                            The Project
+                            <span class="nav-premium-arrow">▼</span>
+                        </a>
+                        <div class="nav-premium-dropdown">
+                            <div class="nav-premium-dropdown-items">
+                                <a href="gallery.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">🏖️</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Property Showcase</span>
+                                        <span class="nav-premium-dropdown-item-desc">Complete property & strategic analysis</span>
+                                    </span>
+                                </a>
+                                <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">🌅</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span>
+                                        <span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family</span>
+                                    </span>
+                                </a>
+                                <a href="positioning.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">🏆</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Strategic Positioning</span>
+                                        <span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span>
+                                    </span>
+                                </a>
+                                <a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">🌊</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Protection Animation</span>
+                                        <span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span>
+                                    </span>
+                                </a>
+                                <a href="yucatan-boom.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">🚀</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">The Yucatan Boom</span>
+                                        <span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span>
+                                    </span>
+                                </a>
+                                <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">💆</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Wellness Differentiation</span>
+                                        <span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span>
+                                    </span>
+                                </a>
+                                <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">🍽️</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Culinary Excellence</span>
+                                        <span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span>
+                                    </span>
+                                </a>
+                                <a href="technology.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">⚡</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Technology & Blockchain</span>
+                                        <span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span>
+                                    </span>
+                                </a>
+                                <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">🏨</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">LHW Partnership</span>
+                                        <span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span>
+                                    </span>
+                                </a>
+                                <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">🌿</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Sustainability</span>
+                                        <span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="nav-premium-dropdown-graphic">
+                                <span class="nav-premium-dropdown-graphic-layer"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Company Dropdown -->
+                    <li class="nav-premium-item">
+                        <a href="#" class="nav-premium-link">
+                            Company
+                            <span class="nav-premium-arrow">▼</span>
+                        </a>
+                        <div class="nav-premium-dropdown">
+                            <div class="nav-premium-dropdown-items">
+                                <a href="team.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">👥</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Innovation Council</span>
+                                        <span class="nav-premium-dropdown-item-desc">Meet our team</span>
+                                    </span>
+                                </a>
+                                <a href="contact.html" class="nav-premium-dropdown-item">
+                                    <span class="nav-premium-dropdown-item-icon">📧</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Contact</span>
+                                        <span class="nav-premium-dropdown-item-desc">Get in touch</span>
+                                    </span>
+                                </a>
+                                <a href="whitepaper.html" class="nav-premium-dropdown-item" target="_blank">
+                                    <span class="nav-premium-dropdown-item-icon">📄</span>
+                                    <span class="nav-premium-dropdown-item-label">
+                                        <span class="nav-premium-dropdown-item-title">Whitepaper</span>
+                                        <span class="nav-premium-dropdown-item-desc">Download whitepaper</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="nav-premium-dropdown-graphic">
+                                <span class="nav-premium-dropdown-graphic-layer"></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+                <a href="#" class="nav-premium-cta" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Connect Wallet</a>
+                
+                <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-title" style="font-family: 'Inter', sans-serif; font-size: 6rem; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase; color: #FFFFFF; line-height: 1.2; margin-bottom: 0.25rem; display: flex; flex-direction: column; align-items: center;">
+                <span style="letter-spacing: 0.30em;">Beachfront</span>
+                <span style="letter-spacing: 0.15em;">Real Estate</span>
+            </h1>
+            
+            <!-- Meets Blockchain Section -->
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 1rem; margin-top: 0.5rem;">
+                <span class="meets-blockchain-text" style="font-family: 'Inter', sans-serif; color: #FFFFFF; text-transform: none; letter-spacing: 0.15em; font-weight: 400; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5); display: inline-flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                    <svg class="blockchain-icon-animated" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.8; flex-shrink: 0;">
+                        <circle cx="12" cy="12" r="2"></circle>
+                        <circle cx="19" cy="5" r="2"></circle>
+                        <circle cx="5" cy="19" r="2"></circle>
+                        <circle cx="5" cy="5" r="2"></circle>
+                        <circle cx="19" cy="19" r="2"></circle>
+                        <line x1="12" y1="10" x2="12" y2="6"></line>
+                        <line x1="14" y1="12" x2="17" y2="7"></line>
+                        <line x1="10" y1="12" x2="7" y2="7"></line>
+                        <line x1="14" y1="14" x2="17" y2="17"></line>
+                        <line x1="10" y1="14" x2="7" y2="17"></line>
+                    </svg>
+                    Meets Blockchain
+                </span>
+                <p class="hero-tagline-vision" style="font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 400; color: #FFFFFF; text-align: center; letter-spacing: 0.03em; margin: 0.5rem 0 1rem 0; opacity: 0.9;">Where nature, history and regenerative luxury come together</p>
+                <div class="hero-badge hero-badge-animated" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 150, 255, 0.15) 100%); border: 1px solid rgba(0, 212, 255, 0.3); color: #00D4FF; min-width: 400px; max-width: 400px; margin: 0 auto; text-align: center;">💎 Own Tokenized Luxury Resorts</div>
+            </div>
+            
+            <!-- Location & Resort Badge -->
+            <div class="hero-location" style="font-family: 'Inter', sans-serif; text-align: center; margin-bottom: 3rem;">
+                <span style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 500; color: rgba(255, 255, 255, 0.75); letter-spacing: 0.03em; flex-wrap: wrap; justify-content: center;">
+                    <span style="display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.85;">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <span style="color: rgba(255, 255, 255, 0.85);">5-Star Eco-Wellness Destination</span>
+                    </span>
+                    <span style="color: rgba(255, 255, 255, 0.5); margin: 0 0.25rem;">•</span>
+                    <span style="display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap;">
+                        <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 32px; height: 16px; border: 1.5px solid rgba(255, 255, 255, 0.85); border-radius: 2px; font-family: 'Space Grotesk', sans-serif; font-size: 8px; font-weight: 700; color: rgba(255, 255, 255, 0.85); line-height: 1; padding: 2px 4px; letter-spacing: 0.5px;">LHW</span>
+                        <span style="color: rgba(255, 255, 255, 0.85);">Leading Hotels Partner</span>
+                    </span>
+                    <span style="color: rgba(255, 255, 255, 0.5); margin: 0 0.25rem;">•</span>
+                    <span style="display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.8;">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span style="color: rgba(255, 255, 255, 0.85);">Isla Aguada, Mexico</span>
+                    </span>
+                </span>
+            </div>
+            
+            <div class="hero-token-info">
+                <div class="token-card">
+                    <div class="token-label">MAYA Token</div>
+                    <div class="token-price" data-target="2000" data-prefix="$" data-suffix="">0</div>
+                </div>
+                <div class="token-card">
+                    <div class="token-label">Total Supply</div>
+                    <div class="token-price" data-target="1000000" data-prefix="" data-suffix="">0</div>
+                </div>
+                <div class="token-card">
+                    <div class="token-label">Asset Backing</div>
+                    <div class="token-price" data-target="100" data-prefix="$" data-suffix="M+">0</div>
+                </div>
+            </div>
+            
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                <a href="whitepaper.html" class="btn btn-secondary" target="_blank">Download Whitepaper</a>
+            </div>
+            
+            <div style="display: flex; justify-content: center; margin-top: 1.5rem; margin-bottom: 2rem;">
+                <div class="hero-rare-opportunity" style="font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 212, 255, 0.03) 100%); border: 1px solid rgba(0, 212, 255, 0.25); border-radius: 100px; backdrop-filter: blur(10px);">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 6px; height: 6px; background: linear-gradient(135deg, #00D4FF 0%, #0099CC 100%); border-radius: 50%; box-shadow: 0 0 12px rgba(0, 212, 255, 0.5), 0 0 24px rgba(0, 212, 255, 0.3);"></span>
+                    <span style="font-size: 0.875rem; font-weight: 500; letter-spacing: 0.025em; background: linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.85) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trophy Asset Opportunity</span>
+                    <span style="font-size: 0.875rem; font-weight: 400; color: rgba(255, 255, 255, 0.5);">•</span>
+                    <span style="font-size: 0.875rem; font-weight: 400; color: rgba(255, 255, 255, 0.7); letter-spacing: 0.02em;">Rarely Available to Retail Investors</span>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <span>Scroll to explore</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Wealth Text Section -->
+    <section style="padding: 2.5rem 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%); text-align: center;">
+        <div class="container">
+            <p style="font-size: 1.1rem; line-height: 1.7; color: rgba(255, 255, 255, 0.85); max-width: 700px; margin: 0 auto;">
+                Build <strong style="color: #00D4FF; font-weight: 600; font-size: 1.15rem;">Generational Legacy wealth</strong> through token appreciation, land value growth, and resort profit sharing
+            </p>
+        </div>
+    </section>
+
+    <!-- 3 Revenue Streams Section -->
+    <section class="revenue-streams-section">
+        <div class="container">
+            <!-- Badge above cards -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div class="section-badge" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.875rem; background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 212, 255, 0.05)); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 100px; font-size: 0.8rem; color: #00D4FF;">
+                    💰 Multiple Revenue Streams
+                </div>
+            </div>
+
+            <div class="revenue-cards-container">
+                <!-- Card 1: Token Appreciation -->
+                <div class="revenue-card" data-index="0">
+                    <div class="revenue-card-inner">
+                        <div class="revenue-icon">💎</div>
+                        <h3 class="revenue-title">Token Appreciation</h3>
+                        <div class="revenue-percentage">
+                            <span class="revenue-number">
+                                <span class="count-up" data-target="15">0</span>
+                                <span>-</span>
+                                <span class="count-up" data-target="20">0</span>
+                                <span>%</span>
+                            </span>
+                            <span class="revenue-period">Annual</span>
+                        </div>
+                        <div class="revenue-progress-container">
+                            <div class="revenue-progress-bar"></div>
+                        </div>
+                        <p class="revenue-description">Your MAYA token grows in value as demand increases and supply remains fixed</p>
+                    </div>
+                </div>
+
+                <!-- Arrow Connector 1 -->
+                <div class="revenue-arrow">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12H38M38 12L28 2M38 12L28 22" stroke="url(#arrowGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="arrowGradient" x1="0" y1="12" x2="40" y2="12" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="rgba(0, 212, 255, 0.3)"/>
+                                <stop offset="1" stop-color="rgba(0, 212, 255, 0.8)"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- Card 2: Land Appreciation -->
+                <div class="revenue-card" data-index="1">
+                    <div class="revenue-card-inner">
+                        <div class="revenue-icon">🏝️</div>
+                        <h3 class="revenue-title">Land Appreciation</h3>
+                        <div class="revenue-percentage">
+                            <span class="revenue-number">
+                                <span class="count-up" data-target="15">0</span>
+                                <span>%</span>
+                            </span>
+                            <span class="revenue-period">Annual</span>
+                        </div>
+                        <div class="revenue-progress-container">
+                            <div class="revenue-progress-bar"></div>
+                        </div>
+                        <p class="revenue-description">Isla Aguada beachfront property increases in value year over year</p>
+                    </div>
+                </div>
+
+                <!-- Arrow Connector 2 -->
+                <div class="revenue-arrow">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12H38M38 12L28 2M38 12L28 22" stroke="url(#arrowGradient2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="arrowGradient2" x1="0" y1="12" x2="40" y2="12" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="rgba(0, 212, 255, 0.3)"/>
+                                <stop offset="1" stop-color="rgba(0, 212, 255, 0.8)"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- Card 3: Profit Sharing -->
+                <div class="revenue-card" data-index="2">
+                    <div class="revenue-card-inner">
+                        <div class="revenue-icon">💵</div>
+                        <h3 class="revenue-title">Profit Sharing</h3>
+                        <div class="revenue-percentage">
+                            <span class="revenue-number">
+                                <span class="count-up" data-target="3">0</span>
+                                <span>-</span>
+                                <span class="count-up" data-target="7">0</span>
+                                <span>%</span>
+                            </span>
+                            <span class="revenue-period">Annual</span>
+                        </div>
+                        <div class="revenue-progress-container">
+                            <div class="revenue-progress-bar"></div>
+                        </div>
+                        <p class="revenue-description">Share in hotel resort operations revenue starting December 2028</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Returns Banner -->
+            <div class="total-returns-banner">
+                <div class="total-returns-inner">
+                    <span class="total-returns-icon">🎯</span>
+                    <span class="total-returns-text">Total Projected Returns:</span>
+                    <span class="total-returns-value">
+                        <span class="count-up" data-target="18">0</span>
+                        <span>-</span>
+                        <span class="count-up" data-target="22">0</span>
+                        <span>% Annually</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" data-target="2000" data-prefix="$" data-suffix="">0</div>
+                    <div class="stat-label">Token Price</div>
+                    <div class="stat-desc">Stable Value Asset</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-target="100" data-prefix="$" data-suffix="M+">0</div>
+                    <div class="stat-label">Asset Backing</div>
+                    <div class="stat-desc">Trophy Beachfront</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-target="15" data-prefix="" data-suffix="%">0</div>
+                    <div class="stat-label">Land Appreciation</div>
+                    <div class="stat-desc">Annual Growth</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-target="18" data-prefix="" data-suffix="-22%">0</div>
+                    <div class="stat-label">Total Returns</div>
+                    <div class="stat-desc">Projected Annual</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Credibility Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🔒 Security & Compliance</div>
+                <h2>BUILT ON INSTITUTIONAL-GRADE INFRASTRUCTURE</h2>
+                <p>Your investment is protected by industry-leading security measures and regulatory compliance</p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <div class="trust-icon-wrapper coming-soon">
+                            🛡️
+                            <span class="coming-soon-badge">Q2 2026</span>
+                        </div>
+                    </div>
+                    <h3>Smart Contract Audit</h3>
+                    <p>Independent third-party security audit of all smart contracts scheduled for Q2 2026 before token launch</p>
+                    <div class="trust-status">
+                        <span class="status-badge in-progress">Scheduled</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <div class="trust-icon-wrapper active">
+                            ⚡
+                        </div>
+                    </div>
+                    <h3>Solana Blockchain</h3>
+                    <p>Built on battle-tested Solana infrastructure with 400ms transactions, enterprise-grade security, and global scalability</p>
+                    <div class="trust-status">
+                        <span class="status-badge active">Active</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <div class="trust-icon-wrapper coming-soon">
+                            📜
+                            <span class="coming-soon-badge">In Progress</span>
+                        </div>
+                    </div>
+                    <h3>Legal Compliance</h3>
+                    <p>Comprehensive legal framework ensuring full regulatory compliance for tokenized real estate offerings</p>
+                    <div class="trust-status">
+                        <span class="status-badge in-progress">In Progress</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <div class="trust-icon-wrapper active">
+                            🏛️
+                        </div>
+                    </div>
+                    <h3>Real Asset Backing</h3>
+                    <p>$100M+ trophy beachfront property in Isla Aguada, Mexico with quarterly independent appraisals</p>
+                    <div class="trust-status">
+                        <span class="status-badge active">Verified</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <div class="trust-icon-wrapper coming-soon">
+                            🔐
+                            <span class="coming-soon-badge">Q2 2026</span>
+                        </div>
+                    </div>
+                    <h3>Custody Solution</h3>
+                    <p>Institutional-grade custody solution for secure token storage and management launching Q2 2026</p>
+                    <div class="trust-status">
+                        <span class="status-badge in-progress">Scheduled</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <div class="trust-icon-wrapper active">
+                            🏨
+                        </div>
+                    </div>
+                    <h3>LHW Partnership</h3>
+                    <p>Letter of Interest received from Leading Hotels of the World (May 2024) – path to membership established</p>
+                    <div class="trust-status">
+                        <span class="status-badge active">Confirmed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Features -->
+            <div class="security-features">
+                <div class="security-feature-item">
+                    <span class="security-icon">✓</span>
+                    <span>Multi-Signature Wallets</span>
+                </div>
+                <div class="security-feature-item">
+                    <span class="security-icon">✓</span>
+                    <span>Quarterly Property Appraisals</span>
+                </div>
+                <div class="security-feature-item">
+                    <span class="security-icon">✓</span>
+                    <span>Transparent On-Chain Records</span>
+                </div>
+                <div class="security-feature-item">
+                    <span class="security-icon">✓</span>
+                    <span>Independent Legal Review</span>
+                </div>
+                <div class="security-feature-item">
+                    <span class="security-icon">✓</span>
+                    <span>Regulated Offering Structure</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Simple, transparent, and secure tokenized real estate investment</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Token Listing</h3>
+                    <p>MAYA tokens are issued and listed on blockchain platforms, representing fractional ownership of premium beachfront property.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Investor Purchase</h3>
+                    <p>Investors purchase MAYA tokens at $2,000 each, gaining exposure to trophy beachfront real estate with full blockchain transparency.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Token EcoResorts Use</h3>
+                    <p>Tokens can be used within the MayaRoyale resort ecosystem for stays, dining, and services, driving daily volume of $50,000+.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Token Recycling</h3>
+                    <p>Used tokens are recycled back into the market, maintaining liquidity and creating a continuous ecosystem cycle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Invest in <span style="color: #00D4FF;">MayaRoyale</span></h2>
+                <p>Transforming luxury hospitality through blockchain technology and tokenized real estate</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏖️</div>
+                    <h3>Pueblos Mágicos Location</h3>
+                    <p>15 acres of pristine beachfront in Isla Aguada - officially designated Pueblos Mágicos by SECTUR (one of only 177 in Mexico). Near UNESCO World Heritage Site Calakmul. 15% annual land appreciation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Blockchain Security</h3>
+                    <p>Every MAYA token is backed by real-world assets and secured by smart contracts. Quarterly independent appraisals ensure transparency and value.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏨</div>
+                    <h3>Future of Hospitality</h3>
+                    <p>Partnership with Leading Hotels of the World ensures world-class operations and management of the MayaRoyale resort destination.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>First-Mover Advantage</h3>
+                    <p>Be part of the first tokenized trophy beachfront resort. Early investors gain access to a revolutionary model combining luxury hospitality with blockchain.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Liquidity & Trading</h3>
+                    <p>Unlike traditional real estate, MAYA tokens offer liquidity through secondary market trading, providing flexibility and exit opportunities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Transparent Returns</h3>
+                    <p>18-22% projected annual returns from land appreciation, resort operations, and ecosystem utility. Real-time tracking via dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison: Traditional vs Tokenized Real Estate -->
+    <section class="comparison-advantage-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">⚖️ Why Choose MAYA</div>
+                <h2>TRADITIONAL REAL ESTATE VS MAYA TOKENS</h2>
+                <p>Discover how blockchain technology revolutionizes real estate investment</p>
+            </div>
+
+            <div class="comparison-advantage-table">
+                <div class="comparison-advantage-header">
+                    <div class="comparison-advantage-cell"></div>
+                    <div class="comparison-advantage-cell">Traditional Real Estate</div>
+                    <div class="comparison-advantage-cell featured">MAYA Tokens</div>
+                </div>
+
+                <!-- Entry Price -->
+                <div class="comparison-advantage-row">
+                    <div class="comparison-advantage-cell label">
+                        <div class="advantage-icon">💰</div>
+                        <strong>Minimum Entry</strong>
+                    </div>
+                    <div class="comparison-advantage-cell traditional">
+                        <div class="value-bad">$500,000+</div>
+                        <div class="description">High barrier to entry</div>
+                    </div>
+                    <div class="comparison-advantage-cell featured">
+                        <div class="value-good">$800</div>
+                        <div class="description">Accessible to all investors</div>
+                    </div>
+                </div>
+
+                <!-- Liquidity -->
+                <div class="comparison-advantage-row">
+                    <div class="comparison-advantage-cell label">
+                        <div class="advantage-icon">💧</div>
+                        <strong>Liquidity</strong>
+                    </div>
+                    <div class="comparison-advantage-cell traditional">
+                        <div class="value-bad">3-12 months</div>
+                        <div class="description">Lengthy selling process</div>
+                    </div>
+                    <div class="comparison-advantage-cell featured">
+                        <div class="value-good">Instant</div>
+                        <div class="description">Trade 24/7 on secondary markets</div>
+                    </div>
+                </div>
+
+                <!-- Divisibility -->
+                <div class="comparison-advantage-row">
+                    <div class="comparison-advantage-cell label">
+                        <div class="advantage-icon">✂️</div>
+                        <strong>Divisibility</strong>
+                    </div>
+                    <div class="comparison-advantage-cell traditional">
+                        <div class="value-bad">All or Nothing</div>
+                        <div class="description">Must buy entire property</div>
+                    </div>
+                    <div class="comparison-advantage-cell featured">
+                        <div class="value-good">Fractional</div>
+                        <div class="description">Buy any amount of tokens</div>
+                    </div>
+                </div>
+
+                <!-- Transaction Speed -->
+                <div class="comparison-advantage-row">
+                    <div class="comparison-advantage-cell label">
+                        <div class="advantage-icon">⚡</div>
+                        <strong>Transaction Speed</strong>
+                    </div>
+                    <div class="comparison-advantage-cell traditional">
+                        <div class="value-bad">30-90 days</div>
+                        <div class="description">Paperwork, escrow, delays</div>
+                    </div>
+                    <div class="comparison-advantage-cell featured">
+                        <div class="value-good">400ms</div>
+                        <div class="description">Instant blockchain settlement</div>
+                    </div>
+                </div>
+
+                <!-- Management -->
+                <div class="comparison-advantage-row">
+                    <div class="comparison-advantage-cell label">
+                        <div class="advantage-icon">🔧</div>
+                        <strong>Property Management</strong>
+                    </div>
+                    <div class="comparison-advantage-cell traditional">
+                        <div class="value-bad">Owner Responsible</div>
+                        <div class="description">Maintenance, tenants, headaches</div>
+                    </div>
+                    <div class="comparison-advantage-cell featured">
+                        <div class="value-good">Fully Managed</div>
+                        <div class="description">Professional resort operations</div>
+                    </div>
+                </div>
+
+                <!-- Global Access -->
+                <div class="comparison-advantage-row">
+                    <div class="comparison-advantage-cell label">
+                        <div class="advantage-icon">🌍</div>
+                        <strong>Global Access</strong>
+                    </div>
+                    <div class="comparison-advantage-cell traditional">
+                        <div class="value-bad">Geographic Limits</div>
+                        <div class="description">Local buyers only</div>
+                    </div>
+                    <div class="comparison-advantage-cell featured">
+                        <div class="value-good">Worldwide</div>
+                        <div class="description">Invest from anywhere</div>
+                    </div>
+                </div>
+
+                <!-- Transparency -->
+                <div class="comparison-advantage-row">
+                    <div class="comparison-advantage-cell label">
+                        <div class="advantage-icon">🔍</div>
+                        <strong>Transparency</strong>
+                    </div>
+                    <div class="comparison-advantage-cell traditional">
+                        <div class="value-bad">Limited</div>
+                        <div class="description">Opaque valuations & records</div>
+                    </div>
+                    <div class="comparison-advantage-cell featured">
+                        <div class="value-good">100% On-Chain</div>
+                        <div class="description">Real-time verifiable data</div>
+                    </div>
+                </div>
+
+                <!-- Transaction Costs -->
+                <div class="comparison-advantage-row">
+                    <div class="comparison-advantage-cell label">
+                        <div class="advantage-icon">💸</div>
+                        <strong>Transaction Costs</strong>
+                    </div>
+                    <div class="comparison-advantage-cell traditional">
+                        <div class="value-bad">5-8%</div>
+                        <div class="description">Agents, lawyers, fees</div>
+                    </div>
+                    <div class="comparison-advantage-cell featured">
+                        <div class="value-good">~$0.00025</div>
+                        <div class="description">Minimal blockchain fees</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="comparison-cta">
+                <div class="comparison-cta-content">
+                    <h3>The Future of Real Estate is Here</h3>
+                    <p>Join the tokenization revolution and unlock instant liquidity, fractional ownership, and global accessibility</p>
+                    <a href="investment-calculator.html" class="btn-cta primary">Calculate Your Returns</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Milestone Timeline -->
+    <section class="milestone-timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🚀 Project Progress</div>
+                <h2>MILESTONE TIMELINE</h2>
+                <p>Track our journey from concept to completion</p>
+            </div>
+
+            <div class="timeline-track">
+                <!-- Milestone 1: COMPLETED -->
+                <div class="milestone-item completed">
+                    <div class="milestone-marker">
+                        <div class="milestone-icon">✓</div>
+                    </div>
+                    <div class="milestone-content">
+                        <div class="milestone-status-badge completed">Completed</div>
+                        <h3>LHW Partnership Letter</h3>
+                        <p class="milestone-date">May 2024</p>
+                        <p class="milestone-desc">Received Letter of Interest from Leading Hotels of the World, establishing clear path to membership</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 2: IN PROGRESS -->
+                <div class="milestone-item active">
+                    <div class="milestone-marker">
+                        <div class="milestone-icon pulsing">◆</div>
+                    </div>
+                    <div class="milestone-content">
+                        <div class="milestone-status-badge active">In Progress</div>
+                        <h3>Series A Fundraising</h3>
+                        <p class="milestone-date">Q1 2026</p>
+                        <p class="milestone-desc">$10M capital raise at $800/token for land acquisition, development planning, and infrastructure</p>
+                        <div class="milestone-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 35%;"></div>
+                            </div>
+                            <span class="progress-text">35% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 3: UPCOMING -->
+                <div class="milestone-item upcoming">
+                    <div class="milestone-marker">
+                        <div class="milestone-icon">◇</div>
+                    </div>
+                    <div class="milestone-content">
+                        <div class="milestone-status-badge upcoming">Q2 2026</div>
+                        <h3>Smart Contract Deployment</h3>
+                        <p class="milestone-date">Q2 2026</p>
+                        <p class="milestone-desc">Security audit completion and mainnet launch of MAYA token on Solana blockchain</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 4: UPCOMING -->
+                <div class="milestone-item upcoming">
+                    <div class="milestone-marker">
+                        <div class="milestone-icon">◇</div>
+                    </div>
+                    <div class="milestone-content">
+                        <div class="milestone-status-badge upcoming">Q2 2026</div>
+                        <h3>Token Launch & Series B</h3>
+                        <p class="milestone-date">Q2 2026</p>
+                        <p class="milestone-desc">Public token launch, Series B fundraising ($20M at $2,000/token), and exchange listings</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 5: UPCOMING -->
+                <div class="milestone-item upcoming">
+                    <div class="milestone-marker">
+                        <div class="milestone-icon">◇</div>
+                    </div>
+                    <div class="milestone-content">
+                        <div class="milestone-status-badge upcoming">Q3-Q4 2026</div>
+                        <h3>Construction Phase 1</h3>
+                        <p class="milestone-date">Q3-Q4 2026</p>
+                        <p class="milestone-desc">Breaking ground on resort infrastructure, utilities, and initial development</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 6: UPCOMING -->
+                <div class="milestone-item upcoming">
+                    <div class="milestone-marker">
+                        <div class="milestone-icon">◇</div>
+                    </div>
+                    <div class="milestone-content">
+                        <div class="milestone-status-badge upcoming">2027</div>
+                        <h3>LHW Membership & Opening</h3>
+                        <p class="milestone-date">2027</p>
+                        <p class="milestone-desc">Official Leading Hotels of the World membership and soft opening of MayaRoyale resort</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Vision -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-content">
+                    <div class="founder-label">Vision & Leadership</div>
+                    <h2 class="founder-title">A Message from MayaRoyale Group</h2>
+                    <p class="founder-quote">"We stand at the forefront of a financial revolution. MayaRoyale is not merely an investment; it is the unprecedented convergence of the world's most proven asset class—<span class="highlight">Trophy Beachfront Real Estate</span>—with the explosive power of blockchain. Historically, prime coastal land has created dynastic wealth for the elite. Today, we are unlocking this scarcity for the visionary investor."</p>
+                    <p class="founder-quote">"Scarcity drives value, and they simply aren't making more beachfront land. By tokenizing this pristine asset, we transform exclusive, illiquid ownership into a liquid, high-velocity technology investment. This is more than a resort; it is the <span class="highlight">future of global finance</span>. Secure your stake in a real-world asset that creates perpetual value before the market fully awakens to this trillion-dollar opportunity."</p>
+                    <div class="founder-signature">
+                        <span style="font-family: 'Brush Script MT', cursive; font-size: 2.5rem; font-weight: 900; color: #000000; font-style: italic; letter-spacing: 2px; text-shadow: 1px 1px 0px rgba(0,0,0,0.2); transform: skewX(-5deg); display: inline-block;">MayaRoyale Group</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Invest in the Future?</h2>
+                <p>Join visionary investors building the future of tokenized real estate</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulatory Disclosure -->
+    <section class="regulatory-disclosure">
+        <div class="container">
+            <div class="disclosure-content">
+                <h3 class="disclosure-title">⚖️ Regulation D 506(c) & Regulation S Offering</h3>
+                <p class="disclosure-text" style="font-weight: 600; font-size: 1.05rem; margin-bottom: 1rem;">
+                    This offering is being conducted pursuant to Rule 506(c) of Regulation D and Regulation S under the U.S. Securities Act of 1933.
+                </p>
+                <p class="disclosure-text">
+                    MayaRoyale securities are offered pursuant to an exemption from registration under Regulation D, Rule 506(c) of the Securities Act of 1933, as amended. This offering is available only to accredited investors as defined in Rule 501 of Regulation D. Investors must meet specific income or net worth requirements and provide verification of accredited investor status before participating. 
+                </p>
+                <p class="disclosure-text">
+                    <strong>Investment involves risk.</strong> There is no guarantee of returns, and investors may lose some or all of their investment. Past performance is not indicative of future results. This website does not constitute an offer to sell or a solicitation of an offer to buy securities in any jurisdiction where such offer or solicitation would be unlawful. All investors should carefully review offering documents and consult with their financial, legal, and tax advisors before making any investment decision.
+                </p>
+                <p class="disclosure-subtext">
+                    Securities offered through MayaRoyale are not registered with the SEC and involve a high degree of risk. Please read all offering materials carefully.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="gallery.html">Smart Resort Vision</a></li>
+                        <li><a href="culinary-excellence.html">Culinary Excellence</a></li>
+                        <li><a href="connect-wallet.html">Connect Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#disclaimer">Risk Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const navPremium = document.querySelector('.nav-premium');
+            if (navPremium) {
+                if (window.scrollY > 50) {
+                    navPremium.classList.add('nav-scrolled');
+                    navPremium.classList.remove('nav-transparent');
+                } else {
+                    navPremium.classList.remove('nav-scrolled');
+                    navPremium.classList.add('nav-transparent');
+                }
+            }
+        });
+        
+        // Number counting animation (like Ondo Finance)
+        function animateCounter(element, target, duration = 2000) {
+            const prefix = element.getAttribute('data-prefix') || '';
+            const suffix = element.getAttribute('data-suffix') || '';
+            const start = 0;
+            const increment = target / (duration / 16); // 60fps
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                // Format number with commas
+                const formattedNumber = Math.floor(current).toLocaleString('en-US');
+                element.textContent = prefix + formattedNumber + suffix;
+            }, 16);
+        }
+        
+        // Intersection Observer for stats animation
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    const target = parseFloat(entry.target.getAttribute('data-target'));
+                    animateCounter(entry.target, target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all counter elements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate hero token cards immediately
+            const heroCounters = document.querySelectorAll('.hero-token-info .token-price');
+            heroCounters.forEach(counter => {
+                const target = parseFloat(counter.getAttribute('data-target'));
+                setTimeout(() => {
+                    animateCounter(counter, target, 1500);
+                }, 500);
+            });
+            
+            // Observe stats section counters
+            const statCounters = document.querySelectorAll('.stat-value');
+            statCounters.forEach(counter => observer.observe(counter));
+            
+            // ========================================
+            // REVENUE STREAMS ANIMATIONS
+            // ========================================
+            
+            // Observe revenue cards for entrance animation
+            const revenueObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        
+                        // Animate count-up numbers
+                        const countUps = entry.target.querySelectorAll('.count-up');
+                        countUps.forEach(counter => {
+                            const target = parseInt(counter.getAttribute('data-target'));
+                            animateCountUp(counter, 0, target, 2000);
+                        });
+                        
+                        // Unobserve after animation
+                        revenueObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2,
+                rootMargin: '0px'
+            });
+            
+            // Observe all revenue cards
+            const revenueCards = document.querySelectorAll('.revenue-card');
+            revenueCards.forEach(card => revenueObserver.observe(card));
+            
+            // Observe total returns banner for count-up animation
+            const totalReturnsBanner = document.querySelector('.total-returns-banner');
+            if (totalReturnsBanner) {
+                const totalReturnsObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const countUps = entry.target.querySelectorAll('.count-up');
+                            countUps.forEach(counter => {
+                                const target = parseInt(counter.getAttribute('data-target'));
+                                animateCountUp(counter, 0, target, 2000);
+                            });
+                            totalReturnsObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.5,
+                    rootMargin: '0px'
+                });
+                
+                totalReturnsObserver.observe(totalReturnsBanner);
+            }
+            
+            // Count-up animation function
+            function animateCountUp(element, start, end, duration) {
+                const range = end - start;
+                const increment = range / (duration / 16); // 60fps
+                let current = start;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= end) {
+                        element.textContent = Math.round(end);
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.round(current);
+                    }
+                }, 16);
+            }
+        });
+    </script>
+    <script src="js/wallet.js"></script>
+    <!-- SIMPLE MOBILE NAV - THE ONLY ONE THAT MATTERS -->
+    <script src="js/mobile-nav-simple.js"></script>
+    
+    <!-- Wallet Connection Modal -->
+    <div id="walletModal" class="wallet-modal">
+        <div class="wallet-modal-content">
+            <button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button>
+            
+            <div class="wallet-modal-header">
+                <div class="wallet-modal-icon">🔗</div>
+                <h2>Connect Your Wallet</h2>
+                <p>Choose your preferred wallet to connect to MayaRoyale</p>
+            </div>
+            
+            <div class="wallet-options-grid">
+                <button class="wallet-option" onclick="connectPhantom()">
+                    <div class="wallet-option-icon">👻</div>
+                    <div class="wallet-option-name">Phantom</div>
+                    <div class="wallet-option-desc">Solana</div>
+                    <span class="wallet-badge-rec">Recommended</span>
+                </button>
+                
+                <button class="wallet-option" onclick="connectSolflare()">
+                    <div class="wallet-option-icon">☀️</div>
+                    <div class="wallet-option-name">Solflare</div>
+                    <div class="wallet-option-desc">Solana</div>
+                </button>
+                
+                <button class="wallet-option" onclick="connectMetaMask()">
+                    <div class="wallet-option-icon">🦊</div>
+                    <div class="wallet-option-name">MetaMask</div>
+                    <div class="wallet-option-desc">Ethereum</div>
+                </button>
+                
+                <button class="wallet-option" onclick="connectWalletConnect()">
+                    <div class="wallet-option-icon">🔗</div>
+                    <div class="wallet-option-name">WalletConnect</div>
+                    <div class="wallet-option-desc">Multi-chain</div>
+                </button>
+                
+                <button class="wallet-option" onclick="connectCoinbase()">
+                    <div class="wallet-option-icon">💼</div>
+                    <div class="wallet-option-name">Coinbase</div>
+                    <div class="wallet-option-desc">Multi-chain</div>
+                </button>
+                
+                <button class="wallet-option" onclick="connectTrustWallet()">
+                    <div class="wallet-option-icon">🛡️</div>
+                    <div class="wallet-option-name">Trust Wallet</div>
+                    <div class="wallet-option-desc">Multi-chain</div>
+                </button>
+            </div>
+            
+            <div class="wallet-modal-footer">
+                <p>New to crypto wallets? <a href="https://phantom.app/" target="_blank">Learn more</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+    .wallet-modal {
+        display: none;
+        position: fixed;
+        z-index: 10000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .wallet-modal-content {
+        background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+        border-radius: 24px;
+        padding: 3rem;
+        max-width: 600px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: slideUp 0.3s ease;
+    }
+    
+    @keyframes slideUp {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    .wallet-modal-close {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #666;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    
+    .wallet-modal-close:hover {
+        background: rgba(184, 134, 11, 0.1);
+        color: #B8860B;
+        transform: rotate(90deg);
+    }
+    
+    .wallet-modal-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .wallet-modal-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .wallet-modal-header h2 {
+        font-size: 2rem;
+        color: #0A0A0A;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+    
+    .wallet-modal-header p {
+        color: #666;
+        font-size: 1.1rem;
+    }
+    
+    .wallet-options-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .wallet-option {
+        background: #FFFFFF;
+        border: 2px solid rgba(184, 134, 11, 0.2);
+        border-radius: 16px;
+        padding: 1.5rem 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        position: relative;
+    }
+    
+    .wallet-option:hover {
+        transform: translateY(-5px);
+        border-color: #B8860B;
+        box-shadow: 0 10px 30px rgba(184, 134, 11, 0.2);
+    }
+    
+    .wallet-option-icon {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .wallet-option-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #0A0A0A;
+        margin-bottom: 0.25rem;
+    }
+    
+    .wallet-option-desc {
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .wallet-badge-rec {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background: linear-gradient(135deg, #B8860B, #D4AF37);
+        color: #FFFFFF;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    .wallet-modal-footer {
+        text-align: center;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(184, 134, 11, 0.2);
+    }
+    
+    .wallet-modal-footer p {
+        color: #666;
+        font-size: 0.95rem;
+    }
+    
+    .wallet-modal-footer a {
+        color: #B8860B;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    .wallet-modal-footer a:hover {
+        text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+        .wallet-modal-content {
+            padding: 2rem 1.5rem;
+            width: 95%;
+        }
+        
+        .wallet-options-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .wallet-modal-header h2 {
+            font-size: 1.5rem;
+        }
+    }
+    </style>
+    
+    <script>
+    function connectPhantom() {
+        if (typeof window.solana !== 'undefined' && window.solana.isPhantom) {
+            window.solana.connect().then(() => {
+                alert('Phantom wallet connected!');
+                closeWalletModal();
+                window.location.href = 'dashboard.html';
+            }).catch(err => {
+                alert('Failed to connect: ' + err.message);
+            });
+        } else {
+            if (confirm('Phantom wallet not found. Install now?')) {
+                window.open('https://phantom.app/', '_blank');
+            }
+        }
+    }
+    
+    function connectSolflare() {
+        alert('Solflare connection coming soon.');
+    }
+    
+    function connectMetaMask() {
+        if (typeof window.ethereum !== 'undefined') {
+            window.ethereum.request({ method: 'eth_requestAccounts' }).then(() => {
+                alert('MetaMask wallet connected!');
+                closeWalletModal();
+                window.location.href = 'dashboard.html';
+            }).catch(err => {
+                alert('Failed to connect: ' + err.message);
+            });
+        } else {
+            if (confirm('MetaMask not found. Install now?')) {
+                window.open('https://metamask.io/', '_blank');
+            }
+        }
+    }
+    
+    function connectWalletConnect() {
+        alert('WalletConnect integration coming soon.');
+    }
+    
+    function connectCoinbase() {
+        alert('Coinbase Wallet integration coming soon.');
+    }
+    
+    function connectTrustWallet() {
+        alert('Trust Wallet integration coming soon.');
+    }
+    </script>
+</body>
+</html>

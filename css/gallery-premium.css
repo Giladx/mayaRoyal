@@ -1,0 +1,546 @@
+/* ========================================
+   GALLERY PAGE - PREMIUM LIGHT THEME
+   ======================================== */
+
+body {
+    background: #FFFFFF !important;
+}
+
+/* ==================== GALLERY FILTERS ==================== */
+
+.gallery-section {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 28px;
+    background: #FFFFFF;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #4A4A4A;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: rgba(0, 212, 255, 0.3);
+    background: rgba(0, 212, 255, 0.05);
+    color: #00D4FF;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #00D4FF 0%, #00B8E6 100%);
+    border-color: #00D4FF;
+    color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.25);
+}
+
+/* ==================== GALLERY GRID ==================== */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 212, 255, 0.2);
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+    transform: scale(1.08);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 80%, transparent 100%);
+}
+
+.gallery-overlay h3 {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+}
+
+.gallery-overlay p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Video indicator */
+.gallery-item video::after {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+    pointer-events: none;
+}
+
+/* ==================== ECO-TOURISM SECTION ==================== */
+
+.eco-tourism-section {
+    padding: 6rem 0;
+    background: #F8F9FA;
+}
+
+.eco-tourism-section .section-header-light {
+    margin-bottom: 3rem;
+}
+
+.eco-commitments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.commitment-card {
+    background: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.commitment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.commitment-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 212, 255, 0.05) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.commitment-card h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #0A0A0A;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.03em;
+}
+
+.commitment-card p {
+    font-size: 1rem;
+    color: #6A6A6A;
+    line-height: 1.7;
+}
+
+.eco-promise {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 212, 255, 0.03) 100%);
+    border-left: 4px solid #00D4FF;
+    padding: 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: #2A2A2A;
+    line-height: 1.7;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ==================== ECO-TOURISM FINTECH SECTION ==================== */
+
+.eco-tourism-section-fintech {
+    background: #FFFFFF;
+    padding: 6rem 0;
+}
+
+.section-header-centered {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 212, 255, 0.05) 100%);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #00D4FF;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.section-header-centered h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.15rem;
+    color: #6A6A6A;
+    line-height: 1.7;
+}
+
+/* Conservation Stats Grid */
+.conservation-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    border-color: #00D4FF;
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin-bottom: 0.75rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-description {
+    font-size: 0.95rem;
+    color: #6A6A6A;
+    line-height: 1.6;
+}
+
+/* Commitments Grid */
+.commitments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.commitment-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.commitment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    border-color: #B8860B;
+}
+
+.commitment-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.commitment-card .commitment-icon {
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.commitment-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin: 0;
+}
+
+.commitment-card p {
+    font-size: 1rem;
+    color: #6A6A6A;
+    line-height: 1.7;
+}
+
+/* Environmental Value Box */
+.environmental-value-box {
+    background: linear-gradient(135deg, #0A0A1A 0%, #1A1A2A 100%);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.environmental-value-box h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+}
+
+.environmental-value-box > p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.value-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.value-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00D4FF;
+    display: block;
+}
+
+.metric-label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+/* Responsive Design for Eco-Tourism Section */
+@media (max-width: 968px) {
+    .conservation-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .commitments-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .value-metrics {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .conservation-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .section-header-centered h2 {
+        font-size: 2rem;
+    }
+    
+    .stat-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .environmental-value-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .environmental-value-box h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ==================== PROPERTY DETAILS ==================== */
+
+.property-info-section {
+    padding: 6rem 0;
+    background: #FFFFFF;
+}
+
+.property-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+
+.info-card {
+    text-align: center;
+    background: #F8F9FA;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    background: #FFFFFF;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.info-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6A6A6A;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.info-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #00D4FF;
+    line-height: 1.2;
+}
+
+.info-description {
+    font-size: 0.95rem;
+    color: #6A6A6A;
+    margin-top: 0.5rem;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .eco-commitments {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .property-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-section,
+    .eco-tourism-section,
+    .property-info-section {
+        padding: 4rem 0;
+    }
+    
+    .gallery-filters {
+        gap: 0.75rem;
+        margin-bottom: 3rem;
+    }
+    
+    .filter-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .gallery-item img,
+    .gallery-item video {
+        height: 240px;
+    }
+    
+    .eco-commitments {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .property-info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .info-value {
+        font-size: 2rem;
+    }
+}

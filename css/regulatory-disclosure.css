@@ -1,0 +1,75 @@
+/* ========================================
+   REGULATORY DISCLOSURE SECTION
+   Reg D 506(c) Compliance
+   ======================================== */
+
+.regulatory-disclosure {
+    background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 50%, #F8F9FA 100%);
+    padding: 4rem 0;
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.disclosure-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 2px solid #B8860B;
+    box-shadow: 0 4px 16px rgba(184, 134, 11, 0.1);
+}
+
+.disclosure-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.disclosure-text {
+    font-size: 0.95rem;
+    color: #4A4A4A;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.disclosure-text strong {
+    color: #0A0A0A;
+    font-weight: 600;
+}
+
+.disclosure-subtext {
+    font-size: 0.85rem;
+    color: #6A6A6A;
+    font-style: italic;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .regulatory-disclosure {
+        padding: 3rem 0;
+    }
+    
+    .disclosure-content {
+        padding: 1.5rem;
+    }
+    
+    .disclosure-title {
+        font-size: 1.25rem;
+    }
+    
+    .disclosure-text {
+        font-size: 0.9rem;
+    }
+}

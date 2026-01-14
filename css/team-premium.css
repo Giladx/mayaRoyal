@@ -1,0 +1,291 @@
+/* ========================================
+   TEAM PAGE - PREMIUM LIGHT THEME
+   ======================================== */
+
+body {
+    background: #FFFFFF !important;
+}
+
+/* ==================== TEAM SECTIONS ==================== */
+
+.team-section {
+    padding: 6rem 0;
+}
+
+.founder-highlight {
+    background: linear-gradient(180deg, #F8F9FA 0%, #FFFFFF 100%);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #0A0A0A;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #00D4FF;
+}
+
+/* ==================== FOUNDER CARD ==================== */
+
+.founder-card-featured {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 3rem;
+    border-radius: 20px;
+    border: 2px solid #00D4FF;
+    box-shadow: 0 8px 32px rgba(0, 212, 255, 0.15);
+}
+
+.founder-card-featured .team-member-photo {
+    width: 100%;
+    height: auto;
+}
+
+.founder-card-featured .team-member-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center top;
+    border-radius: 16px;
+    border: 3px solid #B8860B;
+    box-shadow: 0 8px 24px rgba(184, 134, 11, 0.2);
+    background: #F8F9FA;
+}
+
+.founder-card-featured .team-member-info h3 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #0A0A0A;
+    margin-bottom: 0.5rem;
+}
+
+.founder-card-featured .team-member-role {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00D4FF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.founder-card-featured .team-member-bio {
+    font-size: 1.05rem;
+    color: #4A4A4A;
+    line-height: 1.8;
+}
+
+/* ==================== TEAM GRID ==================== */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.team-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 212, 255, 0.2);
+}
+
+.team-member-photo {
+    margin-bottom: 1.5rem;
+}
+
+.team-member-photo img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 3px solid rgba(0, 212, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .team-member-photo img {
+    border-color: #00D4FF;
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3);
+}
+
+.team-member-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 0.5rem;
+}
+
+.team-member-role {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #00D4FF;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.team-member-bio {
+    font-size: 0.95rem;
+    color: #6A6A6A;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* ==================== CTA SECTION ==================== */
+
+.team-cta-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 50%, #F0F2F5 100%);
+    position: relative;
+}
+
+.team-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+    font-size: 1.15rem;
+    color: #4A4A4A;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.cta-content .btn-web3 {
+    display: inline-block;
+    padding: 16px 40px;
+    background: #00D4FF;
+    color: #000000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-content .btn-web3:hover {
+    background: #00B8E6;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .founder-card-featured {
+        grid-template-columns: 250px 1fr;
+        gap: 3rem;
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .founder-card-featured {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .founder-card-featured .team-member-photo {
+        width: 200px;
+        margin: 0 auto;
+    }
+    
+    .founder-card-featured .team-member-info {
+        text-align: center;
+    }
+    
+    .founder-card-featured .team-member-info h3 {
+        font-size: 1.75rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .team-member-photo img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .team-cta-section {
+        padding: 4rem 0;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+}

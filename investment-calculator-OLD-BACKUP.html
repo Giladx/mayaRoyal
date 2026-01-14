@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator | MayaRoyale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/main.css?v=2.0">
+    <link rel="stylesheet" href="css/premium-light.css">
+    <link rel="stylesheet" href="css/calculator.css?v=10.0">
+    <link rel="stylesheet" href="css/regulatory-disclosure.css">
+    
+    <!-- CRITICAL FIX: Inline styles to override everything -->
+    <style>
+        .results-summary {
+            background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%) !important;
+            border-radius: 16px !important;
+            margin: 2rem 0 !important;
+            padding: 2.5rem 2rem !important;
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: space-evenly !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        
+        .results-summary .result-item {
+            flex: 1 !important;
+            text-align: center !important;
+            padding: 0 1.5rem !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        .results-summary .result-label {
+            font-size: 0.7rem !important;
+            font-weight: 700 !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.5px !important;
+            margin-bottom: 0.75rem !important;
+            display: block !important;
+            width: 100% !important;
+        }
+        
+        .results-summary .result-value {
+            font-size: 1.75rem !important;
+            font-weight: 300 !important;
+            color: #FFFFFF !important;
+            display: block !important;
+            width: 100% !important;
+        }
+    </style>
+    
+    <!-- Chart.js for Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium nav-scrolled">
+        <div class="container nav-premium-container">
+            <a href="index.html" class="nav-premium-logo">
+                <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" style="height: 40px;">
+            </a>
+
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <li class="nav-premium-item">
+                    <button class="nav-premium-link">Platform <span class="nav-premium-arrow">▼</span></button>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">📊</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Dashboard</div>
+                                    <div class="nav-premium-dropdown-description">Track your portfolio</div>
+                                </div>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">💎</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Tokenomics</div>
+                                    <div class="nav-premium-dropdown-description">Token economics & funding</div>
+                                </div>
+                            </a>
+                            <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">📈</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Financial Forecast</div>
+                                    <div class="nav-premium-dropdown-description">7-year projections</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <div class="nav-premium-dropdown-graphic-layer chart-animation"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <button class="nav-premium-link">The Project <span class="nav-premium-arrow">▼</span></button>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🏖️</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Smart Resort Vision</div>
+                                    <div class="nav-premium-dropdown-description">Property gallery & plans</div>
+                                </div>
+                            </a>
+                            <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🌅</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">The Future of Isla Aguada</div>
+                                    <div class="nav-premium-dropdown-description">200+ acres, ROYALE Family of Resorts</div>
+                                </div>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🏆</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Strategic Positioning</div>
+                                    <div class="nav-premium-dropdown-description">Geographic monopoly & moats</div>
+                                </div>
+                            </a>
+                            <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">💆</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Wellness Differentiation</div>
+                                    <div class="nav-premium-dropdown-description">Tropical Wood Thalassotherapy</div>
+                                </div>
+                            </a>
+                            <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🍽️</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Culinary Excellence</div>
+                                    <div class="nav-premium-dropdown-description">6 restaurants, healing nutrition</div>
+                                </div>
+                            </a>
+                            <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🏨</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">LHW Partnership</div>
+                                    <div class="nav-premium-dropdown-description">Leading Hotels of the World</div>
+                                </div>
+                            </a>
+                            <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🌿</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Sustainability</div>
+                                    <div class="nav-premium-dropdown-description">Eco-friendly initiatives</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <div class="nav-premium-dropdown-graphic-layer tropical-animation"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <button class="nav-premium-link">Company <span class="nav-premium-arrow">▼</span></button>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">👥</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Innovation Council</div>
+                                    <div class="nav-premium-dropdown-description">Meet our team</div>
+                                </div>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">📧</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Contact</div>
+                                    <div class="nav-premium-dropdown-description">Get in touch</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <div class="nav-premium-dropdown-graphic-layer network-animation"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="connect-wallet.html" class="nav-premium-cta">Connect Wallet</a>
+
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="calculator-hero">
+        <div class="container">
+            <div class="hero-content-center">
+                <div class="crypto-badge">💰 Investment Planning Tool</div>
+                <h1 class="hero-title">Investment Calculator</h1>
+                <p class="hero-subtitle">Calculate your potential returns and token allocation for Series A and Series B investments</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-grid">
+                <!-- Input Panel -->
+                <div class="calculator-input-panel">
+                    <h2>Investment Details</h2>
+                    
+                    <!-- Series Selection -->
+                    <div class="form-group">
+                        <label>Investment Series</label>
+                        <div class="series-selector">
+                            <button class="series-btn active" data-series="a">
+                                <div class="series-badge">Series A</div>
+                                <div class="series-info">
+                                    <div class="series-price">$800 / Token</div>
+                                    <div class="series-details">$10M Round • 10% Equity</div>
+                                </div>
+                            </button>
+                            <button class="series-btn" data-series="b">
+                                <div class="series-badge">Series B</div>
+                                <div class="series-info">
+                                    <div class="series-price">$2,000 / Token</div>
+                                    <div class="series-details">$20M Round • 15% Equity</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Investment Amount -->
+                    <div class="form-group">
+                        <label for="investmentAmount">Investment Amount (USD)</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">$</span>
+                            <input 
+                                type="number" 
+                                id="investmentAmount" 
+                                placeholder="Enter amount"
+                                min="800"
+                                max="100000000"
+                                step="100"
+                                value="100000"
+                            >
+                        </div>
+                        <div class="input-hints">
+                            <button class="preset-btn" data-amount="50000">$50K</button>
+                            <button class="preset-btn" data-amount="100000">$100K</button>
+                            <button class="preset-btn" data-amount="250000">$250K</button>
+                            <button class="preset-btn" data-amount="500000">$500K</button>
+                            <button class="preset-btn" data-amount="1000000">$1M</button>
+                        </div>
+                    </div>
+
+                    <!-- Results Summary -->
+                    <div class="results-summary">
+                        <div class="result-item">
+                            <div class="result-label">Tokens Received</div>
+                            <div class="result-value" id="tokensReceived">125</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">% of Round</div>
+                            <div class="result-value" id="percentOfRound">1.00%</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">Equity Stake</div>
+                            <div class="result-value" id="equityStake">0.10%</div>
+                        </div>
+                    </div>
+
+                    <!-- Benefits List -->
+                    <div class="benefits-list" id="benefitsList">
+                        <h3>Your Benefits Include:</h3>
+                        <ul id="benefitsItems">
+                            <li>✅ Land Appreciation (15% annually)</li>
+                            <li>✅ Resort Profit Share</li>
+                            <li>✅ MAYA Tokens at $800</li>
+                            <li>✅ 10% Equity Position</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Visualization Panel -->
+                <div class="calculator-viz-panel">
+                    <h2>7-Year Projection</h2>
+                    
+                    <!-- Key Metrics -->
+                    <div class="projection-metrics">
+                        <div class="metric-card">
+                            <div class="metric-icon">📊</div>
+                            <div class="metric-value" id="year7Value">$0</div>
+                            <div class="metric-label">Year 7 Value</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">📈</div>
+                            <div class="metric-value" id="totalReturn">0%</div>
+                            <div class="metric-label">Total Return</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">💰</div>
+                            <div class="metric-value" id="annualizedReturn">0%</div>
+                            <div class="metric-label">Annualized Return</div>
+                        </div>
+                    </div>
+
+                    <!-- Chart -->
+                    <div class="chart-container">
+                        <canvas id="projectionChart"></canvas>
+                    </div>
+
+                    <!-- Assumptions -->
+                    <div class="assumptions-box">
+                        <h4>Projection Assumptions</h4>
+                        <ul>
+                            <li><strong>Land Appreciation:</strong> 15% annually (Series A only)</li>
+                            <li><strong>Resort Profit Share:</strong> 18-20% annually (both series)</li>
+                            <li><strong>Token Value:</strong> Locks at purchase price, tradable on secondary markets</li>
+                            <li><strong>Distributions:</strong> Quarterly profit distributions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <div class="section-badge">📊 Side-by-Side Comparison</div>
+                <h2>Series A vs Series B</h2>
+                <p>Understanding the key differences between investment rounds</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-cell">Feature</div>
+                    <div class="comparison-cell featured">Series A <span class="badge">CURRENT</span></div>
+                    <div class="comparison-cell">Series B</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Total Round Size</strong></div>
+                    <div class="comparison-cell featured">$10,000,000</div>
+                    <div class="comparison-cell">$20,000,000</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Token Price</strong></div>
+                    <div class="comparison-cell featured">$800 / token</div>
+                    <div class="comparison-cell">$2,000 / token</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Equity Offered</strong></div>
+                    <div class="comparison-cell featured">10%</div>
+                    <div class="comparison-cell">15%</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Minimum Investment</strong></div>
+                    <div class="comparison-cell featured">$800 (1 token)</div>
+                    <div class="comparison-cell">$2,000 (1 token)</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Land Appreciation</strong></div>
+                    <div class="comparison-cell featured">✅ 15% annually</div>
+                    <div class="comparison-cell">❌ Not included</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Resort Profit Share</strong></div>
+                    <div class="comparison-cell featured">✅ Included</div>
+                    <div class="comparison-cell">✅ Included</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>MAYA Tokens</strong></div>
+                    <div class="comparison-cell featured">✅ At $800</div>
+                    <div class="comparison-cell">✅ At $2,000</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Investment Structure</strong></div>
+                    <div class="comparison-cell featured">Land + PropCo + OpCo + Tokens</div>
+                    <div class="comparison-cell">OpCo + Tokens</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Projected Annual Returns</strong></div>
+                    <div class="comparison-cell featured">18-20% + Land</div>
+                    <div class="comparison-cell">18-20%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Invest?</h2>
+                <p>Join Series A and secure your position in the future of tokenized real estate</p>
+                <div class="cta-actions">
+                    <a href="connect-wallet.html" class="btn-cta primary">Connect Wallet & Invest</a>
+                    <a href="contact.html" class="btn-cta secondary">Speak with Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Regulatory Disclosure -->
+    <section class="regulatory-disclosure">
+        <div class="container">
+            <div class="disclosure-content">
+                <h3 class="disclosure-title">⚖️ Regulation D 506(c) & Regulation S Offering</h3>
+                <p class="disclosure-text" style="font-weight: 600; font-size: 1.05rem; margin-bottom: 1rem;">
+                    This offering is being conducted pursuant to Rule 506(c) of Regulation D and Regulation S under the U.S. Securities Act of 1933.
+                </p>
+                <p class="disclosure-text">
+                    MayaRoyale securities are offered pursuant to an exemption from registration under Regulation D, Rule 506(c) of the Securities Act of 1933, as amended. This offering is available only to accredited investors as defined in Rule 501 of Regulation D. Investors must meet specific income or net worth requirements and provide verification of accredited investor status before participating. 
+                </p>
+                <p class="disclosure-text">
+                    <strong>Investment involves risk.</strong> There is no guarantee of returns, and investors may lose some or all of their investment. Past performance is not indicative of future results. This calculator provides projections based on assumptions and is for illustrative purposes only. Actual results may vary significantly.
+                </p>
+                <p class="disclosure-subtext">
+                    Securities offered through MayaRoyale are not registered with the SEC and involve a high degree of risk. Please read all offering materials carefully.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p>Tokenized trophy beachfront real estate in Isla Aguada, Campeche, Mexico.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="gallery.html">Smart Resort Vision</a></li>
+                        <li><a href="connect-wallet.html">Connect Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#whitepaper">Whitepaper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#disclaimer">Risk Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#twitter" aria-label="Twitter">𝕏</a>
+                    <a href="#linkedin" aria-label="LinkedIn">in</a>
+                    <a href="#telegram" aria-label="Telegram">✈</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/calculator.js?v=6.0"></script>
+    <script src="js/navigation-premium.js"></script>
+</body>
+</html>

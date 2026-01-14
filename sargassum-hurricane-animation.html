@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isla Aguada Protection: Sargassum & Hurricane Animation | MayaRoyale</title>
+    <meta name="description" content="Interactive animation showing how Isla Aguada remains protected from Sargassum invasions and hurricanes while the Caribbean and Riviera Maya suffer devastating impacts.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/premium-light.css">
+    
+    <style>
+        :root {
+            --fintech-primary: #0A0F1E;
+            --fintech-secondary: #1A2332;
+            --fintech-accent: #3B82F6;
+            --fintech-success: #10B981;
+            --fintech-danger: #EF4444;
+            --fintech-warning: #F59E0B;
+            --fintech-text: #F9FAFB;
+            --fintech-border: #374151;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FFFFFF;
+            color: #1F2937;
+        }
+        
+        /* Hero Section */
+        .animation-hero {
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .animation-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .animation-hero .container {
+            position: relative;
+            z-index: 0;
+            text-align: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .animation-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .animation-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+        }
+        
+        .animation-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+        
+        /* Map Container */
+        .map-container {
+            background: #F3F4F6;
+            padding: 4rem 0;
+        }
+        
+        .map-wrapper {
+            position: relative;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        #map {
+            width: 100%;
+            height: 550px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid #E5E7EB;
+        }
+        
+        /* Leaflet custom styles */
+        .leaflet-control-attribution {
+            display: none;
+        }
+        
+        /* Custom Legend */
+        .legend-control {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.25rem;
+            border-radius: 12px;
+            border: 1px solid #E5E7EB;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            min-width: 240px;
+        }
+        
+        .legend-control h4 {
+            color: #1F2937;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3B82F6;
+            padding-bottom: 0.5rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.875rem;
+        }
+        
+        .legend-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .legend-text {
+            color: #4B5563;
+            font-weight: 600;
+        }
+        
+        /* Custom Marker */
+        .isla-marker {
+            width: 30px;
+            height: 30px;
+            background: var(--fintech-success);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.8),
+                        0 0 40px rgba(16, 185, 129, 0.5);
+            animation: markerPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes markerPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(16, 185, 129, 0.8),
+                            0 0 40px rgba(16, 185, 129, 0.5);
+            }
+            50% {
+                transform: scale(1.3);
+                box-shadow: 0 0 30px rgba(16, 185, 129, 1),
+                            0 0 60px rgba(16, 185, 129, 0.7);
+            }
+        }
+        
+        .marker-label {
+            background: rgba(16, 185, 129, 0.95);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 10px;
+        }
+        
+        /* Animation Controls */
+        .animation-controls {
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem auto;
+            max-width: 1600px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .control-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .control-group {
+            text-align: center;
+        }
+        
+        .control-label {
+            font-weight: 600;
+            color: #6B7280;
+            margin-bottom: 0.75rem;
+            display: block;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-control {
+            background: linear-gradient(135deg, var(--fintech-accent) 0%, #2563EB 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-control:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+        }
+        
+        .btn-control.active {
+            background: linear-gradient(135deg, var(--fintech-success) 0%, #059669 100%);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-control.active:hover {
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+        }
+        
+        .btn-toggle {
+            background: linear-gradient(135deg, #374151 0%, #1F2937 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-toggle:hover {
+            background: linear-gradient(135deg, #4B5563 0%, #374151 100%);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Animation Layers */
+        .animation-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        /* Sargassum patches */
+        .sargassum-patch {
+            position: absolute;
+            background: radial-gradient(ellipse, 
+                rgba(245, 158, 11, 0.8) 0%,
+                rgba(217, 119, 6, 0.6) 40%,
+                rgba(180, 83, 9, 0.4) 70%,
+                transparent 100%
+            );
+            border-radius: 50%;
+            opacity: 0;
+            filter: blur(3px);
+        }
+        
+        /* Hurricane */
+        .hurricane {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            z-index: 1001;
+        }
+        
+        .hurricane-eye {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle, 
+                rgba(255, 255, 255, 0.9) 0%, 
+                rgba(239, 68, 68, 0.8) 20%,
+                rgba(220, 38, 38, 0.6) 50%, 
+                transparent 70%
+            );
+            animation: hurricaneSpin 1s linear infinite;
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.9);
+        }
+        
+        .hurricane-spiral {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            top: -10%;
+            left: -10%;
+            border-radius: 50%;
+            border: 4px solid rgba(239, 68, 68, 0.8);
+            border-top-color: rgba(248, 113, 113, 0.95);
+            border-right-color: transparent;
+            border-bottom-color: rgba(220, 38, 38, 0.6);
+            border-left-color: transparent;
+            animation: hurricaneSpin 0.7s linear infinite reverse;
+        }
+        
+        @keyframes hurricaneSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Stats Display */
+        .stats-display {
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            padding: 4rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+        
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.5rem;
+        }
+        
+        .stat-value {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 0.35rem;
+            letter-spacing: -0.02em;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .stat-label {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.813rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            line-height: 1.3;
+        }
+        
+        /* Historical Section */
+        .historical-section {
+            background: #FFFFFF;
+            padding: 4rem 0;
+        }
+        
+        .historical-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #1F2937;
+        }
+        
+        .historical-subtitle {
+            text-align: center;
+            color: #6B7280;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .hurricane-timeline {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .hurricane-card {
+            background: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .hurricane-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-color: #10B981;
+        }
+        
+        .hurricane-card.missed {
+            border-left: 4px solid #10B981;
+        }
+        
+        .hurricane-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #EF4444;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hurricane-year {
+            color: #6B7280;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hurricane-impact {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .impact-icon {
+            font-size: 1rem;
+            margin-top: 2px;
+        }
+        
+        .impact-text {
+            font-size: 0.875rem;
+            color: #4B5563;
+            line-height: 1.5;
+        }
+        
+        .missed-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: #059669;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid #10B981;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .animation-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .animation-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            #map {
+                height: 400px;
+            }
+            
+            /* Ensure map stays static on mobile */
+            .map-container {
+                position: relative;
+                transform: none !important;
+                will-change: auto;
+            }
+            
+            #map {
+                position: relative !important;
+                transform: none !important;
+            }
+            
+            .control-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Mobile Navigation - Hamburger Lines */
+        @media (max-width: 968px) {
+            .nav-premium-mobile-toggle {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                width: 28px !important;
+                height: 24px !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                z-index: 1003 !important;
+                position: relative !important;
+            }
+            
+            .nav-premium-mobile-toggle span {
+                display: block !important;
+                width: 100% !important;
+                height: 3px !important;
+                background-color: #0A0A0A !important;
+                border-radius: 2px !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px) !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(2) {
+                opacity: 0 !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium nav-scrolled">
+        <div class="nav-premium-container">
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo">
+                </a>
+            </div>
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Platform
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                    <span class="nav-premium-dropdown-item-desc">Track your portfolio</span>
+                                </span>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💎</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                    <span class="nav-premium-dropdown-item-desc">Token economics & funding</span>
+                                </span>
+                            </a>
+                            <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📈</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Financial Forecast</span>
+                                    <span class="nav-premium-dropdown-item-desc">7-year projections</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        The Project
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏖️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Smart Resort Vision</span>
+                                    <span class="nav-premium-dropdown-item-desc">Property gallery & plans</span>
+                                </span>
+                            </a>
+                            <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌅</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span>
+                                    <span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family</span>
+                                </span>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Strategic Positioning</span>
+                                    <span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span>
+                                </span>
+                            </a>
+                            <a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Protection Animation</span>
+                                    <span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span>
+                                </span>
+                            </a>
+                            <a href="yucatan-boom.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🚀</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Yucatan Boom</span>
+                                    <span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span>
+                                </span>
+                            </a>
+                            <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Wellness Differentiation</span>
+                                    <span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span>
+                                </span>
+                            </a>
+                            <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🍽️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Culinary Excellence</span>
+                                    <span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span>
+                                </span>
+                            </a>
+                            <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏨</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">LHW Partnership</span>
+                                    <span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span>
+                                </span>
+                            </a>
+                            <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌿</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Sustainability</span>
+                                    <span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Company
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">👥</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Innovation Council</span>
+                                    <span class="nav-premium-dropdown-item-desc">Meet our team</span>
+                                </span>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📧</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Contact</span>
+                                    <span class="nav-premium-dropdown-item-desc">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="nav-premium-cta">Connect Wallet</a>
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Immediate menu activation script -->
+    <script>
+    (function() {
+        const toggle = document.getElementById('navPremiumMobileToggle');
+        const menu = document.getElementById('navPremiumMenu');
+        if (toggle && menu) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                menu.classList.toggle('active');
+                toggle.classList.toggle('active');
+            });
+            
+            // Mobile dropdown toggle
+            document.querySelectorAll('.nav-premium-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 968) {
+                        const link = item.querySelector('.nav-premium-link');
+                        const dropdown = item.querySelector('.nav-premium-dropdown');
+                        if (dropdown && (e.target === link || link.contains(e.target))) {
+                            e.preventDefault();
+                            item.classList.toggle('dropdown-open');
+                        }
+                    }
+                });
+            });
+        }
+    })();
+    </script>
+
+    <!-- Hero Section -->
+    <section class="animation-hero">
+        <div class="container">
+            <div class="animation-badge">🌊 Geographic Protection Visualization</div>
+            <h1>The Natural Fortress</h1>
+            <p class="animation-subtitle">
+                Watch how Isla Aguada remains pristine while the Caribbean and Riviera Maya face devastating Sargassum invasions and hurricane destruction
+            </p>
+        </div>
+    </section>
+
+    <!-- Map Container -->
+    <section class="map-container">
+        <div class="map-wrapper">
+            <div id="map"></div>
+            
+            <!-- Animation Controls -->
+            <div class="animation-controls">
+                <div class="control-row">
+                    <div class="control-group">
+                        <label class="control-label">Sargassum Animation</label>
+                        <button class="btn-control" id="toggleSargassum">
+                            <i class="fas fa-play"></i>
+                            <span>Start Sargassum</span>
+                        </button>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Hurricane Animation</label>
+                        <button class="btn-control" id="toggleHurricane">
+                            <i class="fas fa-play"></i>
+                            <span>Start Hurricane</span>
+                        </button>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">View Mode</label>
+                        <button class="btn-control btn-toggle" id="toggleBoth">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Show Both</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Display -->
+    <section class="stats-display">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10B981;">
+                            <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+                            <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
+                        </svg>
+                    </div>
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Avoids Sargassum</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #F59E0B;">
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="stat-value">$500M+</div>
+                    <div class="stat-label">Annual Crisis Cost Avoided</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3B82F6;">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Zero Hurricanes in 50 Years</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #06B6D4;">
+                            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+                            <line x1="12" y1="11" x2="12" y2="11.01"/>
+                            <line x1="8" y1="16" x2="8.01" y2="16"/>
+                            <line x1="16" y1="16" x2="16.01" y2="16"/>
+                        </svg>
+                    </div>
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Clean Beaches Year-Round</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Hurricanes -->
+    <section class="historical-section">
+        <div class="container">
+            <h2>🌀 50 Years of Hurricane Protection</h2>
+            <p class="historical-subtitle">Major Hurricanes That Devastated the Region But Missed Isla Aguada (1974-2024)</p>
+            
+            <!-- Explosive Statistic -->
+            <div style="background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%); padding: 2.5rem 3rem; border-radius: 20px; margin: 3rem auto 4rem; max-width: 1000px; box-shadow: 0 12px 40px rgba(239, 68, 68, 0.3); border: 3px solid #FCA5A5;">
+                <div style="text-align: center;">
+                    <div style="font-size: 1rem; font-weight: 700; color: #FEE2E2; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">⚠️ RIVIERA MAYA & YUCATAN PENINSULA ⚠️</div>
+                    <div style="font-size: 4.5rem; font-weight: 900; color: #FFFFFF; line-height: 1; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">26+ HURRICANES</div>
+                    <div style="font-size: 1.5rem; font-weight: 600; color: #FEE2E2; margin-bottom: 1.5rem;">in the last 50 years (1974-2024)</div>
+                    <div style="display: inline-block; background: rgba(255, 255, 255, 0.2); border: 2px solid #FEE2E2; border-radius: 50px; padding: 1rem 2.5rem; margin-top: 1rem;">
+                        <div style="font-size: 3rem; font-weight: 800; color: #FFFFFF; line-height: 1;">75%+</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; color: #FEE2E2; margin-top: 0.5rem;">PROBABILITY OF GETTING HIT AGAIN</div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 2px solid rgba(255, 255, 255, 0.2);">
+                    <div style="font-size: 1.3rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.75rem;">🛡️ ISLA AGUADA: ZERO HURRICANES</div>
+                    <div style="font-size: 1rem; font-weight: 600; color: #FEE2E2;">Geographic protection that cannot be replicated</div>
+                </div>
+            </div>
+            <div class="hurricane-timeline">
+                <!-- 1970s -->
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Carmen</div>
+                    <div class="hurricane-year">September 1974 • Category 4</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Yucatan Peninsula</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada spared</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Anita</div>
+                    <div class="hurricane-year">September 1977 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Struck NE Mexico coast</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada untouched</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <!-- 1980s -->
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Allen</div>
+                    <div class="hurricane-year">August 1980 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Devastated South Texas</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada protected</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Gilbert</div>
+                    <div class="hurricane-year">September 1988 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Destroyed Cancún & Jamaica</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada safe</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <!-- 1990s -->
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Opal</div>
+                    <div class="hurricane-year">October 1995 • Category 4</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Yucatan & Florida</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada bypassed</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Roxanne</div>
+                    <div class="hurricane-year">October 1995 • Category 3</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Struck Yucatan coast</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada avoided</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Mitch</div>
+                    <div class="hurricane-year">October 1998 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Devastated Honduras (11,000+ deaths)</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada unharmed</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <!-- 2000s -->
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Keith</div>
+                    <div class="hurricane-year">October 2000 • Category 4</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Belize & Yucatan</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada protected</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Isidore</div>
+                    <div class="hurricane-year">September 2002 • Category 3</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Damaged Yucatan Peninsula</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada safe</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Ivan</div>
+                    <div class="hurricane-year">September 2004 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Destroyed Grenada & Alabama</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada spared</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Emily</div>
+                    <div class="hurricane-year">July 2005 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Cozumel & Riviera Maya</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada bypassed</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Wilma</div>
+                    <div class="hurricane-year">October 2005 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Devastated Cancún & Cozumel</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada bypassed</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Dean</div>
+                    <div class="hurricane-year">August 2007 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Struck Yucatan coast</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada safe</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <!-- 2010s -->
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Karl</div>
+                    <div class="hurricane-year">September 2010 • Category 3</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Veracruz with flooding</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada unharmed</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Ernesto</div>
+                    <div class="hurricane-year">August 2012 • Category 2</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Damaged Yucatan Peninsula</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada protected</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Ingrid</div>
+                    <div class="hurricane-year">September 2013 • Category 1</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit NE Mexico coast</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada bypassed</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Patricia</div>
+                    <div class="hurricane-year">October 2015 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Strongest Pacific hurricane ever</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada safe (Gulf side)</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Earl</div>
+                    <div class="hurricane-year">August 2016 • Category 1</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Belize & Yucatan</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada spared</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Harvey</div>
+                    <div class="hurricane-year">August 2017 • Category 4</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Devastated Houston ($125B damage)</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada untouched</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Irma</div>
+                    <div class="hurricane-year">September 2017 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Destroyed Caribbean islands</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada protected</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Michael</div>
+                    <div class="hurricane-year">October 2018 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Destroyed Florida Panhandle</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada safe</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <!-- 2020s -->
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Hanna</div>
+                    <div class="hurricane-year">July 2020 • Category 1</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit South Texas</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada bypassed</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Delta</div>
+                    <div class="hurricane-year">October 2020 • Category 4</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Cancún & Louisiana</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada unharmed</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Zeta</div>
+                    <div class="hurricane-year">October 2020 • Category 3</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Struck Yucatan & New Orleans</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada safe</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Grace</div>
+                    <div class="hurricane-year">August 2021 • Category 3</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Yucatan & Veracruz</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada protected</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Ida</div>
+                    <div class="hurricane-year">August 2021 • Category 4</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Devastated Louisiana ($75B damage)</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada bypassed</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Ian</div>
+                    <div class="hurricane-year">September 2022 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Destroyed SW Florida ($113B damage)</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada spared</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Otis</div>
+                    <div class="hurricane-year">October 2023 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Destroyed Acapulco (Pacific side)</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada safe (Gulf side)</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Beryl</div>
+                    <div class="hurricane-year">July 2024 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Caribbean & Texas</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada untouched</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Helene</div>
+                    <div class="hurricane-year">September 2024 • Category 4</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Devastated Florida & Appalachia</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada protected</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+
+                <div class="hurricane-card missed">
+                    <div class="hurricane-name">Hurricane Milton</div>
+                    <div class="hurricane-year">October 2024 • Category 5</div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">❌</span>
+                        <span class="impact-text">Hit Florida (rapid intensification)</span>
+                    </div>
+                    <div class="hurricane-impact">
+                        <span class="impact-icon">✅</span>
+                        <span class="impact-text">Isla Aguada safe</span>
+                    </div>
+                    <span class="missed-badge">Missed Isla Aguada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script>
+        // Initialize map centered on Gulf of Mexico / Caribbean
+        const map = L.map('map', {
+            zoomControl: false,
+            scrollWheelZoom: false,
+            dragging: false,
+            touchZoom: false,
+            doubleClickZoom: false,
+            boxZoom: false,
+            keyboard: false
+        }).setView([22.0, -85.0], 5);
+
+        // Add satellite tile layer
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Exact Isla Aguada coordinates from Google Maps
+        const islaAguadaCoords = [18.816744, -91.465744];
+
+        // Create custom pulsing marker
+        const customIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div class="isla-marker"><div class="marker-label">Isla Aguada (Protected)</div></div>',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+        });
+
+        // Add marker to map
+        const marker = L.marker(islaAguadaCoords, { icon: customIcon }).addTo(map);
+        marker.bindPopup('<b>Isla Aguada</b><br>Laguna de Términos<br>Campeche, Mexico<br><i>Zero hurricanes in 50 years</i>');
+
+        // Add custom legend to map
+        const legend = L.control({ position: 'topright' });
+        legend.onAdd = function(map) {
+            const div = L.DomUtil.create('div', 'legend-control');
+            div.innerHTML = `
+                <h4>Legend</h4>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #F59E0B;"></div>
+                    <span class="legend-text">Sargassum Belt</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #EF4444;"></div>
+                    <span class="legend-text">Hurricane Path</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #10B981;"></div>
+                    <span class="legend-text">Isla Aguada (Protected)</span>
+                </div>
+            `;
+            return div;
+        };
+        legend.addTo(map);
+
+        // CALCULATE ACTUAL PIXEL POSITIONS using Leaflet's coordinate system
+        // Playa del Carmen: 20.603027, -87.122684
+        const playaDelCarmenCoords = [20.603027, -87.122684];
+        const mapContainer = map.getContainer();
+        const mapBounds = mapContainer.getBoundingClientRect();
+        const playaPoint = map.latLngToContainerPoint(playaDelCarmenCoords);
+        const playaXPercent = ((playaPoint.x / mapBounds.width) * 100).toFixed(1);
+        const playaYPercent = ((playaPoint.y / mapBounds.height) * 100).toFixed(1);
+        
+        console.log('🎯 PLAYA DEL CARMEN CALCULATED POSITION:');
+        console.log(`   Coordinates: ${playaDelCarmenCoords[0]}, ${playaDelCarmenCoords[1]}`);
+        console.log(`   Pixel position: ${playaPoint.x}px, ${playaPoint.y}px`);
+        console.log(`   Percentage position: ${playaXPercent}% left, ${playaYPercent}% top`);
+
+        // Animation layer
+        const animationPane = document.createElement('div');
+        animationPane.className = 'animation-layer';
+        animationPane.id = 'animationLayer';
+        document.getElementById('map').appendChild(animationPane);
+
+        // Animation control
+        let sargassumActive = false;
+        let hurricaneActive = false;
+        let sargassumIntervals = [];
+        let hurricaneIntervals = [];
+        
+        const toggleSargassumBtn = document.getElementById('toggleSargassum');
+        const toggleHurricaneBtn = document.getElementById('toggleHurricane');
+        const toggleBothBtn = document.getElementById('toggleBoth');
+        
+        // Sargassum animation paths - FROM WEST AFRICA across Atlantic
+        // Continuing to hit the ENTIRE Riviera Maya coast at CALCULATED position
+        // Playa del Carmen at 20.603027, -87.122684
+        // CALCULATED position will be logged to console and used dynamically
+        
+        // Use the calculated position for target endpoint
+        const targetX = playaXPercent + '%';
+        
+        const sargassumPaths = [
+            // From West Africa (far right - EAST) toward Caribbean - Phase 1
+            { startX: '95%', startY: '55%', endX: '78%', endY: '52%', size: 90, delay: 0 },
+            { startX: '95%', startY: '57%', endX: '76%', endY: '54%', size: 95, delay: 250 },
+            { startX: '95%', startY: '53%', endX: '80%', endY: '50%', size: 85, delay: 500 },
+            { startX: '95%', startY: '59%', endX: '77%', endY: '56%', size: 88, delay: 750 },
+            
+            // Continuing STRAIGHT across Atlantic - Phase 2
+            { startX: '78%', startY: '52%', endX: '68%', endY: '49%', size: 100, delay: 1000 },
+            { startX: '76%', startY: '54%', endX: '66%', endY: '51%', size: 105, delay: 1250 },
+            { startX: '80%', startY: '50%', endX: '70%', endY: '47%', size: 95, delay: 1500 },
+            { startX: '77%', startY: '56%', endX: '67%', endY: '53%', size: 92, delay: 1750 },
+            
+            // STRAIGHT to Riviera Maya approach - Phase 3 (continuing westward)
+            { startX: '68%', startY: '49%', endX: '61%', endY: '46%', size: 110, delay: 2000 },
+            { startX: '66%', startY: '51%', endX: '59%', endY: '48%', size: 115, delay: 2250 },
+            { startX: '70%', startY: '47%', endX: '63%', endY: '44%', size: 108, delay: 2500 },
+            { startX: '67%', startY: '53%', endX: '60%', endY: '50%', size: 105, delay: 2750 },
+            
+            // HITTING Cancún coast (21.16°N) - CALCULATED position
+            { startX: '61%', startY: '45%', endX: targetX, endY: '43%', size: 135, delay: 3000 },
+            { startX: '63%', startY: '44%', endX: targetX, endY: '42%', size: 140, delay: 3250 },
+            { startX: '62%', startY: '46%', endX: targetX, endY: '44%', size: 138, delay: 3500 },
+            { startX: '61%', startY: '47%', endX: targetX, endY: '45%', size: 136, delay: 3750 },
+            
+            // HITTING Puerto Morelos coast (20.85°N) - CALCULATED position
+            { startX: '62%', startY: '47%', endX: targetX, endY: '46%', size: 138, delay: 4000 },
+            { startX: '61%', startY: '48%', endX: targetX, endY: '47%', size: 140, delay: 4250 },
+            { startX: '63%', startY: '46%', endX: targetX, endY: '45%', size: 137, delay: 4500 },
+            { startX: '62%', startY: '49%', endX: targetX, endY: '48%', size: 139, delay: 4750 },
+            
+            // HITTING Playa del Carmen coast DIRECTLY (20.60°N, -87.12°W) - CALCULATED POSITION
+            { startX: '61%', startY: '49%', endX: targetX, endY: '49%', size: 145, delay: 5000 },
+            { startX: '62%', startY: '48%', endX: targetX, endY: '48%', size: 150, delay: 5250 },
+            { startX: '63%', startY: '50%', endX: targetX, endY: '50%', size: 148, delay: 5500 },
+            { startX: '61.5%', startY: '49.5%', endX: targetX, endY: '49.5%', size: 152, delay: 5750 },
+            { startX: '62.5%', startY: '48.5%', endX: targetX, endY: '48.5%', size: 147, delay: 6000 },
+            { startX: '62%', startY: '50%', endX: targetX, endY: '50%', size: 149, delay: 6250 },
+            
+            // CONTINUING - Puerto Aventuras (20.52°N) - CALCULATED position
+            { startX: '61%', startY: '50%', endX: targetX, endY: '51%', size: 143, delay: 6500 },
+            { startX: '62%', startY: '51%', endX: targetX, endY: '52%', size: 145, delay: 6750 },
+            { startX: '63%', startY: '49%', endX: targetX, endY: '50%', size: 144, delay: 7000 },
+            
+            // HITTING Akumal coast (20.39°N) - CALCULATED position
+            { startX: '61%', startY: '51%', endX: targetX, endY: '52%', size: 142, delay: 7250 },
+            { startX: '62%', startY: '52%', endX: targetX, endY: '53%', size: 144, delay: 7500 },
+            { startX: '63%', startY: '50%', endX: targetX, endY: '51%', size: 143, delay: 7750 },
+            
+            // HITTING Tulum beaches (20.21°N) - CALCULATED position
+            { startX: '61%', startY: '52%', endX: targetX, endY: '54%', size: 145, delay: 8000 },
+            { startX: '62%', startY: '53%', endX: targetX, endY: '55%', size: 148, delay: 8250 },
+            { startX: '63%', startY: '51%', endX: targetX, endY: '53%', size: 146, delay: 8500 },
+            { startX: '61.5%', startY: '53%', endX: targetX, endY: '55%', size: 147, delay: 8750 },
+            
+            // HITTING Sian Ka'an coast (19.85°N) - CALCULATED position
+            { startX: '61%', startY: '54%', endX: targetX, endY: '57%', size: 140, delay: 9000 },
+            { startX: '62%', startY: '55%', endX: targetX, endY: '58%', size: 142, delay: 9250 },
+            { startX: '63%', startY: '53%', endX: targetX, endY: '56%', size: 141, delay: 9500 },
+            
+            // HITTING Mahahual/Costa Maya (18.70°N) - CALCULATED position
+            { startX: '61%', startY: '56%', endX: targetX, endY: '60%', size: 138, delay: 9750 },
+            { startX: '62%', startY: '57%', endX: targetX, endY: '61%', size: 140, delay: 10000 },
+            { startX: '63%', startY: '55%', endX: targetX, endY: '59%', size: 139, delay: 10250 },
+            
+            // HITTING Belize coast continuing south
+            { startX: '61%', startY: '58%', endX: targetX, endY: '63%', size: 135, delay: 10500 },
+            { startX: '62%', startY: '59%', endX: targetX, endY: '64%', size: 137, delay: 10750 },
+            { startX: '63%', startY: '57%', endX: targetX, endY: '62%', size: 136, delay: 11000 },
+            
+            // Some Sargassum continues WEST through gap into Gulf of Mexico
+            { startX: '58%', startY: '43%', endX: '48%', endY: '39%', size: 105, delay: 11250 },
+            { startX: '56.5%', startY: '45%', endX: '46%', endY: '41%', size: 110, delay: 11500 },
+            { startX: '57%', startY: '47%', endX: '47%', endY: '43%', size: 108, delay: 11750 },
+            
+            // Gulf circulation - clockwise pushing UP (north) AWAY from Isla Aguada
+            { startX: '48%', startY: '39%', endX: '42%', endY: '31%', size: 100, delay: 12000 },
+            { startX: '46%', startY: '41%', endX: '40%', endY: '33%', size: 105, delay: 12250 },
+            { startX: '47%', startY: '43%', endX: '41%', endY: '35%', size: 95, delay: 12500 },
+            
+            // UP to Texas/Louisiana coast (AWAY from Isla Aguada)
+            { startX: '42%', startY: '31%', endX: '36%', endY: '23%', size: 100, delay: 12750 },
+            { startX: '40%', startY: '33%', endX: '34%', endY: '25%', size: 95, delay: 13000 },
+            { startX: '41%', startY: '35%', endX: '35%', endY: '27%', size: 97, delay: 13250 }
+        ];
+        
+        // Hurricane animation paths - hitting all major historical targets
+        // Cancún, Cozumel, Yucatan, Caribbean islands, Florida, Texas - but MISSING Isla Aguada
+        const hurricanePaths = [
+            // Path 1: Toward Cancún/Cozumel (Wilma, Emily, Delta)
+            { startX: '85%', startY: '52%', endX: '60%', endY: '50%', delay: 0 },
+            
+            // Path 2: Toward Jamaica and Yucatan (Gilbert, Dean)
+            { startX: '85%', startY: '55%', endX: '62%', endY: '52%', delay: 1500 },
+            
+            // Path 3: Toward Cuba (Irma, Ian path)
+            { startX: '85%', startY: '48%', endX: '66%', endY: '44%', delay: 3000 },
+            
+            // Path 4: Toward Florida (Michael, Ian)
+            { startX: '85%', startY: '42%', endX: '68%', endY: '32%', delay: 4500 },
+            
+            // Path 5: Into Gulf toward Louisiana (Katrina, Ida, Zeta)
+            { startX: '85%', startY: '38%', endX: '52%', endY: '28%', delay: 6000 },
+            
+            // Path 6: Toward Texas coast (Harvey, Hanna)
+            { startX: '80%', startY: '50%', endX: '42%', endY: '35%', delay: 7500 },
+            
+            // Path 7: Toward NE Mexico (Anita, Karl) - ABOVE Isla Aguada
+            { startX: '75%', startY: '48%', endX: '38%', endY: '42%', delay: 9000 },
+            
+            // Path 8: Toward Belize/Honduras (Mitch, Keith)
+            { startX: '82%', startY: '58%', endX: '54%', endY: '62%', delay: 10500 },
+            
+            // Path 9: Toward Dominican Republic (various)
+            { startX: '88%', startY: '50%', endX: '72%', endY: '46%', delay: 12000 },
+            
+            // Path 10: Recurving toward Bermuda/Atlantic
+            { startX: '85%', startY: '44%', endX: '78%', endY: '30%', delay: 13500 }
+        ];
+        
+        // Toggle Sargassum
+        toggleSargassumBtn.addEventListener('click', function() {
+            sargassumActive = !sargassumActive;
+            if (sargassumActive) {
+                this.innerHTML = '<i class="fas fa-pause"></i><span>Pause Sargassum</span>';
+                this.classList.add('active');
+                startSargassumAnimation();
+            } else {
+                this.innerHTML = '<i class="fas fa-play"></i><span>Start Sargassum</span>';
+                this.classList.remove('active');
+                stopSargassum();
+            }
+        });
+        
+        // Toggle Hurricane
+        toggleHurricaneBtn.addEventListener('click', function() {
+            hurricaneActive = !hurricaneActive;
+            if (hurricaneActive) {
+                this.innerHTML = '<i class="fas fa-pause"></i><span>Pause Hurricane</span>';
+                this.classList.add('active');
+                startHurricaneAnimation();
+            } else {
+                this.innerHTML = '<i class="fas fa-play"></i><span>Start Hurricane</span>';
+                this.classList.remove('active');
+                stopHurricanes();
+            }
+        });
+        
+        // Toggle Both
+        toggleBothBtn.addEventListener('click', function() {
+            if (!sargassumActive && !hurricaneActive) {
+                sargassumActive = true;
+                hurricaneActive = true;
+                toggleSargassumBtn.innerHTML = '<i class="fas fa-pause"></i><span>Pause Sargassum</span>';
+                toggleSargassumBtn.classList.add('active');
+                toggleHurricaneBtn.innerHTML = '<i class="fas fa-pause"></i><span>Pause Hurricane</span>';
+                toggleHurricaneBtn.classList.add('active');
+                this.innerHTML = '<i class="fas fa-stop"></i><span>Stop Both</span>';
+                startSargassumAnimation();
+                startHurricaneAnimation();
+            } else {
+                sargassumActive = false;
+                hurricaneActive = false;
+                toggleSargassumBtn.innerHTML = '<i class="fas fa-play"></i><span>Start Sargassum</span>';
+                toggleSargassumBtn.classList.remove('active');
+                toggleHurricaneBtn.innerHTML = '<i class="fas fa-play"></i><span>Start Hurricane</span>';
+                toggleHurricaneBtn.classList.remove('active');
+                this.innerHTML = '<i class="fas fa-layer-group"></i><span>Show Both</span>';
+                stopSargassum();
+                stopHurricanes();
+            }
+        });
+        
+        function stopSargassum() {
+            sargassumIntervals.forEach(interval => clearInterval(interval));
+            sargassumIntervals = [];
+            const sargassumElements = document.querySelectorAll('.sargassum-patch');
+            sargassumElements.forEach(el => el.remove());
+        }
+        
+        function stopHurricanes() {
+            hurricaneIntervals.forEach(interval => clearInterval(interval));
+            hurricaneIntervals = [];
+            const hurricaneElements = document.querySelectorAll('.hurricane');
+            hurricaneElements.forEach(el => el.remove());
+        }
+        
+        function startSargassumAnimation() {
+            const layer = document.getElementById('animationLayer');
+            
+            sargassumPaths.forEach((path) => {
+                setTimeout(() => {
+                    createSargassumPatch(layer, path);
+                    
+                    const interval = setInterval(() => {
+                        if (!sargassumActive) return;
+                        createSargassumPatch(layer, path);
+                    }, 5000);
+                    sargassumIntervals.push(interval);
+                }, path.delay);
+            });
+        }
+        
+        function createSargassumPatch(layer, path) {
+            const patch = document.createElement('div');
+            patch.className = 'sargassum-patch';
+            patch.style.left = path.startX;
+            patch.style.top = path.startY;
+            patch.style.width = path.size + 'px';
+            patch.style.height = (path.size * 0.6) + 'px';
+            
+            // Animate using CSS transition
+            layer.appendChild(patch);
+            
+            requestAnimationFrame(() => {
+                patch.style.transition = 'all 4s ease-in-out';
+                patch.style.left = path.endX;
+                patch.style.top = path.endY;
+                patch.style.opacity = '0.85';
+            });
+            
+            setTimeout(() => {
+                patch.style.opacity = '0';
+            }, 3500);
+            
+            setTimeout(() => {
+                if (patch.parentNode) patch.remove();
+            }, 4500);
+        }
+        
+        function startHurricaneAnimation() {
+            const layer = document.getElementById('animationLayer');
+            
+            hurricanePaths.forEach((path) => {
+                setTimeout(() => {
+                    createHurricane(layer, path);
+                    
+                    const interval = setInterval(() => {
+                        if (!hurricaneActive) return;
+                        createHurricane(layer, path);
+                    }, 6000);
+                    hurricaneIntervals.push(interval);
+                }, path.delay);
+            });
+        }
+        
+        function createHurricane(layer, path) {
+            const hurricane = document.createElement('div');
+            hurricane.className = 'hurricane';
+            hurricane.style.left = path.startX;
+            hurricane.style.top = path.startY;
+            hurricane.innerHTML = `
+                <div class="hurricane-eye"></div>
+                <div class="hurricane-spiral"></div>
+            `;
+            
+            layer.appendChild(hurricane);
+            
+            requestAnimationFrame(() => {
+                hurricane.style.transition = 'all 5s linear';
+                hurricane.style.left = path.endX;
+                hurricane.style.top = path.endY;
+                hurricane.style.opacity = '1';
+            });
+            
+            setTimeout(() => {
+                hurricane.style.opacity = '0';
+            }, 4500);
+            
+            setTimeout(() => {
+                if (hurricane.parentNode) hurricane.remove();
+            }, 6000);
+        }
+    </script>
+    <script src="js/wallet.js"></script>
+    <!-- UNIVERSAL MOBILE NAV - LOADS LAST TO OVERRIDE EVERYTHING -->
+    <script src="js/mobile-nav-universal.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="financial-forecast.html">Financial Forecast</a></li>
+                        <li><a href="investment-calculator.html">Investment Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">The Project</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Property Showcase</a></li>
+                        <li><a href="future-vision.html">Future Vision</a></li>
+                        <li><a href="positioning.html">Strategic Positioning</a></li>
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="team.html">Innovation Council</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

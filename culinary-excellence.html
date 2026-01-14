@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Excellence | MayaRoyale - Transformative Nutritional Gastronomy</title>
+    <meta name="description" content="Experience MayaRoyale's revolutionary approach to dining - 6 exceptional restaurants including 5 kosher venues, blending nutritional science, healing cuisine, and world-class gastronomy.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/premium-light.css">
+    
+    <style>
+        /* Culinary Excellence Page Styles */
+        :root {
+            --culinary-gold: #D4AF37;
+            --culinary-dark: #0A0A0A;
+            --culinary-green: #10B981;
+            --culinary-blue: #3B82F6;
+        }
+        
+        /* Hero Section */
+        .culinary-hero {
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(26, 26, 26, 0.95)),
+                        url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920') center/cover;
+            padding: 10rem 0 6rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .culinary-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .culinary-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .culinary-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--culinary-gold);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+        
+        .culinary-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--culinary-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .culinary-hero .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--culinary-gold);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Philosophy Section */
+        .philosophy-section {
+            padding: 8rem 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--culinary-gold);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--culinary-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .section-header p {
+            font-size: 1.25rem;
+            color: #6A6A6A;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .philosophy-card {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            border: 2px solid #E5E7EB;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .philosophy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--culinary-gold), #F59E0B);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .philosophy-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--culinary-gold);
+        }
+        
+        .philosophy-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .philosophy-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--culinary-gold), #F59E0B);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .philosophy-card h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--culinary-dark);
+            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .philosophy-card p {
+            font-size: 1rem;
+            color: #6A6A6A;
+            line-height: 1.8;
+        }
+        
+        /* Restaurants Section */
+        .restaurants-section {
+            padding: 8rem 0;
+            background: white;
+        }
+        
+        .restaurants-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .restaurant-card {
+            background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+            border-radius: 24px;
+            overflow: hidden;
+            border: 2px solid #E5E7EB;
+            transition: all 0.3s ease;
+        }
+        
+        .restaurant-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+            border-color: var(--culinary-gold);
+        }
+        
+        .restaurant-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #D4AF37 0%, #F59E0B 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .restaurant-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        
+        .kosher-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            color: var(--culinary-gold);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .restaurant-content {
+            padding: 2.5rem;
+        }
+        
+        .restaurant-card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--culinary-dark);
+            margin-bottom: 0.75rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .restaurant-type {
+            font-size: 0.9rem;
+            color: var(--culinary-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .restaurant-description {
+            font-size: 1rem;
+            color: #6A6A6A;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .restaurant-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .restaurant-features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4A4A4A;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-bottom: 1px solid #F4F4F4;
+        }
+        
+        .restaurant-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .restaurant-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--culinary-green);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        /* Nutritional Science Section */
+        .nutritional-science {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--culinary-dark) 0%, #1A1A1A 100%);
+            color: white;
+        }
+        
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .science-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .science-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--culinary-gold);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.2);
+        }
+        
+        .science-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .science-card h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--culinary-gold);
+            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .science-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        
+        /* Experience Section */
+        .experience-section {
+            padding: 8rem 0;
+            background: linear-gradient(180deg, #F8F9FA 0%, #FFFFFF 100%);
+        }
+        
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+            align-items: center;
+        }
+        
+        .experience-content h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--culinary-dark);
+            margin-bottom: 2rem;
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.2;
+        }
+        
+        .experience-content p {
+            font-size: 1.125rem;
+            color: #6A6A6A;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .experience-highlights {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        
+        .experience-highlights li {
+            padding: 15px 0 15px 40px;
+            position: relative;
+            color: #4A4A4A;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .experience-highlights li:last-child {
+            border-bottom: none;
+        }
+        
+        .experience-highlights li::before {
+            content: '⭐';
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+        
+        .experience-visual {
+            background: linear-gradient(135deg, #D4AF37 0%, #F59E0B 100%);
+            border-radius: 24px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .experience-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+        }
+        
+        /* Farm to Table Section */
+        .farm-to-table {
+            padding: 8rem 0;
+            background: white;
+        }
+        
+        .farm-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .farm-card {
+            background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            border: 2px solid #E5E7EB;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .farm-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--culinary-green);
+            box-shadow: 0 12px 40px rgba(16, 185, 129, 0.15);
+        }
+        
+        .farm-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--culinary-green), #34D399);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 2rem;
+        }
+        
+        .farm-card h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--culinary-dark);
+            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .farm-card p {
+            font-size: 1rem;
+            color: #6A6A6A;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .culinary-cta {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--culinary-gold) 0%, #F59E0B 100%);
+            text-align: center;
+            color: white;
+        }
+        
+        .culinary-cta h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .culinary-cta p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--culinary-gold);
+            padding: 1.5rem 4rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+            background: #F9FAFB;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .philosophy-grid,
+            .farm-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .science-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .culinary-hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .culinary-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .culinary-hero .hero-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .philosophy-grid,
+            .restaurants-grid,
+            .science-grid,
+            .farm-grid,
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .culinary-cta h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Mobile Navigation - Hamburger Lines */
+        @media (max-width: 968px) {
+            .nav-premium-mobile-toggle {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                width: 28px !important;
+                height: 24px !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                z-index: 1003 !important;
+                position: relative !important;
+            }
+            
+            .nav-premium-mobile-toggle span {
+                display: block !important;
+                width: 100% !important;
+                height: 3px !important;
+                background-color: #0A0A0A !important;
+                border-radius: 2px !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px) !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(2) {
+                opacity: 0 !important;
+            }
+            
+            .nav-premium-mobile-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium nav-scrolled">
+        <div class="nav-premium-container">
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo">
+                </a>
+            </div>
+            
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <!-- Platform Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Platform
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                    <span class="nav-premium-dropdown-item-desc">Track your portfolio</span>
+                                </span>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💎</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                    <span class="nav-premium-dropdown-item-desc">Token economics & funding</span>
+                                </span>
+                            </a>
+                            <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📈</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Financial Forecast</span>
+                                    <span class="nav-premium-dropdown-item-desc">7-year projections</span>
+                                </span>
+                            </a>
+                            <a href="investment-calculator.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🧮</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Investment Calculator</span>
+                                    <span class="nav-premium-dropdown-item-desc">Calculate your returns</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- The Project Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        The Project
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏖️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Smart Resort Vision</span>
+                                    <span class="nav-premium-dropdown-item-desc">Property gallery & plans</span>
+                                </span>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🎯</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Strategic Positioning</span>
+                                    <span class="nav-premium-dropdown-item-desc">Geographic monopoly advantage</span>
+                                </span>
+                            </a>
+                            <a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Protection Animation</span>
+                                    <span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span>
+                                </span>
+                            </a>
+                            <a href="yucatan-boom.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🚀</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Yucatan Boom</span>
+                                    <span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span>
+                                </span>
+                            </a>
+                            <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🧘</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Wellness Excellence</span>
+                                    <span class="nav-premium-dropdown-item-desc">Dead Sea-inspired wellness</span>
+                                </span>
+                            </a>
+                            <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🍽️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Culinary Excellence</span>
+                                    <span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span>
+                                </span>
+                            </a>
+                            <a href="technology.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">⚡</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Technology & Blockchain</span>
+                                    <span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span>
+                                </span>
+                            </a>
+                            <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌿</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Sustainability</span>
+                                    <span class="nav-premium-dropdown-item-desc">100% self-sufficient resort</span>
+                                </span>
+                            </a>
+                            <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🔮</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Future Vision</span>
+                                    <span class="nav-premium-dropdown-item-desc">7-year development roadmap</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- About Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        About
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">LHW Partnership</span>
+                                    <span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span>
+                                </span>
+                            </a>
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">👥</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Team</span>
+                                    <span class="nav-premium-dropdown-item-desc">Leadership & advisors</span>
+                                </span>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📧</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Contact</span>
+                                    <span class="nav-premium-dropdown-item-desc">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <!-- Connect Wallet Button - SMALL & PETITE -->
+            <a href="#" class="nav-premium-cta">Connect Wallet</a>
+            
+            <!-- Mobile Menu Toggle - Hamburger -->
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="culinary-hero">
+        <div class="container">
+            <div class="culinary-badge">🍽️ Transformative Nutritional Gastronomy</div>
+            <h1>Culinary<br>Excellence</h1>
+            <p class="hero-subtitle">
+                Where nutritional science meets world-class gastronomy—creating dining experiences<br>
+                that heal, transform, and transcend expectations
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Exceptional Restaurants</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">Kosher Certified Venues</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Farm-to-Table Fresh</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🌟 Our Philosophy</div>
+                <h2>Food as Medicine, Dining as Art</h2>
+                <p>
+                    MayaRoyale redefines luxury dining by integrating nutritional science, healing principles, and exceptional culinary artistry. Every meal is crafted to nourish your body, elevate your spirit, and create unforgettable sensory experiences.
+                </p>
+            </div>
+            
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">🔬</div>
+                    <h3>Nutritional Science</h3>
+                    <p>
+                        Every dish is designed by nutrition experts and master chefs working in harmony. We optimize macro and micronutrient profiles while never compromising on flavor, creating meals that heal and satisfy.
+                    </p>
+                </div>
+                
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">💚</div>
+                    <h3>Healing Cuisine</h3>
+                    <p>
+                        Drawing from ancient healing traditions and modern nutritional research, our menus incorporate anti-inflammatory ingredients, immune-boosting compounds, and gut-healing protocols designed for optimal wellness.
+                    </p>
+                </div>
+                
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">✨</div>
+                    <h3>Exceptional Experience</h3>
+                    <p>
+                        Beyond nutrition, we craft multi-sensory dining experiences—from ambiance and presentation to service and storytelling—that transform every meal into a memorable journey of discovery and delight.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants Section -->
+    <section class="restaurants-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🏆 Six Distinctive Venues</div>
+                <h2>Our Restaurant Collection</h2>
+                <p>
+                    Six unique dining destinations, each offering a distinct culinary perspective—five certified kosher venues ensuring the highest standards of dietary law and purity.
+                </p>
+            </div>
+            
+            <div class="restaurants-grid">
+                <!-- Restaurant 1 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        🌅
+                        <div class="kosher-badge">✡ KOSHER CERTIFIED</div>
+                    </div>
+                    <div class="restaurant-content">
+                        <h3>Sunset Terrace</h3>
+                        <div class="restaurant-type">Mediterranean Healing Cuisine</div>
+                        <p class="restaurant-description">
+                            Our flagship fine-dining venue showcasing Mediterranean nutritional principles with premium ingredients—olive oils, wild-caught fish, organic vegetables—prepared with precision and artistry.
+                        </p>
+                        <ul class="restaurant-features">
+                            <li>Anti-inflammatory Mediterranean diet focus</li>
+                            <li>Oceanfront sunset dining experience</li>
+                            <li>Personalized nutritional consultations</li>
+                            <li>Wine pairings with health benefits</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 2 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        🌿
+                        <div class="kosher-badge">✡ KOSHER CERTIFIED</div>
+                    </div>
+                    <div class="restaurant-content">
+                        <h3>Verdant Garden</h3>
+                        <div class="restaurant-type">Plant-Based Wellness Dining</div>
+                        <p class="restaurant-description">
+                            100% plant-based culinary artistry featuring farm-fresh produce, ancient grains, and innovative preparations that prove wellness cuisine can be indulgent and exciting.
+                        </p>
+                        <ul class="restaurant-features">
+                            <li>Nutrient-dense superfood ingredients</li>
+                            <li>Raw and living foods options</li>
+                            <li>Gut health-focused menu design</li>
+                            <li>Interactive chef's table experiences</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 3 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        🌊
+                        <div class="kosher-badge">✡ KOSHER CERTIFIED</div>
+                    </div>
+                    <div class="restaurant-content">
+                        <h3>Ocean's Harvest</h3>
+                        <div class="restaurant-type">Sustainable Seafood Excellence</div>
+                        <p class="restaurant-description">
+                            Daily catches from local fishermen transformed into omega-rich masterpieces. Features premium kosher fish prepared using techniques that maximize nutritional value and flavor.
+                        </p>
+                        <ul class="restaurant-features">
+                            <li>6 AM daily fresh fish delivery</li>
+                            <li>Omega-3 optimized preparations</li>
+                            <li>Traditional & modern fusion</li>
+                            <li>Beachfront casual elegance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 4 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        🔥
+                        <div class="kosher-badge">✡ KOSHER CERTIFIED</div>
+                    </div>
+                    <div class="restaurant-content">
+                        <h3>Fire & Spice</h3>
+                        <div class="restaurant-type">Global Wellness Fusion</div>
+                        <p class="restaurant-description">
+                            A culinary journey through healing spices and global traditions—turmeric, ginger, adaptogenic herbs—incorporated into bold, flavorful dishes from around the world.
+                        </p>
+                        <ul class="restaurant-features">
+                            <li>Anti-inflammatory spice focus</li>
+                            <li>Global wellness traditions</li>
+                            <li>Interactive cooking classes</li>
+                            <li>Fermentation and probiotics bar</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 5 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        ☕
+                        <div class="kosher-badge">✡ KOSHER CERTIFIED</div>
+                    </div>
+                    <div class="restaurant-content">
+                        <h3>Morning Ritual</h3>
+                        <div class="restaurant-type">Breakfast & Wellness Café</div>
+                        <p class="restaurant-description">
+                            Start your day with scientifically-optimized breakfast bowls, fresh juices, adaptogenic elixirs, and artisanal breads—all designed to energize and sustain.
+                        </p>
+                        <ul class="restaurant-features">
+                            <li>Circadian-optimized breakfast timing</li>
+                            <li>Cold-pressed juice & smoothie bar</li>
+                            <li>Gluten-free bakery selection</li>
+                            <li>Functional beverage program</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 6 -->
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        🎭
+                    </div>
+                    <div class="restaurant-content">
+                        <h3>Mas'Tul Beach Club</h3>
+                        <div class="restaurant-type">Casual Gourmet & Entertainment</div>
+                        <p class="restaurant-description">
+                            Our signature beach club combines healthy casual dining with entertainment—perfect for daytime refreshment and evening celebrations, featuring lighter wellness-focused fare.
+                        </p>
+                        <ul class="restaurant-features">
+                            <li>All-day wellness menu</li>
+                            <li>Beach bar & mocktail program</li>
+                            <li>Live music and entertainment</li>
+                            <li>Social dining atmosphere</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutritional Science Section -->
+    <section class="nutritional-science">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge" style="background: rgba(212, 175, 55, 0.2); border-color: rgba(212, 175, 55, 0.4);">🔬 Science-Backed Nutrition</div>
+                <h2 style="color: white;">The Science Behind Every Bite</h2>
+                <p style="color: rgba(255, 255, 255, 0.85);">
+                    Our culinary team collaborates with nutritionists, functional medicine practitioners, and wellness experts to create menus that support optimal health, longevity, and vitality.
+                </p>
+            </div>
+            
+            <div class="science-grid">
+                <div class="science-card">
+                    <div class="science-icon">🧬</div>
+                    <h4>Micronutrient Optimization</h4>
+                    <p>Every dish engineered to deliver essential vitamins, minerals, and phytonutrients for cellular health and energy production.</p>
+                </div>
+                
+                <div class="science-card">
+                    <div class="science-icon">💪</div>
+                    <h4>Protein Excellence</h4>
+                    <p>Premium amino acid profiles from diverse sources—wild fish, organic legumes, ancient grains—supporting muscle health and recovery.</p>
+                </div>
+                
+                <div class="science-card">
+                    <div class="science-icon">🥑</div>
+                    <h4>Healthy Fats Focus</h4>
+                    <p>Omega-3 rich preparations, premium olive oils, and anti-inflammatory fat ratios that support brain health and hormone balance.</p>
+                </div>
+                
+                <div class="science-card">
+                    <div class="science-icon">🦠</div>
+                    <h4>Gut Health Support</h4>
+                    <p>Fermented foods, prebiotic fibers, and probiotic-rich preparations designed to optimize digestive health and immunity.</p>
+                </div>
+                
+                <div class="science-card">
+                    <div class="science-icon">🍃</div>
+                    <h4>Antioxidant Rich</h4>
+                    <p>Vibrant vegetables, berries, spices, and herbs loaded with polyphenols and compounds that fight oxidative stress.</p>
+                </div>
+                
+                <div class="science-card">
+                    <div class="science-icon">🌱</div>
+                    <h4>Plant Diversity</h4>
+                    <p>30+ different plant species weekly—maximizing microbiome diversity for optimal gut-brain axis function.</p>
+                </div>
+                
+                <div class="science-card">
+                    <div class="science-icon">⚡</div>
+                    <h4>Blood Sugar Balance</h4>
+                    <p>Low glycemic meal design, strategic fiber content, and mindful carbohydrate timing for sustained energy.</p>
+                </div>
+                
+                <div class="science-card">
+                    <div class="science-icon">🔥</div>
+                    <h4>Anti-Inflammatory</h4>
+                    <p>Cuisine designed to reduce systemic inflammation through ingredient selection and preparation methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">✨ Beyond Dining</div>
+                <h2>An Experience Like No Other</h2>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="experience-content">
+                    <h3>Every Detail Crafted for Excellence</h3>
+                    <p>
+                        Dining at MayaRoyale transcends the ordinary. We've reimagined every aspect of the culinary experience—from the moment you're seated to the final bite—to create memories that last a lifetime.
+                    </p>
+                    
+                    <ul class="experience-highlights">
+                        <li><strong>Architectural Excellence:</strong> Each restaurant features stunning design that connects you to nature and culture</li>
+                        <li><strong>Personalized Service:</strong> Staff trained in both hospitality excellence and nutritional knowledge</li>
+                        <li><strong>Multi-Sensory Design:</strong> Lighting, music, aromatherapy, and presentation create holistic experiences</li>
+                        <li><strong>Cultural Storytelling:</strong> Every dish tells a story of place, tradition, and transformation</li>
+                        <li><strong>Interactive Experiences:</strong> Chef's tables, cooking classes, and farm tours bring guests into the creative process</li>
+                        <li><strong>Seasonal Evolution:</strong> Menus change with nature's rhythms, celebrating peak freshness and variety</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-visual">
+                    🎨
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farm to Table Section -->
+    <section class="farm-to-table">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🌾 100% Sustainable</div>
+                <h2>Farm-to-Table Commitment</h2>
+                <p>
+                    Our on-site organic farm and partnerships with local producers ensure ingredients are picked at peak ripeness, delivered within hours, and bursting with nutrients and flavor.
+                </p>
+            </div>
+            
+            <div class="farm-grid">
+                <div class="farm-card">
+                    <div class="farm-icon">🌿</div>
+                    <h4>Organic Farm</h4>
+                    <p>
+                        5-acre regenerative farm produces fresh vegetables, herbs, and fruits daily—harvested in the morning, on your plate by evening.
+                    </p>
+                </div>
+                
+                <div class="farm-card">
+                    <div class="farm-icon">🐟</div>
+                    <h4>Local Fishermen</h4>
+                    <p>
+                        Direct partnerships with sustainable fishing cooperatives ensure 6 AM daily deliveries of the freshest catch from Gulf waters.
+                    </p>
+                </div>
+                
+                <div class="farm-card">
+                    <div class="farm-icon">🌾</div>
+                    <h4>Artisan Partners</h4>
+                    <p>
+                        Collaborations with local producers of exceptional olive oil, honey, ancient grains, and traditional foods celebrate regional excellence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="culinary-cta">
+        <div class="container">
+            <h2>Experience Transformative Dining</h2>
+            <p>
+                Join us in revolutionizing luxury hospitality—where every meal heals, every bite delights,<br>
+                and every dining experience creates lasting transformation.
+            </p>
+            <a href="connect-wallet.html" class="cta-button">Invest in Culinary Excellence</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="financial-forecast.html">Financial Forecast</a></li>
+                        <li><a href="investment-calculator.html">Investment Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">The Project</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Smart Resort Vision</a></li>
+                        <li><a href="positioning.html">Strategic Positioning</a></li>
+                        <li><a href="wellness-differentiation.html">Wellness Excellence</a></li>
+                        <li><a href="culinary-excellence.html">Culinary Excellence</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">About</h4>
+                    <ul class="footer-links">
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MayaRoyale. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navigation Script -->
+    <script src="js/wallet.js"></script>
+    <script src="js/mobile-nav-simple.js"></script>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

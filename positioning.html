@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Positioning | MayaRoyale - Geographic Monopoly in Regenerative Luxury</title>
+    <meta name="description" content="MayaRoyale occupies a geographic monopoly—the ONLY hurricane & sargassum-free luxury beach resort in Mexico and the Caribbean, with 5 defensive moats and category-defining regenerative luxury leadership.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/premium-light.css">
+    <link rel="stylesheet" href="css/competitive-advantages.css">
+    <link rel="stylesheet" href="css/regenerative-luxury.css">
+    <link rel="stylesheet" href="css/comparison-premium.css">
+    <link rel="stylesheet" href="css/risk-mitigation-premium.css">
+    
+    <style>
+        /* Fix horizontal overflow issue */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        
+        body {
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Prevent all sections from overflowing */
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Mobile fixes for 7-Year ROI Comparison */
+        @media (max-width: 768px) {
+            .roi-comparison-container {
+                padding: 1.5rem 1rem !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            
+            .roi-comparison-title {
+                font-size: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .roi-comparison-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            .roi-comparison-grid > div:last-child {
+                border-left: none !important;
+                border-top: 2px solid rgba(184, 134, 11, 0.3) !important;
+                padding-left: 0 !important;
+                padding-top: 2rem !important;
+                margin-top: 1rem !important;
+            }
+            
+            /* Reduce font sizes on mobile for better fit */
+            .roi-comparison-grid > div > div:first-child {
+                font-size: 1rem !important;
+            }
+            
+            .animated-number[data-target="399"],
+            .animated-number-range {
+                font-size: 2.2rem !important;
+            }
+            
+            .animated-number[data-format="currency"] {
+                font-size: 1.4rem !important;
+            }
+            
+            /* Make inner cards more compact on mobile */
+            .roi-comparison-grid > div > div:nth-of-type(2) {
+                padding: 1rem !important;
+            }
+            
+            .roi-comparison-grid > div > div:nth-of-type(2) > div {
+                font-size: 0.75rem !important;
+            }
+        }
+        
+        section {
+            overflow-x: hidden;
+        }
+        
+        /* Positioning Page Specific Styles */
+        .positioning-hero {
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+            padding: 10rem 0 5rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .positioning-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(184, 134, 11, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .positioning-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .positioning-badge {
+            display: inline-block;
+            background: rgba(184, 134, 11, 0.15);
+            border: 1px solid rgba(184, 134, 11, 0.3);
+            color: #B8860B;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .positioning-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .positioning-hero .hero-subtitle {
+            font-size: 1.35rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 950px;
+            margin: 0 auto 4rem;
+            line-height: 1.7;
+            padding: 0 1rem;
+            font-weight: 400;
+        }
+        
+        .positioning-hero .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .positioning-hero .stat-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .positioning-hero .stat-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(184, 134, 11, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(184, 134, 11, 0.15);
+        }
+        
+        .positioning-hero .stat-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #B8860B;
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .positioning-hero .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.75);
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-top: 0;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: rgba(184, 134, 11, 0.1);
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            color: #B8860B;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #0A0A0A;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #6A6A6A;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Geographic Monopoly Section */
+        .geographic-monopoly {
+            padding: 6rem 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+        }
+        
+        .monopoly-visual {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            margin-bottom: 4rem;
+        }
+        
+        .coastline-comparison {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .coastline-card {
+            background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+            border: 2px solid #E5E7EB;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .coastline-card:hover {
+            transform: translateY(-4px);
+            border-color: #B8860B;
+            box-shadow: 0 12px 24px rgba(184, 134, 11, 0.15);
+        }
+        
+        .coastline-card.highlight {
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+            border-color: #B8860B;
+            color: white;
+        }
+        
+        .coastline-card .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+        
+        .coastline-card.highlight .stat-number {
+            color: white;
+        }
+        
+        .coastline-card .stat-label {
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+        }
+        
+        /* Five Moats Grid */
+        .five-moats {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .moats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .moat-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+            border: 2px solid #E5E7EB;
+            border-radius: 20px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .moat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #B8860B 0%, #D4AF37 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .moat-card:hover {
+            transform: translateY(-6px);
+            border-color: #B8860B;
+            box-shadow: 0 16px 40px rgba(184, 134, 11, 0.2);
+        }
+        
+        .moat-card:hover::before {
+            opacity: 1;
+        }
+        
+        .moat-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .moat-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .moat-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0A0A0A;
+        }
+        
+        .moat-type {
+            display: inline-block;
+            background: rgba(184, 134, 11, 0.1);
+            color: #B8860B;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0.5rem;
+        }
+        
+        .moat-description {
+            color: #6A6A6A;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .moat-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #E5E7EB;
+        }
+        
+        .moat-stat {
+            text-align: center;
+        }
+        
+        .moat-stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #B8860B;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .moat-stat-label {
+            font-size: 0.85rem;
+            color: #6A6A6A;
+            margin-top: 0.25rem;
+        }
+        
+        /* Investment Thesis Impact */
+        .investment-impact {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+            color: white;
+        }
+        
+        .investment-impact .section-badge {
+            background: rgba(184, 134, 11, 0.15);
+            border-color: rgba(184, 134, 11, 0.3);
+        }
+        
+        .investment-impact h2,
+        .investment-impact p {
+            color: white;
+        }
+        
+        .investment-impact p {
+            opacity: 0.9;
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .impact-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .impact-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #B8860B;
+            transform: translateY(-4px);
+        }
+        
+        .impact-card .impact-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #B8860B;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+        
+        .impact-card .impact-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        
+        .impact-card .impact-description {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.5;
+        }
+        
+        /* CTA Section */
+        .positioning-cta {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+            text-align: center;
+            color: white;
+        }
+        
+        .positioning-cta h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .positioning-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .cta-btn {
+            padding: 1.25rem 3rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .cta-btn-primary {
+            background: white;
+            color: #0A0A0A;
+        }
+        
+        .cta-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+        }
+        
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-secondary:hover {
+            background: white;
+            color: #B8860B;
+        }
+        
+        /* Leadership Statement Styles */
+        .leadership-statement {
+            margin: 6rem 0;
+            padding: 4rem 3rem;
+            background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+            border-radius: 24px;
+            border: 3px solid #FCD34D;
+            box-shadow: 0 12px 48px rgba(30, 58, 138, 0.2);
+        }
+        
+        .leadership-statement h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #FCD34D;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .leadership-statement > p {
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .leadership-statement > p strong {
+            color: #FCD34D;
+            font-weight: 700;
+        }
+        
+        .leadership-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        
+        .leadership-metric {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            border: 1px solid rgba(252, 211, 77, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .leadership-metric:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #FCD34D;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(252, 211, 77, 0.2);
+        }
+        
+        .leadership-metric .metric-value {
+            display: block !important;
+            font-size: 3.5rem !important;
+            font-weight: 700 !important;
+            color: #FCD34D !important;
+            font-family: 'Space Grotesk', sans-serif !important;
+            margin-bottom: 0.75rem !important;
+            line-height: 1 !important;
+            text-shadow: 0 2px 8px rgba(252, 211, 77, 0.3) !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        .leadership-metric .metric-label {
+            display: block !important;
+            font-size: 0.95rem !important;
+            color: #E5E7EB !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            line-height: 1.4 !important;
+            font-weight: 600 !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Circular Progress Animation */
+        .score-circle svg {
+            transform: rotate(-90deg);
+        }
+        
+        .score-circle-bg {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.1);
+            stroke-width: 10;
+        }
+        
+        .score-circle-progress {
+            fill: none;
+            stroke-width: 10;
+            stroke-linecap: round;
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            transition: stroke-dashoffset 2s ease-out;
+        }
+        
+        /* Green circle (9.2/10 = 92%) */
+        .isla-aguada .score-circle-progress {
+            stroke: url(#scoreGradientGreen);
+        }
+        
+        .isla-aguada .score-circle-progress.animated {
+            stroke-dashoffset: 35.2;  /* 440 - (440 * 0.92) = 35.2 */
+        }
+        
+        /* Red circle (5.8/10 = 58%) */
+        .riviera-maya .score-circle-progress {
+            stroke: url(#scoreGradientRed);
+        }
+        
+        .riviera-maya .score-circle-progress.animated {
+            stroke-dashoffset: 184.8;  /* 440 - (440 * 0.58) = 184.8 */
+        }
+        
+        .score-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .score-number-main {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+            line-height: 1;
+        }
+        
+        .score-out-of {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+        
+        .isla-aguada .score-number-main {
+            color: #10B981;
+        }
+        
+        .riviera-maya .score-number-main {
+            color: #EF4444;
+        }
+        
+        .score-circle {
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .positioning-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .coastline-comparison,
+            .moats-grid,
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .positioning-hero {
+                padding: 5rem 0 2.5rem;
+            }
+            
+            .positioning-hero h1 {
+                font-size: 1.75rem;
+                line-height: 1.2;
+            }
+            
+            .positioning-hero h1 br {
+                display: none;
+            }
+            
+            .positioning-hero .hero-subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .positioning-hero .hero-subtitle br {
+                display: none;
+            }
+            
+            .positioning-hero .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .coastline-comparison,
+            .moats-grid,
+            .impact-grid,
+            .leadership-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+            
+            .positioning-cta h2 {
+                font-size: 1.75rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .leadership-metrics {
+                gap: 1.5rem;
+            }
+            
+            .leadership-metric {
+                padding: 1.5rem 1rem;
+            }
+            
+            .leadership-metric .metric-value {
+                font-size: 2.5rem !important;
+            }
+            
+            .leadership-metric .metric-label {
+                font-size: 0.85rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .positioning-hero {
+                padding: 4rem 0 2rem;
+            }
+            
+            .positioning-hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            .positioning-hero .hero-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .stat-value {
+                font-size: 2rem !important;
+            }
+            
+            .stat-label {
+                font-size: 0.8rem !important;
+            }
+        }
+        
+        /* CRITICAL MOBILE FIXES */
+        @media (max-width: 968px) {
+            /* FORCE NAV TO BE VISIBLE */
+            .nav-premium {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                z-index: 1000 !important;
+            }
+            
+            .nav-premium-container {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            
+            /* Force logo visibility */
+            .nav-premium-brand {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                z-index: 1002 !important;
+            }
+            
+            .nav-premium-logo {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                height: 50px !important;
+                width: auto !important;
+                min-width: 130px !important;
+            }
+            
+            /* FIX: Connect Wallet button - FORCE VISIBLE */
+            .nav-premium-cta {
+                display: inline-block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                padding: 0.5rem 1rem !important;
+                font-size: 0.85rem !important;
+                white-space: nowrap !important;
+                margin-left: auto !important;
+                margin-right: 0.5rem !important;
+                background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%) !important;
+                color: #FFFFFF !important;
+                border: none !important;
+                z-index: 1001 !important;
+            }
+            
+            /* FIX: Hamburger menu - FORCE VISIBLE */
+            .nav-premium-mobile-toggle {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                width: 30px !important;
+                height: 24px !important;
+                z-index: 1003 !important;
+                position: relative !important;
+                background: transparent !important;
+                border: none !important;
+                padding: 0 !important;
+                cursor: pointer !important;
+            }
+            
+            /* Hamburger menu lines - FORCE VISIBLE */
+            .nav-premium-mobile-toggle span {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                width: 100% !important;
+                height: 3px !important;
+                background-color: #0A0A0A !important;
+                margin: 0 !important;
+                transition: all 0.3s ease !important;
+                border-radius: 2px !important;
+            }
+            
+            /* FIX: Push hero content down to avoid Connect Wallet overlay */
+            .positioning-hero {
+                padding-top: 12rem !important;
+                padding-bottom: 4rem !important;
+                margin-top: 0 !important;
+                min-height: auto !important;
+            }
+            
+            .positioning-hero .container {
+                padding-top: 2rem !important;
+            }
+            
+            /* Make comparison cards fully responsive */
+            .comparison-container {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            .comparison-side {
+                max-width: 100% !important;
+            }
+            
+            .location-badge {
+                font-size: 1.1rem !important;
+                padding: 8px 16px !important;
+            }
+            
+            .score-circle {
+                width: 140px !important;
+                height: 140px !important;
+            }
+            
+            .score-number-main {
+                font-size: 2.5rem !important;
+            }
+            
+            .advantage-item {
+                padding: 1rem !important;
+            }
+            
+            .advantage-content h4 {
+                font-size: 1rem !important;
+            }
+            
+            /* Stat cards responsive */
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem !important;
+                margin-top: 3rem !important;
+            }
+            
+            .positioning-hero .stat-item {
+                padding: 1.5rem 1rem !important;
+            }
+            
+            .stat-value {
+                font-size: 2rem !important;
+            }
+            
+            .coastline-comparison {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .positioning-hero h1 {
+                font-size: 2rem !important;
+            }
+            
+            .positioning-hero .hero-subtitle {
+                font-size: 1.05rem !important;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr !important;
+                gap: 1.25rem !important;
+            }
+            
+            .positioning-hero .stat-value {
+                font-size: 2.5rem !important;
+            }
+            
+            .positioning-hero .stat-label {
+                font-size: 0.85rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .positioning-hero {
+                padding-top: 10rem !important;
+            }
+            
+            .stat-value {
+                font-size: 1.75rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium nav-scrolled">
+        <div class="nav-premium-container">
+            <!-- Logo -->
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" 
+                         alt="MayaRoyale" 
+                         class="nav-premium-logo">
+                </a>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <!-- Platform Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Platform
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                    <span class="nav-premium-dropdown-item-desc">Track your portfolio</span>
+                                </span>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💎</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                    <span class="nav-premium-dropdown-item-desc">Token economics & funding</span>
+                                </span>
+                            </a>
+                            <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📈</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Financial Forecast</span>
+                                    <span class="nav-premium-dropdown-item-desc">7-year projections</span>
+                                </span>
+                            </a>
+                            <a href="investment-calculator.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🧮</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Investment Calculator</span>
+                                    <span class="nav-premium-dropdown-item-desc">Calculate your returns</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- The Project Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        The Project
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏖️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Smart Resort Vision</span>
+                                    <span class="nav-premium-dropdown-item-desc">Property gallery & plans</span>
+                                </span>
+                            </a>
+                            <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌅</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span>
+                                    <span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family of Resorts</span>
+                                </span>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Strategic Positioning</span>
+                                    <span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span>
+                                </span>
+                            </a>
+                            <a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Protection Animation</span>
+                                    <span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span>
+                                </span>
+                            </a>
+                            <a href="yucatan-boom.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🚀</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">The Yucatan Boom</span>
+                                    <span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span>
+                                </span>
+                            </a>
+                            <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Wellness Differentiation</span>
+                                    <span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span>
+                                </span>
+                            </a>
+                            <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🍽️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Culinary Excellence</span>
+                                    <span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span>
+                                </span>
+                            </a>
+                            <a href="technology.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">⚡</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Technology & Blockchain</span>
+                                    <span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span>
+                                </span>
+                            </a>
+                            <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏨</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">LHW Partnership</span>
+                                    <span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span>
+                                </span>
+                            </a>
+                            <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🌿</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Sustainability</span>
+                                    <span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Company Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Company
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">👥</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Innovation Council</span>
+                                    <span class="nav-premium-dropdown-item-desc">Meet our team</span>
+                                </span>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📧</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Contact</span>
+                                    <span class="nav-premium-dropdown-item-desc">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <!-- Connect Wallet Button - SMALL & PETITE -->
+            <a href="#" class="nav-premium-cta">Connect Wallet</a>
+            
+            <!-- Mobile Menu Toggle - Hamburger -->
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="positioning-hero">
+        <div class="container">
+            <div class="positioning-badge">🏆 Category-Defining Investment Opportunity</div>
+            <h1>Geographic Monopoly<br>in Regenerative Luxury</h1>
+            <p class="hero-subtitle">
+                MayaRoyale occupies the ONLY hurricane & sargassum-free luxury beach resort location<br>
+                in Mexico and the Caribbean—creating an unassailable competitive position
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value animate-counter" data-target="0.45" data-suffix="%">0</div>
+                    <div class="stat-label">Of Mexican Coastline Protected</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value animate-counter" data-target="500" data-prefix="$" data-suffix="M+">0</div>
+                    <div class="stat-label">Annual Crisis We Avoid</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value animate-counter" data-target="5">0</div>
+                    <div class="stat-label">Defensive Moats</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value animate-counter" data-target="20" data-suffix="M">0</div>
+                    <div class="stat-label">Captive Domestic Market</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geographic Monopoly Section -->
+    <section class="geographic-monopoly">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🌎 Geographic Exclusivity</div>
+                <h2>The Last Protected Paradise</h2>
+                <p>Out of 11,000+ km of Mexican coastline and the entire Caribbean, only ONE 50km pocket around Isla Aguada and Sabancuy remains naturally protected from hurricanes and sargassum. MayaRoyale owns 15 acres within this geographic miracle.</p>
+            </div>
+            
+            <div class="monopoly-visual">
+                <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.8rem; color: #0A0A0A;">
+                    <strong>Only 2 Towns</strong> Out of Thousands
+                </h3>
+                
+                <div class="coastline-comparison">
+                    <div class="coastline-card">
+                        <div class="stat-number animate-counter" style="color: #DC2626;" data-target="11000" data-suffix="+">0</div>
+                        <div class="stat-label" style="color: #6A6A6A;">KM of Mexican Coastline</div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #9CA3AF;">Hurricanes & Sargassum Impact</p>
+                    </div>
+                    
+                    <div class="coastline-card highlight">
+                        <div class="stat-number animate-counter" data-target="50" data-prefix="~">0</div>
+                        <div class="stat-label">KM Protected Pocket</div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">Isla Aguada & Sabancuy ONLY</p>
+                    </div>
+                    
+                    <div class="coastline-card" style="border: 3px solid #B8860B;">
+                        <div class="stat-number animate-counter" style="color: #B8860B;" data-target="15">0</div>
+                        <div class="stat-label" style="color: #6A6A6A;">Acres MayaRoyale Owns</div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #9CA3AF;">Within Protected Zone</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(184, 134, 11, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%); border-radius: 12px;">
+                    <p style="font-size: 1.3rem; font-weight: 600; color: #B8860B; margin-bottom: 0.5rem;">
+                        0.45% of Mexican Coastline = 100% Geographic Monopoly
+                    </p>
+                    <p style="font-size: 1rem; color: #6A6A6A;">
+                        This is not a competitive advantage. This is a natural monopoly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Advantages Section (from competitive-advantages.css) -->
+    <section class="competitive-advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">⚡ Rare Physical Advantages</div>
+                <h2>What Competitors Pay $500M+ Annually to Fight,<br>We Avoid Completely</h2>
+                <p>While the entire Riviera Maya battles an unwinnable $500M+ annual crisis with 3-5 months of business disruption, Isla Aguada operates at 365 days of pristine conditions with zero cost, zero interruption, ever.</p>
+            </div>
+            
+            <!-- Competitive Comparison -->
+            <div class="comparison-container">
+                <div class="comparison-side isla-aguada">
+                    <div class="comparison-header">
+                        <div class="location-badge isla">
+                            <i class="fas fa-trophy"></i>
+                            <span>Isla Aguada</span>
+                        </div>
+                        <div class="risk-score">
+                            <div class="score-label">Investment Risk Score</div>
+                            <div class="score-value isla-score">
+                                <div class="score-circle">
+                                    <svg viewBox="0 0 160 160">
+                                        <defs>
+                                            <linearGradient id="scoreGradientGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle class="score-circle-bg" cx="80" cy="80" r="70"></circle>
+                                        <circle class="score-circle-progress" cx="80" cy="80" r="70"></circle>
+                                    </svg>
+                                    <div class="score-text">
+                                        <span class="score-number-main">9.2</span>
+                                        <span class="score-out-of">/10</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="advantage-list">
+                        <div class="advantage-item advantage-win">
+                            <div class="advantage-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="advantage-content">
+                                <h4>Hurricane-Free Zone</h4>
+                                <p><strong>0 hurricanes</strong> in recorded history (100+ years)</p>
+                                <span class="advantage-badge safe">Zero Risk</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-win">
+                            <div class="advantage-icon"><i class="fas fa-water"></i></div>
+                            <div class="advantage-content">
+                                <h4>Zero Sargassum</h4>
+                                <p><strong>Pristine beaches</strong> year-round, 365 days</p>
+                                <span class="advantage-badge safe">Natural Protection</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-win">
+                            <div class="advantage-icon"><i class="fas fa-mountain"></i></div>
+                            <div class="advantage-content">
+                                <h4>15 Feet Above Sea Level</h4>
+                                <p><strong>Climate-resilient</strong> for 50-100+ years</p>
+                                <span class="advantage-badge safe">Future-Proof</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-win">
+                            <div class="advantage-icon"><i class="fas fa-anchor"></i></div>
+                            <div class="advantage-content">
+                                <h4>Zero Coastal Erosion</h4>
+                                <p><strong>100-year stability</strong> documented</p>
+                                <span class="advantage-badge safe">Permanent Asset</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-win">
+                            <div class="advantage-icon"><i class="fas fa-sun"></i></div>
+                            <div class="advantage-content">
+                                <h4>West-Facing Sunset Views</h4>
+                                <p><strong>Premium positioning</strong> over beach</p>
+                                <span class="advantage-badge premium">+25% ADR</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-win">
+                            <div class="advantage-icon"><i class="fas fa-road"></i></div>
+                            <div class="advantage-content">
+                                <h4>Highway 180 + 20M Market</h4>
+                                <p><strong>Free advertising</strong> to 3.6M impressions/year</p>
+                                <span class="advantage-badge premium">Captive Market</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-divider">
+                    <div class="vs-badge">VS</div>
+                </div>
+                
+                <div class="comparison-side riviera-maya">
+                    <div class="comparison-header">
+                        <div class="location-badge riviera">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Entire Caribbean & Mexico</span>
+                        </div>
+                        <div class="risk-score">
+                            <div class="score-label">Investment Risk Score</div>
+                            <div class="score-value riviera-score">
+                                <div class="score-circle">
+                                    <svg viewBox="0 0 160 160">
+                                        <defs>
+                                            <linearGradient id="scoreGradientRed" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#EF4444;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#DC2626;stop-opacity:1" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle class="score-circle-bg" cx="80" cy="80" r="70"></circle>
+                                        <circle class="score-circle-progress" cx="80" cy="80" r="70"></circle>
+                                    </svg>
+                                    <div class="score-text">
+                                        <span class="score-number-main">5.8</span>
+                                        <span class="score-out-of">/10</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="advantage-list">
+                        <div class="advantage-item advantage-loss">
+                            <div class="advantage-icon risk"><i class="fas fa-hurricane"></i></div>
+                            <div class="advantage-content">
+                                <h4>Hurricane Zone</h4>
+                                <p>Wilma, Dean, Delta caused <strong>billions in damages</strong></p>
+                                <span class="advantage-badge risk">High Risk</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-loss">
+                            <div class="advantage-icon risk"><i class="fas fa-algae"></i></div>
+                            <div class="advantage-content">
+                                <h4>Massive Sargassum Crisis</h4>
+                                <p><strong>$500M+ annually</strong> to clean up across ALL Mexico/Caribbean</p>
+                                <span class="advantage-badge risk">$500M+ Regional Crisis</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-loss">
+                            <div class="advantage-icon risk"><i class="fas fa-water"></i></div>
+                            <div class="advantage-content">
+                                <h4>Below/At Sea Level</h4>
+                                <p>Regular flooding, <strong>vulnerable to storms</strong></p>
+                                <span class="advantage-badge risk">Flood Risk</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-loss">
+                            <div class="advantage-icon risk"><i class="fas fa-exclamation-circle"></i></div>
+                            <div class="advantage-content">
+                                <h4>Constant Coastal Erosion</h4>
+                                <p><strong>$50K-$200K+</strong> annual beach replenishment</p>
+                                <span class="advantage-badge risk">Ongoing Costs</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-loss">
+                            <div class="advantage-icon"><i class="fas fa-compass"></i></div>
+                            <div class="advantage-content">
+                                <h4>East-Facing (Sunrise)</h4>
+                                <p>Standard orientation, <strong>no sunset premium</strong></p>
+                                <span class="advantage-badge neutral">Standard ADR</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item advantage-loss">
+                            <div class="advantage-icon risk"><i class="fas fa-users"></i></div>
+                            <div class="advantage-content">
+                                <h4>Saturated Market</h4>
+                                <p><strong>Heavy competition</strong>, no local monopoly</p>
+                                <span class="advantage-badge risk">Competitive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Financial Impact -->
+            <div class="financial-impact-section">
+                <h3 class="impact-title">
+                    <i class="fas fa-chart-line"></i>
+                    Financial Impact: <span class="highlight-gold">$5.3M – $14.3M+</span> Annual Advantage
+                </h3>
+                
+                <div class="impact-grid">
+                    <div class="impact-card cost-savings">
+                        <div class="impact-value">$1.8M – $7.5M</div>
+                        <div class="impact-label">Annual Cost Savings</div>
+                        <ul class="impact-breakdown">
+                            <li><strong>Hurricane Insurance:</strong> $0 vs $500K–$2M</li>
+                            <li><strong>Sargassum Cleanup:</strong> $0 vs $100K–$500K</li>
+                            <li><strong>Beach Replenishment:</strong> $0 vs $50K–$200K</li>
+                            <li><strong>Flood Insurance:</strong> $0 vs $50K–$150K</li>
+                            <li><strong>Business Interruption:</strong> $0 vs $1M–$4.5M (3-5 months)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impact-card revenue-premium">
+                        <div class="impact-value">$2.5M – $4.8M</div>
+                        <div class="impact-label">Revenue Premiums</div>
+                        <ul class="impact-breakdown">
+                            <li><strong>Sunset ADR Premium:</strong> +25% = $800K–$1.5M</li>
+                            <li><strong>Year-Round Bookability:</strong> 365 days = $800K–$1.2M</li>
+                            <li><strong>Beach Quality Premium:</strong> +$400K–$800K</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impact-card domestic-market">
+                        <div class="impact-value">$1M – $2M</div>
+                        <div class="impact-label">Domestic Market Revenue</div>
+                        <ul class="impact-breakdown">
+                            <li><strong>Mas'Tul Beach Club:</strong> Day-use revenue</li>
+                            <li><strong>20M Locals:</strong> Within 2-hour drive</li>
+                            <li><strong>Highway 180:</strong> 3.6M impressions/year</li>
+                            <li><strong>52 Weekends:</strong> 26K+ visitors annually</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impact-card months-disruption">
+                        <div class="impact-value-large">0</div>
+                        <div class="impact-label">Months of Disruption</div>
+                        <p class="impact-description">While Riviera Maya suffers <strong>3-5 months</strong> of business interruption annually</p>
+                    </div>
+                    
+                    <div class="impact-card crisis-cost">
+                        <div class="impact-value-large">$0</div>
+                        <div class="impact-label">Sargassum Crisis Cost</div>
+                        <p class="impact-description">Riviera Maya region spends <strong>$500M+ annually</strong> fighting this losing battle</p>
+                    </div>
+                    
+                    <div class="impact-card bookable-days">
+                        <div class="impact-value-large">365</div>
+                        <div class="impact-label">Bookable Days per Year</div>
+                        <p class="impact-description">Riviera Maya: <strong>310-340 days</strong> with 60-75% beach quality during crisis</p>
+                    </div>
+                </div>
+                
+                <div class="shocking-stat-callout">
+                    <div class="stat-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="stat-content">
+                        <div class="stat-title">While Riviera Maya Fights a Losing $500M+ Annual Battle...</div>
+                        <div class="stat-subtitle">Isla Aguada Pays $0 and Operates 365 Days with Zero Interruption</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Risk Mitigation -->
+            <div class="risk-mitigation-box">
+                <h4><i class="fas fa-shield-check"></i> Investment Risk Mitigation</h4>
+                <div class="risk-categories">
+                    <div class="risk-category">
+                        <strong>Operational Risk:</strong>
+                        <ul>
+                            <li>No hurricane damage risk</li>
+                            <li>No sargassum cleanup costs</li>
+                            <li>No beach erosion expenses</li>
+                            <li>No flood mitigation needed</li>
+                            <li>No business interruption from natural events</li>
+                        </ul>
+                    </div>
+                    <div class="risk-category">
+                        <strong>Guest Experience Risk:</strong>
+                        <ul>
+                            <li>No seaweed complaints</li>
+                            <li>No hurricane evacuations</li>
+                            <li>No "beach closed" days</li>
+                            <li>Premium sunset views guaranteed</li>
+                            <li>365-day perfect conditions</li>
+                        </ul>
+                    </div>
+                    <div class="risk-category">
+                        <strong>Asset Protection Risk:</strong>
+                        <ul>
+                            <li>Stable property values</li>
+                            <li>No storm damage depreciation</li>
+                            <li>Climate change-proof elevation</li>
+                            <li>100-year coastal stability</li>
+                            <li>Natural moat protecting value</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Five Defensive Moats -->
+    <section class="five-moats">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🛡️ Competitive Fortress</div>
+                <h2>Five Defensive Moats</h2>
+                <p>Each moat independently creates competitive advantage. Together, they form an unassailable position that compounds value over decades.</p>
+            </div>
+            
+            <div class="moats-grid">
+                <!-- Moat 1: Geographic Monopoly -->
+                <div class="moat-card">
+                    <div class="moat-header">
+                        <div class="moat-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div>
+                            <div class="moat-title">Geographic Monopoly</div>
+                            <div class="moat-type">Permanent</div>
+                        </div>
+                    </div>
+                    <p class="moat-description">
+                        The ONLY hurricane & sargassum-free luxury beach resort in Mexico and the Caribbean. Out of 11,000+ km of coastline, only ~50 km (0.45%) enjoys this natural protection. MayaRoyale owns 15 acres within this geographic miracle.
+                    </p>
+                    <div class="moat-stats">
+                        <div class="moat-stat">
+                            <div class="moat-stat-value animate-counter" data-target="0.45" data-suffix="%">0</div>
+                            <div class="moat-stat-label">Protected Coastline</div>
+                        </div>
+                        <div class="moat-stat">
+                            <div class="moat-stat-value animate-counter" data-target="500" data-prefix="$" data-suffix="M+">0</div>
+                            <div class="moat-stat-label">Annual Crisis Avoided</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Moat 2: Cultural Designation -->
+                <div class="moat-card">
+                    <div class="moat-header">
+                        <div class="moat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div>
+                            <div class="moat-title">Cultural Designation</div>
+                            <div class="moat-type">Exclusive</div>
+                        </div>
+                    </div>
+                    <p class="moat-description">
+                        Pueblos Mágicos status by SECTUR—one of only 177 towns in Mexico. Adjacent to Calakmul UNESCO World Heritage Site (722,000+ hectares). Government support, tourism marketing, and cultural authenticity that cannot be replicated.
+                    </p>
+                    <div class="moat-stats">
+                        <div class="moat-stat">
+                            <div class="moat-stat-value">1 of 177</div>
+                            <div class="moat-stat-label">Pueblos Mágicos</div>
+                        </div>
+                        <div class="moat-stat">
+                            <div class="moat-stat-value">UNESCO</div>
+                            <div class="moat-stat-label">World Heritage Proximity</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Moat 3: Infrastructure Advantage -->
+                <div class="moat-card">
+                    <div class="moat-header">
+                        <div class="moat-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div>
+                            <div class="moat-title">Infrastructure Advantage</div>
+                            <div class="moat-type">Timing-Based</div>
+                        </div>
+                    </div>
+                    <p class="moat-description">
+                        Highway 180 (Mexico's coastal artery) runs directly through the property, delivering 10,000+ vehicles daily—3.6M+ annual impressions. Tren Maya connectivity brings 10M+ tourists. Free advertising to captive traffic.
+                    </p>
+                    <div class="moat-stats">
+                        <div class="moat-stat">
+                            <div class="moat-stat-value animate-counter" data-target="3.6" data-suffix="M+">0</div>
+                            <div class="moat-stat-label">Annual Impressions</div>
+                        </div>
+                        <div class="moat-stat">
+                            <div class="moat-stat-value animate-counter" data-target="10" data-suffix="M+">0</div>
+                            <div class="moat-stat-label">Tren Maya Tourists</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Moat 4: Captive Domestic Market -->
+                <div class="moat-card">
+                    <div class="moat-header">
+                        <div class="moat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <div class="moat-title">Captive Domestic Market</div>
+                            <div class="moat-type">Market Gap</div>
+                        </div>
+                    </div>
+                    <p class="moat-description">
+                        20M residents within 2-hour drive have ZERO accessible quality beach options. Competitors require 6-10 hours travel to Riviera Maya or Pacific Coast. MayaRoyale fills a massive unmet demand with 50%+ occupancy floor before international tourism.
+                    </p>
+                    <div class="moat-stats">
+                        <div class="moat-stat">
+                            <div class="moat-stat-value animate-counter" data-target="20" data-suffix="M">0</div>
+                            <div class="moat-stat-label">Local Population</div>
+                        </div>
+                        <div class="moat-stat">
+                            <div class="moat-stat-value animate-counter" data-target="1" data-prefix="$" data-suffix="-2M">0</div>
+                            <div class="moat-stat-label">Annual Domestic Revenue</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Moat 5: Technology First-Mover -->
+                <div class="moat-card">
+                    <div class="moat-header">
+                        <div class="moat-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <div class="moat-title">Technology First-Mover</div>
+                            <div class="moat-type">Innovation</div>
+                        </div>
+                    </div>
+                    <p class="moat-description">
+                        First tokenized luxury resort globally. Blockchain transparency, fractional ownership, and liquidity redefine real estate investment. Partnership with Leading Hotels of the World ensures institutional credibility and operational excellence.
+                    </p>
+                    <div class="moat-stats">
+                        <div class="moat-stat">
+                            <div class="moat-stat-value">First</div>
+                            <div class="moat-stat-label">Tokenized Resort</div>
+                        </div>
+                        <div class="moat-stat">
+                            <div class="moat-stat-value">LHW</div>
+                            <div class="moat-stat-label">Strategic Partner</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Summary Card -->
+                <div class="moat-card" style="grid-column: 1 / -1; background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%); color: white; border-color: #B8860B;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem; text-align: center;">
+                        <i class="fas fa-shield-alt"></i> The Unfair Advantage Stack
+                    </h3>
+                    <p style="text-align: center; font-size: 1.1rem; line-height: 1.6; opacity: 0.95;">
+                        No competitor has all five moats. Most have zero. This creates a compounding competitive advantage that strengthens over time—geographic protection prevents crises, cultural designation drives premium positioning, infrastructure delivers customers, domestic market provides revenue stability, and technology enables liquidity. Together: <strong>an investment fortress.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regenerative Luxury Leadership (from regenerative-luxury.css) -->
+    <section class="regenerative-luxury-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🌿 Category Leadership</div>
+                <h2>Next-Generation Leadership in Regenerative Luxury</h2>
+                <p>MayaRoyale doesn't just compete with Aman, Six Senses, and Soneva—we redefine the category by combining their best attributes with natural advantages they cannot replicate.</p>
+            </div>
+            
+            <!-- Industry Inspirations -->
+            <div class="industry-inspirations">
+                <h3 class="subsection-title">Industry Inspirations</h3>
+                <div class="inspirations-grid">
+                    <div class="inspiration-card">
+                        <div class="inspiration-logo">Aman Resorts</div>
+                        <div class="inspiration-focus">Spirit & Exclusivity</div>
+                        <p>Ultra-luxury positioning, intimate scale, unparalleled service, and spiritual connection to place</p>
+                    </div>
+                    <div class="inspiration-card">
+                        <div class="inspiration-logo">Six Senses</div>
+                        <div class="inspiration-focus">Wellness Leadership</div>
+                        <p>Holistic wellness programs, sustainable luxury, and transformative guest experiences</p>
+                    </div>
+                    <div class="inspiration-card">
+                        <div class="inspiration-logo">Soneva</div>
+                        <div class="inspiration-focus">Sustainability Pioneer</div>
+                        <p>Environmental innovation, conservation programs, and luxury with purpose</p>
+                    </div>
+                </div>
+                
+                <div class="legacy-quote">
+                    <p>"We're not building another beach resort. We're creating the next generation of regenerative luxury—where Aman's exclusivity meets Six Senses' wellness leadership and Soneva's environmental commitment, all protected by natural advantages our competitors will never have."</p>
+                    <div class="quote-author" style="margin-top: 1.5rem;">— MayaRoyale Vision</div>
+                </div>
+            </div>
+            
+            <!-- Competitive Comparison Chart -->
+            <div class="comparison-chart-section" style="margin-top: 4rem;">
+                <h3 class="subsection-title">Competitive Positioning</h3>
+                <div class="comparison-chart">
+                    <div class="comparison-dimension">
+                        <div class="dimension-label">Location Security</div>
+                        <div class="dimension-bars">
+                            <div class="bar-container">
+                                <div class="bar competitor-bar" style="width: 55%;">
+                                    <span class="bar-label">Industry Average: 5.5/10</span>
+                                </div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar mayaroyale-bar" style="width: 95%;">
+                                    <span class="bar-label">MayaRoyale: 9.5/10</span>
+                                    <span class="advantage-badge">+73% Advantage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dimension-description">
+                            <strong>Hurricane & Sargassum-Free:</strong> Geographic monopoly in naturally protected zone—0 risk vs industry standard exposure
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-dimension">
+                        <div class="dimension-label">Cultural Depth</div>
+                        <div class="dimension-bars">
+                            <div class="bar-container">
+                                <div class="bar competitor-bar" style="width: 60%;">
+                                    <span class="bar-label">Industry Average: 6.0/10</span>
+                                </div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar mayaroyale-bar" style="width: 90%;">
+                                    <span class="bar-label">MayaRoyale: 9.0/10</span>
+                                    <span class="advantage-badge">+50% Advantage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dimension-description">
+                            <strong>Maya Identity:</strong> Pueblos Mágicos designation + UNESCO Calakmul proximity—authentic cultural immersion vs generic luxury
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-dimension">
+                        <div class="dimension-label">Sustainability</div>
+                        <div class="dimension-bars">
+                            <div class="bar-container">
+                                <div class="bar competitor-bar" style="width: 65%;">
+                                    <span class="bar-label">Industry Average: 6.5/10</span>
+                                </div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar mayaroyale-bar" style="width: 88%;">
+                                    <span class="bar-label">MayaRoyale: 8.8/10</span>
+                                    <span class="advantage-badge">+35% Advantage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dimension-description">
+                            <strong>Active Conservation:</strong> On-site Turtle Hospital + 5:1 preservation ratio—beyond carbon neutrality to active ecosystem regeneration
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-dimension">
+                        <div class="dimension-label">Wellness Integration</div>
+                        <div class="dimension-bars">
+                            <div class="bar-container">
+                                <div class="bar competitor-bar" style="width: 68%;">
+                                    <span class="bar-label">Industry Average: 6.8/10</span>
+                                </div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar mayaroyale-bar" style="width: 87%;">
+                                    <span class="bar-label">MayaRoyale: 8.7/10</span>
+                                    <span class="advantage-badge">+28% Advantage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dimension-description">
+                            <strong>Holistic Wellness:</strong> Dead Sea-inspired thermal circuit + beachfront yoga—comprehensive mind-body transformation programs
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-dimension">
+                        <div class="dimension-label">Strategic Access</div>
+                        <div class="dimension-bars">
+                            <div class="bar-container">
+                                <div class="bar competitor-bar" style="width: 58%;">
+                                    <span class="bar-label">Industry Average: 5.8/10</span>
+                                </div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar mayaroyale-bar" style="width: 85%;">
+                                    <span class="bar-label">MayaRoyale: 8.5/10</span>
+                                    <span class="advantage-badge">+47% Advantage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dimension-description">
+                            <strong>Tren Maya Connectivity:</strong> Direct access to 10M+ tourists + Highway 180 frontage—unmatched visibility and accessibility
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Leadership Statement -->
+            <div class="leadership-statement">
+                <h3><i class="fas fa-crown"></i> Category-Defining Leadership</h3>
+                <p>
+                    MayaRoyale combines the <strong>exclusivity of Aman</strong>, the <strong>wellness focus of Six Senses</strong>, and the <strong>sustainability mission of Soneva</strong>—then adds five defensive moats that create an unassailable competitive position. This is not incremental improvement. This is category redefinition.
+                </p>
+                <div class="leadership-metrics">
+                    <div class="leadership-metric">
+                        <div class="metric-value animate-counter" data-target="9.0" data-suffix="+">0</div>
+                        <div class="metric-label">Leadership Score Across All Dimensions</div>
+                    </div>
+                    <div class="leadership-metric">
+                        <div class="metric-value animate-counter" data-target="46" data-prefix="+" data-suffix="%">0</div>
+                        <div class="metric-label">Superior Performance vs Industry</div>
+                    </div>
+                    <div class="leadership-metric">
+                        <div class="metric-value animate-counter" data-target="5">0</div>
+                        <div class="metric-label">Unbreakable Defensive Moats</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Impact -->
+    <section class="investment-impact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">💰 Investment Thesis</div>
+                <h2>Why This Changes Everything</h2>
+                <p>These advantages don't just improve operations—they fundamentally transform the investment thesis, driving superior returns, lower risk, and premium exit multiples.</p>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-value animate-counter" data-target="5" data-prefix="$" data-suffix="-14M+">0</div>
+                    <div class="impact-label">Annual Financial Advantage</div>
+                    <div class="impact-description">Cost savings + revenue premiums + domestic market revenue that compounds year after year</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-value animate-counter" data-target="22" data-suffix="-25%">0</div>
+                    <div class="impact-label">Total Annual Returns</div>
+                    <div class="impact-description">vs 18-20% industry standard—driven by operational advantages and premium positioning</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-value animate-counter" data-target="8" data-suffix="-12x">0</div>
+                    <div class="impact-label">Exit EBITDA Multiple</div>
+                    <div class="impact-description">vs 5-7x industry average—premium valuation for unique, defensible assets</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-value animate-counter" data-target="365">0</div>
+                    <div class="impact-label">Bookable Days per Year</div>
+                    <div class="impact-description">vs 310-340 for Riviera Maya—zero disruption, zero downtime, ever</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-value animate-counter" data-target="9.2" data-suffix="/10">0</div>
+                    <div class="impact-label">Investment Risk Score</div>
+                    <div class="impact-description">vs 5.8/10 Riviera Maya—geographic monopoly + five defensive moats = lowest risk</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-value animate-counter" data-target="50" data-suffix="-100+">0</div>
+                    <div class="impact-label">Years Climate-Resilient</div>
+                    <div class="impact-description">15' elevation + stable coastline—future-proof against sea-level rise</div>
+                </div>
+            </div>
+            
+            <div class="roi-comparison-container" style="margin-top: 4rem; padding: 3rem; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(184, 134, 11, 0.3);">
+                <h3 class="roi-comparison-title" style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #B8860B;">
+                    7-Year ROI Comparison
+                </h3>
+                <div class="roi-comparison-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 1rem;">Standard Riviera Maya Investment</div>
+                        <div class="animated-number" data-target="399" style="font-size: 3rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">0</div>
+                        <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.08); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                            <div style="font-size: 0.85rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem;">Initial Investment</div>
+                            <div class="animated-number" data-target="100000" data-format="currency" style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">0</div>
+                            <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0.5rem;">Annual Returns: 18-20%</div>
+                            <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0.5rem;">Investment Period: 7 Years</div>
+                            <div style="font-size: 0.85rem; opacity: 0.7;">Exit Multiple: 5-7x EBITDA</div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; border-left: 2px solid rgba(184, 134, 11, 0.3); padding-left: 3rem;">
+                        <div style="font-size: 1.2rem; color: #B8860B; margin-bottom: 1rem;">MayaRoyale with Advantages</div>
+                        <div class="animated-number-range" style="font-size: 3rem; font-weight: 700; color: #B8860B; margin-bottom: 0.5rem;">0</div>
+                        <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(184, 134, 11, 0.15); border-radius: 12px; border: 1px solid rgba(184, 134, 11, 0.3);">
+                            <div style="font-size: 0.85rem; color: #B8860B; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem; font-weight: 600;">Initial Investment</div>
+                            <div class="animated-number" data-target="100000" data-format="currency" style="font-size: 1.75rem; font-weight: 700; color: #B8860B; margin-bottom: 1rem;">0</div>
+                            <div style="font-size: 0.85rem; color: #B8860B; margin-bottom: 0.5rem; font-weight: 600;">Annual Returns: 22-25%</div>
+                            <div style="font-size: 0.85rem; color: #B8860B; margin-bottom: 0.5rem; font-weight: 600;">Investment Period: 7 Years</div>
+                            <div style="font-size: 0.85rem; color: #B8860B; font-weight: 600;">Exit Multiple: 8-12x EBITDA</div>
+                        </div>
+                        <div style="margin-top: 1.5rem; font-size: 1.5rem; font-weight: 700; color: #B8860B;">
+                            +$125K-$200K Additional Return<br>
+                            <span style="font-size: 1.2rem; opacity: 0.9;">(+30-50% Higher Returns)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="positioning-cta">
+        <div class="container">
+            <h2>This Is Not a Competitive Advantage.<br>This Is a Natural Monopoly.</h2>
+            <p>
+                Join the investors who recognize that MayaRoyale occupies the last protected paradise<br>
+                in Mexico and the Caribbean—with five defensive moats that make it impossible to replicate.
+            </p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-btn cta-btn-primary">
+                    <i class="fas fa-envelope"></i> Schedule Investment Discussion
+                </a>
+                <a href="financial-forecast.html" class="cta-btn cta-btn-secondary">
+                    <i class="fas fa-chart-line"></i> View 7-Year Projections
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="financial-forecast.html">Financial Forecast</a></li>
+                        <li><a href="investment-calculator.html">Investment Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">The Project</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Property Showcase</a></li>
+                        <li><a href="future-vision.html">Future of Isla Aguada</a></li>
+                        <li><a href="positioning.html">Strategic Positioning</a></li>
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="team.html">Innovation Council</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navigation Script -->
+    <script src="js/mobile-nav-simple.js"></script>
+    <script src="js/wallet.js"></script>
+    
+    <!-- Number Animation Script -->
+    <script>
+        // Unified animation function with data-target support
+        function animateCounter(element) {
+            if (element.classList.contains('animated')) return;
+            element.classList.add('animated');
+            
+            const target = parseFloat(element.dataset.target || element.textContent);
+            const prefix = element.dataset.prefix || '';
+            const suffix = element.dataset.suffix || '';
+            const duration = 2000;
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    // Format final value
+                    let finalValue = target;
+                    if (target >= 1000 && !suffix.includes('M') && !suffix.includes('K')) {
+                        finalValue = Math.round(target).toLocaleString();
+                    } else if (target < 1) {
+                        finalValue = target.toFixed(2);
+                    } else if (target < 10) {
+                        finalValue = target.toFixed(1);
+                    } else {
+                        finalValue = Math.round(target);
+                    }
+                    element.textContent = prefix + finalValue + suffix;
+                    clearInterval(timer);
+                } else {
+                    // Format current value
+                    let currentValue = current;
+                    if (target >= 1000 && !suffix.includes('M') && !suffix.includes('K')) {
+                        currentValue = Math.floor(current).toLocaleString();
+                    } else if (target < 1) {
+                        currentValue = current.toFixed(2);
+                    } else if (target < 10) {
+                        currentValue = current.toFixed(1);
+                    } else {
+                        currentValue = Math.floor(current);
+                    }
+                    element.textContent = prefix + currentValue + suffix;
+                }
+            }, 16);
+        }
+        
+        // Intersection Observer for scroll-triggered animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate all counter elements
+                    entry.target.querySelectorAll('.animate-counter').forEach(counter => {
+                        animateCounter(counter);
+                    });
+                    
+                    // Also check if the entry target itself is a counter
+                    if (entry.target.classList.contains('animate-counter')) {
+                        animateCounter(entry.target);
+                    }
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        // Animate .animated-number elements
+        function animateNumber(element) {
+            if (element.classList.contains('animated')) return;
+            element.classList.add('animated');
+            
+            const target = parseFloat(element.dataset.target);
+            const format = element.dataset.format;
+            const duration = 2000;
+            let current = 0;
+            const increment = target / (duration / 16);
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    if (format === 'currency') {
+                        element.textContent = '$' + Math.round(target).toLocaleString();
+                    } else if (target >= 1000) {
+                        element.textContent = '$' + Math.round(target) + 'K';
+                    } else {
+                        element.textContent = Math.round(target);
+                    }
+                    clearInterval(timer);
+                } else {
+                    if (format === 'currency') {
+                        element.textContent = '$' + Math.floor(current).toLocaleString();
+                    } else if (target >= 1000) {
+                        element.textContent = '$' + Math.floor(current) + 'K';
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }
+            }, 16);
+        }
+        
+        // Animate .animated-number-range (525-600K)
+        function animateNumberRange(element) {
+            if (element.classList.contains('animated')) return;
+            element.classList.add('animated');
+            
+            const targetMin = 525;
+            const targetMax = 600;
+            const duration = 2000;
+            let current = 0;
+            const increment = targetMax / (duration / 16);
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= targetMax) {
+                    element.textContent = '$' + targetMin + '-' + targetMax + 'K';
+                    clearInterval(timer);
+                } else {
+                    const min = Math.floor((current / targetMax) * targetMin);
+                    const max = Math.floor(current);
+                    element.textContent = '$' + min + '-' + max + 'K';
+                }
+            }, 16);
+        }
+        
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Positioning page loaded - initializing number animations');
+            
+            // Observer for animated numbers
+            const numberObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        console.log('Element in view:', entry.target.className);
+                        if (entry.target.classList.contains('animated-number')) {
+                            console.log('Animating number with target:', entry.target.dataset.target);
+                            animateNumber(entry.target);
+                        } else if (entry.target.classList.contains('animated-number-range')) {
+                            console.log('Animating range number');
+                            animateNumberRange(entry.target);
+                        }
+                        numberObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '50px' });
+            
+            // Observer for circular progress animations
+            const circleObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        console.log('🔵 Circle section in view!', entry.target.className);
+                        const circles = entry.target.querySelectorAll('.score-circle-progress');
+                        console.log('Found circles:', circles.length);
+                        circles.forEach((circle, index) => {
+                            console.log('Animating circle', index, circle);
+                            setTimeout(() => {
+                                circle.classList.add('animated');
+                                console.log('✅ Added animated class to circle', index);
+                            }, 300);
+                        });
+                        circleObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '100px' });
+            
+            // Observe all animated numbers
+            const animatedElements = document.querySelectorAll('.animated-number, .animated-number-range');
+            console.log('Found animated elements:', animatedElements.length);
+            animatedElements.forEach(el => {
+                console.log('Observing element:', el.className, 'target:', el.dataset.target);
+                numberObserver.observe(el);
+            });
+            
+            // Observe circular progress sections
+            const comparisonSections = document.querySelectorAll('.comparison-side');
+            console.log('🔍 Found comparison sections:', comparisonSections.length);
+            comparisonSections.forEach((section, index) => {
+                console.log('Observing comparison section', index, section.className);
+                circleObserver.observe(section);
+            });
+            
+            // Also observe the ROI comparison container to trigger when it comes into view
+            const roiContainer = document.querySelector('.roi-comparison-container');
+            if (roiContainer) {
+                console.log('Found ROI container, observing it');
+                numberObserver.observe(roiContainer);
+            }
+            
+            // Observe parent containers
+            document.querySelectorAll('.stat-item, .coastline-card, .moat-card, .moat-stats, .hero-stats, .positioning-hero, .leadership-statement, .leadership-metrics, .impact-grid, .impact-card').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Also observe standalone counters
+            document.querySelectorAll('.animate-counter').forEach(el => {
+                if (!el.closest('.stat-item, .coastline-card, .moat-card')) {
+                    observer.observe(el);
+                }
+            });
+        });
+    </script>
+
+    <script src="js/wallet.js"></script>
+    <!-- UNIVERSAL MOBILE NAV - LOADS LAST TO OVERRIDE EVERYTHING -->
+    <script src="js/mobile-nav-universal.js"></script>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

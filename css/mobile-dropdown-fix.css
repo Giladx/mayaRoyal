@@ -1,0 +1,113 @@
+/* ========================================
+   MOBILE DROPDOWN FIX - CRITICAL
+   Ensures dropdown menus work on mobile
+   ======================================== */
+
+@media (max-width: 968px) {
+    /* Make dropdown items visible and styled for mobile */
+    .nav-premium-menu.active .nav-premium-dropdown-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 0.875rem 1rem !important;
+        border-radius: 6px !important;
+        transition: all 0.2s ease !important;
+        background: transparent !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        text-decoration: none !important;
+    }
+    
+    .nav-premium-menu.active .nav-premium-dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.08) !important;
+        color: #FFFFFF !important;
+    }
+    
+    .nav-premium-menu.active .nav-premium-dropdown-item:active {
+        background: rgba(255, 255, 255, 0.12) !important;
+    }
+    
+    .nav-premium-menu.active .nav-premium-dropdown-item-icon {
+        font-size: 1.25rem !important;
+        min-width: 1.5rem !important;
+        display: block !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .nav-premium-menu.active .nav-premium-dropdown-item-label {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.125rem !important;
+        flex: 1 !important;
+    }
+    
+    .nav-premium-menu.active .nav-premium-dropdown-item-title {
+        font-weight: 600 !important;
+        font-size: 0.95rem !important;
+        color: #FFFFFF !important;
+        display: block !important;
+        line-height: 1.3 !important;
+    }
+    
+    .nav-premium-menu.active .nav-premium-dropdown-item-desc {
+        font-size: 0.8rem !important;
+        color: rgba(255, 255, 255, 0.6) !important;
+        display: block !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* Hide the graphic element on mobile */
+    .nav-premium-menu.active .nav-premium-dropdown-graphic {
+        display: none !important;
+    }
+    
+    /* Ensure dropdown items container is visible */
+    .nav-premium-menu.active .nav-premium-dropdown-items {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.25rem !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    /* Arrow rotation on mobile when dropdown is open */
+    .nav-premium-menu.active .nav-premium-item.dropdown-open .nav-premium-arrow {
+        transform: rotate(180deg) !important;
+    }
+    
+    /* Ensure dropdown container is visible when open */
+    .nav-premium-menu.active .nav-premium-item.dropdown-open .nav-premium-dropdown {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    /* Mobile dropdown container styling */
+    .nav-premium-menu.active .nav-premium-dropdown {
+        position: static !important;
+        min-width: auto !important;
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 8px !important;
+        margin-top: 0.5rem !important;
+        display: block !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transform: none !important;
+        transition: all 0.3s ease !important;
+        padding: 0 !important;
+        grid-template-columns: 1fr !important;
+        box-shadow: none !important;
+    }
+    
+    /* When dropdown is open */
+    .nav-premium-menu.active .nav-premium-item.dropdown-open .nav-premium-dropdown {
+        max-height: 2000px !important;
+        padding: 1rem !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}

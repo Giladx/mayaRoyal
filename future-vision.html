@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of Isla Aguada | MayaRoyale - ROYALE Family of Resorts</title>
+    <meta name="description" content="MayaRoyale Group owns 200+ acres in Isla Aguada with plans to develop the ROYALE Family of Resorts—an 8-kilometer coastal masterplan featuring multiple themed luxury resorts.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/premium-light.css">
+    
+    <style>
+        /* Prevent horizontal scrolling on mobile */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        
+        * {
+            max-width: 100%;
+        }
+        
+        /* Future Vision Page Styles */
+        .future-hero {
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .future-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(184, 134, 11, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .future-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .future-badge {
+            display: inline-block;
+            background: rgba(184, 134, 11, 0.15);
+            border: 1px solid rgba(184, 134, 11, 0.3);
+            color: #B8860B;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .future-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .future-hero .hero-subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 950px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+        
+        .future-hero .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .future-hero .stat-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .future-hero .stat-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(184, 134, 11, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(184, 134, 11, 0.15);
+        }
+        
+        .future-hero .stat-item > * {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        .future-hero .stat-value {
+            font-size: 3.5rem !important;
+            font-weight: 700 !important;
+            color: #B8860B !important;
+            font-family: 'Space Grotesk', sans-serif !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            margin-bottom: 0.5rem !important;
+        }
+        
+        .future-hero .stat-label {
+            font-size: 1rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            margin-top: 0.5rem !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Master Plan Section */
+        .masterplan-section {
+            padding: 6rem 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: rgba(184, 134, 11, 0.1);
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            color: #B8860B;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #0A0A0A;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #6A6A6A;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .masterplan-image {
+            max-width: 1400px;
+            margin: 0 auto 4rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .masterplan-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Resort Grid */
+        .resort-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .resort-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .resort-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(184, 134, 11, 0.2);
+            border-color: rgba(184, 134, 11, 0.3);
+        }
+        
+        .resort-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .resort-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #0A0A0A;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resort-tagline {
+            font-size: 0.95rem;
+            color: #B8860B;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .resort-description {
+            font-size: 1rem;
+            color: #6A6A6A;
+            line-height: 1.6;
+        }
+        
+        .resort-features {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+        
+        .resort-features li {
+            padding: 0.5rem 0;
+            color: #4A4A4A;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .resort-features li::before {
+            content: '✓';
+            color: #B8860B;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Vision Stats */
+        .vision-stats {
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+            padding: 5rem 0;
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+        
+        .stat-box {
+            padding: 2rem;
+        }
+        
+        .stat-box .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #B8860B;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-box .stat-text {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Timeline Section */
+        .timeline-section {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .timeline {
+            max-width: 1000px;
+            margin: 4rem auto 0;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #B8860B 0%, rgba(184, 134, 11, 0.3) 100%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #B8860B;
+        }
+        
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #B8860B;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0A0A0A;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-desc {
+            font-size: 1rem;
+            color: #6A6A6A;
+            line-height: 1.6;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: #B8860B;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px rgba(184, 134, 11, 0.2);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+            padding: 5rem 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-white {
+            background: white;
+            color: #B8860B;
+        }
+        
+        .btn-white:hover {
+            background: #F8F9FA;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #B8860B;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .future-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .timeline-content {
+                width: 100%;
+                margin-left: 60px;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+            
+            .future-hero .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .future-hero .stat-item {
+                padding: 1.5rem 1rem;
+            }
+            
+            .future-hero .stat-value {
+                font-size: 2.5rem !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .future-hero .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            
+            .future-hero .stat-value {
+                font-size: 2.25rem !important;
+            }
+            
+            .future-hero .stat-label {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium nav-scrolled"><div class="nav-premium-container"><div class="nav-premium-brand"><a href="index.html"><img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo"></a></div><ul class="nav-premium-menu" id="navPremiumMenu"><li class="nav-premium-item"><a href="#" class="nav-premium-link">Platform<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="dashboard.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Dashboard</span><span class="nav-premium-dropdown-item-desc">Track your portfolio</span></span></a><a href="tokenomics.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💎</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Tokenomics</span><span class="nav-premium-dropdown-item-desc">Token economics & funding</span></span></a><a href="financial-forecast.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📈</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Financial Forecast</span><span class="nav-premium-dropdown-item-desc">7-year projections</span></span></a><a href="investment-calculator.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🧮</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Investment Calculator</span><span class="nav-premium-dropdown-item-desc">Calculate your returns</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">The Project<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="gallery.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏖️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Smart Resort Vision</span><span class="nav-premium-dropdown-item-desc">Property gallery & plans</span></span></a><a href="future-vision.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌅</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span><span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family of Resorts</span></span></a><a href="positioning.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Strategic Positioning</span><span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span></span></a><a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Protection Animation</span><span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span></span></a><a href="yucatan-boom.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🚀</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Yucatan Boom</span><span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span></span></a><a href="wellness-differentiation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Wellness Differentiation</span><span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span></span></a><a href="culinary-excellence.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🍽️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Culinary Excellence</span><span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span></span></a><a href="technology.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">⚡</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Technology & Blockchain</span><span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span></span></a><a href="lhw-partnership.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏨</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">LHW Partnership</span><span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span></span></a><a href="sustainability.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌿</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Sustainability</span><span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">Company<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="team.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">👥</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Innovation Council</span><span class="nav-premium-dropdown-item-desc">Meet our team</span></span></a><a href="contact.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📧</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Contact</span><span class="nav-premium-dropdown-item-desc">Get in touch</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li></ul><a href="#" class="nav-premium-cta">Connect Wallet</a><button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle"><span></span><span></span><span></span></button></div></nav>
+
+    <!-- Hero Section -->
+    <section class="future-hero">
+        <div class="container">
+            <div class="future-badge">🌅 Master Development Plan</div>
+            <h1>The Future of<br>Isla Aguada</h1>
+            <p class="hero-subtitle">
+                MayaRoyale Group owns 200+ acres along 8 kilometers of pristine coastline<br>
+                with a visionary masterplan for the ROYALE Family of Resorts—multiple themed luxury destinations<br>
+                creating the Caribbean's most exclusive resort collection
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value"><span class="animate-counter" data-target="200" data-suffix="+">0</span></div>
+                    <div class="stat-label">Acres Owned</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value"><span class="animate-counter" data-target="8" data-suffix=" KM">0</span></div>
+                    <div class="stat-label">Coastal Frontage</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value"><span class="animate-counter" data-target="5" data-suffix="">0</span></div>
+                    <div class="stat-label">Resort Themes Planned</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value"><span class="animate-counter" data-target="1000" data-suffix="+">0</span></div>
+                    <div class="stat-label">Future Room Inventory</div>
+                </div>
+            </div>
+            
+            <!-- Additional Metrics Row -->
+            <div class="hero-stats" style="margin-top: 2rem;">
+                <div class="stat-item">
+                    <div class="stat-value"><span class="animate-counter" data-target="2" data-prefix="$" data-suffix="B+">0</span></div>
+                    <div class="stat-label">Total Development Value</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value"><span class="animate-counter" data-target="20" data-suffix="M">0</span></div>
+                    <div class="stat-label">Domestic Market Access</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Plan Section -->
+    <section class="masterplan-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🗺️ 8-Kilometer Coastal Masterplan</div>
+                <h2>Isla Aguada Sabancuy Eco-Destination Development</h2>
+                <p>
+                    A comprehensive master-planned community spanning 8 kilometers of hurricane & sargassum-free coastline.
+                    MayaRoyale Group's vision transforms Isla Aguada into Mexico's premier luxury eco-resort destination.
+                </p>
+            </div>
+            
+            <!-- Master Plan Image -->
+            <div class="masterplan-image">
+                <img src="https://www.genspark.ai/api/files/s/ogiJkD9n" alt="Isla Aguada Sabancuy 8 KM Coastal Masterplan showing ROYALE Family of Resorts">
+            </div>
+            
+            <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, rgba(184, 134, 11, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%); border-radius: 16px; margin-top: 3rem;">
+                <p style="font-size: 1.4rem; font-weight: 600; color: #B8860B; margin-bottom: 1rem;">
+                    Phase 1: MayaRoyale (15 Acres) → Currently Under Development
+                </p>
+                <p style="font-size: 1.1rem; color: #6A6A6A;">
+                    The flagship resort establishing the luxury standard for the entire ROYALE Family collection.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROYALE Family of Resorts Grid -->
+    <section style="padding: 6rem 0; background: white;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🏖️ Themed Resort Collection</div>
+                <h2>The ROYALE Family of Resorts</h2>
+                <p>
+                    Five distinct resort experiences, each with its unique theme and character,
+                    united by the ROYALE commitment to regenerative luxury and world-class service.
+                </p>
+            </div>
+            
+            <div class="resort-grid">
+                <!-- MayaRoyale -->
+                <div class="resort-card">
+                    <div class="resort-icon">👑</div>
+                    <h3 class="resort-name">MayaRoyale</h3>
+                    <div class="resort-tagline">Flagship Regenerative Luxury</div>
+                    <p class="resort-description">
+                        The crown jewel establishing the standard for the ROYALE Family. 
+                        15 acres of pristine beachfront with wellness sanctuary, Mas'Tul Beach Club, 
+                        and world-class eco-resort amenities.
+                    </p>
+                    <ul class="resort-features">
+                        <li>Plot 1 - Phase 1 (Current Development)</li>
+                        <li>Tropical Wood Thalassotherapy Spa</li>
+                        <li>LHW Partnership (Letter of Interest)</li>
+                        <li>100 luxury villas & suites</li>
+                    </ul>
+                </div>
+                
+                <!-- Sahara Royale -->
+                <div class="resort-card">
+                    <div class="resort-icon">🏜️</div>
+                    <h3 class="resort-name">Sahara Royale</h3>
+                    <div class="resort-tagline">Desert Oasis on the Coast</div>
+                    <p class="resort-description">
+                        A unique fusion of Middle Eastern luxury and coastal elegance. 
+                        Plot 2 features Moroccan-inspired architecture, botanical gardens, 
+                        and authentic desert wellness experiences.
+                    </p>
+                    <ul class="resort-features">
+                        <li>Plot 2 - Future Phase</li>
+                        <li>Moroccan-inspired architecture</li>
+                        <li>Lush botanical gardens</li>
+                        <li>Hammam & desert spa rituals</li>
+                    </ul>
+                </div>
+                
+                <!-- Namaste Royale -->
+                <div class="resort-card">
+                    <div class="resort-icon">🧘</div>
+                    <h3 class="resort-name">Namaste Royale</h3>
+                    <div class="resort-tagline">Spiritual Wellness Sanctuary</div>
+                    <p class="resort-description">
+                        A dedicated yoga and meditation retreat combining ancient Eastern wisdom 
+                        with modern wellness science. Plot 3's serene environment perfect for 
+                        transformative wellness journeys.
+                    </p>
+                    <ul class="resort-features">
+                        <li>Plot 3 - Future Phase</li>
+                        <li>Yoga & meditation pavilions</li>
+                        <li>Ayurvedic wellness center</li>
+                        <li>Silent zones & reflection gardens</li>
+                    </ul>
+                </div>
+                
+                <!-- Nomad Royale -->
+                <div class="resort-card">
+                    <div class="resort-icon">⛺</div>
+                    <h3 class="resort-name">Nomad Royale</h3>
+                    <div class="resort-tagline">Adventure & Ecotourism</div>
+                    <p class="resort-description">
+                        Plot 4 brings adventurous luxury with glamping, eco-lodges, 
+                        jungle expeditions, and cultural immersion experiences. 
+                        Perfect for active travelers seeking authentic connections.
+                    </p>
+                    <ul class="resort-features">
+                        <li>Plot 4 - Future Phase</li>
+                        <li>Luxury glamping & eco-lodges</li>
+                        <li>Jungle expeditions & safaris</li>
+                        <li>Cultural immersion programs</li>
+                    </ul>
+                </div>
+                
+                <!-- Privé Royale -->
+                <div class="resort-card">
+                    <div class="resort-icon">💎</div>
+                    <h3 class="resort-name">Privé Royale</h3>
+                    <div class="resort-tagline">Ultra-Exclusive Reserve</div>
+                    <p class="resort-description">
+                        Plot 5 offers the ultimate in privacy and exclusivity. 
+                        Private beach reserve with ultra-luxury villas, personal concierge, 
+                        and bespoke experiences for discerning guests.
+                    </p>
+                    <ul class="resort-features">
+                        <li>Plot 5 - Future Phase</li>
+                        <li>Ultra-luxury private villas</li>
+                        <li>Exclusive beach access</li>
+                        <li>24/7 personal butler service</li>
+                    </ul>
+                </div>
+                
+                <!-- Beach Clubs -->
+                <div class="resort-card">
+                    <div class="resort-icon">🏖️</div>
+                    <h3 class="resort-name">Beach Club Collection</h3>
+                    <div class="resort-tagline">Day-Use Paradise</div>
+                    <p class="resort-description">
+                        Multiple beach clubs along the coastline including Mas'Tul, Amara, 
+                        Shantl, and Atlas. Each offers unique day-use experiences with 
+                        food, beverage, and water sports.
+                    </p>
+                    <ul class="resort-features">
+                        <li>Mas'Tul Beach Club (MayaRoyale)</li>
+                        <li>Amara, Shantl, Atlas Beach Clubs</li>
+                        <li>Water activities & sports</li>
+                        <li>$50-100/person day-use revenue</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Stats -->
+    <section class="vision-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Development at Scale</h2>
+                <p style="color: rgba(255,255,255,0.8);">
+                    A multi-phase, multi-decade vision creating one of the Caribbean's<br>
+                    most significant luxury resort developments
+                </p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number"><span class="animate-counter" data-target="200" data-suffix="+">0</span></div>
+                    <div class="stat-text">Total Acres Owned</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number"><span class="animate-counter" data-target="5" data-suffix="">0</span></div>
+                    <div class="stat-text">Themed Resorts</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number"><span class="animate-counter" data-target="8" data-suffix=" KM">0</span></div>
+                    <div class="stat-text">Beachfront Coastline</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number"><span class="animate-counter" data-target="1000" data-suffix="+">0</span></div>
+                    <div class="stat-text">Future Room Inventory</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number"><span class="animate-counter" data-target="2" data-prefix="$" data-suffix="B+">0</span></div>
+                    <div class="stat-text">Total Development Value</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number"><span class="animate-counter" data-target="20" data-suffix="M">0</span></div>
+                    <div class="stat-text">Domestic Market Access</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">📅 Phased Development</div>
+                <h2>Multi-Decade Vision</h2>
+                <p>
+                    Strategic phased development approach ensuring quality, sustainability,
+                    and maximizing long-term value creation for investors.
+                </p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024-2027</div>
+                        <div class="timeline-title">Phase 1: MayaRoyale Flagship</div>
+                        <div class="timeline-desc">
+                            15-acre flagship resort development. Establish brand standards, 
+                            operational excellence, and market positioning. LHW partnership activation. 
+                            Projected completion 2027.
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2028-2030</div>
+                        <div class="timeline-title">Phase 2: Sahara & Namaste Royale</div>
+                        <div class="timeline-desc">
+                            Expand the ROYALE Family with two additional themed resorts. 
+                            Diversify guest experiences and establish Isla Aguada as a 
+                            multi-resort destination.
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2031-2035</div>
+                        <div class="timeline-title">Phase 3: Nomad & Privé Royale</div>
+                        <div class="timeline-desc">
+                            Complete the ROYALE Family collection with adventure-focused Nomad 
+                            and ultra-luxury Privé resorts. Establish Isla Aguada as premier 
+                            Caribbean destination.
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2035+</div>
+                        <div class="timeline-title">Future Expansion & Optimization</div>
+                        <div class="timeline-desc">
+                            Continued enhancement, additional amenities, residential offerings, 
+                            and cementing Isla Aguada's position as the Caribbean's most exclusive 
+                            resort collection.
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Invest in the Future of Isla Aguada</h2>
+            <p>Join us in building the Caribbean's most exclusive resort collection</p>
+            <div class="cta-buttons">
+                <a href="tokenomics.html" class="btn btn-white">View Investment Opportunities</a>
+                <a href="contact.html" class="btn btn-outline">Schedule Discussion</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="financial-forecast.html">Financial Forecast</a></li>
+                        <li><a href="investment-calculator.html">Investment Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">The Project</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Property Showcase</a></li>
+                        <li><a href="future-vision.html">Future of Isla Aguada</a></li>
+                        <li><a href="positioning.html">Strategic Positioning</a></li>
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="team.html">Innovation Council</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer JavaScript -->
+    <script src="js/wallet.js"></script>
+    <script src="js/mobile-nav-simple.js"></script>
+    
+    <!-- Counter Animation Script -->
+    <script>
+        // Number counting animation
+        function animateCounter(element, target, duration = 2000) {
+            const prefix = element.getAttribute('data-prefix') || '';
+            const suffix = element.getAttribute('data-suffix') || '';
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const isDecimal = target % 1 !== 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                let formattedNumber;
+                if (isDecimal) {
+                    formattedNumber = current.toFixed(1);
+                } else {
+                    formattedNumber = Math.floor(current).toLocaleString('en-US');
+                }
+                
+                element.textContent = prefix + formattedNumber + suffix;
+            }, 16);
+        }
+        
+        // Intersection Observer for stats animation
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    const target = parseFloat(entry.target.getAttribute('data-target'));
+                    if (target > 0) {
+                        animateCounter(entry.target, target);
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all counter elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.animate-counter');
+            counters.forEach(counter => observer.observe(counter));
+        });
+    </script>
+    
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

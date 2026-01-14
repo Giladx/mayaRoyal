@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Dropdown Test - MayaRoyale</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-fix.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: #0A0A0A;
+            color: #FFFFFF;
+            padding-top: 100px;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .test-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .test-box h2 {
+            color: #B8860B;
+            margin-top: 0;
+        }
+        
+        .test-steps {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .test-steps li {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            border-left: 4px solid #B8860B;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        
+        .status-pass {
+            background: rgba(0, 255, 0, 0.2);
+            color: #00FF00;
+        }
+        
+        .status-fail {
+            background: rgba(255, 0, 0, 0.2);
+            color: #FF0000;
+        }
+        
+        .console-log {
+            background: #1A1A1A;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-premium">
+        <div class="nav-premium-container">
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo">
+                </a>
+            </div>
+            
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <!-- Platform Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Platform
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📊</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Dashboard</span>
+                                    <span class="nav-premium-dropdown-item-desc">Track your portfolio</span>
+                                </span>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">💎</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Tokenomics</span>
+                                    <span class="nav-premium-dropdown-item-desc">Token economics</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- The Project Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        The Project
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏖️</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Property Showcase</span>
+                                    <span class="nav-premium-dropdown-item-desc">View properties</span>
+                                </span>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">🏆</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Strategic Positioning</span>
+                                    <span class="nav-premium-dropdown-item-desc">Our advantages</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Company Dropdown -->
+                <li class="nav-premium-item">
+                    <a href="#" class="nav-premium-link">
+                        Company
+                        <span class="nav-premium-arrow">▼</span>
+                    </a>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">👥</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Team</span>
+                                    <span class="nav-premium-dropdown-item-desc">Meet our team</span>
+                                </span>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-item-icon">📧</span>
+                                <span class="nav-premium-dropdown-item-label">
+                                    <span class="nav-premium-dropdown-item-title">Contact</span>
+                                    <span class="nav-premium-dropdown-item-desc">Get in touch</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <span class="nav-premium-dropdown-graphic-layer"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <a href="#" class="nav-premium-cta">Connect Wallet</a>
+            
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Test Content -->
+    <div class="test-container">
+        <div class="test-box">
+            <h2>🧪 Mobile Dropdown Test Page</h2>
+            <p>This page tests if the mobile dropdown menus work correctly.</p>
+            <p><strong>Current Screen Width:</strong> <span id="screenWidth"></span>px</p>
+            <p><strong>Mobile Mode:</strong> <span id="mobileMode"></span></p>
+        </div>
+        
+        <div class="test-box">
+            <h2>✅ Testing Steps</h2>
+            <ol class="test-steps">
+                <li><strong>Step 1:</strong> Resize browser to mobile width (&lt;968px) or open DevTools mobile view</li>
+                <li><strong>Step 2:</strong> Click the hamburger menu icon (☰) in top-right corner</li>
+                <li><strong>Step 3:</strong> Menu should slide in from the right</li>
+                <li><strong>Step 4:</strong> Click "Platform ▼" → Should expand showing 2 items</li>
+                <li><strong>Step 5:</strong> Click "The Project ▼" → Platform closes, The Project expands with 2 items</li>
+                <li><strong>Step 6:</strong> Click "Company ▼" → The Project closes, Company expands with 2 items</li>
+                <li><strong>Step 7:</strong> Click any dropdown link → Should be clickable</li>
+            </ol>
+        </div>
+        
+        <div class="test-box">
+            <h2>📊 Status Indicators</h2>
+            <div id="statusContainer">
+                <span class="status-indicator" id="toggleStatus">Hamburger: Checking...</span>
+                <span class="status-indicator" id="menuStatus">Menu: Checking...</span>
+                <span class="status-indicator" id="dropdownStatus">Dropdowns: Checking...</span>
+                <span class="status-indicator" id="cssStatus">CSS: Checking...</span>
+                <span class="status-indicator" id="jsStatus">JS: Checking...</span>
+            </div>
+        </div>
+        
+        <div class="test-box">
+            <h2>🖥️ Console Output</h2>
+            <div class="console-log" id="consoleLog">
+                Waiting for console messages...
+            </div>
+        </div>
+        
+        <div class="test-box">
+            <h2>📋 What to Look For</h2>
+            <ul>
+                <li><strong>Green indicators:</strong> Everything is working ✅</li>
+                <li><strong>Red indicators:</strong> Something is broken ❌</li>
+                <li><strong>Console output:</strong> Shows what's happening behind the scenes</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script>
+        // Update screen info
+        function updateScreenInfo() {
+            document.getElementById('screenWidth').textContent = window.innerWidth;
+            document.getElementById('mobileMode').textContent = window.innerWidth <= 968 ? 'YES (Dropdowns should work)' : 'NO (Use desktop hover)';
+        }
+        
+        updateScreenInfo();
+        window.addEventListener('resize', updateScreenInfo);
+        
+        // Capture console logs
+        const originalLog = console.log;
+        const originalError = console.error;
+        const logContainer = document.getElementById('consoleLog');
+        const logs = [];
+        
+        function addLog(message, type = 'log') {
+            const timestamp = new Date().toLocaleTimeString();
+            const color = type === 'error' ? '#FF6B6B' : type === 'success' ? '#51CF66' : '#FFFFFF';
+            logs.push(`<div style="color: ${color};">[${timestamp}] ${message}</div>`);
+            logContainer.innerHTML = logs.join('');
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            addLog(args.join(' '), 'log');
+        };
+        
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            addLog(args.join(' '), 'error');
+        };
+        
+        // Check status
+        setTimeout(() => {
+            const toggle = document.getElementById('navPremiumMobileToggle');
+            const menu = document.getElementById('navPremiumMenu');
+            const dropdowns = document.querySelectorAll('.nav-premium-dropdown');
+            const cssFile = document.querySelector('link[href*="mobile-dropdown-fix"]');
+            const jsFile = document.querySelector('script[src*="mobile-nav-universal"]');
+            
+            // Update status indicators
+            document.getElementById('toggleStatus').className = 'status-indicator ' + (toggle ? 'status-pass' : 'status-fail');
+            document.getElementById('toggleStatus').textContent = toggle ? 'Hamburger: ✅ Found' : 'Hamburger: ❌ Not Found';
+            
+            document.getElementById('menuStatus').className = 'status-indicator ' + (menu ? 'status-pass' : 'status-fail');
+            document.getElementById('menuStatus').textContent = menu ? 'Menu: ✅ Found' : 'Menu: ❌ Not Found';
+            
+            document.getElementById('dropdownStatus').className = 'status-indicator ' + (dropdowns.length > 0 ? 'status-pass' : 'status-fail');
+            document.getElementById('dropdownStatus').textContent = dropdowns.length > 0 ? `Dropdowns: ✅ ${dropdowns.length} Found` : 'Dropdowns: ❌ Not Found';
+            
+            document.getElementById('cssStatus').className = 'status-indicator ' + (cssFile ? 'status-pass' : 'status-fail');
+            document.getElementById('cssStatus').textContent = cssFile ? 'CSS: ✅ Loaded' : 'CSS: ❌ Not Loaded';
+            
+            document.getElementById('jsStatus').className = 'status-indicator ' + (jsFile ? 'status-pass' : 'status-fail');
+            document.getElementById('jsStatus').textContent = jsFile ? 'JS: ✅ Loaded' : 'JS: ❌ Not Loaded';
+            
+            addLog('=== DIAGNOSTIC CHECK ===', 'success');
+            addLog(`Toggle button: ${toggle ? 'FOUND ✅' : 'NOT FOUND ❌'}`);
+            addLog(`Menu element: ${menu ? 'FOUND ✅' : 'NOT FOUND ❌'}`);
+            addLog(`Dropdowns: ${dropdowns.length} found`);
+            addLog(`CSS file: ${cssFile ? 'LOADED ✅' : 'NOT LOADED ❌'}`);
+            addLog(`JS file: ${jsFile ? 'LOADED ✅' : 'NOT LOADED ❌'}`);
+        }, 1000);
+    </script>
+    <script src="js/navigation-premium.js"></script>
+    <!-- UNIVERSAL MOBILE NAV - LOADS LAST TO OVERRIDE EVERYTHING -->
+    <script src="js/mobile-nav-universal.js"></script>
+</body>
+</html>

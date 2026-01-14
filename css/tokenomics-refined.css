@@ -1,0 +1,779 @@
+/* ========================================
+   TOKENOMICS PAGE - REFINED DARK THEME
+   Professional Fintech, Clean Data Visualization
+   ======================================== */
+
+/* ==================== HERO SECTION ==================== */
+
+.tokenomics-hero {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+    color: var(--color-white);
+    padding: 5rem 0 3rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(184, 134, 11, 0.15);
+}
+
+.tokenomics-hero h1 {
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.crypto-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(184, 134, 11, 0.1);
+    border: 1px solid rgba(184, 134, 11, 0.2);
+    border-radius: 24px;
+    color: #B8860B;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==================== TOKEN SUPPLY SECTION ==================== */
+
+.token-supply-section {
+    padding: 6rem 0;
+    background: #0F0F0F;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.supply-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.supply-header h2 {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.token-price-highlight {
+    font-size: 2rem;
+    color: #B8860B;
+    font-weight: 700;
+}
+
+.tokenomics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* ==================== CARDS ==================== */
+
+.distribution-card,
+.metrics-card {
+    background: #1A1A1A;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    border: 1px solid rgba(184, 134, 11, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.distribution-card h3,
+.metrics-card h3 {
+    color: #B8860B;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metrics-card h3 {
+    justify-content: flex-start;
+}
+
+/* ==================== CHART SECTION ==================== */
+
+.chart-wrapper {
+    max-width: 300px;
+    margin: 0 auto 2rem;
+}
+
+.distribution-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    align-items: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 300px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.legend-text {
+    flex: 1;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+}
+
+.legend-tokens {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 0.25rem;
+}
+
+/* ==================== VALUE PROPOSITION BOXES ==================== */
+
+.distribution-value-box,
+.metrics-value-box {
+    margin-top: auto;
+    padding: 1.5rem;
+    background: rgba(184, 134, 11, 0.05);
+    border: 1px solid rgba(184, 134, 11, 0.15);
+    border-radius: 12px;
+}
+
+.value-box-title {
+    color: #B8860B;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.value-box-item {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.value-box-item:last-child {
+    margin-bottom: 0;
+}
+
+.value-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.value-box-item p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ==================== METRICS CARD ==================== */
+
+.metrics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.token-badge-display {
+    flex-shrink: 0;
+}
+
+.maya-token-badge {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(184, 134, 11, 0.1);
+    border-radius: 50%;
+    border: 2px solid rgba(184, 134, 11, 0.3);
+}
+
+.token-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metric-row:last-of-type {
+    border-bottom: none;
+}
+
+.metric-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.metric-value {
+    color: #B8860B;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* ==================== MARKET FLOW SECTION ==================== */
+
+.market-flow-section {
+    padding: 6rem 0;
+    background: #1A1A1A;
+}
+
+.market-flow-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+.flow-diagram {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.flow-step {
+    background: #0F0F0F;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(184, 134, 11, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.flow-step:hover {
+    transform: translateY(-4px);
+    border-color: rgba(184, 134, 11, 0.3);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.flow-step h3 {
+    color: #B8860B;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.flow-step p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.ecosystem-cycle {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(184, 134, 11, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(184, 134, 11, 0.15);
+}
+
+.cycle-icon {
+    font-size: 3rem;
+    color: #B8860B;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.ecosystem-cycle p {
+    color: #B8860B;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* ==================== ECOSYSTEM CYCLE CARD ==================== */
+
+.ecosystem-cycle-card {
+    margin-top: 3rem;
+    background: #1A1A1A;
+    border: 1px solid rgba(184, 134, 11, 0.2);
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.cycle-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #B8860B;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.cycle-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+}
+
+.cycle-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.cycle-step {
+    background: #0F0F0F;
+    border: 1px solid rgba(184, 134, 11, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.cycle-step:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 212, 255, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.cycle-step-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #000000;
+    margin: 0 auto 1rem;
+}
+
+.cycle-step-content h4 {
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.cycle-step-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.cycle-arrow {
+    color: #B8860B;
+    font-size: 2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.cycle-loop {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.cycle-loop-arrow {
+    font-size: 3rem;
+    color: #B8860B;
+    margin-bottom: 0.5rem;
+}
+
+.cycle-loop-text {
+    color: #B8860B;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.cycle-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cycle-benefit {
+    text-align: center;
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.cycle-benefit p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.cycle-benefit strong {
+    color: #B8860B;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+/* ==================== INVESTMENT TIERS ==================== */
+
+.investment-tiers-section {
+    padding: 6rem 0;
+    background: #0F0F0F;
+}
+
+.investment-tiers-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.tier-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4rem;
+}
+
+.tiers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.tier-card {
+    background: #1A1A1A;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(184, 134, 11, 0.1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tier-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(184, 134, 11, 0.3);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+}
+
+.tier-featured {
+    border: 2px solid #00D4FF;
+    box-shadow: 0 8px 32px rgba(184, 134, 11, 0.2);
+}
+
+.tier-ribbon {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%);
+    color: #000000;
+    padding: 6px 20px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tier-badge {
+    display: inline-block;
+    background: rgba(184, 134, 11, 0.15);
+    color: #B8860B;
+    padding: 6px 16px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.tier-name {
+    font-size: 1.75rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.tier-price {
+    font-size: 2.5rem;
+    color: #B8860B;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.tier-tokens {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.tier-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.tier-features li {
+    padding: 0.75rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tier-features li:last-child {
+    border-bottom: none;
+}
+
+.tier-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: rgba(184, 134, 11, 0.1);
+    border: 2px solid #00D4FF;
+    border-radius: 8px;
+    color: #B8860B;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.tier-btn:hover {
+    background: rgba(184, 134, 11, 0.2);
+    transform: translateY(-2px);
+}
+
+.tier-btn-featured {
+    background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%);
+    color: #000000;
+    border: none;
+}
+
+.tier-btn-featured:hover {
+    background: linear-gradient(135deg, #00B8E6 0%, #0099CC 100%);
+    box-shadow: 0 8px 20px rgba(184, 134, 11, 0.3);
+}
+
+/* ==================== TOKEN UTILITY ==================== */
+
+.token-utility-section {
+    padding: 6rem 0;
+    background: #1A1A1A;
+}
+
+.token-utility-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+.utility-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.utility-item {
+    background: #0F0F0F;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(184, 134, 11, 0.1);
+    transition: all 0.3s ease;
+}
+
+.utility-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(184, 134, 11, 0.3);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.utility-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.utility-item h3 {
+    color: #B8860B;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.utility-item p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.utility-item strong {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.utility-item ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.utility-item ul li {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+/* ==================== RISK DISCLOSURE ==================== */
+
+.risk-disclosure-section {
+    padding: 4rem 0;
+    background: #0F0F0F;
+}
+
+.disclosure-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 184, 0, 0.05);
+    border: 1px solid rgba(255, 184, 0, 0.3);
+    border-left: 4px solid #FFB800;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.disclosure-box h3 {
+    color: #FFB800;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.disclosure-box p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 1200px) {
+    .utility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 968px) {
+    .tokenomics-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .flow-diagram {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tiers-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .utility-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cycle-flow {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cycle-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .cycle-benefits {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .token-supply-section,
+    .market-flow-section,
+    .investment-tiers-section,
+    .token-utility-section {
+        padding: 4rem 0;
+    }
+    
+    .tokenomics-hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .supply-header h2,
+    .market-flow-section h2,
+    .investment-tiers-section h2,
+    .token-utility-section h2 {
+        font-size: 2rem;
+    }
+    
+    .flow-diagram {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tier-price {
+        font-size: 2rem;
+    }
+}
+
+/* ==================== ANIMATION CLASSES ==================== */
+
+.animate-counter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.animate-counter.animated {
+    opacity: 1;
+    transform: translateY(0);
+}

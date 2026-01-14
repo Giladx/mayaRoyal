@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology & Blockchain | MayaRoyale</title>
+    <meta name="description" content="Built on Solana blockchain with institutional-grade security and smart contract infrastructure for tokenized real estate.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/navigation-premium.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-critical.css">
+    <link rel="stylesheet" href="css/mobile-dropdown-fix.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/premium-light.css">
+    <link rel="stylesheet" href="css/technology.css">
+    
+    <style>
+        /* Technology Page Mobile Dropdown Fix */
+        @media (max-width: 968px) {
+            .nav-premium-menu.active .nav-premium-dropdown-content {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0.125rem !important;
+                flex: 1 !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown-title {
+                font-weight: 600 !important;
+                font-size: 0.95rem !important;
+                color: #FFFFFF !important;
+                display: block !important;
+                line-height: 1.3 !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown-description {
+                font-size: 0.8rem !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                display: block !important;
+                line-height: 1.3 !important;
+            }
+            
+            .nav-premium-menu.active .nav-premium-dropdown-icon {
+                font-size: 1.25rem !important;
+                min-width: 1.5rem !important;
+                display: block !important;
+                flex-shrink: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="nav-premium nav-scrolled">
+        <div class="container nav-premium-container">
+            <div class="nav-premium-brand">
+                <a href="index.html">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo" style="height: 40px;">
+                </a>
+            </div>
+
+            <ul class="nav-premium-menu" id="navPremiumMenu">
+                <li class="nav-premium-item">
+                    <button class="nav-premium-link">Platform <span class="nav-premium-arrow">▼</span></button>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="dashboard.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">📊</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Dashboard</div>
+                                    <div class="nav-premium-dropdown-description">Track your portfolio</div>
+                                </div>
+                            </a>
+                            <a href="tokenomics.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">💎</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Tokenomics</div>
+                                    <div class="nav-premium-dropdown-description">Token economics & funding</div>
+                                </div>
+                            </a>
+                            <a href="financial-forecast.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">📈</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Financial Forecast</div>
+                                    <div class="nav-premium-dropdown-description">7-year projections</div>
+                                </div>
+                            </a>
+                            <a href="investment-calculator.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🧮</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Investment Calculator</div>
+                                    <div class="nav-premium-dropdown-description">Calculate your returns</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <div class="nav-premium-dropdown-graphic-layer chart-animation"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <button class="nav-premium-link">The Project <span class="nav-premium-arrow">▼</span></button>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="gallery.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🏖️</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Smart Resort Vision</div>
+                                    <div class="nav-premium-dropdown-description">Property gallery & plans</div>
+                                </div>
+                            </a>
+                            <a href="future-vision.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🌅</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">The Future of Isla Aguada</div>
+                                    <div class="nav-premium-dropdown-description">200+ acres, ROYALE Family of Resorts</div>
+                                </div>
+                            </a>
+                            <a href="positioning.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🏆</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Strategic Positioning</div>
+                                    <div class="nav-premium-dropdown-description">Geographic monopoly & moats</div>
+                                </div>
+                            </a>
+                            <a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🌊</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Protection Animation</div>
+                                    <div class="nav-premium-dropdown-description">Sargassum & Hurricane protection</div>
+                                </div>
+                            </a>
+                            <a href="yucatan-boom.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🚀</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">The Yucatan Boom</div>
+                                    <div class="nav-premium-dropdown-description">$100B+ regional investment</div>
+                                </div>
+                            </a>
+                            <a href="wellness-differentiation.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">💆</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Wellness Differentiation</div>
+                                    <div class="nav-premium-dropdown-description">Tropical Wood Thalassotherapy</div>
+                                </div>
+                            </a>
+                            <a href="culinary-excellence.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🍽️</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Culinary Excellence</div>
+                                    <div class="nav-premium-dropdown-description">Transformative gastronomy</div>
+                                </div>
+                            </a>
+                            <a href="lhw-partnership.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🏨</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">LHW Partnership</div>
+                                    <div class="nav-premium-dropdown-description">Leading Hotels of the World</div>
+                                </div>
+                            </a>
+                            <a href="sustainability.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">🌿</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Sustainability</div>
+                                    <div class="nav-premium-dropdown-description">Eco-friendly initiatives</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <div class="nav-premium-dropdown-graphic-layer tropical-animation"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-premium-item">
+                    <button class="nav-premium-link">Company <span class="nav-premium-arrow">▼</span></button>
+                    <div class="nav-premium-dropdown">
+                        <div class="nav-premium-dropdown-items">
+                            <a href="team.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">👥</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Innovation Council</div>
+                                    <div class="nav-premium-dropdown-description">Meet our team</div>
+                                </div>
+                            </a>
+                            <a href="contact.html" class="nav-premium-dropdown-item">
+                                <span class="nav-premium-dropdown-icon">📧</span>
+                                <div class="nav-premium-dropdown-content">
+                                    <div class="nav-premium-dropdown-title">Contact</div>
+                                    <div class="nav-premium-dropdown-description">Get in touch</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-premium-dropdown-graphic">
+                            <div class="nav-premium-dropdown-graphic-layer network-animation"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="#" class="nav-premium-cta" onclick="openWalletModal(); return false;">Connect Wallet</a>
+
+            <button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="tech-hero">
+        <div class="container">
+            <div class="hero-content-center">
+                <div class="crypto-badge">⚡ Built on Solana</div>
+                <h1 class="hero-title">BLOCKCHAIN TECHNOLOGY</h1>
+                <p class="hero-subtitle">Institutional-grade infrastructure powering the future of tokenized real estate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solana Overview -->
+    <section class="solana-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <h2>Why Solana Blockchain</h2>
+                <p>The most performant blockchain for real-world asset tokenization</p>
+            </div>
+
+            <div class="solana-grid">
+                <div class="solana-card">
+                    <div class="solana-icon">⚡</div>
+                    <h3>Ultra-Fast Transactions</h3>
+                    <div class="solana-metric">
+                        <span class="metric-value">400ms</span>
+                        <span class="metric-label">Block Time</span>
+                    </div>
+                    <p>Near-instant transaction finality for seamless token transfers and trades</p>
+                </div>
+
+                <div class="solana-card">
+                    <div class="solana-icon">💰</div>
+                    <h3>Minimal Costs</h3>
+                    <div class="solana-metric">
+                        <span class="metric-value">$0.00025</span>
+                        <span class="metric-label">Avg. Fee</span>
+                    </div>
+                    <p>Negligible transaction costs enable micro-transactions and frequent trading</p>
+                </div>
+
+                <div class="solana-card">
+                    <div class="solana-icon">🔒</div>
+                    <h3>Battle-Tested Security</h3>
+                    <div class="solana-metric">
+                        <span class="metric-value">1,900+</span>
+                        <span class="metric-label">Validators</span>
+                    </div>
+                    <p>Proof-of-Stake consensus with high decentralization and security</p>
+                </div>
+
+                <div class="solana-card">
+                    <div class="solana-icon">🌐</div>
+                    <h3>Massive Scalability</h3>
+                    <div class="solana-metric">
+                        <span class="metric-value">65,000</span>
+                        <span class="metric-label">TPS</span>
+                    </div>
+                    <p>Handles institutional-grade transaction volumes without congestion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Contracts Roadmap -->
+    <section class="smart-contracts-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <div class="section-badge">🛠️ Development Roadmap</div>
+                <h2>SMART CONTRACT ARCHITECTURE</h2>
+                <p>Our phased approach to launching secure, audited smart contracts</p>
+            </div>
+
+            <div class="roadmap-timeline">
+                <!-- Phase 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge">Phase 1</div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>Token Contract Development</h3>
+                            <span class="timeline-status in-progress">In Progress</span>
+                        </div>
+                        <div class="timeline-period">Q1 2026</div>
+                        <ul class="timeline-features">
+                            <li>✓ SPL token standard implementation (Solana)</li>
+                            <li>✓ Multi-signature wallet integration</li>
+                            <li>🔄 Vesting and lock-up mechanisms</li>
+                            <li>🔄 Transfer restrictions for compliance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge">Phase 2</div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>Security Audit & Testing</h3>
+                            <span class="timeline-status scheduled">Scheduled</span>
+                        </div>
+                        <div class="timeline-period">Q2 2026</div>
+                        <ul class="timeline-features">
+                            <li>Third-party smart contract audit</li>
+                            <li>Penetration testing</li>
+                            <li>Bug bounty program launch</li>
+                            <li>Mainnet deployment preparation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge">Phase 3</div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>Token Launch & Distribution</h3>
+                            <span class="timeline-status scheduled">Q2 2026</span>
+                        </div>
+                        <div class="timeline-period">Q2 2026</div>
+                        <ul class="timeline-features">
+                            <li>Mainnet token deployment</li>
+                            <li>Series A & B token distribution</li>
+                            <li>Secondary market listings</li>
+                            <li>DEX liquidity pools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge">Phase 4</div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>Advanced Features</h3>
+                            <span class="timeline-status future">Q3-Q4 2026</span>
+                        </div>
+                        <div class="timeline-period">Q3-Q4 2026</div>
+                        <ul class="timeline-features">
+                            <li>Automated profit distribution</li>
+                            <li>Governance mechanisms</li>
+                            <li>Cross-chain bridge (multi-chain support)</li>
+                            <li>Staking and rewards programs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Framework -->
+    <section class="security-framework-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <div class="section-badge">🔐 Security First</div>
+                <h2>MULTI-LAYER SECURITY FRAMEWORK</h2>
+                <p>Protecting your investment with enterprise-grade security measures</p>
+            </div>
+
+            <div class="security-layers">
+                <!-- Layer 1: Blockchain -->
+                <div class="security-layer">
+                    <div class="layer-number">1</div>
+                    <div class="layer-content">
+                        <h3>Blockchain Layer</h3>
+                        <div class="layer-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">⛓️</span>
+                                <div>
+                                    <strong>Solana PoS Consensus</strong>
+                                    <p>1,900+ validators securing the network</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔍</span>
+                                <div>
+                                    <strong>Transparent Ledger</strong>
+                                    <p>All transactions publicly verifiable on-chain</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2: Smart Contracts -->
+                <div class="security-layer">
+                    <div class="layer-number">2</div>
+                    <div class="layer-content">
+                        <h3>Smart Contract Layer</h3>
+                        <div class="layer-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🛡️</span>
+                                <div>
+                                    <strong>Third-Party Audit</strong>
+                                    <p>Independent security audit before launch</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🐛</span>
+                                <div>
+                                    <strong>Bug Bounty Program</strong>
+                                    <p>Ongoing community security testing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 3: Custody -->
+                <div class="security-layer">
+                    <div class="layer-number">3</div>
+                    <div class="layer-content">
+                        <h3>Custody & Access Layer</h3>
+                        <div class="layer-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🔑</span>
+                                <div>
+                                    <strong>Multi-Signature Wallets</strong>
+                                    <p>Requires multiple approvals for large transactions</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🏦</span>
+                                <div>
+                                    <strong>Institutional Custody</strong>
+                                    <p>Regulated custody solution for token storage</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 4: Legal & Compliance -->
+                <div class="security-layer">
+                    <div class="layer-number">4</div>
+                    <div class="layer-content">
+                        <h3>Legal & Compliance Layer</h3>
+                        <div class="layer-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">📜</span>
+                                <div>
+                                    <strong>Regulatory Compliance</strong>
+                                    <p>Full compliance with securities regulations</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🏛️</span>
+                                <div>
+                                    <strong>Legal Framework</strong>
+                                    <p>Proper legal structure for real asset backing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Chain Future -->
+    <section class="multichain-section">
+        <div class="container">
+            <div class="multichain-content">
+                <div class="multichain-text">
+                    <div class="section-badge">🌐 Future-Proof</div>
+                    <h2>MULTI-CHAIN EXPANSION</h2>
+                    <p>While we're launching on Solana for its superior performance, our long-term vision includes multi-chain deployment to ensure maximum accessibility and liquidity.</p>
+                    
+                    <div class="multichain-plans">
+                        <div class="chain-item">
+                            <div class="chain-logo">
+                                <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="Solana" class="chain-logo-img" onerror="this.src='https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png'">
+                            </div>
+                            <div>
+                                <strong>Solana (Primary)</strong>
+                                <p>Live Q2 2026</p>
+                            </div>
+                        </div>
+                        <div class="chain-item future">
+                            <div class="chain-logo">
+                                <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="Ethereum" class="chain-logo-img" onerror="this.src='https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png'">
+                            </div>
+                            <div>
+                                <strong>Ethereum</strong>
+                                <p>Planned 2027</p>
+                            </div>
+                        </div>
+                        <div class="chain-item future">
+                            <div class="chain-logo">
+                                <img src="https://assets.coingecko.com/coins/images/17413/small/polymesh.PNG" alt="Polymesh" class="chain-logo-img" onerror="this.src='https://s2.coinmarketcap.com/static/img/coins/64x64/12018.png'">
+                            </div>
+                            <div>
+                                <strong>Polymesh</strong>
+                                <p>Planned 2027 - Regulated securities</p>
+                            </div>
+                        </div>
+                        <div class="chain-item future">
+                            <div class="chain-logo">
+                                <img src="https://cryptologos.cc/logos/bnb-bnb-logo.png" alt="BNB Chain" class="chain-logo-img" onerror="this.src='https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png'">
+                            </div>
+                            <div>
+                                <strong>BNB Chain (BSC)</strong>
+                                <p>Planned 2027 - DeFi integration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="multichain-visual">
+                    <div class="network-diagram">
+                        <!-- Animated SVG Connections -->
+                        <svg class="network-connections" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Connection Lines -->
+                            <line class="connection-line active" x1="200" y1="200" x2="200" y2="50" />
+                            <line class="connection-line" x1="200" y1="200" x2="200" y2="350" />
+                            <line class="connection-line" x1="200" y1="200" x2="50" y2="200" />
+                            <line class="connection-line" x1="200" y1="200" x2="350" y2="200" />
+                            
+                            <!-- Animated Particles traveling along lines -->
+                            <circle class="connection-particle active" r="4" cx="200" cy="200">
+                                <animateMotion dur="4s" repeatCount="indefinite" path="M 200,200 L 200,50" />
+                            </circle>
+                            <circle class="connection-particle" r="4" cx="200" cy="200">
+                                <animateMotion dur="4s" repeatCount="indefinite" begin="1s" path="M 200,200 L 200,350" />
+                            </circle>
+                            <circle class="connection-particle" r="4" cx="200" cy="200">
+                                <animateMotion dur="4s" repeatCount="indefinite" begin="2s" path="M 200,200 L 50,200" />
+                            </circle>
+                            <circle class="connection-particle" r="4" cx="200" cy="200">
+                                <animateMotion dur="4s" repeatCount="indefinite" begin="3s" path="M 200,200 L 350,200" />
+                            </circle>
+                        </svg>
+                        
+                        <div class="network-center">
+                            <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MAYA" class="network-logo">
+                            <span>MAYA TOKEN</span>
+                        </div>
+                        <div class="network-nodes">
+                            <div class="network-node active">
+                                <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="Solana" class="node-logo" onerror="this.src='https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png'">
+                                <span>SOLANA</span>
+                            </div>
+                            <div class="network-node">
+                                <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="Ethereum" class="node-logo" onerror="this.src='https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png'">
+                                <span>ETH</span>
+                            </div>
+                            <div class="network-node">
+                                <img src="https://assets.coingecko.com/coins/images/17413/small/polymesh.PNG" alt="Polymesh" class="node-logo" onerror="this.src='https://s2.coinmarketcap.com/static/img/coins/64x64/12018.png'">
+                                <span>POLYMESH</span>
+                            </div>
+                            <div class="network-node">
+                                <img src="https://cryptologos.cc/logos/bnb-bnb-logo.png" alt="BNB" class="node-logo" onerror="this.src='https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png'">
+                                <span>BSC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience the Future?</h2>
+                <p>Join the blockchain real estate revolution powered by Solana</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn-cta primary">Technical Questions?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <p>Tokenized trophy beachfront real estate in Isla Aguada, Campeche, Mexico.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="tokenomics.html">Tokenomics</a></li>
+                        <li><a href="gallery.html">Smart Resort Vision</a></li>
+                        <li><a href="connect-wallet.html">Connect Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="lhw-partnership.html">LHW Partnership</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#disclaimer">Risk Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#twitter" aria-label="Twitter">𝕏</a>
+                    <a href="#linkedin" aria-label="LinkedIn">in</a>
+                    <a href="#telegram" aria-label="Telegram">✈</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/wallet.js"></script>
+    <!-- UNIVERSAL MOBILE NAV - LOADS LAST TO OVERRIDE EVERYTHING -->
+    <script src="js/mobile-nav-universal.js"></script>
+    
+    <!-- Additional Mobile Nav Handler for Button Elements -->
+    <script>
+        // Extra handler specifically for button.nav-premium-link elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('button.nav-premium-link');
+            
+            navButtons.forEach(button => {
+                // Remove existing listeners by cloning
+                const newButton = button.cloneNode(true);
+                button.parentNode.replaceChild(newButton, button);
+                
+                newButton.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 968) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const parentItem = this.closest('.nav-premium-item');
+                        const dropdown = parentItem.querySelector('.nav-premium-dropdown');
+                        
+                        if (!dropdown) return;
+                        
+                        // Close other dropdowns
+                        document.querySelectorAll('.nav-premium-item').forEach(item => {
+                            if (item !== parentItem && item.classList.contains('dropdown-open')) {
+                                item.classList.remove('dropdown-open');
+                                const otherDropdown = item.querySelector('.nav-premium-dropdown');
+                                if (otherDropdown) {
+                                    otherDropdown.style.maxHeight = '0';
+                                    otherDropdown.style.padding = '0';
+                                    otherDropdown.style.opacity = '0';
+                                    otherDropdown.style.visibility = 'hidden';
+                                }
+                            }
+                        });
+                        
+                        // Toggle this dropdown
+                        const isOpen = parentItem.classList.contains('dropdown-open');
+                        
+                        if (isOpen) {
+                            parentItem.classList.remove('dropdown-open');
+                            dropdown.style.maxHeight = '0';
+                            dropdown.style.padding = '0';
+                            dropdown.style.opacity = '0';
+                            dropdown.style.visibility = 'hidden';
+                        } else {
+                            parentItem.classList.add('dropdown-open');
+                            dropdown.style.maxHeight = '2000px';
+                            dropdown.style.padding = '1rem';
+                            dropdown.style.opacity = '1';
+                            dropdown.style.visibility = 'visible';
+                        }
+                    }
+                });
+            });
+            
+            console.log('✅ Button dropdown handlers attached');
+        });
+    </script>
+
+    <!-- Wallet Modal Functions -->
+    <script>
+        function openWalletModal() {
+            const modal = document.getElementById('walletModal');
+            if (modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        function closeWalletModal() {
+            const modal = document.getElementById('walletModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Close modal when clicking outside
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('walletModal');
+            if (modal && e.target === modal) {
+                closeWalletModal();
+            }
+        });
+    </script>
+
+    <!-- Wallet Modal -->
+    <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>
+</body>
+</html>

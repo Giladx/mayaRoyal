@@ -1,0 +1,595 @@
+/* ========================================
+   GLOBAL LEADERSHIP IN REGENERATIVE LUXURY
+   Premium Fintech Design System
+   ======================================== */
+
+.regenerative-luxury-section {
+    padding: 8rem 0;
+    background: linear-gradient(180deg, #F8F9FA 0%, #FFFFFF 50%, #F8F9FA 100%);
+}
+
+/* Industry Inspirations Grid */
+.inspirations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 4rem 0;
+}
+
+.inspiration-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%);
+    padding: 3.5rem 3rem;
+    border-radius: 24px;
+    border: 3px solid #E5E7EB;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.inspiration-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(184, 134, 11, 0.2);
+    border-color: #B8860B;
+}
+
+.inspiration-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.inspiration-card h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 0.75rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Hotel Brand Logo Styling */
+.inspiration-logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0A0A0A;
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hotel Focus/Category */
+.inspiration-focus {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 1.25rem;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(184, 134, 11, 0.1);
+    border-radius: 50px;
+    border: 2px solid #B8860B;
+}
+
+.inspiration-attribute {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #B8860B;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.inspiration-description {
+    font-size: 1rem;
+    color: #4A4A4A;
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Legacy Quote Box */
+.legacy-quote-box {
+    position: relative;
+    padding: 4rem 5rem;
+    background: linear-gradient(135deg, rgba(184, 134, 11, 0.08) 0%, rgba(184, 134, 11, 0.03) 100%);
+    border-radius: 24px;
+    border-left: 6px solid #B8860B;
+    margin: 5rem 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote-icon {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 8rem;
+    color: rgba(184, 134, 11, 0.15);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.quote-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1A1A1A;
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-attribution {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #B8860B;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Competitive Comparison */
+.competitive-comparison {
+    margin: 6rem 0;
+    padding: 4rem 0;
+}
+
+.comparison-title {
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: #0A0A0A;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.comparison-subtitle {
+    font-size: 1.15rem;
+    color: #6A6A6A;
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comparison-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 300px;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 2px solid #E5E7EB;
+    transition: all 0.3s ease;
+}
+
+.comparison-row:hover {
+    border-color: #B8860B;
+    box-shadow: 0 4px 20px rgba(184, 134, 11, 0.1);
+}
+
+.dimension-label h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.bars-container {
+    flex: 1;
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bar {
+    position: relative;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.maya-bar {
+    background: linear-gradient(90deg, #B8860B 0%, #D4A017 100%);
+    box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+}
+
+.competitor-bar {
+    background: linear-gradient(90deg, #9CA3AF 0%, #D1D5DB 100%);
+    box-shadow: 0 2px 8px rgba(156, 163, 175, 0.2);
+}
+
+.bar-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.bar-score {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.dimension-advantage {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.advantage-badge {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.advantage-text strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 0.25rem;
+}
+
+.advantage-text p {
+    font-size: 0.9rem;
+    color: #6A6A6A;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Next Generation Leadership Box */
+.next-gen-leadership-box {
+    margin: 6rem 0;
+    padding: 4rem 3rem;
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+    border-radius: 24px;
+    border: 3px solid #B8860B;
+}
+
+.leadership-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(184, 134, 11, 0.3);
+}
+
+.leadership-icon {
+    font-size: 3.5rem;
+}
+
+.leadership-header h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #B8860B;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.leadership-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.leadership-column h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #00D4FF;
+    margin-bottom: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.leadership-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leadership-column ul li {
+    padding: 12px 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.leadership-column ul li:last-child {
+    border-bottom: none;
+}
+
+.leadership-column ul li strong {
+    color: #B8860B;
+    font-weight: 700;
+}
+
+.leadership-footer {
+    padding: 3rem;
+    background: rgba(184, 134, 11, 0.1);
+    border-radius: 16px;
+    border: 2px solid rgba(184, 134, 11, 0.3);
+}
+
+.leadership-footer p {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.leadership-footer strong {
+    color: #B8860B;
+    font-weight: 700;
+}
+
+/* Competitive Moat Section */
+.competitive-moat-section {
+    margin: 6rem 0;
+}
+
+/* Leadership Statement */
+.leadership-statement {
+    margin: 6rem 0;
+    padding: 4rem 3rem;
+    background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+    border-radius: 24px;
+    border: 3px solid #FCD34D;
+    box-shadow: 0 12px 48px rgba(30, 58, 138, 0.2);
+}
+
+.leadership-statement h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FCD34D;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.leadership-statement h3 i {
+    margin-right: 1rem;
+    color: #FCD34D;
+}
+
+.leadership-statement > p {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leadership-statement > p strong {
+    color: #FCD34D;
+    font-weight: 700;
+}
+
+.leadership-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.leadership-metric {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(252, 211, 77, 0.3);
+    transition: all 0.3s ease;
+}
+
+.leadership-metric:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #FCD34D;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(252, 211, 77, 0.2);
+}
+
+.leadership-metric .metric-value {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #FCD34D !important;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 0.75rem;
+    line-height: 1;
+    text-shadow: 0 2px 8px rgba(252, 211, 77, 0.3);
+}
+
+.leadership-metric .metric-label {
+    display: block;
+    font-size: 0.95rem;
+    color: #E5E7EB !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.moat-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #0A0A0A;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.moats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.moat-card {
+    background: #FFFFFF;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    border: 3px solid #E5E7EB;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.moat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #B8860B 0%, #D4A017 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.moat-card:hover {
+    border-color: #B8860B;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(184, 134, 11, 0.15);
+}
+
+.moat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.moat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(184, 134, 11, 0.2);
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.moat-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.moat-card p {
+    font-size: 0.9rem;
+    color: #6A6A6A;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.moat-strength {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(184, 134, 11, 0.1);
+    border: 1px solid #B8860B;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #B8860B;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .inspirations-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .comparison-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .dimension-advantage {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .leadership-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .moats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .regenerative-luxury-section {
+        padding: 4rem 0;
+    }
+    
+    .legacy-quote-box {
+        padding: 3rem 2rem;
+    }
+    
+    .quote-text {
+        font-size: 1.2rem;
+    }
+    
+    .comparison-title {
+        font-size: 2rem;
+    }
+    
+    .comparison-row {
+        padding: 1.5rem;
+    }
+    
+    .bar {
+        height: 40px;
+        padding: 0 1rem;
+    }
+    
+    .bar-score {
+        font-size: 1rem;
+    }
+    
+    .next-gen-leadership-box {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .leadership-header h3 {
+        font-size: 1.75rem;
+    }
+    
+    .moats-grid {
+        grid-template-columns: 1fr;
+    }
+}
