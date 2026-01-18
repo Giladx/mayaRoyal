@@ -42,21 +42,33 @@ async function handleFormSubmit(event) {
     
     // Show loading state
     const submitButton = form.querySelector('button[type="submit"]');
-    const originalText = submitButton.textContent;
-    submitButton.textContent = 'Sending...';
+    const buttonLabel = submitButton.querySelector('span') || submitButton;
+    const originalText = buttonLabel.textContent;
+    buttonLabel.textContent = 'Sending...';
     submitButton.disabled = true;
+    submitButton.setAttribute('aria-busy', 'true');
     
-    // Simulate form submission (in production, this would send to a backend API)
     try {
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Get form values for display
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const interest = formData.get('interest');
-        const message = formData.get('message');
-        
-        console.log('Form submitted:', { name, email, interest, message });
+        const endpoint = form.getAttribute('data-formsubmit-endpoint') || 'https://formsubmit.co/ajax/mayaroyale2022@gmail.com';
+        const payload = Object.fromEntries(formData.entries());
+        payload._replyto = formData.get('email');
+        payload.page = window.location.href;
+        payload.submittedAt = new Date().toISOString();
+
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+            throw new Error(result.message || 'Failed to send message.');
+        }
         
         // Show success message
         displaySuccessMessage(form);
@@ -70,8 +82,9 @@ async function handleFormSubmit(event) {
         console.error('Error submitting form:', error);
         showToast('Failed to send message. Please try again or contact us directly.', 'error');
     } finally {
-        submitButton.textContent = originalText;
+        buttonLabel.textContent = originalText;
         submitButton.disabled = false;
+        submitButton.removeAttribute('aria-busy');
     }
 }
 
