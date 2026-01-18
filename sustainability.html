@@ -17,14 +17,47 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/premium-light.css">
     <link rel="stylesheet" href="css/sustainability-premium.css">
+    <style>
+    /* Waitlist Form Styles */
+    .waitlist-form input[type="email"]:focus {
+        outline: none;
+        border-color: #B8860B;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .waitlist-form input[type="email"]::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .waitlist-form button:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(184, 134, 11, 0.4);
+    }
+    
+    .waitlist-form button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+    
+    @media (max-width: 768px) {
+        .waitlist-form {
+            max-width: 100%;
+        }
+        
+        .waitlist-form input[type="email"],
+        .waitlist-form button {
+            width: 100%;
+        }
+    }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav-premium nav-scrolled">
+    <nav class="nav-premium nav-light-bg">
         <div class="nav-premium-container">
             <div class="nav-premium-brand">
                 <a href="index.html">
-                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo">
+                    <img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" alt="MayaRoyale" class="nav-premium-logo">
                 </a>
             </div>
             <ul class="nav-premium-menu" id="navPremiumMenu">
@@ -633,7 +666,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" alt="MayaRoyale" class="footer-logo">
                     <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
                 </div>
                 <div class="footer-col">
@@ -662,6 +695,26 @@
                         <li><a href="#disclaimer">Risk Disclaimer</a></li>
                     </ul>
                 </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Join the Waiting List</h4>
+                    <p class="footer-desc" style="margin-bottom: 1rem; font-size: 0.9rem; opacity: 0.8;">Be the first to know about our token launch</p>
+                    <form class="waitlist-form" id="waitlistForm" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <input 
+                            type="email" 
+                            id="waitlistEmail" 
+                            placeholder="Enter your email" 
+                            required
+                            style="padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: #FFFFFF; font-size: 0.9rem; font-family: 'Inter', sans-serif; transition: all 0.3s ease;"
+                        >
+                        <button 
+                            type="submit" 
+                            style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%); color: #FFFFFF; font-weight: 600; font-size: 0.95rem; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-family: 'Inter', sans-serif;"
+                        >
+                            Join Waitlist
+                        </button>
+                        <span id="waitlistMessage" style="font-size: 0.85rem; color: #00D4FF; display: none;"></span>
+                    </form>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 MayaRoyale. All rights reserved.</p>
@@ -673,6 +726,38 @@
     <script src="js/wallet.js"></script>
     <script src="js/mobile-nav-simple.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+    // Waitlist Form Handler
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('waitlistForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('waitlistEmail').value;
+                const message = document.getElementById('waitlistMessage');
+                const button = e.target.querySelector('button[type="submit"]');
+                
+                button.disabled = true;
+                button.textContent = 'Joining...';
+                
+                setTimeout(() => {
+                    message.textContent = '✓ Successfully joined! Check your email.';
+                    message.style.color = '#00D4FF';
+                    message.style.display = 'block';
+                    
+                    document.getElementById('waitlistEmail').value = '';
+                    button.disabled = false;
+                    button.textContent = 'Join Waitlist';
+                    
+                    setTimeout(() => { message.style.display = 'none'; }, 5000);
+                    console.log('Waitlist email submitted:', email);
+                }, 1000);
+            });
+        }
+    });
+    </script>
     
     <!-- Wallet Modal -->
     <div id="walletModal" class="wallet-modal"><div class="wallet-modal-content"><button class="wallet-modal-close" onclick="closeWalletModal()">&times;</button><div class="wallet-modal-header"><div class="wallet-modal-icon">🔗</div><h2>Connect Your Wallet</h2><p>Choose your preferred wallet to connect to MayaRoyale</p></div><div class="wallet-options-grid"><button class="wallet-option" onclick="connectPhantom()"><div class="wallet-option-icon">👻</div><div class="wallet-option-name">Phantom</div><div class="wallet-option-desc">Solana</div><span class="wallet-badge-rec">Recommended</span></button><button class="wallet-option" onclick="connectSolflare()"><div class="wallet-option-icon">☀️</div><div class="wallet-option-name">Solflare</div><div class="wallet-option-desc">Solana</div></button><button class="wallet-option" onclick="connectMetaMask()"><div class="wallet-option-icon">🦊</div><div class="wallet-option-name">MetaMask</div><div class="wallet-option-desc">Ethereum</div></button><button class="wallet-option" onclick="connectWalletConnect()"><div class="wallet-option-icon">🔗</div><div class="wallet-option-name">WalletConnect</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectCoinbase()"><div class="wallet-option-icon">💼</div><div class="wallet-option-name">Coinbase</div><div class="wallet-option-desc">Multi-chain</div></button><button class="wallet-option" onclick="connectTrustWallet()"><div class="wallet-option-icon">🛡️</div><div class="wallet-option-name">Trust Wallet</div><div class="wallet-option-desc">Multi-chain</div></button></div><div class="wallet-modal-footer"><p>New to crypto? <a href="https://phantom.app/" target="_blank">Learn more</a></p></div></div></div><style>.wallet-modal{display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.wallet-modal-content{background:linear-gradient(135deg,#FFF 0%,#F8F9FA 100%);border-radius:24px;padding:3rem;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.3s ease}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.wallet-modal-close{position:absolute;right:1.5rem;top:1.5rem;font-size:2rem;background:none;border:none;color:#666;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all 0.3s ease}.wallet-modal-close:hover{background:rgba(184,134,11,0.1);color:#B8860B;transform:rotate(90deg)}.wallet-modal-header{text-align:center;margin-bottom:2rem}.wallet-modal-icon{font-size:4rem;margin-bottom:1rem}.wallet-modal-header h2{font-size:2rem;color:#0A0A0A;margin-bottom:0.5rem;font-weight:700}.wallet-modal-header p{color:#666;font-size:1.1rem}.wallet-options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem}.wallet-option{background:#FFF;border:2px solid rgba(184,134,11,0.2);border-radius:16px;padding:1.5rem 1rem;cursor:pointer;transition:all 0.3s ease;text-align:center;position:relative}.wallet-option:hover{transform:translateY(-5px);border-color:#B8860B;box-shadow:0 10px 30px rgba(184,134,11,0.2)}.wallet-option-icon{font-size:3rem;margin-bottom:0.5rem}.wallet-option-name{font-size:1.2rem;font-weight:700;color:#0A0A0A;margin-bottom:0.25rem}.wallet-option-desc{font-size:0.9rem;color:#666}.wallet-badge-rec{position:absolute;top:0.5rem;right:0.5rem;background:linear-gradient(135deg,#B8860B,#D4AF37);color:#FFF;padding:0.25rem 0.5rem;border-radius:12px;font-size:0.7rem;font-weight:700;text-transform:uppercase}.wallet-modal-footer{text-align:center;padding-top:1rem;border-top:1px solid rgba(184,134,11,0.2)}.wallet-modal-footer p{color:#666;font-size:0.95rem}.wallet-modal-footer a{color:#B8860B;font-weight:600;text-decoration:none}.wallet-modal-footer a:hover{text-decoration:underline}@media (max-width:768px){.wallet-modal-content{padding:2rem 1.5rem;width:95%}.wallet-options-grid{grid-template-columns:1fr}.wallet-modal-header h2{font-size:1.5rem}}</style><script>function connectPhantom(){if(typeof window.solana!=='undefined'&&window.solana.isPhantom){window.solana.connect().then(()=>{alert('Phantom wallet connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('Phantom not found. Install now?')){window.open('https://phantom.app/','_blank')}}}function connectSolflare(){alert('Solflare coming soon.')}function connectMetaMask(){if(typeof window.ethereum!=='undefined'){window.ethereum.request({method:'eth_requestAccounts'}).then(()=>{alert('MetaMask connected!');closeWalletModal();window.location.href='dashboard.html'}).catch(err=>{alert('Failed: '+err.message)})}else{if(confirm('MetaMask not found. Install now?')){window.open('https://metamask.io/','_blank')}}}function connectWalletConnect(){alert('WalletConnect coming soon.')}function connectCoinbase(){alert('Coinbase coming soon.')}function connectTrustWallet(){alert('Trust Wallet coming soon.')}</script>

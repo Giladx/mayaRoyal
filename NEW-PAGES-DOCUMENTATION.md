@@ -111,7 +111,7 @@
 ## 🌴 Core Concept: Tropical Wood Thalassotherapy
 
 ### Hero Image
-**Source:** `https://www.genspark.ai/api/files/s/qvNE9bHt`  
+**Source:** `https://www.genspark.ai/api/files/s/Kq9aKKKc`  
 **Description:** Stunning wooden spa sanctuary with steaming mineral pool, glass walls opening to jungle, natural stone accents
 
 ### Three Key Features

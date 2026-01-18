@@ -14,7 +14,7 @@
 
 **Logo URL Update**:
 - ❌ Old: `https://www.genspark.ai/api/files/s/CLWTmhof`
-- ✅ New: `https://www.genspark.ai/api/files/s/gPGTg8CG`
+- ✅ New: `https://www.genspark.ai/api/files/s/n8E8Zqjs`
 
 **Result**: All pages now display the correct Maya sun logo (not gold text).
 

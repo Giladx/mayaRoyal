@@ -5,7 +5,7 @@
 ### Added
 - **Floating Resort Logo Watermark**: Stunning creative placement as an animated floating watermark behind hero content
   - **Location**: Centered in hero section as a subtle, elegant watermark
-  - **Image URL**: https://www.genspark.ai/api/files/s/gPGTg8CG
+  - **Image URL**: https://www.genspark.ai/api/files/s/n8E8Zqjs
   - **Design Approach**: Floating ethereal background element that adds brand presence without overwhelming content
   
 ### Creative Design Features
@@ -58,7 +58,7 @@
 <!-- Floating above all content -->
 <div class="floating-resort-logo">
     <div class="logo-glow-container">
-        <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" 
+        <img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" 
              alt="MayaRoyale Resort">
     </div>
 </div>
@@ -508,8 +508,8 @@ css/blockchain-design.css (11,015 characters)
 
 ### Changed
 - **Sustainable Architecture Image**: Enhanced from blurry to crystal-clear high resolution
-  - Old Image: https://www.genspark.ai/api/files/s/EHcRs2F5 (blurry, low resolution)
-  - **New Image**: https://www.genspark.ai/api/files/s/zaBwzua9 (sharp, 2K resolution)
+  - Old Image: https://www.genspark.ai/api/files/s/LJNoexqW (blurry, low resolution)
+  - **New Image**: https://www.genspark.ai/api/files/s/pdZRAmBG (sharp, 2K resolution)
   - Title: "Sustainable Architecture" (unchanged)
   - Description: "Organic design inspired by nature" (unchanged)
   - Category: Property, Renderings
@@ -530,8 +530,8 @@ css/blockchain-design.css (11,015 characters)
 
 ### Changed
 - **Mas'Tul Beach Club & Restaurant**: Replaced with ultra-luxury architectural dining experience
-  - Old Image: https://www.genspark.ai/api/files/s/hnCckpT4
-  - **New Image**: https://www.genspark.ai/api/files/s/Bw6P9HxR
+  - Old Image: https://www.genspark.ai/api/files/s/lTosW7lc
+  - **New Image**: https://www.genspark.ai/api/files/s/2txv8lUt
   - Old Title: "Beachfront Restaurant"
   - **New Title**: "Mas'Tul Beach Club & Restaurant"
   - Old Description: "Open-air tropical dining experience"
@@ -594,8 +594,8 @@ Inspired by world-class establishments like:
 
 ### Changed
 - **Luxury Pool & Lounge**: Replaced with stunning Tulum-style tropical pool image
-  - Old Image: https://www.genspark.ai/api/files/s/skBm184T
-  - **New Image**: https://www.genspark.ai/api/files/s/XE7atADN
+  - Old Image: https://www.genspark.ai/api/files/s/aFn0ZCQO
+  - **New Image**: https://www.genspark.ai/api/files/s/pDbbIEht
   - Old Title: "Luxury Lounge & Pool Area"
   - **New Title**: "Tropical Pool & Lounge Oasis"
   - Old Description: "Fire pit seating with ocean views"
@@ -642,8 +642,8 @@ Inspired by world-class establishments like:
 
 ### Changed
 - **Shawn Jamil Photo**: Updated with refined professional photo
-  - Old Photo: https://www.genspark.ai/api/files/s/pigSVrNU
-  - **New Photo**: https://www.genspark.ai/api/files/s/HrOYHCYG
+  - Old Photo: https://www.genspark.ai/api/files/s/qE81k9Sn
+  - **New Photo**: https://www.genspark.ai/api/files/s/70cU7nku
   - Features: Professional headshot with overwater bungalows and vibrant turquoise lagoon
   - Style: Business formal (black suit, white shirt)
   - Background: Multiple overwater villas with crystal turquoise water
@@ -668,8 +668,8 @@ Inspired by world-class establishments like:
 
 ### Changed
 - **Shawn Jamil Photo**: Updated with new professional photo
-  - Old Photo: https://www.genspark.ai/api/files/s/L1dFC2IZ
-  - **New Photo**: https://www.genspark.ai/api/files/s/pigSVrNU
+  - Old Photo: https://www.genspark.ai/api/files/s/JQPqlPQl
+  - **New Photo**: https://www.genspark.ai/api/files/s/qE81k9Sn
   - Features: Professional headshot with overwater bungalows and turquoise lagoon background
   - Style: Business formal (black suit, white shirt, open collar)
   - Background: Luxury tropical resort with thatched-roof overwater villas
@@ -694,7 +694,7 @@ Inspired by world-class establishments like:
 
 ### Added
 - **Beachfront Horseback Riding**: AI-generated luxury beach equestrian experience
-  - URL: https://www.genspark.ai/api/files/s/5KxR6aBf
+  - URL: https://www.genspark.ai/api/files/s/yQcJDVBp
   - Title: "Beachfront Horseback Riding"
   - Description: "Scenic rides along pristine white sand beaches with turquoise waters"
   - Category: Amenities
@@ -747,7 +747,7 @@ MayaRoyale now showcases three signature adventure experiences:
 
 ### Added
 - **Grand Lobby & Reception**: Stunning luxury resort entrance image
-  - URL: https://www.genspark.ai/api/files/s/vrhlicXB
+  - URL: https://www.genspark.ai/api/files/s/ys7JTZ65
   - Title: "Grand Lobby & Reception"
   - Description: "Tropical elegance with soaring ceilings and ocean views"
   - Category: Amenities, Renderings
@@ -899,7 +899,7 @@ Gallery now exclusively showcases:
 
 ### Remaining Blockchain Image
 **Blockchain Innovation**
-  - URL: https://www.genspark.ai/api/files/s/ayKG7BJ2
+  - URL: https://www.genspark.ai/api/files/s/lnjhhmRT
   - Title: "Blockchain Innovation"
   - Description: "Decentralized network powering transparent real estate ownership"
   - Features: Glowing turquoise/blue nodes, 3D network grid, holographic data visualization
@@ -940,21 +940,21 @@ Gallery now exclusively showcases:
 - **3 Futuristic Blockchain/Crypto Images**: Modern tech aesthetic for MayaRoyale
   
 **Image 1: Blockchain Innovation**
-  - URL: https://www.genspark.ai/api/files/s/ayKG7BJ2
+  - URL: https://www.genspark.ai/api/files/s/lnjhhmRT
   - Title: "Blockchain Innovation"
   - Description: "Decentralized network powering transparent real estate ownership"
   - Features: Glowing turquoise/blue nodes, 3D network grid, holographic data visualization
   - Style: Abstract digital network with light trails and geometric patterns
 
 **Image 2: Digital Asset Tokenization**
-  - URL: https://www.genspark.ai/api/files/s/3QDbMMsa
+  - URL: https://www.genspark.ai/api/files/s/f30ETmsp
   - Title: "Digital Asset Tokenization"
   - Description: "MAYA tokens backed by $100M+ trophy beachfront real estate"
   - Features: Golden MAYA token with holographic glow, luxury property connection
   - Style: Real estate + blockchain fusion with futuristic HUD elements
 
 **Image 3: Investment Analytics**
-  - URL: https://www.genspark.ai/api/files/s/Epup2jBv
+  - URL: https://www.genspark.ai/api/files/s/qILhcE3E
   - Title: "Investment Analytics"
   - Description: "Real-time blockchain tracking and portfolio management"
   - Features: Crypto dashboard, glowing charts, market data displays
@@ -1008,8 +1008,8 @@ Gallery now exclusively showcases:
 
 ### Changed
 - **Shawn Jamil Photo**: Replaced with new professional headshot
-  - Old Photo: https://www.genspark.ai/api/files/s/gaeThPfw
-  - **New Photo**: https://www.genspark.ai/api/files/s/L1dFC2IZ
+  - Old Photo: https://www.genspark.ai/api/files/s/emoMcoxQ
+  - **New Photo**: https://www.genspark.ai/api/files/s/JQPqlPQl
   - Features: Professional headshot with tropical resort background (overwater bungalows, turquoise water)
   - Style: Business professional (black suit, white shirt)
   - Background: Luxury tropical paradise setting aligns with MayaRoyale brand
@@ -1139,7 +1139,7 @@ Gallery now exclusively showcases:
 
 ### Added
 - **ATV Jungle Adventures**: New professional image showcasing adventure tours
-  - Image URL: https://www.genspark.ai/api/files/s/Y8msdOqS
+  - Image URL: https://www.genspark.ai/api/files/s/zsiPdjka
   - Generated: AI-created luxury resort marketing image
   - Title: "ATV Jungle Adventures"
   - Description: "Expert-guided off-road expeditions through pristine rainforest trails"
@@ -1184,8 +1184,8 @@ Gallery now exclusively showcases:
 
 ### Changed
 - **Expert Experience Image**: Replaced with higher quality professional photo
-  - Old Image: https://www.genspark.ai/api/files/s/6v4xlF2n
-  - **New Image**: https://www.genspark.ai/api/files/s/eZXVObm7 ✅
+  - Old Image: https://www.genspark.ai/api/files/s/WqK1AevD
+  - **New Image**: https://www.genspark.ai/api/files/s/m1p9e4YP ✅
   - Old Title: "Expert-Led Safaris"
   - **New Title**: "Expert Experience"
   - Old Description: "Rainforest expeditions with binoculars and deep wildlife insights"
@@ -1212,7 +1212,7 @@ Gallery now exclusively showcases:
 
 ### Added
 - **Expert-Led Rainforest Safari**: New gallery image showcasing adventure experiences
-  - Image URL: https://www.genspark.ai/api/files/s/6v4xlF2n
+  - Image URL: https://www.genspark.ai/api/files/s/WqK1AevD
   - Title: "Expert-Led Safaris"
   - Description: "Rainforest expeditions with binoculars and deep wildlife insights"
   - Category: Amenities
@@ -1245,7 +1245,7 @@ Gallery now exclusively showcases:
 
 ### Changed
 - **Video 1**: Updated mouseover text to reflect biophilic luxury accommodations
-  - Video URL: https://www.genspark.ai/api/files/s/8twIIhY2
+  - Video URL: https://www.genspark.ai/api/files/s/A0FB3Gmm
   - Old Title: "Property Video Tour"
   - Old Description: "Explore the beachfront location"
   - **New Title**: "200 Keys"
@@ -1273,7 +1273,7 @@ Gallery now exclusively showcases:
 
 ### Changed
 - **Video 2**: Updated mouseover text to reflect Monaco-style casino amenity
-  - Video URL: https://www.genspark.ai/api/files/s/838EaFKG
+  - Video URL: https://www.genspark.ai/api/files/s/6SxPQSj9
   - Old Title: "Pristine Beach Views"
   - Old Description: "Crystal clear Caribbean waters"
   - **New Title**: "Monaco Style Casino"
@@ -1301,7 +1301,7 @@ Gallery now exclusively showcases:
 
 ### Changed
 - **Video 4**: Updated mouseover text to reflect resort experience pillars
-  - Video URL: https://www.genspark.ai/api/files/s/r0PcDsu4
+  - Video URL: https://www.genspark.ai/api/files/s/GjDPRDlR
   - Old Title: "Coastal Paradise"
   - Old Description: "Natural beauty of Isla Aguada"
   - **New Title**: "Experiential Pillars"
@@ -1329,7 +1329,7 @@ Gallery now exclusively showcases:
 
 ### Changed
 - **Video 5**: Updated mouseover text to reflect culinary and wellness dining
-  - Video URL: https://www.genspark.ai/api/files/s/owcspZh1
+  - Video URL: https://www.genspark.ai/api/files/s/tKzOkZl0
   - Old Title: "Development Site"
   - Old Description: "Trophy beachfront property"
   - **New Title**: "Gastronomy & Culture"
@@ -1357,7 +1357,7 @@ Gallery now exclusively showcases:
 
 ### Changed
 - **Video 6**: Updated mouseover text to reflect thermal circuit wellness amenity
-  - Video URL: https://www.genspark.ai/api/files/s/wXLdVQwR
+  - Video URL: https://www.genspark.ai/api/files/s/2iy847uA
   - Old Title: "Beach Walkthrough"
   - Old Description: "Experience the pristine coastline"
   - **New Title**: "Beyond Leisure"
@@ -1385,8 +1385,8 @@ Gallery now exclusively showcases:
 
 ### Fixed
 - **Turtle Video**: Replaced with correct video file
-  - Old Video URL: https://www.genspark.ai/api/files/s/MSW7BjE7 (wrong video)
-  - **New Video URL**: https://www.genspark.ai/api/files/s/onvt1f6j ✅ (correct turtle video)
+  - Old Video URL: https://www.genspark.ai/api/files/s/4wUvbP8M (wrong video)
+  - **New Video URL**: https://www.genspark.ai/api/files/s/j1oacUn1 ✅ (correct turtle video)
   - File: VID-20251225-WA0025.mp4
   - Title: "Tourist Turtle Hospital / Sanctuary"
   - Description: "Conservation and protection of endangered sea turtles at the resort"
@@ -1413,7 +1413,7 @@ Gallery now exclusively showcases:
 ### Changed
 - **Gallery Image**: Updated "Rare Physical Advantages" infographic
   - Old URL: https://www.genspark.ai/api/files/s/v6WH5DCR
-  - New URL: https://www.genspark.ai/api/files/s/lhH2yb6m
+  - New URL: https://www.genspark.ai/api/files/s/PBxcXzHU
   - Image shows: Natural Elevation, Hurricane-Free Zone, Sargassum-Free, Zero Erosion, Site Cross-Section Analysis
   - Categories: Location, Property
   - Description: "Unique geographic and strategic benefits of Isla Aguada"
@@ -1428,7 +1428,7 @@ Gallery now exclusively showcases:
 
 ### Added
 - **Resources Section**: Re-added "LHW Letter of Interest" download link to footer
-  - URL: https://www.genspark.ai/api/files/s/WGMxJnV5
+  - URL: https://www.genspark.ai/api/files/s/bJxnOBMi
   - Appears alongside Token Investor Deck and Pitch Deck
   - Consistent styling with other resource links
   - Download attribute for direct file download
@@ -1476,7 +1476,7 @@ Gallery now exclusively showcases:
   
 ### Added
 - **Resources Section**: Re-added "LHW Letter of Interest" download link
-  - URL: https://www.genspark.ai/api/files/s/WGMxJnV5
+  - URL: https://www.genspark.ai/api/files/s/bJxnOBMi
   - Appears alongside Token Investor Deck and Pitch Deck
   - Consistent styling with other resource links
 
@@ -1524,7 +1524,7 @@ Gallery now exclusively showcases:
 - **Footer LHW Logo**: Updated to navy background version with white text
   - Previous: White background logo with invert filter
   - Current: Navy background (#0a1628) with white text (no filter needed)
-  - Logo URL: https://www.genspark.ai/api/files/s/tNK6zuCh
+  - Logo URL: https://www.genspark.ai/api/files/s/aP2wQlmA
   - Design: 'LHW' + 'THE LEADING HOTELS OF THE WORLD®' in white on navy
   - Simpler CSS: removed `filter: invert(1)` and `background-color`
 
@@ -1551,7 +1551,7 @@ Gallery now exclusively showcases:
 
 ### Changed
 - **Contact Page Strategic Partnership Logo**: Updated sidebar logo to navy background version
-  - Logo URL: https://www.genspark.ai/api/files/s/tNK6zuCh
+  - Logo URL: https://www.genspark.ai/api/files/s/aP2wQlmA
   - Size: max-width 200px, width 100%
   - Now matches footer logo across all pages
 
@@ -1566,7 +1566,7 @@ Gallery now exclusively showcases:
 - **Footer LHW Logo**: Updated to transparent background version
   - Previous: Light background logo with invert filter
   - Current: Transparent background, white text on navy
-  - Logo URL: https://www.genspark.ai/api/files/s/tNK6zuCh
+  - Logo URL: https://www.genspark.ai/api/files/s/aP2wQlmA
   - Removed CSS: `filter: invert(1)` and `background-color: var(--color-navy)`
   - Cleaner implementation, blends perfectly with footer
 
@@ -1643,7 +1643,7 @@ Gallery now exclusively showcases:
 
 ### Changed
 - **Footer Logo**: Replaced "Leading Hotels of the World" text link with logo image
-  - Logo URL: https://www.genspark.ai/api/files/s/m68tb2Mn
+  - Logo URL: https://www.genspark.ai/api/files/s/GAf6NR76
   - Position: Under "Isla Aguada, Campeche, Mexico" in footer
   - Specs: max-width 180px, opacity 0.9, hover opacity 1.0, transition 0.3s
   - Hover effect: scale 1.05x
@@ -1687,7 +1687,7 @@ Gallery now exclusively showcases:
     6. Quality Assurance Partnership
   - Embedded PDF Letter of Interest:
     - Document viewer with download/view buttons
-    - PDF URL: https://www.genspark.ai/api/files/s/WGMxJnV5
+    - PDF URL: https://www.genspark.ai/api/files/s/bJxnOBMi
   - Key LOI Highlights (4 cards):
     - Mutual interest in partnership
     - Strategic location in Yucatan, Mexico
@@ -1797,14 +1797,14 @@ Gallery now exclusively showcases:
 
 ### Added
 - **8 Video Gallery Items** to Gallery page:
-  1. **Property Video Tour** - https://www.genspark.ai/api/files/s/8twIIhY2
-  2. **Pristine Beach Views** - https://www.genspark.ai/api/files/s/838EaFKG
-  3. **Aerial Property View** - https://www.genspark.ai/api/files/s/R2L7eYYm
-  4. **Coastal Paradise** - https://www.genspark.ai/api/files/s/r0PcDsu4
-  5. **Development Site** - https://www.genspark.ai/api/files/s/owcspZh1
-  6. **Beach Walkthrough** - https://www.genspark.ai/api/files/s/wXLdVQwR
-  7. **Natural Environment** - https://www.genspark.ai/api/files/s/MSW7BjE7
-  8. **Golden Hour Views** - https://www.genspark.ai/api/files/s/M62cTa2J
+  1. **Property Video Tour** - https://www.genspark.ai/api/files/s/A0FB3Gmm
+  2. **Pristine Beach Views** - https://www.genspark.ai/api/files/s/6SxPQSj9
+  3. **Aerial Property View** - https://www.genspark.ai/api/files/s/ezzgMwAN
+  4. **Coastal Paradise** - https://www.genspark.ai/api/files/s/GjDPRDlR
+  5. **Development Site** - https://www.genspark.ai/api/files/s/tKzOkZl0
+  6. **Beach Walkthrough** - https://www.genspark.ai/api/files/s/2iy847uA
+  7. **Natural Environment** - https://www.genspark.ai/api/files/s/4wUvbP8M
+  8. **Golden Hour Views** - https://www.genspark.ai/api/files/s/UC5gXg5N
 
 ### Changed
 - **Gallery CSS**: Enhanced video styling
@@ -1831,12 +1831,12 @@ Gallery now exclusively showcases:
 
 ### Added
 - **Gallery Assets**:
-  - Luxury Lounge & Pool Area (https://www.genspark.ai/api/files/s/skBm184T)
-  - Beachfront Restaurant (https://www.genspark.ai/api/files/s/hnCckpT4)
-  - Natural Rock Pools (https://www.genspark.ai/api/files/s/AWDP1df9)
-  - Sustainable Architecture (https://www.genspark.ai/api/files/s/EHcRs2F5)
-  - Healing & Wellness Center (https://www.genspark.ai/api/files/s/BH3NP8oj)
-  - Property Video Tour (https://www.genspark.ai/api/files/s/8twIIhY2)
+  - Luxury Lounge & Pool Area (https://www.genspark.ai/api/files/s/aFn0ZCQO)
+  - Beachfront Restaurant (https://www.genspark.ai/api/files/s/lTosW7lc)
+  - Natural Rock Pools (https://www.genspark.ai/api/files/s/ijYq0mzE)
+  - Sustainable Architecture (https://www.genspark.ai/api/files/s/LJNoexqW)
+  - Healing & Wellness Center (https://www.genspark.ai/api/files/s/7zuN5cMl)
+  - Property Video Tour (https://www.genspark.ai/api/files/s/A0FB3Gmm)
 
 ### Features
 - Gallery overlay with titles and descriptions
@@ -1905,17 +1905,17 @@ Gallery now exclusively showcases:
 
 ### Added
 - **Joseph Tal Photo**: Founder photo updated
-  - URL: https://www.genspark.ai/api/files/s/lz67YgwW
+  - URL: https://www.genspark.ai/api/files/s/bVGKUn6y
   - Featured card styling with gold border
   - Comprehensive bio and credentials
 
 - **Team Member Photos**: 6 additional team members
-  1. Seth Rosenberg (CEO) - https://www.genspark.ai/api/files/s/eOxZZ4ff
-  2. John Sears (Senior Lead Developer) - https://www.genspark.ai/api/files/s/0eAICT35
-  3. Jason Harris (Project Supporter) - https://www.genspark.ai/api/files/s/Ni8ea6lu
-  4. Shawn Jamil (Co-Founder/Developer) - https://www.genspark.ai/api/files/s/gaeThPfw
-  5. Ben Tal (Junior Dev. Associate) - https://www.genspark.ai/api/files/s/hkt6awce
-  6. Damu Winston (Investor & Advisor) - https://www.genspark.ai/api/files/s/bLNHzNzR
+  1. Seth Rosenberg (CEO) - https://www.genspark.ai/api/files/s/s3YUkbVR
+  2. John Sears (Senior Lead Developer) - https://www.genspark.ai/api/files/s/EBG5JEXb
+  3. Jason Harris (Project Supporter) - https://www.genspark.ai/api/files/s/l82vcbEJ
+  4. Shawn Jamil (Co-Founder/Developer) - https://www.genspark.ai/api/files/s/emoMcoxQ
+  5. Ben Tal (Junior Dev. Associate) - https://www.genspark.ai/api/files/s/Pm2CtsT5
+  6. Damu Winston (Investor & Advisor) - https://www.genspark.ai/api/files/s/woV5KlM8
 
 ### Design
 - Circular team photos (140px × 140px)

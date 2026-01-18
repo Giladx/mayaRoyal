@@ -47,7 +47,7 @@ Updated image URL to the correct photo with office background
 ### Change Made:
 ```html
 <!-- Before -->
-<img src="https://www.genspark.ai/api/files/s/NGg1FmpM" alt="Josef Tal">
+<img src="https://www.genspark.ai/api/files/s/baN9P5fp" alt="Josef Tal">
 
 <!-- After -->
 <img src="https://www.genspark.ai/agents?id=749b4b28-43a5-48ac-ac95-9bbb20971815" alt="Josef Tal">

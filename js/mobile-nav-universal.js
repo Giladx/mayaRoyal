@@ -124,6 +124,23 @@
                         dropdown.style.transition = 'all 0.3s ease';
                         dropdown.style.padding = '0';
                         dropdown.style.gridTemplateColumns = '1fr';
+                    } else {
+                        // DESKTOP - Remove all inline styles so CSS :hover works
+                        dropdown.style.position = '';
+                        dropdown.style.minWidth = '';
+                        dropdown.style.width = '';
+                        dropdown.style.background = '';
+                        dropdown.style.borderRadius = '';
+                        dropdown.style.marginTop = '';
+                        dropdown.style.display = '';
+                        dropdown.style.maxHeight = '';
+                        dropdown.style.overflow = '';
+                        dropdown.style.opacity = '';
+                        dropdown.style.visibility = '';
+                        dropdown.style.transform = '';
+                        dropdown.style.transition = '';
+                        dropdown.style.padding = '';
+                        dropdown.style.gridTemplateColumns = '';
                     }
                 }
                 

@@ -68,7 +68,7 @@ I have performed a thorough quality control check on the MayaRoyale website and 
 
 1. **Logo URL Inconsistency**: 
    - 19 pages still use old URL: `https://www.genspark.ai/api/files/s/CLWTmhof`
-   - Need to update to: `https://www.genspark.ai/api/files/s/gPGTg8CG`
+   - Need to update to: `https://www.genspark.ai/api/files/s/n8E8Zqjs`
 
 2. **Minified Navigation** (3 pages):
    - gallery.html, wellness-differentiation.html, future-vision.html
@@ -133,7 +133,7 @@ Run `fix-all-navigation.py` to automatically update all 19 pages.
 ### Option C: Manual Editing
 Open each HTML file in a text editor and:
 1. Find: `https://www.genspark.ai/api/files/s/CLWTmhof`
-2. Replace All with: `https://www.genspark.ai/api/files/s/gPGTg8CG`
+2. Replace All with: `https://www.genspark.ai/api/files/s/n8E8Zqjs`
 3. For minified pages (gallery, wellness-differentiation, future-vision), copy master template
 
 **Advantages**:

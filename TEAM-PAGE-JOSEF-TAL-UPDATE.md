@@ -17,7 +17,7 @@
 - Updated photo to new image with office background
 
 ### 3. **Updated Josef Tal Information**
-- **New Photo**: `https://www.genspark.ai/api/files/s/NGg1FmpM` (professional headshot with office background)
+- **New Photo**: `https://www.genspark.ai/api/files/s/baN9P5fp` (professional headshot with office background)
 - **New Title**: Executive Director
 - **Updated Bio**: Condensed to match other team members' bio length
 
@@ -43,7 +43,7 @@ The Leadership Council now appears in this order:
 <!-- Josef Tal -->
 <div class="team-card">
     <div class="team-member-photo">
-        <img src="https://www.genspark.ai/api/files/s/NGg1FmpM" alt="Josef Tal">
+        <img src="https://www.genspark.ai/api/files/s/baN9P5fp" alt="Josef Tal">
     </div>
     <div class="team-member-info">
         <h3>Josef Tal</h3>
@@ -99,11 +99,11 @@ The Leadership Council now appears in this order:
 ## 📸 IMAGE UPDATE
 
 ### Old Image:
-- **URL**: `https://www.genspark.ai/api/files/s/snEkKS57`
+- **URL**: `https://www.genspark.ai/api/files/s/Ynp9Hp6M`
 - **Style**: Different background/lighting
 
 ### New Image:
-- **URL**: `https://www.genspark.ai/api/files/s/NGg1FmpM`
+- **URL**: `https://www.genspark.ai/api/files/s/baN9P5fp`
 - **Style**: Professional headshot with office background (matches team aesthetic)
 - **Consistency**: Same office background as other team members
 
@@ -253,19 +253,19 @@ Josef Tal's card now:
 ## 🔗 IMAGE REFERENCES
 
 ### New Josef Tal Photo:
-- **URL**: `https://www.genspark.ai/api/files/s/NGg1FmpM`
+- **URL**: `https://www.genspark.ai/api/files/s/baN9P5fp`
 - **Alt Text**: "Josef Tal"
 - **Background**: Professional office setting
 - **Consistency**: Matches team aesthetic
 
 ### All Team Photos:
-1. Damu Winston: `https://www.genspark.ai/api/files/s/qh1vhGHo`
-2. **Josef Tal**: `https://www.genspark.ai/api/files/s/NGg1FmpM` ← Updated
-3. Seth Rosenberg: `https://www.genspark.ai/api/files/s/5sSyFWp6`
-4. Jason Harris: `https://www.genspark.ai/api/files/s/OSE5sHdP`
-5. John Sears: `https://www.genspark.ai/api/files/s/HwlkKQIx`
-6. Shawn Jamil: `https://www.genspark.ai/api/files/s/l8w2IlqK`
-7. Ben Tal: `https://www.genspark.ai/api/files/s/jCLrQ7pc`
+1. Damu Winston: `https://www.genspark.ai/api/files/s/F8XWZcEA`
+2. **Josef Tal**: `https://www.genspark.ai/api/files/s/baN9P5fp` ← Updated
+3. Seth Rosenberg: `https://www.genspark.ai/api/files/s/HNGJnBXA`
+4. Jason Harris: `https://www.genspark.ai/api/files/s/STeJZVwn`
+5. John Sears: `https://www.genspark.ai/api/files/s/TLElFBO6`
+6. Shawn Jamil: `https://www.genspark.ai/api/files/s/zpzyBgV8`
+7. Ben Tal: `https://www.genspark.ai/api/files/s/hNBlSB9v`
 
 ---
 

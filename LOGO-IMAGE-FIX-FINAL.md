@@ -15,7 +15,7 @@
 
 **Before**:
 ```html
-<img src="https://www.genspark.ai/api/files/s/gPGTg8CG" 
+<img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" 
      alt="MayaRoyale" 
      class="nav-premium-logo"
      onerror="...complex fallback logic...">
@@ -23,7 +23,7 @@
 
 **After** (CLEAN & SIMPLE):
 ```html
-<img src="https://www.genspark.ai/api/files/s/gPGTg8CG" 
+<img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" 
      alt="MayaRoyale" 
      class="nav-premium-logo">
 ```
@@ -76,7 +76,7 @@ Then fix the remaining 10+ pages.
 ## ✅ WHY THIS WILL WORK
 
 1. **No onerror conflicts**: The image loads normally without JavaScript interference
-2. **Correct logo URL**: `https://www.genspark.ai/api/files/s/gPGTg8CG` points to your actual Maya sun logo
+2. **Correct logo URL**: `https://www.genspark.ai/api/files/s/n8E8Zqjs` points to your actual Maya sun logo
 3. **CSS-only fallback**: Only triggers if the image truly fails
 4. **Clean HTML**: Simple, reliable code
 

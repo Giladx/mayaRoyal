@@ -124,7 +124,7 @@ Added to three strategic locations:
 - MayaRoyale Pitch Deck: https://www.genspark.ai/api/files/s/eBOnR7OM
 
 ### Video Asset
-- Isla Aguada Transformation: https://www.genspark.ai/api/files/s/ua3dsTMP
+- Isla Aguada Transformation: https://www.genspark.ai/api/files/s/vcGWuLjf
 
 ### Logo
 - MayaRoyale Logo: https://www.genspark.ai/api/files/s/CLWTmhof

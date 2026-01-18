@@ -53,7 +53,7 @@
 **Solution:** Enhanced object-fit properties for better positioning
 
 ```html
-<img src="https://www.genspark.ai/api/files/s/eZXVObm7" 
+<img src="https://www.genspark.ai/api/files/s/m1p9e4YP" 
      alt="Expert-Led Safari Experience" 
      style="object-fit: cover; object-position: center center; height: 100%;">
 ```

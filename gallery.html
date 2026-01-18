@@ -19,13 +19,20 @@
     <link rel="stylesheet" href="css/gallery-premium.css">
     <link rel="stylesheet" href="css/property-map.css">
     <link rel="stylesheet" href="css/competitive-advantages.css">
+    <style>
+    .waitlist-form input[type="email"]:focus { outline: none; border-color: #B8860B; background: rgba(255, 255, 255, 0.1); }
+    .waitlist-form input[type="email"]::placeholder { color: rgba(255, 255, 255, 0.5); }
+    .waitlist-form button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(184, 134, 11, 0.4); }
+    .waitlist-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+    @media (max-width: 768px) { .waitlist-form { max-width: 100%; } .waitlist-form input[type="email"], .waitlist-form button { width: 100%; } }
+    </style>
     
     <!-- Leaflet CSS for Interactive Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav-premium nav-scrolled"><div class="nav-premium-container"><div class="nav-premium-brand"><a href="index.html"><img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo"></a></div><ul class="nav-premium-menu" id="navPremiumMenu"><li class="nav-premium-item"><a href="#" class="nav-premium-link">Platform<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="dashboard.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Dashboard</span><span class="nav-premium-dropdown-item-desc">Track your portfolio</span></span></a><a href="tokenomics.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💎</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Tokenomics</span><span class="nav-premium-dropdown-item-desc">Token economics & funding</span></span></a><a href="financial-forecast.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📈</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Financial Forecast</span><span class="nav-premium-dropdown-item-desc">7-year projections</span></span></a><a href="investment-calculator.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🧮</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Investment Calculator</span><span class="nav-premium-dropdown-item-desc">Calculate your returns</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">The Project<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="gallery.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏖️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Smart Resort Vision</span><span class="nav-premium-dropdown-item-desc">Property gallery & plans</span></span></a><a href="future-vision.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌅</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span><span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family of Resorts</span></span></a><a href="positioning.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Strategic Positioning</span><span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span></span></a><a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Protection Animation</span><span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span></span></a><a href="yucatan-boom.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🚀</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Yucatan Boom</span><span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span></span></a><a href="wellness-differentiation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Wellness Differentiation</span><span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span></span></a><a href="culinary-excellence.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🍽️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Culinary Excellence</span><span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span></span></a><a href="technology.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">⚡</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Technology & Blockchain</span><span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span></span></a><a href="lhw-partnership.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏨</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">LHW Partnership</span><span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span></span></a><a href="sustainability.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌿</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Sustainability</span><span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">Company<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="team.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">👥</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Innovation Council</span><span class="nav-premium-dropdown-item-desc">Meet our team</span></span></a><a href="contact.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📧</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Contact</span><span class="nav-premium-dropdown-item-desc">Get in touch</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li></ul><a href="#" class="nav-premium-cta">Connect Wallet</a><button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle"><span></span><span></span><span></span></button></div></nav>
+    <nav class="nav-premium nav-light-bg"><div class="nav-premium-container"><div class="nav-premium-brand"><a href="index.html"><img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" alt="MayaRoyale" class="nav-premium-logo"></a></div><ul class="nav-premium-menu" id="navPremiumMenu"><li class="nav-premium-item"><a href="#" class="nav-premium-link">Platform<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="dashboard.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Dashboard</span><span class="nav-premium-dropdown-item-desc">Track your portfolio</span></span></a><a href="tokenomics.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💎</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Tokenomics</span><span class="nav-premium-dropdown-item-desc">Token economics & funding</span></span></a><a href="financial-forecast.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📈</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Financial Forecast</span><span class="nav-premium-dropdown-item-desc">7-year projections</span></span></a><a href="investment-calculator.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🧮</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Investment Calculator</span><span class="nav-premium-dropdown-item-desc">Calculate your returns</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">The Project<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="gallery.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏖️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Smart Resort Vision</span><span class="nav-premium-dropdown-item-desc">Property gallery & plans</span></span></a><a href="future-vision.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌅</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Future of Isla Aguada</span><span class="nav-premium-dropdown-item-desc">200+ acres, ROYALE Family of Resorts</span></span></a><a href="positioning.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Strategic Positioning</span><span class="nav-premium-dropdown-item-desc">Geographic monopoly & moats</span></span></a><a href="sargassum-hurricane-animation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌊</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Protection Animation</span><span class="nav-premium-dropdown-item-desc">Sargassum & Hurricane protection</span></span></a><a href="yucatan-boom.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🚀</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">The Yucatan Boom</span><span class="nav-premium-dropdown-item-desc">$100B+ regional investment</span></span></a><a href="wellness-differentiation.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">💆</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Wellness Differentiation</span><span class="nav-premium-dropdown-item-desc">World-class spa & longevity</span></span></a><a href="culinary-excellence.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🍽️</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Culinary Excellence</span><span class="nav-premium-dropdown-item-desc">Transformative gastronomy</span></span></a><a href="technology.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">⚡</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Technology & Blockchain</span><span class="nav-premium-dropdown-item-desc">Web3 infrastructure</span></span></a><a href="lhw-partnership.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🏨</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">LHW Partnership</span><span class="nav-premium-dropdown-item-desc">Leading Hotels of the World</span></span></a><a href="sustainability.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">🌿</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Sustainability</span><span class="nav-premium-dropdown-item-desc">Eco-friendly initiatives</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li><li class="nav-premium-item"><a href="#" class="nav-premium-link">Company<span class="nav-premium-arrow">▼</span></a><div class="nav-premium-dropdown"><div class="nav-premium-dropdown-items"><a href="team.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">👥</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Innovation Council</span><span class="nav-premium-dropdown-item-desc">Meet our team</span></span></a><a href="contact.html" class="nav-premium-dropdown-item"><span class="nav-premium-dropdown-item-icon">📧</span><span class="nav-premium-dropdown-item-label"><span class="nav-premium-dropdown-item-title">Contact</span><span class="nav-premium-dropdown-item-desc">Get in touch</span></span></a></div><div class="nav-premium-dropdown-graphic"><span class="nav-premium-dropdown-graphic-layer"></span></div></div></li></ul><a href="#" class="nav-premium-cta">Connect Wallet</a><button class="nav-premium-mobile-toggle" id="navPremiumMobileToggle"><span></span><span></span><span></span></button></div></nav>
 
     <!-- Hero Section -->
     <section class="hero-light">
@@ -53,7 +60,7 @@
             <div class="gallery-grid">
                 <!-- Mas'Tul Beach Club Rendering -->
                 <div class="gallery-item" data-category="renderings property">
-                    <img src="https://www.genspark.ai/api/files/s/V4JQ5Yoo" alt="Mas'Tul Beach Club">
+                    <img src="https://www.genspark.ai/api/files/s/VXrw6COq" alt="Mas'Tul Beach Club">
                     <div class="gallery-overlay">
                         <h3>Mas'Tul Beach Club</h3>
                         <p>Signature beachfront dining & entertainment venue</p>
@@ -62,7 +69,7 @@
 
                 <!-- Luxury Resort Lobby -->
                 <div class="gallery-item" data-category="amenities renderings">
-                    <img src="https://www.genspark.ai/api/files/s/vrhlicXB" alt="Luxury Resort Lobby" style="object-fit: cover; object-position: center;">
+                    <img src="https://www.genspark.ai/api/files/s/ys7JTZ65" alt="Luxury Resort Lobby" style="object-fit: cover; object-position: center;">
                     <div class="gallery-overlay">
                         <h3>Grand Lobby & Reception</h3>
                         <p>Tropical elegance with soaring ceilings and ocean views</p>
@@ -71,7 +78,7 @@
 
                 <!-- Expert-Led Rainforest Expedition -->
                 <div class="gallery-item" data-category="amenities">
-                    <img src="https://www.genspark.ai/api/files/s/eZXVObm7" alt="Expert-Led Safari Experience" style="object-fit: cover; object-position: center center; height: 100%;">
+                    <img src="https://www.genspark.ai/api/files/s/m1p9e4YP" alt="Expert-Led Safari Experience" style="object-fit: cover; object-position: center center; height: 100%;">
                     <div class="gallery-overlay">
                         <h3>Expert Experience</h3>
                         <p>Guided rainforest safaris with MayaRoyale naturalist experts</p>
@@ -80,7 +87,7 @@
 
                 <!-- ATV Jungle Adventures -->
                 <div class="gallery-item" data-category="amenities">
-                    <img src="https://www.genspark.ai/api/files/s/Y8msdOqS" alt="ATV Jungle Adventure Tours" style="object-fit: cover; object-position: center;">
+                    <img src="https://www.genspark.ai/api/files/s/zsiPdjka" alt="ATV Jungle Adventure Tours" style="object-fit: cover; object-position: center;">
                     <div class="gallery-overlay">
                         <h3>ATV Jungle Adventures</h3>
                         <p>Expert-guided off-road expeditions through pristine rainforest trails</p>
@@ -89,7 +96,7 @@
 
                 <!-- Beach Horseback Riding -->
                 <div class="gallery-item" data-category="amenities">
-                    <img src="https://www.genspark.ai/api/files/s/5KxR6aBf" alt="Beach Horseback Riding" style="object-fit: cover; object-position: center;">
+                    <img src="https://www.genspark.ai/api/files/s/yQcJDVBp" alt="Beach Horseback Riding" style="object-fit: cover; object-position: center;">
                     <div class="gallery-overlay">
                         <h3>Beachfront Horseback Riding</h3>
                         <p>Scenic rides along pristine white sand beaches with turquoise waters</p>
@@ -98,7 +105,7 @@
 
                 <!-- Pristine Beachfront -->
                 <div class="gallery-item" data-category="location">
-                    <img src="https://www.genspark.ai/api/files/s/52KtYrBI" alt="Pristine Caribbean Beach">
+                    <img src="https://www.genspark.ai/api/files/s/gp4ZVvYp" alt="Pristine Caribbean Beach">
                     <div class="gallery-overlay">
                         <h3>Pristine Caribbean Beach</h3>
                         <p>Crystal clear turquoise waters</p>
@@ -107,7 +114,7 @@
 
                 <!-- Aerial Beachfront View -->
                 <div class="gallery-item" data-category="location">
-                    <img src="https://www.genspark.ai/api/files/s/5yUX8V20" alt="Aerial Beach View">
+                    <img src="https://www.genspark.ai/api/files/s/wdfFd2YD" alt="Aerial Beach View">
                     <div class="gallery-overlay">
                         <h3>15 Acres Trophy Beachfront</h3>
                         <p>Pristine coastal land with turquoise waters</p>
@@ -116,7 +123,7 @@
 
                 <!-- Resort Master Plan -->
                 <div class="gallery-item" data-category="renderings">
-                    <img src="https://www.genspark.ai/api/files/s/ogiJkD9n" alt="8 Kilometer Master Plan">
+                    <img src="https://www.genspark.ai/api/files/s/717V90xH" alt="8 Kilometer Master Plan">
                     <div class="gallery-overlay">
                         <h3>8 Kilometer Coastal Masterplan</h3>
                         <p>Isla Aguada Sabancuy Eco-Destination Development</p>
@@ -125,7 +132,7 @@
 
                 <!-- Luxury Lounge Area -->
                 <div class="gallery-item" data-category="amenities renderings">
-                    <img src="https://www.genspark.ai/api/files/s/XE7atADN" alt="Luxury Pool & Lounge" style="object-fit: cover; object-position: center;">
+                    <img src="https://www.genspark.ai/api/files/s/pDbbIEht" alt="Luxury Pool & Lounge" style="object-fit: cover; object-position: center;">
                     <div class="gallery-overlay">
                         <h3>Tropical Pool & Lounge Oasis</h3>
                         <p>Lush jungle setting with infinity pool and natural palapa lounges</p>
@@ -134,7 +141,7 @@
 
                 <!-- Beach Club Restaurant -->
                 <div class="gallery-item" data-category="property amenities">
-                    <img src="https://www.genspark.ai/api/files/s/Bw6P9HxR" alt="Mas'Tul Beach Club" style="object-fit: cover; object-position: center;">
+                    <img src="https://www.genspark.ai/api/files/s/2txv8lUt" alt="Mas'Tul Beach Club" style="object-fit: cover; object-position: center;">
                     <div class="gallery-overlay">
                         <h3>Mas'Tul Beach Club & Restaurant</h3>
                         <p>Architectural masterpiece with living walls and guests enjoying fine dining</p>
@@ -143,7 +150,7 @@
 
                 <!-- Natural Pool Area -->
                 <div class="gallery-item" data-category="amenities">
-                    <img src="https://www.genspark.ai/api/files/s/AWDP1df9" alt="Natural Pools">
+                    <img src="https://www.genspark.ai/api/files/s/ijYq0mzE" alt="Natural Pools">
                     <div class="gallery-overlay">
                         <h3>Natural Rock Pools</h3>
                         <p>Oceanfront infinity pools with tropical setting</p>
@@ -152,7 +159,7 @@
 
                 <!-- Unique Architecture -->
                 <div class="gallery-item" data-category="property renderings">
-                    <img src="https://www.genspark.ai/api/files/s/zaBwzua9" alt="Sustainable Architecture" style="object-fit: cover; object-position: center;">
+                    <img src="https://www.genspark.ai/api/files/s/pdZRAmBG" alt="Sustainable Architecture" style="object-fit: cover; object-position: center;">
                     <div class="gallery-overlay">
                         <h3>Sustainable Architecture</h3>
                         <p>Organic design inspired by nature</p>
@@ -161,7 +168,7 @@
 
                 <!-- Wellness Center -->
                 <div class="gallery-item" data-category="amenities">
-                    <img src="https://www.genspark.ai/api/files/s/BH3NP8oj" alt="Wellness Center">
+                    <img src="https://www.genspark.ai/api/files/s/7zuN5cMl" alt="Wellness Center">
                     <div class="gallery-overlay">
                         <h3>Healing & Wellness Center</h3>
                         <p>Collective healing rituals in harmony with nature</p>
@@ -171,7 +178,7 @@
                 <!-- Video 1: Luxury Accommodations -->
                 <div class="gallery-item" data-category="amenities property">
                     <video controls playsinline webkit-playsinline>
-                        <source src="https://www.genspark.ai/api/files/s/8twIIhY2" type="video/mp4">
+                        <source src="https://www.genspark.ai/api/files/s/A0FB3Gmm" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="gallery-overlay">
@@ -183,7 +190,7 @@
                 <!-- Video 2: Monaco Style Casino -->
                 <div class="gallery-item" data-category="amenities">
                     <video controls playsinline webkit-playsinline>
-                        <source src="https://www.genspark.ai/api/files/s/838EaFKG" type="video/mp4">
+                        <source src="https://www.genspark.ai/api/files/s/6SxPQSj9" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="gallery-overlay">
@@ -195,7 +202,7 @@
                 <!-- Video 3: Aerial Footage -->
                 <div class="gallery-item" data-category="location">
                     <video controls playsinline webkit-playsinline>
-                        <source src="https://www.genspark.ai/api/files/s/R2L7eYYm" type="video/mp4">
+                        <source src="https://www.genspark.ai/api/files/s/ezzgMwAN" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="gallery-overlay">
@@ -207,7 +214,7 @@
                 <!-- Video 4: Experiential Pillars -->
                 <div class="gallery-item" data-category="amenities">
                     <video controls playsinline webkit-playsinline>
-                        <source src="https://www.genspark.ai/api/files/s/r0PcDsu4" type="video/mp4">
+                        <source src="https://www.genspark.ai/api/files/s/GjDPRDlR" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="gallery-overlay">
@@ -219,7 +226,7 @@
                 <!-- Video 5: Gastronomy & Culture -->
                 <div class="gallery-item" data-category="amenities">
                     <video controls playsinline webkit-playsinline>
-                        <source src="https://www.genspark.ai/api/files/s/owcspZh1" type="video/mp4">
+                        <source src="https://www.genspark.ai/api/files/s/tKzOkZl0" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="gallery-overlay">
@@ -231,7 +238,7 @@
                 <!-- Video 6: Beyond Leisure - Thermal Circuit -->
                 <div class="gallery-item" data-category="amenities">
                     <video controls playsinline webkit-playsinline>
-                        <source src="https://www.genspark.ai/api/files/s/wXLdVQwR" type="video/mp4">
+                        <source src="https://www.genspark.ai/api/files/s/2iy847uA" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="gallery-overlay">
@@ -243,7 +250,7 @@
                 <!-- Video 7: Turtle Hospital -->
                 <div class="gallery-item" data-category="location">
                     <video controls playsinline webkit-playsinline>
-                        <source src="https://www.genspark.ai/api/files/s/onvt1f6j" type="video/mp4">
+                        <source src="https://www.genspark.ai/api/files/s/j1oacUn1" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="gallery-overlay">
@@ -255,7 +262,7 @@
                 <!-- Video 8: Wellness & Yoga -->
                 <div class="gallery-item" data-category="amenities">
                     <video controls playsinline webkit-playsinline>
-                        <source src="https://www.genspark.ai/api/files/s/Ncc0e781" type="video/mp4">
+                        <source src="https://www.genspark.ai/api/files/s/hhOvWU8Z" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="gallery-overlay">
@@ -1088,7 +1095,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" alt="MayaRoyale" class="footer-logo">
                     <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
                 </div>
                 <div class="footer-col">
@@ -1115,6 +1122,15 @@
                         <li><a href="#terms">Terms of Service</a></li>
                         <li><a href="#disclaimer">Risk Disclaimer</a></li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Join the Waiting List</h4>
+                    <p class="footer-desc" style="margin-bottom: 1rem; font-size: 0.9rem; opacity: 0.8;">Be the first to know about our token launch</p>
+                    <form class="waitlist-form" id="waitlistForm" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <input type="email" id="waitlistEmail" placeholder="Enter your email" required style="padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: #FFFFFF; font-size: 0.9rem; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
+                        <button type="submit" style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%); color: #FFFFFF; font-weight: 600; font-size: 0.95rem; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-family: 'Inter', sans-serif;">Join Waitlist</button>
+                        <span id="waitlistMessage" style="font-size: 0.85rem; color: #00D4FF; display: none;"></span>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1195,6 +1211,33 @@
     </script>
     <script src="js/wallet.js"></script>
     <script src="js/gallery.js"></script>
+    
+    <script>
+    // Waitlist Form Handler
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('waitlistForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('waitlistEmail').value;
+                const message = document.getElementById('waitlistMessage');
+                const button = e.target.querySelector('button[type="submit"]');
+                button.disabled = true;
+                button.textContent = 'Joining...';
+                setTimeout(() => {
+                    message.textContent = '✓ Successfully joined! Check your email.';
+                    message.style.color = '#00D4FF';
+                    message.style.display = 'block';
+                    document.getElementById('waitlistEmail').value = '';
+                    button.disabled = false;
+                    button.textContent = 'Join Waitlist';
+                    setTimeout(() => { message.style.display = 'none'; }, 5000);
+                    console.log('Waitlist email submitted:', email);
+                }, 1000);
+            });
+        }
+    });
+    </script>
     
     <!-- Leaflet JS for Interactive Map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

@@ -49,7 +49,7 @@ Changed text color from `#000000` (black) to `#FFFFFF` (white) in the comparison
 ## ⏳ FIX #2: JOSEF TAL PHOTO (AWAITING CLARIFICATION)
 
 ### Current Status:
-Josef Tal's photo URL is set to: `https://www.genspark.ai/api/files/s/NGg1FmpM`
+Josef Tal's photo URL is set to: `https://www.genspark.ai/api/files/s/baN9P5fp`
 
 This is the URL you provided in your first message with the attached image.
 
@@ -65,16 +65,16 @@ You mentioned the photo should have an office background like the other team mem
 Please provide the correct image URL for Josef Tal with the office background. You can:
 - Upload the processed image with office background and share the new URL
 - Confirm if there's a different GenSpark API file URL I should use
-- Verify that `https://www.genspark.ai/api/files/s/NGg1FmpM` is the correct final image
+- Verify that `https://www.genspark.ai/api/files/s/baN9P5fp` is the correct final image
 
 ### Current Team Photo URLs:
-1. Damu Winston: `https://www.genspark.ai/api/files/s/qh1vhGHo`
-2. Josef Tal: `https://www.genspark.ai/api/files/s/NGg1FmpM` ← Current URL
-3. Seth Rosenberg: `https://www.genspark.ai/api/files/s/5sSyFWp6`
-4. Jason Harris: `https://www.genspark.ai/api/files/s/OSE5sHdP`
-5. John Sears: `https://www.genspark.ai/api/files/s/HwlkKQIx`
-6. Shawn Jamil: `https://www.genspark.ai/api/files/s/l8w2IlqK`
-7. Ben Tal: `https://www.genspark.ai/api/files/s/jCLrQ7pc`
+1. Damu Winston: `https://www.genspark.ai/api/files/s/F8XWZcEA`
+2. Josef Tal: `https://www.genspark.ai/api/files/s/baN9P5fp` ← Current URL
+3. Seth Rosenberg: `https://www.genspark.ai/api/files/s/HNGJnBXA`
+4. Jason Harris: `https://www.genspark.ai/api/files/s/STeJZVwn`
+5. John Sears: `https://www.genspark.ai/api/files/s/TLElFBO6`
+6. Shawn Jamil: `https://www.genspark.ai/api/files/s/zpzyBgV8`
+7. Ben Tal: `https://www.genspark.ai/api/files/s/hNBlSB9v`
 
 Once you provide the correct URL, I can immediately update team.html.
 

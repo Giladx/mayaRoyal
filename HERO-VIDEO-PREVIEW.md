@@ -7,7 +7,7 @@
 │                                                                     │
 │  🎥 FULL-SCREEN VIDEO BACKGROUND (Auto-playing, Looped)           │
 │  Video: Isla Aguada Beach/Resort Transformation                    │
-│  URL: https://www.genspark.ai/api/files/s/ua3dsTMP                │
+│  URL: https://www.genspark.ai/api/files/s/vcGWuLjf                │
 │                                                                     │
 │  ╔═══════════════════════════════════════════════════════════╗    │
 │  ║  [Semi-transparent dark overlay - 30-50% opacity]          ║    │
@@ -61,7 +61,7 @@
 ```
 
 **Video Properties:**
-- **Source:** `https://www.genspark.ai/api/files/s/ua3dsTMP`
+- **Source:** `https://www.genspark.ai/api/files/s/vcGWuLjf`
 - **Autoplay:** Yes (muted for browser compatibility)
 - **Loop:** Yes (continuous playback)
 - **Playsinline:** Yes (mobile support)
@@ -428,7 +428,7 @@ User lands on page
 
 ✅ **Video element already in HTML** (index.html line 502-504)  
 ✅ **CSS styling complete** (main.css lines 205-263)  
-✅ **Video URL configured** (https://www.genspark.ai/api/files/s/ua3dsTMP)  
+✅ **Video URL configured** (https://www.genspark.ai/api/files/s/vcGWuLjf)  
 ✅ **Overlay gradient set** (30-50% black)  
 ✅ **Content layering done** (z-index: 1, 2, 3)  
 ✅ **Responsive design ready** (object-fit: cover)  

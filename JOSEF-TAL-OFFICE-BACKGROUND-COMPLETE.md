@@ -17,12 +17,12 @@ Used AI image generation to add a professional office background to Josef Tal's 
 ## 🖼️ IMAGE GENERATION DETAILS
 
 ### Original Image:
-- **URL**: `https://www.genspark.ai/api/files/s/NGg1FmpM`
+- **URL**: `https://www.genspark.ai/api/files/s/baN9P5fp`
 - **Style**: Clean white background
 - **Issue**: Didn't match team aesthetic
 
 ### Generated Image:
-- **New URL**: `https://www.genspark.ai/api/files/s/k0D03NOr`
+- **New URL**: `https://www.genspark.ai/api/files/s/sMis3pFL`
 - **Style**: Professional office background with blurred environment
 - **Features**: 
   - Modern professional office setting
@@ -50,7 +50,7 @@ Used AI image generation to add a professional office background to Josef Tal's 
 <img src="https://www.genspark.ai/agents?id=749b4b28-43a5-48ac-ac95-9bbb20971815" alt="Josef Tal">
 
 <!-- After (new office background) -->
-<img src="https://www.genspark.ai/api/files/s/k0D03NOr" alt="Josef Tal">
+<img src="https://www.genspark.ai/api/files/s/sMis3pFL" alt="Josef Tal">
 ```
 
 ---
@@ -109,13 +109,13 @@ All Leadership Council members now have:
 ## 📋 COMPLETE UPDATE HISTORY
 
 ### Original URL (provided by user):
-`https://www.genspark.ai/api/files/s/NGg1FmpM` - Clean white background
+`https://www.genspark.ai/api/files/s/baN9P5fp` - Clean white background
 
 ### First Incorrect Update:
 `https://www.genspark.ai/agents?id=...` - Not an image URL (broken)
 
 ### Final Correct URL:
-`https://www.genspark.ai/api/files/s/k0D03NOr` - Professional office background ✅
+`https://www.genspark.ai/api/files/s/sMis3pFL` - Professional office background ✅
 
 ---
 

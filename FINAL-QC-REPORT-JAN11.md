@@ -91,7 +91,7 @@
 For each page above:
 1. Open the page
 2. Find `<img src="https://www.genspark.ai/api/files/s/CLWTmhof"`
-3. Replace with `<img src="https://www.genspark.ai/api/files/s/gPGTg8CG"`
+3. Replace with `<img src="https://www.genspark.ai/api/files/s/n8E8Zqjs"`
 4. If navigation is minified (gallery.html, wellness-differentiation.html, future-vision.html), replace entire `<nav>` block with MASTER-NAVIGATION-TEMPLATE.html
 5. Test on mobile
 
@@ -169,7 +169,7 @@ Then test each page manually.
 
 - **Logo URLs**:
   - ❌ **OLD (Wrong)**: `https://www.genspark.ai/api/files/s/CLWTmhof`
-  - ✅ **NEW (Correct)**: `https://www.genspark.ai/api/files/s/gPGTg8CG`
+  - ✅ **NEW (Correct)**: `https://www.genspark.ai/api/files/s/n8E8Zqjs`
 
 - **Connect Wallet Button Sizing**:
   - CSS in `navigation-premium.css` sets: `padding: 0.4rem 0.75rem; font-size: 0.75rem`

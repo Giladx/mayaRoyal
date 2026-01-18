@@ -12,7 +12,7 @@ The MayaRoyale logo was not displaying on mobile devices (screens < 480px width)
 
 ### Screenshot Evidence
 - Mobile view showing missing logo
-- URL: `https://www.genspark.ai/api/files/s/NYJGaMfN`
+- URL: `https://www.genspark.ai/api/files/s/86eqTurj`
 
 ---
 

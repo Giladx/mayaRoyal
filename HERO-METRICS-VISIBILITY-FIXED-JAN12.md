@@ -6,7 +6,7 @@
 
 **User Report:** "The 3 metric boxes (MAYA TOKEN, TOTAL SUPPLY, ASSET BACKING) are now hidden"
 
-**Screenshot Evidence:** https://www.genspark.ai/api/files/s/cWkamx4p
+**Screenshot Evidence:** https://www.genspark.ai/api/files/s/0A9HxCqo
 
 ### Root Cause:
 When I added `padding-top: 140px` to fix the Blockchain badge visibility, it pushed ALL content down but also caused the metric boxes to be hidden or cut off on full-screen displays.

@@ -8,7 +8,7 @@
 
 ### Solution
 - Updated to working video: **Isla Aguada Transformation.mp4**
-- New URL: `https://www.genspark.ai/api/files/s/ua3dsTMP`
+- New URL: `https://www.genspark.ai/api/files/s/vcGWuLjf`
 - File size: 11.3 MB (optimized for web)
 - Format: MP4 (video/mp4)
 
@@ -21,7 +21,7 @@
 
 ### Video Details
 - **File:** Isla Aguada Transformation.mp4
-- **URL:** https://www.genspark.ai/api/files/s/ua3dsTMP
+- **URL:** https://www.genspark.ai/api/files/s/vcGWuLjf
 - **Size:** 11,317,099 bytes (~11.3 MB)
 - **Type:** video/mp4
 - **Usage:** Full-screen hero background video on home page

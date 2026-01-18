@@ -8,7 +8,7 @@
 
 ### 1. **Removed Josef Tal Image**
 - Deleted the `<div class="founder-image">` block
-- Removed image reference: `https://www.genspark.ai/api/files/s/qqhpuFUR`
+- Removed image reference: `https://www.genspark.ai/api/files/s/ci5pHxyQ`
 
 ### 2. **Changed Heading**
 - **From**: "A Message from the CEO"

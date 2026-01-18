@@ -10,7 +10,7 @@
 
 ### Logo URL Updates (ALL PAGES)
 **Old URL** (WRONG): `https://www.genspark.ai/api/files/s/CLWTmhof`  
-**New URL** (CORRECT): `https://www.genspark.ai/api/files/s/gPGTg8CG`
+**New URL** (CORRECT): `https://www.genspark.ai/api/files/s/n8E8Zqjs`
 
 ---
 

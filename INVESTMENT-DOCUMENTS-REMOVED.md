@@ -65,7 +65,7 @@ Successfully removed all Pitch Deck, Tokenomics Deck, and 7-Year Financial Proje
   - index-new.html (footer)
 
 ### Document 3: Complete 7-Year Financial Projection
-- **File URL**: `https://www.genspark.ai/api/files/s/vEqOjOgh`
+- **File URL**: `https://www.genspark.ai/api/files/s/FyIe4Shx`
 - **File Name**: Hotel-MayaRoyale-7yr-Projection.pdf
 - **Description**: "Download the full PDF for detailed financial models, assumptions, and comprehensive analysis"
 - **Removed From**:
@@ -76,7 +76,7 @@ Successfully removed all Pitch Deck, Tokenomics Deck, and 7-Year Financial Proje
 ## ✅ WHAT WAS KEPT
 
 ### LHW Letter of Interest
-- **File URL**: `https://www.genspark.ai/api/files/s/WGMxJnV5`
+- **File URL**: `https://www.genspark.ai/api/files/s/bJxnOBMi`
 - **Status**: RETAINED (not removed)
 - **Location**: Still available in footer Resources sections
 - **Pages**: connect-wallet.html, index-new.html

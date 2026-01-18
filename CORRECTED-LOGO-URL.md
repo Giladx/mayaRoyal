@@ -4,7 +4,7 @@
 
 I was using the WRONG logo URL in all templates:
 - ❌ **WRONG**: `https://www.genspark.ai/api/files/s/CLWTmhof` (shows gold TEXT)
-- ✅ **CORRECT**: `https://www.genspark.ai/api/files/s/gPGTg8CG` (shows actual LOGO with Mayan sun design)
+- ✅ **CORRECT**: `https://www.genspark.ai/api/files/s/n8E8Zqjs` (shows actual LOGO with Mayan sun design)
 
 ## ✅ What I Fixed
 
@@ -15,7 +15,7 @@ I was using the WRONG logo URL in all templates:
 
 ### New Logo Code:
 ```html
-<img src="https://www.genspark.ai/api/files/s/gPGTg8CG" 
+<img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" 
      alt="MayaRoyale" 
      class="nav-premium-logo"
      onerror="this.onerror=null; this.src='https://www.genspark.ai/api/files/s/CLWTmhof';">
@@ -30,7 +30,7 @@ I was using the WRONG logo URL in all templates:
 
 ## 🎯 The Correct Logo
 
-**URL**: `https://www.genspark.ai/api/files/s/gPGTg8CG`
+**URL**: `https://www.genspark.ai/api/files/s/n8E8Zqjs`
 
 **What it shows**:
 - Golden Mayan sun with rays at top
@@ -59,7 +59,7 @@ This is your ACTUAL brand logo, NOT just gold text!
 
 **New logo code:**
 ```html
-<img src="https://www.genspark.ai/api/files/s/gPGTg8CG" 
+<img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" 
      alt="MayaRoyale" 
      class="nav-premium-logo"
      onerror="this.onerror=null; this.src='https://www.genspark.ai/api/files/s/CLWTmhof';">

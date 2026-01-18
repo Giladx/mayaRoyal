@@ -954,19 +954,19 @@ css/
 ### External Assets
 
 **Logo URL:** `https://www.genspark.ai/api/files/s/CLWTmhof`  
-**Video URL:** `https://www.genspark.ai/api/files/s/ua3dsTMP` (Isla Aguada Transformation - Home hero with enhanced colors: contrast 1.2, saturation 1.5, brightness 1.08)
+**Video URL:** `https://www.genspark.ai/api/files/s/vcGWuLjf` (Isla Aguada Transformation - Home hero with enhanced colors: contrast 1.2, saturation 1.5, brightness 1.08)
 
 **Team Photos:**
-- Josef Tal (Home page hero): `https://www.genspark.ai/api/files/s/qqhpuFUR` (9:16 tall vertical portrait 768x1365, in office with MayaRoyale logo with backlighting - original photo ICRz340T with background changed only)
-- Josef Tal (Team page): `https://www.genspark.ai/api/files/s/snEkKS57` (1:1, professional headshot in navy suit at desk with office background - used exactly as provided)
-- Damu Winston: `https://www.genspark.ai/api/files/s/qh1vhGHo` (1:1, professional headshot in office, original face preserved)
-- Seth Rosenberg: `https://www.genspark.ai/api/files/s/5sSyFWp6` (1:1, professional headshot in office, dark hair)
-- Jason Harris: `https://www.genspark.ai/api/files/s/OSE5sHdP` (1:1, professional headshot in office, completely bald)
-- John Sears: `https://www.genspark.ai/api/files/s/HwlkKQIx` (1:1, professional headshot in office)
-- Shawn Jamil: `https://www.genspark.ai/api/files/s/l8w2IlqK` (1:1, professional headshot in office)
-- Ben Tal: `https://www.genspark.ai/api/files/s/jCLrQ7pc` (1:1, professional headshot in office)
+- Josef Tal (Home page hero): `https://www.genspark.ai/api/files/s/ci5pHxyQ` (9:16 tall vertical portrait 768x1365, in office with MayaRoyale logo with backlighting - original photo ICRz340T with background changed only)
+- Josef Tal (Team page): `https://www.genspark.ai/api/files/s/Ynp9Hp6M` (1:1, professional headshot in navy suit at desk with office background - used exactly as provided)
+- Damu Winston: `https://www.genspark.ai/api/files/s/F8XWZcEA` (1:1, professional headshot in office, original face preserved)
+- Seth Rosenberg: `https://www.genspark.ai/api/files/s/HNGJnBXA` (1:1, professional headshot in office, dark hair)
+- Jason Harris: `https://www.genspark.ai/api/files/s/STeJZVwn` (1:1, professional headshot in office, completely bald)
+- John Sears: `https://www.genspark.ai/api/files/s/TLElFBO6` (1:1, professional headshot in office)
+- Shawn Jamil: `https://www.genspark.ai/api/files/s/zpzyBgV8` (1:1, professional headshot in office)
+- Ben Tal: `https://www.genspark.ai/api/files/s/hNBlSB9v` (1:1, professional headshot in office)
 - Josef Tal Signature: `https://www.genspark.ai/api/files/s/kC6TYyUh`
-- MayaRoyale Logo: `https://www.genspark.ai/api/files/s/gPGTg8CG`
+- MayaRoyale Logo: `https://www.genspark.ai/api/files/s/n8E8Zqjs`
 
 **Note:** All team photos feature modern luxury office backgrounds. Josef's home page image (3:4 vertical) keeps his exact appearance from the podcast photo, with only the background changed to an office setting with illuminated MayaRoyale logo to align with vertical text layout.
 

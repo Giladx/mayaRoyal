@@ -109,7 +109,7 @@ Successfully updated the LHW Partnership page with all requested modifications.
     </div>
     
     <div class="document-viewer">
-        <iframe src="https://www.genspark.ai/api/files/s/WGMxJnV5"></iframe>
+        <iframe src="https://www.genspark.ai/api/files/s/bJxnOBMi"></iframe>
     </div>
 
     <div class="document-actions">
@@ -128,7 +128,7 @@ Successfully updated the LHW Partnership page with all requested modifications.
     </div>
     
     <div class="document-viewer">
-        <img src="https://www.genspark.ai/api/files/s/iVOlEjUY" 
+        <img src="https://www.genspark.ai/api/files/s/GwaWKkGG" 
              alt="LHW Membership Interest Letter" 
              style="width: 100%; 
                     max-width: 600px; 
@@ -247,7 +247,7 @@ The letter image has been secured against downloading:
 
 ## 📝 LETTER IMAGE DETAILS
 
-**New Image URL**: `https://www.genspark.ai/api/files/s/iVOlEjUY`
+**New Image URL**: `https://www.genspark.ai/api/files/s/GwaWKkGG`
 
 **Image Properties**:
 - Width: 100% (responsive)

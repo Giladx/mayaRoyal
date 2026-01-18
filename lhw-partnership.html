@@ -16,14 +16,21 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/premium-light.css">
     <link rel="stylesheet" href="css/lhw-premium.css">
+    <style>
+    .waitlist-form input[type="email"]:focus { outline: none; border-color: #B8860B; background: rgba(255, 255, 255, 0.1); }
+    .waitlist-form input[type="email"]::placeholder { color: rgba(255, 255, 255, 0.5); }
+    .waitlist-form button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(184, 134, 11, 0.4); }
+    .waitlist-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+    @media (max-width: 768px) { .waitlist-form { max-width: 100%; } .waitlist-form input[type="email"], .waitlist-form button { width: 100%; } }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav-premium nav-scrolled">
+    <nav class="nav-premium nav-light-bg">
         <div class="nav-premium-container">
             <div class="nav-premium-brand">
                 <a href="index.html">
-                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="nav-premium-logo">
+                    <img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" alt="MayaRoyale" class="nav-premium-logo">
                 </a>
             </div>
             <ul class="nav-premium-menu" id="navPremiumMenu">
@@ -185,7 +192,7 @@
             <div class="lhw-hero-content">
                 <h1 class="lhw-hero-title">Strategic Partnership</h1>
                 <div class="lhw-logo-hero">
-                    <img src="https://www.genspark.ai/api/files/s/RVsiixWQ" alt="The Leading Hotels of the World">
+                    <img src="https://www.genspark.ai/api/files/s/PQOMbMTb" alt="The Leading Hotels of the World">
                 </div>
                 <span class="lhw-hero-badge">🏆 Global Luxury Excellence</span>
                 <p class="lhw-hero-subtitle">Letter of Interest Received <span class="accent">May 29, 2024</span></p>
@@ -286,7 +293,7 @@
                 </div>
                 
                 <div class="document-viewer">
-                    <img src="https://www.genspark.ai/api/files/s/q2Svv53d" alt="LHW Membership Interest Letter" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); pointer-events: none; user-select: none;">
+                    <img src="https://www.genspark.ai/api/files/s/USwhUCuj" alt="LHW Membership Interest Letter" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); pointer-events: none; user-select: none;">
                 </div>
             </div>
 
@@ -403,7 +410,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" alt="MayaRoyale" class="footer-logo">
                     <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
                 </div>
                 <div class="footer-col">
@@ -430,6 +437,15 @@
                         <li><a href="#terms">Terms of Service</a></li>
                         <li><a href="#disclaimer">Risk Disclaimer</a></li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Join the Waiting List</h4>
+                    <p class="footer-desc" style="margin-bottom: 1rem; font-size: 0.9rem; opacity: 0.8;">Be the first to know about our token launch</p>
+                    <form class="waitlist-form" id="waitlistForm" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <input type="email" id="waitlistEmail" placeholder="Enter your email" required style="padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: #FFFFFF; font-size: 0.9rem; font-family: 'Inter', sans-serif; transition: all 0.3s ease;">
+                        <button type="submit" style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%); color: #FFFFFF; font-weight: 600; font-size: 0.95rem; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-family: 'Inter', sans-serif;">Join Waitlist</button>
+                        <span id="waitlistMessage" style="font-size: 0.85rem; color: #00D4FF; display: none;"></span>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -507,6 +523,28 @@
             const counters = document.querySelectorAll('.animate-counter');
             counters.forEach(counter => observer.observe(counter));
         });
+    </script>
+    <script>
+    // Waitlist form handler
+    const form = document.getElementById('waitlistForm');
+    const message = document.getElementById('waitlistMessage');
+    form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('waitlistEmail').value;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Joining...';
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        message.textContent = '✓ Successfully joined the waiting list!';
+        message.style.display = 'block';
+        submitBtn.textContent = 'Joined!';
+        form.reset();
+        setTimeout(() => {
+            message.style.display = 'none';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Join Waitlist';
+        }, 5000);
+    });
     </script>
     <script src="js/wallet.js"></script>
 <script src="js/mobile-nav-simple.js"></script>

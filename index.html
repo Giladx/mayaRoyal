@@ -43,14 +43,31 @@
                 transform: scale(1) rotate(0deg);
                 opacity: 0.8;
             }
+            25% {
+                transform: scale(1.15) rotate(90deg);
+                opacity: 1;
+            }
             50% {
-                transform: scale(1.1) rotate(5deg);
+                transform: scale(1) rotate(180deg);
+                opacity: 0.9;
+            }
+            75% {
+                transform: scale(1.15) rotate(270deg);
                 opacity: 1;
             }
         }
         
+        @keyframes iconGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.6));
+            }
+            50% {
+                filter: drop-shadow(0 0 16px rgba(0, 212, 255, 1));
+            }
+        }
+        
         .blockchain-icon-animated {
-            animation: iconPulse 2.5s ease-in-out infinite;
+            animation: iconPulse 4s ease-in-out infinite, iconGlow 2s ease-in-out infinite;
             transform-origin: center;
         }
         
@@ -180,6 +197,70 @@
                 padding: 0.5rem 1rem !important;
             }
             
+            .lifestyle-access-badge {
+                display: none !important;
+            }
+            
+            /* Mobile location line - uniform sizing and spacing */
+            .hero-location {
+                font-size: 0.8rem !important;
+            }
+            
+            .hero-location > span {
+                gap: 0 !important;
+                font-size: 0.8rem !important;
+            }
+            
+            /* Make all text same size */
+            .hero-location span,
+            .hero-location span span {
+                font-size: 0.8rem !important;
+            }
+            
+            /* Keep existing bullets with even spacing */
+            .hero-location > span > span[style*="color: rgba(255, 255, 255, 0.5)"] {
+                display: inline !important;
+                margin: 0 0.4rem !important;
+                font-size: 0.8rem !important;
+            }
+            
+            /* Stack location items vertically on mobile */
+            .hero-location {
+                margin-bottom: 2rem !important;
+            }
+            
+            .hero-location > span {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 0rem !important;
+                line-height: 1.6 !important;
+            }
+            
+            .hero-location > span > span {
+                font-size: 0.8rem !important;
+            }
+            
+            /* Hide all bullet separators on mobile */
+            .location-separator {
+                display: none !important;
+            }
+            
+            /* Show golf text on mobile */
+            .mobile-golf-text {
+                display: inline-flex !important;
+            }
+            
+            .mobile-golf-text span {
+                font-size: 0.8rem !important;
+            }
+            
+            .hero-location svg {
+                flex-shrink: 0 !important;
+                width: 13px !important;
+                height: 13px !important;
+            }
+            
             h1.hero-title {
                 font-size: 2.5rem !important;
                 margin-bottom: 0.5rem !important;
@@ -217,33 +298,6 @@
                 font-size: 0.65rem !important;
                 margin-bottom: 0.5rem !important;
                 letter-spacing: 0.3em !important;
-            }
-            
-            .hero-location {
-                margin-bottom: 2rem !important;
-            }
-            
-            .hero-location > span {
-                font-size: 0.8rem !important;
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-                gap: 0rem !important;
-                line-height: 1.4 !important;
-            }
-            
-            .hero-location span span {
-                display: inline-flex !important;
-                align-items: center !important;
-                gap: 0.25rem !important;
-                white-space: nowrap !important;
-                font-size: 0.8rem !important;
-            }
-            
-            .hero-location svg {
-                flex-shrink: 0 !important;
-                width: 13px !important;
-                height: 13px !important;
             }
             
             .hero-subtitle {
@@ -313,16 +367,24 @@
             }
         }
         
+        /* Desktop: Hide mobile golf text */
+        @media (min-width: 769px) {
+            .mobile-golf-separator,
+            .mobile-golf-text {
+                display: none !important;
+            }
+        }
+        
         @media (max-width: 480px) {
             .hero-fullscreen {
-                padding-top: 110px !important;
-                padding-bottom: 3rem !important;
+                padding-top: 80px !important;
+                padding-bottom: 2rem !important;
                 height: auto !important;
             }
             
             .hero-content {
-                padding-top: 1.5rem !important;
-                padding-bottom: 4rem !important;
+                padding-top: 0.5rem !important;
+                padding-bottom: 2rem !important;
             }
             
             .hero-title {
@@ -961,6 +1023,38 @@
                 font-size: 0.8rem;
             }
         }
+        
+        /* Waitlist Form Styles */
+        .waitlist-form input[type="email"]:focus {
+            outline: none;
+            border-color: #B8860B;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .waitlist-form input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .waitlist-form button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(184, 134, 11, 0.4);
+        }
+        
+        .waitlist-form button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        @media (max-width: 768px) {
+            .waitlist-form {
+                max-width: 100%;
+            }
+            
+            .waitlist-form input[type="email"],
+            .waitlist-form button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -968,7 +1062,7 @@
     <section class="hero-fullscreen">
         <!-- Background Video -->
         <video class="hero-video-bg" autoplay muted loop playsinline>
-            <source src="https://www.genspark.ai/api/files/s/ua3dsTMP" type="video/mp4">
+            <source src="https://www.genspark.ai/api/files/s/vcGWuLjf" type="video/mp4">
         </video>
         
         <!-- Overlay -->
@@ -979,7 +1073,7 @@
             <div class="nav-premium-container">
                 <div class="nav-premium-brand">
                     <a href="index.html">
-                        <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" 
+                        <img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" 
                              alt="MayaRoyale" 
                              class="nav-premium-logo">
                     </a>
@@ -1198,12 +1292,16 @@
                         </svg>
                         <span style="color: rgba(255, 255, 255, 0.85);">5-Star Eco-Wellness Destination</span>
                     </span>
-                    <span style="color: rgba(255, 255, 255, 0.5); margin: 0 0.25rem;">•</span>
+                    <span class="location-separator" style="color: rgba(255, 255, 255, 0.5); margin: 0 0.4rem;">•</span>
                     <span style="display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap;">
                         <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 32px; height: 16px; border: 1.5px solid rgba(255, 255, 255, 0.85); border-radius: 2px; font-family: 'Space Grotesk', sans-serif; font-size: 8px; font-weight: 700; color: rgba(255, 255, 255, 0.85); line-height: 1; padding: 2px 4px; letter-spacing: 0.5px;">LHW</span>
                         <span style="color: rgba(255, 255, 255, 0.85);">Leading Hotels Partner</span>
                     </span>
-                    <span style="color: rgba(255, 255, 255, 0.5); margin: 0 0.25rem;">•</span>
+                    <span class="location-separator" style="color: rgba(255, 255, 255, 0.5); margin: 0 0.4rem;">•</span>
+                    <span class="mobile-golf-text" style="display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap;">
+                        <span style="color: rgba(255, 255, 255, 0.85);">⛳ Championship Golf</span>
+                    </span>
+                    <span class="location-separator mobile-golf-separator" style="color: rgba(255, 255, 255, 0.5); margin: 0 0.4rem;">•</span>
                     <span style="display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap;">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.8;">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -1212,6 +1310,16 @@
                         <span style="color: rgba(255, 255, 255, 0.85);">Isla Aguada, Mexico</span>
                     </span>
                 </span>
+            </div>
+            
+            <!-- Premium Lifestyle Access - Fintech Badge -->
+            <div class="lifestyle-access-badge" style="text-align: center; margin: 2rem auto 2.5rem; padding: 1.25rem 1.75rem; background: linear-gradient(135deg, rgba(184, 134, 11, 0.08) 0%, rgba(212, 175, 55, 0.05) 100%); border: 1px solid rgba(184, 134, 11, 0.25); border-radius: 16px; max-width: 650px; backdrop-filter: blur(10px);">
+                <div style="font-size: 0.8rem; color: #B8860B; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 0.5rem; text-transform: uppercase; font-family: 'Space Grotesk', sans-serif;">
+                    🏌️ Premium Lifestyle Ecosystem
+                </div>
+                <div style="font-size: 1rem; color: rgba(255, 255, 255, 0.9); line-height: 1.6; font-family: 'Inter', sans-serif; font-weight: 400;">
+                    Championship golf at <strong style="color: #FCD34D;">Campeche Country Club</strong>, farm-to-table dining, and pristine beaches—all within the last protected paradise of Mexico.
+                </div>
             </div>
             
             <div class="hero-token-info">
@@ -1906,7 +2014,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="https://www.genspark.ai/api/files/s/gPGTg8CG" alt="MayaRoyale" class="footer-logo">
+                    <img src="https://www.genspark.ai/api/files/s/n8E8Zqjs" alt="MayaRoyale" class="footer-logo">
                     <p class="footer-desc">Tokenized trophy beachfront real estate in Isla Aguada, Mexico.</p>
                 </div>
                 <div class="footer-col">
@@ -1934,6 +2042,26 @@
                         <li><a href="#terms">Terms of Service</a></li>
                         <li><a href="#disclaimer">Risk Disclaimer</a></li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Join the Waiting List</h4>
+                    <p class="footer-desc" style="margin-bottom: 1rem; font-size: 0.9rem; opacity: 0.8;">Be the first to know about our token launch</p>
+                    <form class="waitlist-form" id="waitlistForm" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <input 
+                            type="email" 
+                            id="waitlistEmail" 
+                            placeholder="Enter your email" 
+                            required
+                            style="padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: #FFFFFF; font-size: 0.9rem; font-family: 'Inter', sans-serif; transition: all 0.3s ease;"
+                        >
+                        <button 
+                            type="submit" 
+                            style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%); color: #FFFFFF; font-weight: 600; font-size: 0.95rem; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-family: 'Inter', sans-serif;"
+                        >
+                            Join Waitlist
+                        </button>
+                        <span id="waitlistMessage" style="font-size: 0.85rem; color: #00D4FF; display: none;"></span>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -2375,6 +2503,40 @@
     function connectTrustWallet() {
         alert('Trust Wallet integration coming soon.');
     }
+    
+    // Waitlist Form Handler
+    document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('waitlistEmail').value;
+        const message = document.getElementById('waitlistMessage');
+        const button = e.target.querySelector('button[type="submit"]');
+        
+        // Disable button during submission
+        button.disabled = true;
+        button.textContent = 'Joining...';
+        
+        // Simulate API call (replace with actual API endpoint)
+        setTimeout(() => {
+            // Success response
+            message.textContent = '✓ Successfully joined! Check your email.';
+            message.style.color = '#00D4FF';
+            message.style.display = 'block';
+            
+            // Reset form
+            document.getElementById('waitlistEmail').value = '';
+            button.disabled = false;
+            button.textContent = 'Join Waitlist';
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 5000);
+            
+            // Log for now (remove in production)
+            console.log('Waitlist email submitted:', email);
+        }, 1000);
+    });
     </script>
 </body>
 </html>
